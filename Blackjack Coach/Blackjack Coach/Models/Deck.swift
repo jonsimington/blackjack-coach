@@ -23,6 +23,7 @@ let suits: [CARD_SUIT] = [
 class Deck {
     var _cards: [Card] = []
 
+    // constructor
     init() {
         _cards = []
 
@@ -51,6 +52,11 @@ class Deck {
 
     // deals a card for a Player
     func dealCard(player: Player) -> Card {
+        // if deck is empty, we need to build a new deck
+        if _cards.count == 0 {
+            reloadDeck()
+        }
+
         // get card at top of deck
         let card = _cards[0]
 
@@ -67,11 +73,17 @@ class Deck {
             return card
         }
 
+        let currentPlayerScore = player.score()
+
+        print("Dealt (\(card.description)) to (\(player._name)) --> \(currentPlayerScore)")
+
         return card
     }
 
     // shuffles the deck
     func shuffleDeck() {
+        let originalDeck = _cards
+
         var last = _cards.count - 1
 
         while last > 0 {
@@ -79,9 +91,11 @@ class Deck {
 
             _cards.swapAt(last, rand)
 
-            // print(_cards)
-
             last -= 1
+        }
+
+        if _cards == originalDeck {
+            print("Shuffled deck is the same as original!")
         }
     }
 }

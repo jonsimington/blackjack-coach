@@ -47,7 +47,7 @@ class Player {
             if total < 21 {
                 return total
             }
-            elevatedAcesInHand.forEach { card in print(card) }
+            //elevatedAcesInHand.forEach { card in print(card) }
         }
 
         total = 0

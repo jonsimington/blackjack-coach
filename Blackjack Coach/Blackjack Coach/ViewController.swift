@@ -19,33 +19,8 @@ class ViewController: UIViewController {
     @IBOutlet var playerHandContainer: UIView!
     @IBOutlet var playerCard1: UIImageView!
     @IBOutlet var playerCard2: UIImageView!
-
-    @IBOutlet var playerControlsContainer: UIView!
-    @IBOutlet var playerHitButton: UIButton!
-    @IBAction func playerHitButtonOnClick(_: Any) {
-        // accept user input here
-        let userAction = USER_ACTION.HIT
-
-        // continue dealing to player until they either bust or stop hitting
-        while (_player?.score())! < 22 && userAction != USER_ACTION.STAND {
-            // reload deck and shuffle it
-            if _deck?._cards.count == 0 {
-                _deck?.reloadDeck()
-            }
-
-            let dealtCard = (_deck?.dealCard(player: _player!))!
-            updateCardImage(card: dealtCard, image: playerCard2, imageViewName: "playerCard2")
-            updateStats()
-            _player?.printHand()
-        }
-    }
-
     @IBOutlet var playerNameLabel: UILabel!
-    @IBOutlet var playerStandButton: UIButton!
-    @IBOutlet var playerSplitButton: UIButton!
-    @IBOutlet var playerDoubleDownButton: UIButton!
-    @IBOutlet var playerInsuranceButton: UIButton!
-    @IBOutlet var playerSurrenderButton: UIButton!
+
 
     // STATS VIEWS
     @IBOutlet var statsContainer: UIView!
@@ -58,6 +33,41 @@ class ViewController: UIViewController {
     @IBAction func restartGameButtonOnClick(_: Any) {
         initGame()
     }
+
+    // GAME RESULT VIEWS
+    @IBOutlet var gameResultContainer: UIView!
+    @IBOutlet var gameResultLabel: UILabel!
+    @IBOutlet var gameResultRestartButton: UIButton!
+    @IBAction func gameResultRestartButtonOnClick(_: Any) {
+        initGame()
+    }
+
+    // PLAYER CONTROLS VIEWS
+    @IBOutlet var playerControlsContainer: UIView!
+    @IBOutlet var playerHitStandContainer: UIView!
+    @IBOutlet var playerStandButton: UIButton!
+    @IBOutlet var playerSplitButton: UIButton!
+    @IBOutlet var playerDoubleDownButton: UIButton!
+    @IBOutlet var playerInsuranceButton: UIButton!
+    @IBOutlet var playerSurrenderButton: UIButton!
+    @IBOutlet var playerHitButton: UIButton!
+    @IBAction func playerHitButtonOnClick(_: Any) {
+        // disable hit and stand buttons
+        playerHitButton.isEnabled = false
+        playerStandButton.isEnabled = false
+
+        // reload deck and shuffle it
+        if _deck?._cards.count == 0 {
+            _deck?.reloadDeck()
+        }
+
+        let dealtCard = (_deck?.dealCard(player: _player!))!
+        updateCardImage(card: dealtCard, image: playerCard2, imageViewName: "playerCard2")
+        updateStats()
+
+        checkIfGameIsOver()
+    }
+
 
     var _player: Player?
     var _dealer: Dealer?
@@ -72,23 +82,36 @@ class ViewController: UIViewController {
     func updateCardImage(card: Card, image: UIImageView, imageViewName: String) {
         let cardImageName = getCardImageName(card: card)
         image.image = UIImage(named: cardImageName)
-        print("Updated \(imageViewName) to \(cardImageName)")
     }
 
-    func initGame() {
+    func clearCardImages() {
         // clear card images
         playerCard1.image = nil
         playerCard2.image = nil
         dealerCard1.image = nil
         dealerCard2.image = nil
+    }
+
+    func initGame() {
+        // hide gameResultContainer
+        gameResultContainer.isHidden = true
+        gameResultContainer.isUserInteractionEnabled = false
+
+
 
         // init players
         _player = Player(name: "JON", chips: 0, cards: [])
         _dealer = Dealer(name: "DEALER", chips: 0, cards: [])
 
-        // init player name labels
+        // init player name label
         playerNameLabel.text = _player?._name
+        playerNameLabel.sizeToFit()
+        playerNameLabel.center.x = statsContainer.center.x
+
+        // init dealer name label
         dealerNameLabel.text = _dealer?._name
+        dealerNameLabel.sizeToFit()
+        dealerNameLabel.center.x = statsContainer.center.x
 
         // init deck
         if _deck == nil {
@@ -111,11 +134,24 @@ class ViewController: UIViewController {
         updateCardImage(card: dealtCard, image: playerCard2, imageViewName: "playerCard2")
         updateStats()
 
-        // check if user busted on first deal
+        checkIfGameIsOver()
+    }
+
+    func checkIfGameIsOver() {
+        // check if user busted
         if (_player?.score())! > 21 {
-            // HANDLE GAMEOVER LOGIC HERE
+            gameResultLabel.text = "Dang, broheim, you lost."
+            gameResultLabel.textColor = UIColor.red
+            gameResultContainer.backgroundColor = UIColor.darkText.withAlphaComponent(0.75)
+            gameResultContainer.isUserInteractionEnabled = true
+            gameResultContainer.isHidden = false
+
         } else if _player?.score() == 21 {
-            // HANDLE GAME WIN - BLACKJACK LOGIC HERE
+            gameResultLabel.text = "Blackjack!  You Win!"
+            gameResultLabel.textColor = UIColor.green
+            gameResultContainer.backgroundColor = UIColor.darkText.withAlphaComponent(0.75)
+            gameResultContainer.isUserInteractionEnabled = true
+            gameResultContainer.isHidden = false
         } else {
             // enable hit and stand buttons
             playerHitButton.isEnabled = true

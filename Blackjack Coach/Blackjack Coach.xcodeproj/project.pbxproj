@@ -129,6 +129,7 @@
 		DD4AF51A20D5520E001235BA /* FuraMono-Medium Powerline.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF41520D5520B001235BA /* FuraMono-Medium Powerline.otf */; };
 		DD4AF51D20D5520E001235BA /* Roboto Mono Light for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF41820D5520B001235BA /* Roboto Mono Light for Powerline.ttf */; };
 		DD4AF52020D5520E001235BA /* Droid Sans Mono Slashed for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF41C20D5520B001235BA /* Droid Sans Mono Slashed for Powerline.ttf */; };
+		DD4AF52520D58238001235BA /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AF52420D58238001235BA /* PaddingLabel.swift */; };
 		DD906DAA20D4C2E600501074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD906DA920D4C2E600501074 /* AppDelegate.swift */; };
 		DD906DAC20D4C2E600501074 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD906DAB20D4C2E600501074 /* ViewController.swift */; };
 		DD906DAF20D4C2E600501074 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD906DAD20D4C2E600501074 /* Main.storyboard */; };
@@ -279,6 +280,7 @@
 		DD4AF41520D5520B001235BA /* FuraMono-Medium Powerline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuraMono-Medium Powerline.otf"; sourceTree = "<group>"; };
 		DD4AF41820D5520B001235BA /* Roboto Mono Light for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Light for Powerline.ttf"; sourceTree = "<group>"; };
 		DD4AF41C20D5520B001235BA /* Droid Sans Mono Slashed for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Droid Sans Mono Slashed for Powerline.ttf"; sourceTree = "<group>"; };
+		DD4AF52420D58238001235BA /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		DD906DA620D4C2E600501074 /* Blackjack Coach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blackjack Coach.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD906DA920D4C2E600501074 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD906DAB20D4C2E600501074 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -679,6 +681,14 @@
 			path = DroidSansMonoSlashed;
 			sourceTree = "<group>";
 		};
+		DD4AF52320D58212001235BA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DD4AF52420D58238001235BA /* PaddingLabel.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		DD906D9D20D4C2E600501074 = {
 			isa = PBXGroup;
 			children = (
@@ -702,6 +712,7 @@
 		DD906DA820D4C2E600501074 /* Blackjack Coach */ = {
 			isa = PBXGroup;
 			children = (
+				DD4AF52320D58212001235BA /* Extensions */,
 				DD4AF2F820D5520A001235BA /* Fonts */,
 				DD4AEF7620D4E894001235BA /* Enumerations */,
 				DD4AEF7320D4E69D001235BA /* Models */,
@@ -990,6 +1001,7 @@
 				DD4AEF7A20D4E914001235BA /* Player.swift in Sources */,
 				DD4AEF8220D51D03001235BA /* USER_ACTION.swift in Sources */,
 				DD4AEF7520D4E6B2001235BA /* Card.swift in Sources */,
+				DD4AF52520D58238001235BA /* PaddingLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
