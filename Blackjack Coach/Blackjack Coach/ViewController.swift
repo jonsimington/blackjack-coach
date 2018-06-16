@@ -95,17 +95,20 @@ class ViewController: UIViewController {
         gameResultContainer.isHidden = true
         gameResultContainer.isUserInteractionEnabled = false
 
+        // unhide the deal again button from this view
+        restartGameButton.isHidden = false
+
         // init players
-        _player = Player(name: "JON", chips: 0, cards: [])
+        _player = Player(name: "DR VAN NOSTRAND", chips: 0, cards: [])
         _dealer = Dealer(name: "DEALER", chips: 0, cards: [])
 
         // init player name label
-        playerNameLabel.text = _player?._name
+        playerNameLabel.text = _player?._name.uppercased()
         playerNameLabel.sizeToFit()
         playerNameLabel.center.x = statsContainer.center.x
 
         // init dealer name label
-        dealerNameLabel.text = _dealer?._name
+        dealerNameLabel.text = _dealer?._name.uppercased()
         dealerNameLabel.sizeToFit()
         dealerNameLabel.center.x = statsContainer.center.x
 
@@ -130,25 +133,43 @@ class ViewController: UIViewController {
         updateCardImage(card: dealtCard, image: playerCard2, imageViewName: "playerCard2")
         updateStats()
 
+        // check to see if user got blackjack or busted
         checkIfGameIsOver()
     }
 
+    // determines if user busted or got blackjack and updates the UI accordingly
     func checkIfGameIsOver() {
         // check if user busted
         if (_player?.score())! > 21 {
-            gameResultLabel.text = "Dang, broheim, you lost."
+            // hide restart game button from other view
+            restartGameButton.isHidden = true
+
+            // set game over status text
+            gameResultLabel.text = "Dang, broheim, you busted."
             gameResultLabel.textColor = UIColor.red
-            gameResultContainer.backgroundColor = UIColor.darkText.withAlphaComponent(0.75)
+
+            // show the game result overlay
+            gameResultContainer.backgroundColor = UIColor.darkText.withAlphaComponent(0.85)
             gameResultContainer.isUserInteractionEnabled = true
             gameResultContainer.isHidden = false
 
-        } else if _player?.score() == 21 {
+        }
+        // check if user got blackjack
+        else if _player?.score() == 21 {
+            // hide restart game button from other view
+            restartGameButton.isHidden = true
+
+            // set game win status text
             gameResultLabel.text = "Blackjack!  You Win!"
             gameResultLabel.textColor = UIColor.green
-            gameResultContainer.backgroundColor = UIColor.darkText.withAlphaComponent(0.75)
+
+            // show the game result overlay
+            gameResultContainer.backgroundColor = UIColor.darkText.withAlphaComponent(0.85)
             gameResultContainer.isUserInteractionEnabled = true
             gameResultContainer.isHidden = false
-        } else {
+        }
+        // otherwise, user can continue playing
+        else {
             // enable hit and stand buttons
             playerHitButton.isEnabled = true
             playerStandButton.isEnabled = true

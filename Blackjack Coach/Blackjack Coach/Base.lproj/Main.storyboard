@@ -22,10 +22,10 @@
                                 <rect key="frame" x="0.0" y="611" width="375" height="201"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H4c-RS-q6e">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H4c-RS-q6e">
                                         <rect key="frame" x="8" y="111" width="158" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="buttonPrimary">
+                                        <state key="normal" backgroundImage="buttonHollowPrimary">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="SPLIT">
                                                     <attributes>
@@ -36,10 +36,10 @@
                                             </attributedString>
                                         </state>
                                     </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4W1-nA-yMp">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4W1-nA-yMp">
                                         <rect key="frame" x="209" y="111" width="158" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="buttonPrimary">
+                                        <state key="normal" backgroundImage="buttonHollowPrimary">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="DOUBLE DOWN">
                                                     <attributes>
@@ -50,10 +50,10 @@
                                             </attributedString>
                                         </state>
                                     </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="frU-vr-Eao">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="frU-vr-Eao">
                                         <rect key="frame" x="209" y="8" width="158" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="buttonDanger">
+                                        <state key="normal" backgroundImage="buttonHollowDanger">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="SURRENDER">
                                                     <attributes>
@@ -64,10 +64,10 @@
                                             </attributedString>
                                         </state>
                                     </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NAl-u2-xx7">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NAl-u2-xx7">
                                         <rect key="frame" x="8" y="8" width="158" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="buttonPrimary">
+                                        <state key="normal" backgroundImage="buttonHollowPrimary">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="INSURANCE">
                                                     <attributes>
@@ -81,9 +81,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ql-H9-OTz">
                                         <rect key="frame" x="89" y="59" width="196" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="buttonDanger">
+                                        <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" backgroundImage="buttonPrimary">
                                             <attributedString key="attributedTitle">
-                                                <fragment content="Restart Game">
+                                                <fragment content="DEAL AGAIN">
                                                     <attributes>
                                                         <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <font key="NSFont" size="22" name="RobotoMonoForPowerline-Light"/>
@@ -96,6 +97,10 @@
                                             <action selector="restartGameButtonOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x67-th-AG7"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Loading" translatesAutoresizingMaskIntoConstraints="NO" id="JFZ-WO-vIW">
+                                        <rect key="frame" x="102" y="69" width="27" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -136,7 +141,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ww-bz-0bz">
                                         <rect key="frame" x="37" y="14" width="136" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="buttonPrimary">
+                                        <state key="normal" backgroundImage="buttonSuccess">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="HIT">
                                                     <attributes>
@@ -307,7 +312,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="buttonSuccess">
                                             <attributedString key="attributedTitle">
-                                                <fragment content="Restart Game">
+                                                <fragment content="DEAL AGAIN">
                                                     <attributes>
                                                         <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <font key="NSFont" size="22" name="RobotoMonoForPowerline-Light"/>
@@ -361,7 +366,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="buttonDanger" width="136" height="48"/>
+        <image name="Loading" width="24" height="24"/>
+        <image name="buttonHollowDanger" width="136" height="48"/>
+        <image name="buttonHollowPrimary" width="136" height="48"/>
         <image name="buttonPrimary" width="136" height="48"/>
         <image name="buttonSuccess" width="136" height="48"/>
         <image name="buttonWarning" width="136" height="48"/>
