@@ -8,11 +8,51 @@
 
 import Foundation
 
+let ranks: [CARD_RANK] = [
+    CARD_RANK.ACE, CARD_RANK.TWO, CARD_RANK.THREE,
+    CARD_RANK.FOUR, CARD_RANK.FIVE, CARD_RANK.SIX,
+    CARD_RANK.SEVEN, CARD_RANK.EIGHT, CARD_RANK.NINE,
+    CARD_RANK.JACK, CARD_RANK.QUEEN, CARD_RANK.KING,
+]
+
+let suits: [CARD_SUIT] = [
+    CARD_SUIT.CLUBS, CARD_SUIT.HEARTS, CARD_SUIT.DIAMONDS,
+    CARD_SUIT.SPADES,
+]
+
 class Deck {
     var _cards: [Card] = []
 
+    init() {
+        _cards = []
+
+        for suit in suits {
+            for rank in ranks {
+                let rankValue = CARD_RANK.getValue(rank)()
+                let card = Card(rank: rank, value: rankValue, suit: suit)
+                _cards.append(card)
+            }
+        }
+        var cards = _cards
+    }
+
+    // regenerates the deck and shuffles
+    func reloadDeck() {
+        _cards = []
+
+        for suit in suits {
+            for rank in ranks {
+                let rankValue = CARD_RANK.getValue(rank)()
+                let card = Card(rank: rank, value: rankValue, suit: suit)
+                _cards.append(card)
+            }
+        }
+        var cards = _cards
+        shuffleDeck()
+    }
+
     // deals a card for a Player
-    func dealCard(player: Player) -> Bool {
+    func dealCard(player: Player) -> Card {
         // get card at top of deck
         let card = _cards[0]
 
@@ -24,14 +64,15 @@ class Deck {
 
         // assert that card is added to player's cards, and from deck
         if !player._cards.contains(card) {
-            return false
+            return card
         } else if _cards.contains(card) {
-            return false
+            return card
         }
 
-        return true
+        return card
     }
 
+    // shuffles the deck
     func shuffleDeck() {
         var last = _cards.count - 1
 

@@ -9,15 +9,21 @@
 import Foundation
 
 class Card {
-    var _name: String = ""
+    var _rank: CARD_RANK = CARD_RANK.ACE
     var _value: Int = 0
     var _suit: CARD_SUIT = CARD_SUIT.CLUBS
 
-    public var description: String { return "\(_name) of \(_suit)" }
+    init(rank: CARD_RANK, value: Int, suit: CARD_SUIT) {
+        _rank = rank
+        _value = value
+        _suit = suit
+    }
+
+    public var description: String { return "\(_rank) of \(_suit)" }
 }
 
 extension Card: Equatable {
     static func == (lhs: Card, rhs: Card) -> Bool {
-        return lhs._name == rhs._name && lhs._value == rhs._value && lhs._suit == rhs._suit
+        return lhs._rank == rhs._rank && lhs._value == rhs._value && lhs._suit == rhs._suit
     }
 }

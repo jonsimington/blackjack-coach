@@ -9,8 +9,21 @@
 import Foundation
 
 enum CARD_SUIT: String {
-    case SPADES = "spades"
-    case HEARTS = "hearts"
-    case CLUBS = "clubs"
-    case DIAMONDS = "diamonds"
+    case SPADES
+    case HEARTS
+    case CLUBS
+    case DIAMONDS
+
+    func getImageName() -> String {
+        switch self {
+        case .SPADES:
+            return "spade"
+        case .HEARTS:
+            return "heart"
+        case .CLUBS:
+            return "club"
+        case .DIAMONDS:
+            return "diamond"
+        }
+    }
 }

@@ -13,6 +13,12 @@ class Player {
     var _chips: Int = 0
     var _name: String = ""
 
+    init(name: String, chips: Int, cards: [Card]) {
+        _name = name
+        _chips = chips
+        _cards = cards
+    }
+
     public var description: String { return "\(_name): \(_cards), \(_chips)" }
 
     // calculates the player's score
@@ -28,13 +34,14 @@ class Player {
 
     // prints the player's hand to the console for debugging
     func printHand() {
-        print("Your hand:")
+        var output = "Your Hand: "
 
         for c in _cards {
-            print(c)
+            output += " \(c)"
         }
 
-        print("Total: \(score())")
+        output += " Total: \(score())"
+        print(output)
     }
 }
 
