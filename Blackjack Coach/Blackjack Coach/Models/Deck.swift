@@ -33,7 +33,6 @@ class Deck {
                 _cards.append(card)
             }
         }
-        var cards = _cards
     }
 
     // regenerates the deck and shuffles
@@ -47,7 +46,6 @@ class Deck {
                 _cards.append(card)
             }
         }
-        var cards = _cards
         shuffleDeck()
     }
 
@@ -79,11 +77,9 @@ class Deck {
         while last > 0 {
             let rand = Int(arc4random_uniform(UInt32(last)))
 
-            print("swap items[\(last)] = \(_cards[last]) with items[\(rand)] = \(_cards[rand])")
-
             _cards.swapAt(last, rand)
 
-            print(_cards)
+            // print(_cards)
 
             last -= 1
         }

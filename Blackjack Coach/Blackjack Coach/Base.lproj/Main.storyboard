@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,80 +18,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4SI-a3-qn6">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4SI-a3-qn6">
                                 <rect key="frame" x="0.0" y="44" width="375" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yNR-ng-XfX">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yNR-ng-XfX">
                                         <rect key="frame" x="8" y="8" width="89" height="112"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="89" id="GxO-ma-HXf"/>
-                                        </constraints>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RoG-bE-nqd">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RoG-bE-nqd">
                                         <rect key="frame" x="105" y="8" width="89" height="112"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="89" id="DSe-CB-dWc"/>
-                                        </constraints>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="yNR-ng-XfX" firstAttribute="bottom" secondItem="4SI-a3-qn6" secondAttribute="bottomMargin" id="0ke-LJ-67f"/>
-                                    <constraint firstItem="yNR-ng-XfX" firstAttribute="leading" secondItem="4SI-a3-qn6" secondAttribute="leadingMargin" id="7Jo-ry-fCE"/>
-                                    <constraint firstItem="yNR-ng-XfX" firstAttribute="top" secondItem="4SI-a3-qn6" secondAttribute="topMargin" id="UaY-SP-bez"/>
-                                    <constraint firstItem="yNR-ng-XfX" firstAttribute="top" secondItem="RoG-bE-nqd" secondAttribute="top" id="VEP-Sf-r0l"/>
-                                    <constraint firstItem="yNR-ng-XfX" firstAttribute="bottom" secondItem="RoG-bE-nqd" secondAttribute="bottom" id="VHd-mD-SgX"/>
-                                    <constraint firstItem="RoG-bE-nqd" firstAttribute="leading" secondItem="yNR-ng-XfX" secondAttribute="trailing" constant="8" symbolic="YES" id="rTI-gq-2Xj"/>
-                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JC3-sm-T1M">
-                                <rect key="frame" x="0.0" y="342" width="375" height="186"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JC3-sm-T1M">
+                                <rect key="frame" x="0.0" y="403" width="375" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jxw-9w-VLp">
-                                        <rect key="frame" x="71" y="37" width="89" height="112"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="89" id="pUW-uC-GT1"/>
-                                        </constraints>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6RC-2c-DbF">
+                                        <rect key="frame" x="105" y="7" width="89" height="112"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6RC-2c-DbF">
-                                        <rect key="frame" x="222" y="37" width="89" height="112"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jxw-9w-VLp">
+                                        <rect key="frame" x="8" y="7" width="89" height="112"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="jxw-9w-VLp" firstAttribute="leading" secondItem="JC3-sm-T1M" secondAttribute="leading" constant="71" id="2d3-pA-8YI"/>
-                                    <constraint firstItem="jxw-9w-VLp" firstAttribute="bottom" secondItem="6RC-2c-DbF" secondAttribute="bottom" id="4K0-vn-HZM"/>
-                                    <constraint firstItem="jxw-9w-VLp" firstAttribute="top" secondItem="6RC-2c-DbF" secondAttribute="top" id="C0w-SR-Yoz"/>
-                                    <constraint firstAttribute="trailing" secondItem="6RC-2c-DbF" secondAttribute="trailing" constant="64" id="HZo-BE-pG6"/>
-                                    <constraint firstItem="jxw-9w-VLp" firstAttribute="centerY" secondItem="JC3-sm-T1M" secondAttribute="centerY" id="NdM-Ss-GwZ"/>
-                                    <constraint firstItem="jxw-9w-VLp" firstAttribute="top" secondItem="JC3-sm-T1M" secondAttribute="top" constant="37" id="Vd8-aq-Gk2"/>
-                                    <constraint firstItem="6RC-2c-DbF" firstAttribute="leading" secondItem="jxw-9w-VLp" secondAttribute="trailing" constant="62" id="e1Z-Tb-Dbd"/>
-                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xbI-mg-gfj">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xbI-mg-gfj">
                                 <rect key="frame" x="0.0" y="536" width="375" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ww-bz-0bz">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ww-bz-0bz">
                                         <rect key="frame" x="37" y="14" width="136" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="buttonPrimary">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="HIT">
                                                     <attributes>
-                                                        <color key="NSColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <font key="NSFont" size="22" name="RobotoMonoForPowerline-Thin"/>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="22" name="RobotoMonoForPowerline-Light"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
                                         </state>
+                                        <connections>
+                                            <action selector="playerHitButtonOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pLf-kF-Fxx"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tO9-fV-PxE">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tO9-fV-PxE">
                                         <rect key="frame" x="205" y="14" width="136" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="buttonWarning">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="STAND">
                                                     <attributes>
-                                                        <color key="NSColor" red="0.011764705882352941" green="0.12941176470588237" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <font key="NSFont" size="22" name="RobotoMonoForPowerline-Light"/>
                                                     </attributes>
                                                 </fragment>
@@ -101,97 +86,205 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="8Ww-bz-0bz" firstAttribute="top" secondItem="xbI-mg-gfj" secondAttribute="top" constant="14" id="Mqq-GO-UDY"/>
-                                    <constraint firstItem="8Ww-bz-0bz" firstAttribute="baseline" secondItem="tO9-fV-PxE" secondAttribute="baseline" id="b1O-gQ-Wvf"/>
-                                    <constraint firstItem="8Ww-bz-0bz" firstAttribute="leading" secondItem="xbI-mg-gfj" secondAttribute="leading" constant="37" id="e4u-u4-bDQ"/>
-                                    <constraint firstItem="tO9-fV-PxE" firstAttribute="leading" secondItem="8Ww-bz-0bz" secondAttribute="trailing" constant="32" id="hRq-z3-6lQ"/>
-                                    <constraint firstItem="8Ww-bz-0bz" firstAttribute="centerY" secondItem="xbI-mg-gfj" secondAttribute="centerY" id="jGc-aM-r9O"/>
-                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H4c-RS-q6e">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H4c-RS-q6e">
                                 <rect key="frame" x="16" y="620" width="158" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="158" id="20b-gH-e2C"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="buttonPrimary">
                                     <attributedString key="attributedTitle">
                                         <fragment content="SPLIT">
                                             <attributes>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="18" name="RobotoMonoForPowerline-Light"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4W1-nA-yMp">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4W1-nA-yMp">
                                 <rect key="frame" x="16" y="730" width="158" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="buttonPrimary">
                                     <attributedString key="attributedTitle">
                                         <fragment content="DOUBLE DOWN">
                                             <attributes>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="18" name="RobotoMonoForPowerline-Light"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="frU-vr-Eao">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="frU-vr-Eao">
                                 <rect key="frame" x="201" y="730" width="158" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="buttonDanger">
                                     <attributedString key="attributedTitle">
                                         <fragment content="SURRENDER">
                                             <attributes>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="18" name="RobotoMonoForPowerline-Light"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NAl-u2-xx7">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NAl-u2-xx7">
                                 <rect key="frame" x="201" y="620" width="158" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="buttonPrimary">
                                     <attributedString key="attributedTitle">
                                         <fragment content="INSURANCE">
                                             <attributes>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="18" name="RobotoMonoForPowerline-Light"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
                                 </state>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="okt-6B-ZEP">
+                                <rect key="frame" x="16" y="217" width="343" height="131"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XgC-EX-1ql">
+                                        <rect key="frame" x="8" y="82" width="173" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Player Score">
+                                                <attributes>
+                                                    <font key="NSFont" size="24" name="RobotoMonoForPowerline-Light"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7C0-jE-9Gf">
+                                        <rect key="frame" x="306" y="45" width="29" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="21">
+                                                <attributes>
+                                                    <font key="NSFont" size="24" name="RobotoMonoForPowerline-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hoo-2Y-aCn">
+                                        <rect key="frame" x="8" y="45" width="173" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Dealer Score">
+                                                <attributes>
+                                                    <font key="NSFont" size="24" name="RobotoMonoForPowerline-Light"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dcz-pq-T3E">
+                                        <rect key="frame" x="8" y="8" width="73" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Deck:">
+                                                <attributes>
+                                                    <font key="NSFont" size="24" name="RobotoMonoForPowerline-Light"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuF-hd-EYG">
+                                        <rect key="frame" x="219" y="8" width="116" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="52 cards">
+                                                <attributes>
+                                                    <font key="NSFont" size="24" name="RobotoMonoForPowerline-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bef-5r-p1g">
+                                        <rect key="frame" x="306" y="82" width="29" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="21">
+                                                <attributes>
+                                                    <font key="NSFont" size="24" name="RobotoMonoForPowerline-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ql-H9-OTz">
+                                <rect key="frame" x="89" y="674" width="196" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="buttonDanger">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Restart Game">
+                                            <attributes>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="22" name="RobotoMonoForPowerline-Light"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="restartGameButtonOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x67-th-AG7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hyb-tW-WRj">
+                                <rect key="frame" x="16" y="180" width="343" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Dealer">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="24" name="FiraMonoForPowerline-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnE-0O-4a4">
+                                <rect key="frame" x="16" y="366" width="343" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Player">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="24" name="FiraMonoForPowerline-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="JC3-sm-T1M" firstAttribute="trailing" secondItem="xbI-mg-gfj" secondAttribute="trailing" id="2A3-yh-qDh"/>
-                            <constraint firstItem="4W1-nA-yMp" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="44I-rW-uBn"/>
-                            <constraint firstItem="H4c-RS-q6e" firstAttribute="trailing" secondItem="4W1-nA-yMp" secondAttribute="trailing" id="6Q8-Vl-DeZ"/>
-                            <constraint firstAttribute="bottom" secondItem="4SI-a3-qn6" secondAttribute="bottom" constant="640" id="Eju-xQ-d4R"/>
-                            <constraint firstItem="H4c-RS-q6e" firstAttribute="baseline" secondItem="NAl-u2-xx7" secondAttribute="baseline" id="HJG-iT-7Gr"/>
-                            <constraint firstAttribute="trailing" secondItem="4SI-a3-qn6" secondAttribute="trailing" id="TwH-Hi-gQE"/>
-                            <constraint firstItem="H4c-RS-q6e" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="VWo-2t-gBC"/>
-                            <constraint firstItem="JC3-sm-T1M" firstAttribute="leading" secondItem="xbI-mg-gfj" secondAttribute="leading" id="XHI-rR-OQq"/>
-                            <constraint firstItem="JC3-sm-T1M" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="342" id="anS-cf-MFE"/>
-                            <constraint firstItem="NAl-u2-xx7" firstAttribute="trailing" secondItem="frU-vr-Eao" secondAttribute="trailing" id="e2V-pC-cMm"/>
-                            <constraint firstItem="NAl-u2-xx7" firstAttribute="leading" secondItem="frU-vr-Eao" secondAttribute="leading" id="f8n-c3-x9g"/>
-                            <constraint firstItem="4SI-a3-qn6" firstAttribute="trailing" secondItem="JC3-sm-T1M" secondAttribute="trailing" id="fSt-km-IDb"/>
-                            <constraint firstItem="4SI-a3-qn6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fnk-yl-2N1"/>
-                            <constraint firstItem="4W1-nA-yMp" firstAttribute="baseline" secondItem="frU-vr-Eao" secondAttribute="baseline" id="hgO-7W-WfI"/>
-                            <constraint firstItem="4W1-nA-yMp" firstAttribute="top" secondItem="H4c-RS-q6e" secondAttribute="bottom" constant="62" id="kyd-ag-i4d"/>
-                            <constraint firstItem="NAl-u2-xx7" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="lqc-Z3-0Qb"/>
-                            <constraint firstItem="NAl-u2-xx7" firstAttribute="leading" secondItem="H4c-RS-q6e" secondAttribute="trailing" constant="27" id="m02-rK-SDY"/>
-                            <constraint firstItem="H4c-RS-q6e" firstAttribute="leading" secondItem="4W1-nA-yMp" secondAttribute="leading" id="oSF-0w-SKE"/>
-                            <constraint firstItem="4SI-a3-qn6" firstAttribute="leading" secondItem="JC3-sm-T1M" secondAttribute="leading" id="p6o-xW-xak"/>
-                            <constraint firstItem="H4c-RS-q6e" firstAttribute="top" secondItem="xbI-mg-gfj" secondAttribute="bottom" constant="8" symbolic="YES" id="sn8-Us-fz0"/>
-                            <constraint firstItem="xbI-mg-gfj" firstAttribute="top" secondItem="JC3-sm-T1M" secondAttribute="bottom" constant="8" symbolic="YES" id="whr-jW-KSn"/>
-                            <constraint firstItem="4SI-a3-qn6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="z52-4F-5Cd"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="dealerCard1" destination="yNR-ng-XfX" id="zeJ-Tq-7GF"/>
                         <outlet property="dealerCard2" destination="RoG-bE-nqd" id="QZO-zB-cYd"/>
                         <outlet property="dealerHandContainer" destination="4SI-a3-qn6" id="pNl-ZW-Xc3"/>
+                        <outlet property="dealerNameLabel" destination="Hyb-tW-WRj" id="umi-rm-6nn"/>
+                        <outlet property="dealerScoreLabel" destination="7C0-jE-9Gf" id="Thu-B3-WOh"/>
+                        <outlet property="deckCountLabel" destination="zuF-hd-EYG" id="lf1-vH-Obj"/>
                         <outlet property="playerCard1" destination="jxw-9w-VLp" id="AWa-Ch-tDY"/>
                         <outlet property="playerCard2" destination="6RC-2c-DbF" id="3i6-ia-v7t"/>
                         <outlet property="playerControlsContainer" destination="xbI-mg-gfj" id="TRe-XE-MZy"/>
@@ -199,9 +292,13 @@
                         <outlet property="playerHandContainer" destination="JC3-sm-T1M" id="cbS-pD-8Ag"/>
                         <outlet property="playerHitButton" destination="8Ww-bz-0bz" id="PJX-IN-K1A"/>
                         <outlet property="playerInsuranceButton" destination="NAl-u2-xx7" id="55i-tH-5Kl"/>
+                        <outlet property="playerNameLabel" destination="nnE-0O-4a4" id="Yun-JB-suR"/>
+                        <outlet property="playerScoreLabel" destination="Bef-5r-p1g" id="D3k-eq-1mB"/>
                         <outlet property="playerSplitButton" destination="H4c-RS-q6e" id="INk-0C-57b"/>
                         <outlet property="playerStandButton" destination="tO9-fV-PxE" id="IFO-FA-0HW"/>
                         <outlet property="playerSurrenderButton" destination="frU-vr-Eao" id="jDE-Lw-nHq"/>
+                        <outlet property="restartGameButton" destination="0ql-H9-OTz" id="opM-gg-ZjD"/>
+                        <outlet property="statsContainer" destination="okt-6B-ZEP" id="Vp0-Dl-RaY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -34,6 +34,19 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Roboto Mono Thin for Powerline.ttf</string>
+		<string>Roboto Mono for Powerline.ttf</string>
+		<string>Roboto Mono Light for Powerline.ttf</string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string>Roboto Mono Bold for Powerline.ttf</string>
+		<string>Roboto Mono Medium for Powerline.ttf</string>
+	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
