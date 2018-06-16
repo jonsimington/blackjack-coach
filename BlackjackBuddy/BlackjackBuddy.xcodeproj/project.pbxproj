@@ -132,14 +132,15 @@
 		DD4AF52520D58238001235BA /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AF52420D58238001235BA /* PaddingLabel.swift */; };
 		DD4AF52720D593A1001235BA /* ELEMENT_STATE.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AF52620D593A1001235BA /* ELEMENT_STATE.swift */; };
 		DD4AF52920D59455001235BA /* ELEMENT_TYPE.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AF52820D59455001235BA /* ELEMENT_TYPE.swift */; };
+		DD4AF52E20D5A251001235BA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD4AF52D20D5A251001235BA /* StoreKit.framework */; };
 		DD906DAA20D4C2E600501074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD906DA920D4C2E600501074 /* AppDelegate.swift */; };
 		DD906DAC20D4C2E600501074 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD906DAB20D4C2E600501074 /* ViewController.swift */; };
 		DD906DAF20D4C2E600501074 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD906DAD20D4C2E600501074 /* Main.storyboard */; };
-		DD906DB220D4C2E600501074 /* Blackjack_Coach.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD906DB020D4C2E600501074 /* Blackjack_Coach.xcdatamodeld */; };
+		DD906DB220D4C2E600501074 /* BlackjackBuddy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD906DB020D4C2E600501074 /* BlackjackBuddy.xcdatamodeld */; };
 		DD906DB420D4C2E800501074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD906DB320D4C2E800501074 /* Assets.xcassets */; };
 		DD906DB720D4C2E800501074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD906DB520D4C2E800501074 /* LaunchScreen.storyboard */; };
-		DD906DC220D4C2E800501074 /* Blackjack_CoachTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD906DC120D4C2E800501074 /* Blackjack_CoachTests.swift */; };
-		DD906DCD20D4C2E800501074 /* Blackjack_CoachUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD906DCC20D4C2E800501074 /* Blackjack_CoachUITests.swift */; };
+		DD906DC220D4C2E800501074 /* BlackjackBuddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD906DC120D4C2E800501074 /* BlackjackBuddyTests.swift */; };
+		DD906DCD20D4C2E800501074 /* BlackjackBuddyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD906DCC20D4C2E800501074 /* BlackjackBuddyUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,14 +149,14 @@
 			containerPortal = DD906D9E20D4C2E600501074 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = DD906DA520D4C2E600501074;
-			remoteInfo = "Blackjack Coach";
+			remoteInfo = "BlackjackBuddy";
 		};
 		DD906DC920D4C2E800501074 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DD906D9E20D4C2E600501074 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = DD906DA520D4C2E600501074;
-			remoteInfo = "Blackjack Coach";
+			remoteInfo = "BlackjackBuddy";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -285,19 +286,20 @@
 		DD4AF52420D58238001235BA /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		DD4AF52620D593A1001235BA /* ELEMENT_STATE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELEMENT_STATE.swift; sourceTree = "<group>"; };
 		DD4AF52820D59455001235BA /* ELEMENT_TYPE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELEMENT_TYPE.swift; sourceTree = "<group>"; };
-		DD906DA620D4C2E600501074 /* Blackjack Coach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blackjack Coach.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD4AF52D20D5A251001235BA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		DD906DA620D4C2E600501074 /* BlackjackBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackjackBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD906DA920D4C2E600501074 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD906DAB20D4C2E600501074 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DD906DAE20D4C2E600501074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DD906DB120D4C2E600501074 /* Blackjack_Coach.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Blackjack_Coach.xcdatamodel; sourceTree = "<group>"; };
+		DD906DB120D4C2E600501074 /* BlackjackBuddy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BlackjackBuddy.xcdatamodel; sourceTree = "<group>"; };
 		DD906DB320D4C2E800501074 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD906DB620D4C2E800501074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD906DB820D4C2E800501074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DD906DBD20D4C2E800501074 /* Blackjack CoachTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Blackjack CoachTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD906DC120D4C2E800501074 /* Blackjack_CoachTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blackjack_CoachTests.swift; sourceTree = "<group>"; };
+		DD906DBD20D4C2E800501074 /* BlackjackBuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlackjackBuddyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD906DC120D4C2E800501074 /* BlackjackBuddyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackjackBuddyTests.swift; sourceTree = "<group>"; };
 		DD906DC320D4C2E800501074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DD906DC820D4C2E800501074 /* Blackjack CoachUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Blackjack CoachUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD906DCC20D4C2E800501074 /* Blackjack_CoachUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blackjack_CoachUITests.swift; sourceTree = "<group>"; };
+		DD906DC820D4C2E800501074 /* BlackjackBuddyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlackjackBuddyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD906DCC20D4C2E800501074 /* BlackjackBuddyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackjackBuddyUITests.swift; sourceTree = "<group>"; };
 		DD906DCE20D4C2E800501074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -306,6 +308,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD4AF52E20D5A251001235BA /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,27 +698,36 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		DD4AF52A20D59FF8001235BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD4AF52D20D5A251001235BA /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DD906D9D20D4C2E600501074 = {
 			isa = PBXGroup;
 			children = (
-				DD906DA820D4C2E600501074 /* Blackjack Coach */,
-				DD906DC020D4C2E800501074 /* Blackjack CoachTests */,
-				DD906DCB20D4C2E800501074 /* Blackjack CoachUITests */,
+				DD906DA820D4C2E600501074 /* BlackjackBuddy */,
+				DD906DC020D4C2E800501074 /* BlackjackBuddyTests */,
+				DD906DCB20D4C2E800501074 /* BlackjackBuddyUITests */,
 				DD906DA720D4C2E600501074 /* Products */,
+				DD4AF52A20D59FF8001235BA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		DD906DA720D4C2E600501074 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DD906DA620D4C2E600501074 /* Blackjack Coach.app */,
-				DD906DBD20D4C2E800501074 /* Blackjack CoachTests.xctest */,
-				DD906DC820D4C2E800501074 /* Blackjack CoachUITests.xctest */,
+				DD906DA620D4C2E600501074 /* BlackjackBuddy.app */,
+				DD906DBD20D4C2E800501074 /* BlackjackBuddyTests.xctest */,
+				DD906DC820D4C2E800501074 /* BlackjackBuddyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DD906DA820D4C2E600501074 /* Blackjack Coach */ = {
+		DD906DA820D4C2E600501074 /* BlackjackBuddy */ = {
 			isa = PBXGroup;
 			children = (
 				DD4AF52320D58212001235BA /* Extensions */,
@@ -728,35 +740,35 @@
 				DD906DB320D4C2E800501074 /* Assets.xcassets */,
 				DD906DB520D4C2E800501074 /* LaunchScreen.storyboard */,
 				DD906DB820D4C2E800501074 /* Info.plist */,
-				DD906DB020D4C2E600501074 /* Blackjack_Coach.xcdatamodeld */,
+				DD906DB020D4C2E600501074 /* BlackjackBuddy.xcdatamodeld */,
 			);
-			path = "Blackjack Coach";
+			path = BlackjackBuddy;
 			sourceTree = "<group>";
 		};
-		DD906DC020D4C2E800501074 /* Blackjack CoachTests */ = {
+		DD906DC020D4C2E800501074 /* BlackjackBuddyTests */ = {
 			isa = PBXGroup;
 			children = (
-				DD906DC120D4C2E800501074 /* Blackjack_CoachTests.swift */,
+				DD906DC120D4C2E800501074 /* BlackjackBuddyTests.swift */,
 				DD906DC320D4C2E800501074 /* Info.plist */,
 			);
-			path = "Blackjack CoachTests";
+			path = BlackjackBuddyTests;
 			sourceTree = "<group>";
 		};
-		DD906DCB20D4C2E800501074 /* Blackjack CoachUITests */ = {
+		DD906DCB20D4C2E800501074 /* BlackjackBuddyUITests */ = {
 			isa = PBXGroup;
 			children = (
-				DD906DCC20D4C2E800501074 /* Blackjack_CoachUITests.swift */,
+				DD906DCC20D4C2E800501074 /* BlackjackBuddyUITests.swift */,
 				DD906DCE20D4C2E800501074 /* Info.plist */,
 			);
-			path = "Blackjack CoachUITests";
+			path = BlackjackBuddyUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DD906DA520D4C2E600501074 /* Blackjack Coach */ = {
+		DD906DA520D4C2E600501074 /* BlackjackBuddy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DD906DD120D4C2E800501074 /* Build configuration list for PBXNativeTarget "Blackjack Coach" */;
+			buildConfigurationList = DD906DD120D4C2E800501074 /* Build configuration list for PBXNativeTarget "BlackjackBuddy" */;
 			buildPhases = (
 				DD906DA220D4C2E600501074 /* Sources */,
 				DD906DA320D4C2E600501074 /* Frameworks */,
@@ -766,14 +778,14 @@
 			);
 			dependencies = (
 			);
-			name = "Blackjack Coach";
-			productName = "Blackjack Coach";
-			productReference = DD906DA620D4C2E600501074 /* Blackjack Coach.app */;
+			name = BlackjackBuddy;
+			productName = "BlackjackBuddy";
+			productReference = DD906DA620D4C2E600501074 /* BlackjackBuddy.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DD906DBC20D4C2E800501074 /* Blackjack CoachTests */ = {
+		DD906DBC20D4C2E800501074 /* BlackjackBuddyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DD906DD420D4C2E800501074 /* Build configuration list for PBXNativeTarget "Blackjack CoachTests" */;
+			buildConfigurationList = DD906DD420D4C2E800501074 /* Build configuration list for PBXNativeTarget "BlackjackBuddyTests" */;
 			buildPhases = (
 				DD906DB920D4C2E800501074 /* Sources */,
 				DD906DBA20D4C2E800501074 /* Frameworks */,
@@ -784,14 +796,14 @@
 			dependencies = (
 				DD906DBF20D4C2E800501074 /* PBXTargetDependency */,
 			);
-			name = "Blackjack CoachTests";
-			productName = "Blackjack CoachTests";
-			productReference = DD906DBD20D4C2E800501074 /* Blackjack CoachTests.xctest */;
+			name = BlackjackBuddyTests;
+			productName = "BlackjackBuddyTests";
+			productReference = DD906DBD20D4C2E800501074 /* BlackjackBuddyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DD906DC720D4C2E800501074 /* Blackjack CoachUITests */ = {
+		DD906DC720D4C2E800501074 /* BlackjackBuddyUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DD906DD720D4C2E800501074 /* Build configuration list for PBXNativeTarget "Blackjack CoachUITests" */;
+			buildConfigurationList = DD906DD720D4C2E800501074 /* Build configuration list for PBXNativeTarget "BlackjackBuddyUITests" */;
 			buildPhases = (
 				DD906DC420D4C2E800501074 /* Sources */,
 				DD906DC520D4C2E800501074 /* Frameworks */,
@@ -802,9 +814,9 @@
 			dependencies = (
 				DD906DCA20D4C2E800501074 /* PBXTargetDependency */,
 			);
-			name = "Blackjack CoachUITests";
-			productName = "Blackjack CoachUITests";
-			productReference = DD906DC820D4C2E800501074 /* Blackjack CoachUITests.xctest */;
+			name = BlackjackBuddyUITests;
+			productName = "BlackjackBuddyUITests";
+			productReference = DD906DC820D4C2E800501074 /* BlackjackBuddyUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -819,6 +831,11 @@
 				TargetAttributes = {
 					DD906DA520D4C2E600501074 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					DD906DBC20D4C2E800501074 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -830,7 +847,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DD906DA120D4C2E600501074 /* Build configuration list for PBXProject "Blackjack Coach" */;
+			buildConfigurationList = DD906DA120D4C2E600501074 /* Build configuration list for PBXProject "BlackjackBuddy" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -843,9 +860,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DD906DA520D4C2E600501074 /* Blackjack Coach */,
-				DD906DBC20D4C2E800501074 /* Blackjack CoachTests */,
-				DD906DC720D4C2E800501074 /* Blackjack CoachUITests */,
+				DD906DA520D4C2E600501074 /* BlackjackBuddy */,
+				DD906DBC20D4C2E800501074 /* BlackjackBuddyTests */,
+				DD906DC720D4C2E800501074 /* BlackjackBuddyUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -1000,7 +1017,7 @@
 				DD4AEF7820D4E8A3001235BA /* CARD_SUIT.swift in Sources */,
 				DD906DAC20D4C2E600501074 /* ViewController.swift in Sources */,
 				DD4AEF7C20D4EAC8001235BA /* Dealer.swift in Sources */,
-				DD906DB220D4C2E600501074 /* Blackjack_Coach.xcdatamodeld in Sources */,
+				DD906DB220D4C2E600501074 /* BlackjackBuddy.xcdatamodeld in Sources */,
 				DD4AF52720D593A1001235BA /* ELEMENT_STATE.swift in Sources */,
 				DD4AF52920D59455001235BA /* ELEMENT_TYPE.swift in Sources */,
 				DD4AEF7E20D4EB83001235BA /* Deck.swift in Sources */,
@@ -1017,7 +1034,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD906DC220D4C2E800501074 /* Blackjack_CoachTests.swift in Sources */,
+				DD906DC220D4C2E800501074 /* BlackjackBuddyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1025,7 +1042,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD906DCD20D4C2E800501074 /* Blackjack_CoachUITests.swift in Sources */,
+				DD906DCD20D4C2E800501074 /* BlackjackBuddyUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1034,12 +1051,12 @@
 /* Begin PBXTargetDependency section */
 		DD906DBF20D4C2E800501074 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DD906DA520D4C2E600501074 /* Blackjack Coach */;
+			target = DD906DA520D4C2E600501074 /* BlackjackBuddy */;
 			targetProxy = DD906DBE20D4C2E800501074 /* PBXContainerItemProxy */;
 		};
 		DD906DCA20D4C2E800501074 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DD906DA520D4C2E600501074 /* Blackjack Coach */;
+			target = DD906DA520D4C2E600501074 /* BlackjackBuddy */;
 			targetProxy = DD906DC920D4C2E800501074 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1184,13 +1201,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PS325E4877;
-				INFOPLIST_FILE = "Blackjack Coach/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/BlackjackBuddy/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.simington.Blackjack-Coach";
+				PRODUCT_BUNDLE_IDENTIFIER = io.simington.blackjackbuddy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1203,13 +1220,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PS325E4877;
-				INFOPLIST_FILE = "Blackjack Coach/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/BlackjackBuddy/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.simington.Blackjack-Coach";
+				PRODUCT_BUNDLE_IDENTIFIER = io.simington.blackjackbuddy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1223,17 +1240,17 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PS325E4877;
-				INFOPLIST_FILE = "Blackjack CoachTests/Info.plist";
+				INFOPLIST_FILE = "BlackjackBuddyTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.simington.Blackjack-CoachTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.simington.BlackjackBuddyTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blackjack Coach.app/Blackjack Coach";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlackjackBuddy.app/BlackjackBuddy";
 			};
 			name = Debug;
 		};
@@ -1244,17 +1261,17 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PS325E4877;
-				INFOPLIST_FILE = "Blackjack CoachTests/Info.plist";
+				INFOPLIST_FILE = "BlackjackBuddyTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.simington.Blackjack-CoachTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.simington.BlackjackBuddyTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blackjack Coach.app/Blackjack Coach";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlackjackBuddy.app/BlackjackBuddy";
 			};
 			name = Release;
 		};
@@ -1264,17 +1281,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PS325E4877;
-				INFOPLIST_FILE = "Blackjack CoachUITests/Info.plist";
+				INFOPLIST_FILE = "BlackjackBuddyUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.simington.Blackjack-CoachUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.simington.BlackjackBuddyUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Blackjack Coach";
+				TEST_TARGET_NAME = "BlackjackBuddy";
 			};
 			name = Debug;
 		};
@@ -1284,24 +1301,24 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PS325E4877;
-				INFOPLIST_FILE = "Blackjack CoachUITests/Info.plist";
+				INFOPLIST_FILE = "BlackjackBuddyUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.simington.Blackjack-CoachUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.simington.BlackjackBuddyUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Blackjack Coach";
+				TEST_TARGET_NAME = "BlackjackBuddy";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DD906DA120D4C2E600501074 /* Build configuration list for PBXProject "Blackjack Coach" */ = {
+		DD906DA120D4C2E600501074 /* Build configuration list for PBXProject "BlackjackBuddy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD906DCF20D4C2E800501074 /* Debug */,
@@ -1310,7 +1327,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DD906DD120D4C2E800501074 /* Build configuration list for PBXNativeTarget "Blackjack Coach" */ = {
+		DD906DD120D4C2E800501074 /* Build configuration list for PBXNativeTarget "BlackjackBuddy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD906DD220D4C2E800501074 /* Debug */,
@@ -1319,7 +1336,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DD906DD420D4C2E800501074 /* Build configuration list for PBXNativeTarget "Blackjack CoachTests" */ = {
+		DD906DD420D4C2E800501074 /* Build configuration list for PBXNativeTarget "BlackjackBuddyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD906DD520D4C2E800501074 /* Debug */,
@@ -1328,7 +1345,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DD906DD720D4C2E800501074 /* Build configuration list for PBXNativeTarget "Blackjack CoachUITests" */ = {
+		DD906DD720D4C2E800501074 /* Build configuration list for PBXNativeTarget "BlackjackBuddyUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD906DD820D4C2E800501074 /* Debug */,
@@ -1340,13 +1357,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		DD906DB020D4C2E600501074 /* Blackjack_Coach.xcdatamodeld */ = {
+		DD906DB020D4C2E600501074 /* BlackjackBuddy.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				DD906DB120D4C2E600501074 /* Blackjack_Coach.xcdatamodel */,
+				DD906DB120D4C2E600501074 /* BlackjackBuddy.xcdatamodel */,
 			);
-			currentVersion = DD906DB120D4C2E600501074 /* Blackjack_Coach.xcdatamodel */;
-			path = Blackjack_Coach.xcdatamodeld;
+			currentVersion = DD906DB120D4C2E600501074 /* BlackjackBuddy.xcdatamodel */;
+			path = BlackjackBuddy.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

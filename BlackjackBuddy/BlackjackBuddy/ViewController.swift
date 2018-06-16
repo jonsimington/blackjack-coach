@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Blackjack Coach
+//  BlackjackBuddy
 //
 //  Created by Jon Simington on 6/15/18.
 //  Copyright © 2018 Jon Simington. All rights reserved.
