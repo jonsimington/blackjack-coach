@@ -6,7 +6,7 @@
 //  Copyright © 2018 Jon Simington. All rights reserved.
 //
 
-@testable import Blackjack_Coach
+@testable import BlackjackBuddy
 import XCTest
 
 class Blackjack_CoachTests: XCTestCase {
