@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD4AEF7520D4E6B2001235BA /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AEF7420D4E6B2001235BA /* Card.swift */; };
+		DD4AEF7820D4E8A3001235BA /* CARD_SUIT.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AEF7720D4E8A3001235BA /* CARD_SUIT.swift */; };
+		DD4AEF7A20D4E914001235BA /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AEF7920D4E914001235BA /* Player.swift */; };
+		DD4AEF7C20D4EAC8001235BA /* Dealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AEF7B20D4EAC8001235BA /* Dealer.swift */; };
+		DD4AEF7E20D4EB83001235BA /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AEF7D20D4EB83001235BA /* Deck.swift */; };
 		DD906DAA20D4C2E600501074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD906DA920D4C2E600501074 /* AppDelegate.swift */; };
 		DD906DAC20D4C2E600501074 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD906DAB20D4C2E600501074 /* ViewController.swift */; };
 		DD906DAF20D4C2E600501074 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD906DAD20D4C2E600501074 /* Main.storyboard */; };
@@ -35,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD4AEF7420D4E6B2001235BA /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		DD4AEF7720D4E8A3001235BA /* CARD_SUIT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CARD_SUIT.swift; sourceTree = "<group>"; };
+		DD4AEF7920D4E914001235BA /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		DD4AEF7B20D4EAC8001235BA /* Dealer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dealer.swift; sourceTree = "<group>"; };
+		DD4AEF7D20D4EB83001235BA /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		DD906DA620D4C2E600501074 /* Blackjack Coach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blackjack Coach.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD906DA920D4C2E600501074 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD906DAB20D4C2E600501074 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +86,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD4AEF7320D4E69D001235BA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DD4AEF7420D4E6B2001235BA /* Card.swift */,
+				DD4AEF7920D4E914001235BA /* Player.swift */,
+				DD4AEF7B20D4EAC8001235BA /* Dealer.swift */,
+				DD4AEF7D20D4EB83001235BA /* Deck.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DD4AEF7620D4E894001235BA /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				DD4AEF7720D4E8A3001235BA /* CARD_SUIT.swift */,
+			);
+			path = Enumerations;
+			sourceTree = "<group>";
+		};
 		DD906D9D20D4C2E600501074 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +128,8 @@
 		DD906DA820D4C2E600501074 /* Blackjack Coach */ = {
 			isa = PBXGroup;
 			children = (
+				DD4AEF7620D4E894001235BA /* Enumerations */,
+				DD4AEF7320D4E69D001235BA /* Models */,
 				DD906DA920D4C2E600501074 /* AppDelegate.swift */,
 				DD906DAB20D4C2E600501074 /* ViewController.swift */,
 				DD906DAD20D4C2E600501074 /* Main.storyboard */,
@@ -259,9 +290,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD4AEF7820D4E8A3001235BA /* CARD_SUIT.swift in Sources */,
 				DD906DAC20D4C2E600501074 /* ViewController.swift in Sources */,
+				DD4AEF7C20D4EAC8001235BA /* Dealer.swift in Sources */,
 				DD906DB220D4C2E600501074 /* Blackjack_Coach.xcdatamodeld in Sources */,
+				DD4AEF7E20D4EB83001235BA /* Deck.swift in Sources */,
 				DD906DAA20D4C2E600501074 /* AppDelegate.swift in Sources */,
+				DD4AEF7A20D4E914001235BA /* Player.swift in Sources */,
+				DD4AEF7520D4E6B2001235BA /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
