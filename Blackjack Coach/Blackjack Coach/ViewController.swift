@@ -21,7 +21,6 @@ class ViewController: UIViewController {
     @IBOutlet var playerCard2: UIImageView!
     @IBOutlet var playerNameLabel: UILabel!
 
-
     // STATS VIEWS
     @IBOutlet var statsContainer: UIView!
     @IBOutlet var deckCountLabel: UILabel!
@@ -68,7 +67,6 @@ class ViewController: UIViewController {
         checkIfGameIsOver()
     }
 
-
     var _player: Player?
     var _dealer: Dealer?
     var _deck: Deck?
@@ -79,7 +77,7 @@ class ViewController: UIViewController {
         deckCountLabel.text = "\(_deck?._cards.count ?? 52) cards"
     }
 
-    func updateCardImage(card: Card, image: UIImageView, imageViewName: String) {
+    func updateCardImage(card: Card, image: UIImageView, imageViewName _: String) {
         let cardImageName = getCardImageName(card: card)
         image.image = UIImage(named: cardImageName)
     }
@@ -96,8 +94,6 @@ class ViewController: UIViewController {
         // hide gameResultContainer
         gameResultContainer.isHidden = true
         gameResultContainer.isUserInteractionEnabled = false
-
-
 
         // init players
         _player = Player(name: "JON", chips: 0, cards: [])
