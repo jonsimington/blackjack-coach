@@ -149,14 +149,14 @@
 			containerPortal = DD906D9E20D4C2E600501074 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = DD906DA520D4C2E600501074;
-			remoteInfo = "BlackjackBuddy";
+			remoteInfo = BlackjackBuddy;
 		};
 		DD906DC920D4C2E800501074 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DD906D9E20D4C2E600501074 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = DD906DA520D4C2E600501074;
-			remoteInfo = "BlackjackBuddy";
+			remoteInfo = BlackjackBuddy;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -779,7 +779,7 @@
 			dependencies = (
 			);
 			name = BlackjackBuddy;
-			productName = "BlackjackBuddy";
+			productName = BlackjackBuddy;
 			productReference = DD906DA620D4C2E600501074 /* BlackjackBuddy.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -797,7 +797,7 @@
 				DD906DBF20D4C2E800501074 /* PBXTargetDependency */,
 			);
 			name = BlackjackBuddyTests;
-			productName = "BlackjackBuddyTests";
+			productName = BlackjackBuddyTests;
 			productReference = DD906DBD20D4C2E800501074 /* BlackjackBuddyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -815,7 +815,7 @@
 				DD906DCA20D4C2E800501074 /* PBXTargetDependency */,
 			);
 			name = BlackjackBuddyUITests;
-			productName = "BlackjackBuddyUITests";
+			productName = BlackjackBuddyUITests;
 			productReference = DD906DC820D4C2E800501074 /* BlackjackBuddyUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
@@ -1240,13 +1240,13 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PS325E4877;
-				INFOPLIST_FILE = "BlackjackBuddyTests/Info.plist";
+				INFOPLIST_FILE = BlackjackBuddyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.simington.BlackjackBuddyTests";
+				PRODUCT_BUNDLE_IDENTIFIER = io.simington.BlackjackBuddyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1261,13 +1261,13 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PS325E4877;
-				INFOPLIST_FILE = "BlackjackBuddyTests/Info.plist";
+				INFOPLIST_FILE = BlackjackBuddyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.simington.BlackjackBuddyTests";
+				PRODUCT_BUNDLE_IDENTIFIER = io.simington.BlackjackBuddyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1281,17 +1281,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PS325E4877;
-				INFOPLIST_FILE = "BlackjackBuddyUITests/Info.plist";
+				INFOPLIST_FILE = BlackjackBuddyUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.simington.BlackjackBuddyUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = io.simington.BlackjackBuddyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "BlackjackBuddy";
+				TEST_TARGET_NAME = BlackjackBuddy;
 			};
 			name = Debug;
 		};
@@ -1301,17 +1301,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PS325E4877;
-				INFOPLIST_FILE = "BlackjackBuddyUITests/Info.plist";
+				INFOPLIST_FILE = BlackjackBuddyUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.simington.BlackjackBuddyUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = io.simington.BlackjackBuddyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "BlackjackBuddy";
+				TEST_TARGET_NAME = BlackjackBuddy;
 			};
 			name = Release;
 		};
