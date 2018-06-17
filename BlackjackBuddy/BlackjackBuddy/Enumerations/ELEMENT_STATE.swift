@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum ELEMENT_STATE: String{
+enum ELEMENT_STATE: String {
     case SUCCESS = "Success"
     case WARNING = "Warning"
     case DANGER = "Danger"

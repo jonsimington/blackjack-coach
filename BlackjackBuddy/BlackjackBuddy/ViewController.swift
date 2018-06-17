@@ -76,7 +76,6 @@ class ViewController: UIViewController {
         checkIfGameIsOver()
     }
 
-
     // Updates label text for player scores, remaining cards in deck
     func updateStats() {
         playerScoreLabel.text = "\(_player?.score() ?? 0)"
@@ -156,29 +155,31 @@ class ViewController: UIViewController {
             // set game over status text
             gameResultLabel.text = "Dang, broheim, you busted."
             gameResultLabel.textColor = UIColor.red
+            gameResultLabel.backgroundColor = UIColor.darkGray.withAlphaComponent(0.75)
+            gameResultLabel.sizeToFit()
+            gameResultLabel.center.x = gameResultContainer.center.x
 
             // show the game result overlay
-            gameResultContainer.backgroundColor = UIColor.darkText.withAlphaComponent(0.85)
+            gameResultContainer.backgroundColor = UIColor.red.withAlphaComponent(0.15)
             gameResultContainer.isUserInteractionEnabled = true
             gameResultContainer.isHidden = false
 
-        }
-        // check if user got blackjack
-        else if _player?.score() == 21 {
+        } else if _player?.score() == 21 {
             // hide restart game button from other view
             restartGameButton.isHidden = true
 
             // set game win status text
             gameResultLabel.text = "Blackjack!  You Win!"
             gameResultLabel.textColor = UIColor.green
+            gameResultLabel.backgroundColor = UIColor.darkGray.withAlphaComponent(0.75)
+            gameResultLabel.sizeToFit()
+            gameResultLabel.center.x = gameResultContainer.center.x
 
             // show the game result overlay
-            gameResultContainer.backgroundColor = UIColor.darkText.withAlphaComponent(0.85)
+            gameResultContainer.backgroundColor = UIColor.green.withAlphaComponent(0.15)
             gameResultContainer.isUserInteractionEnabled = true
             gameResultContainer.isHidden = false
-        }
-        // otherwise, user can continue playing
-        else {
+        } else {
             // enable hit and stand buttons
             playerHitButton.isEnabled = true
             playerStandButton.isEnabled = true

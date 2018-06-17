@@ -292,7 +292,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7r-4W-deZ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="w7r-4W-deZ" customClass="PaddingLabel" customModule="BlackjackBuddy" customModuleProvider="target">
                                         <rect key="frame" x="18" y="142" width="339" height="329"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <attributedString key="attributedText">
@@ -307,9 +307,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gNA-ww-QlH">
-                                        <rect key="frame" x="89" y="528" width="196" height="48"/>
+                                        <rect key="frame" x="54" y="629" width="267" height="86"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="buttonSuccess">
+                                        <state key="normal" backgroundImage="buttonHollowSuccess">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="DEAL AGAIN">
                                                     <attributes>
@@ -367,6 +367,7 @@
         <image name="Loading" width="24" height="24"/>
         <image name="buttonHollowDanger" width="136" height="48"/>
         <image name="buttonHollowPrimary" width="136" height="48"/>
+        <image name="buttonHollowSuccess" width="136" height="48"/>
         <image name="buttonPrimary" width="136" height="48"/>
         <image name="buttonSuccess" width="136" height="48"/>
         <image name="buttonWarning" width="136" height="48"/>
