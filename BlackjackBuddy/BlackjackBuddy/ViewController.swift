@@ -9,6 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
+    // LOCAL VARS
+    var _player: Player?
+    var _dealer: Dealer?
+    var _deck: Deck?
+
     // DEALER VIEWS
     @IBOutlet var dealerHandContainer: UIView!
     @IBOutlet var dealerCard1: UIImageView!
@@ -29,6 +34,7 @@ class ViewController: UIViewController {
 
     // RESTART GAME VIEWS
     @IBOutlet var restartGameButton: UIButton!
+
     @IBAction func restartGameButtonOnClick(_: Any) {
         initGame()
     }
@@ -37,6 +43,7 @@ class ViewController: UIViewController {
     @IBOutlet var gameResultContainer: UIView!
     @IBOutlet var gameResultLabel: UILabel!
     @IBOutlet var gameResultRestartButton: UIButton!
+
     @IBAction func gameResultRestartButtonOnClick(_: Any) {
         initGame()
     }
@@ -50,6 +57,7 @@ class ViewController: UIViewController {
     @IBOutlet var playerInsuranceButton: UIButton!
     @IBOutlet var playerSurrenderButton: UIButton!
     @IBOutlet var playerHitButton: UIButton!
+
     @IBAction func playerHitButtonOnClick(_: Any) {
         // disable hit and stand buttons
         playerHitButton.isEnabled = false
@@ -60,6 +68,7 @@ class ViewController: UIViewController {
             _deck?.reloadDeck()
         }
 
+        // deal card to player and check for a terminal state
         let dealtCard = (_deck?.dealCard(player: _player!))!
         updateCardImage(card: dealtCard, image: playerCard2, imageViewName: "playerCard2")
         updateStats()
@@ -67,21 +76,21 @@ class ViewController: UIViewController {
         checkIfGameIsOver()
     }
 
-    var _player: Player?
-    var _dealer: Dealer?
-    var _deck: Deck?
 
+    // Updates label text for player scores, remaining cards in deck
     func updateStats() {
         playerScoreLabel.text = "\(_player?.score() ?? 0)"
         dealerScoreLabel.text = "\(_dealer?.score() ?? 0)"
         deckCountLabel.text = "\(_deck?._cards.count ?? 52) cards"
     }
 
+    // sets the image for a UIImageView
     func updateCardImage(card: Card, image: UIImageView, imageViewName _: String) {
         let cardImageName = getCardImageName(card: card)
         image.image = UIImage(named: cardImageName)
     }
 
+    // sets the UIImageViews associated with the player's hand and the dealer's hand
     func clearCardImages() {
         // clear card images
         playerCard1.image = nil
