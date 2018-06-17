@@ -847,7 +847,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DD906DA120D4C2E600501074 /* Build configuration list for PBXProject "BlackjackBuddy" */;
+			buildConfigurationList = DD906DA120D4C2E600501074 /* Build configuration list for PBXProject "BlackJackBuddy" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -1250,7 +1250,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlackjackBuddy.app/BlackjackBuddy";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlackJackBuddy.temp_caseinsensitive_rename.app/BlackJackBuddy.temp_caseinsensitive_rename";
 			};
 			name = Debug;
 		};
@@ -1271,7 +1271,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlackjackBuddy.app/BlackjackBuddy";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlackJackBuddy.temp_caseinsensitive_rename.app/BlackJackBuddy.temp_caseinsensitive_rename";
 			};
 			name = Release;
 		};
@@ -1318,7 +1318,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DD906DA120D4C2E600501074 /* Build configuration list for PBXProject "BlackjackBuddy" */ = {
+		DD906DA120D4C2E600501074 /* Build configuration list for PBXProject "BlackJackBuddy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD906DCF20D4C2E800501074 /* Debug */,

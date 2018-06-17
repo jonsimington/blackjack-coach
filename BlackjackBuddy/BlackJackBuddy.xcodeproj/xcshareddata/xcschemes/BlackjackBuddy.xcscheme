@@ -17,7 +17,7 @@
                BlueprintIdentifier = "DD906DA520D4C2E600501074"
                BuildableName = "BlackjackBuddy.app"
                BlueprintName = "BlackjackBuddy"
-               ReferencedContainer = "container:BlackjackBuddy.xcodeproj">
+               ReferencedContainer = "container:BlackJackBuddy.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "DD906DBC20D4C2E800501074"
                BuildableName = "BlackjackBuddyTests.xctest"
                BlueprintName = "BlackjackBuddyTests"
-               ReferencedContainer = "container:BlackjackBuddy.xcodeproj">
+               ReferencedContainer = "container:BlackJackBuddy.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -45,7 +45,7 @@
                BlueprintIdentifier = "DD906DC720D4C2E800501074"
                BuildableName = "BlackjackBuddyUITests.xctest"
                BlueprintName = "BlackjackBuddyUITests"
-               ReferencedContainer = "container:BlackjackBuddy.xcodeproj">
+               ReferencedContainer = "container:BlackJackBuddy.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,7 +55,7 @@
             BlueprintIdentifier = "DD906DA520D4C2E600501074"
             BuildableName = "BlackjackBuddy.app"
             BlueprintName = "BlackjackBuddy"
-            ReferencedContainer = "container:BlackjackBuddy.xcodeproj">
+            ReferencedContainer = "container:BlackJackBuddy.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -78,7 +78,7 @@
             BlueprintIdentifier = "DD906DA520D4C2E600501074"
             BuildableName = "BlackjackBuddy.app"
             BlueprintName = "BlackjackBuddy"
-            ReferencedContainer = "container:BlackjackBuddy.xcodeproj">
+            ReferencedContainer = "container:BlackJackBuddy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -97,7 +97,7 @@
             BlueprintIdentifier = "DD906DA520D4C2E600501074"
             BuildableName = "BlackjackBuddy.app"
             BlueprintName = "BlackjackBuddy"
-            ReferencedContainer = "container:BlackjackBuddy.xcodeproj">
+            ReferencedContainer = "container:BlackJackBuddy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
