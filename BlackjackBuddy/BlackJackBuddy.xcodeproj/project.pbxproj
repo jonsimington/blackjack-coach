@@ -132,6 +132,7 @@
 		DD4AF52520D58238001235BA /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AF52420D58238001235BA /* PaddingLabel.swift */; };
 		DD4AF52720D593A1001235BA /* ELEMENT_STATE.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AF52620D593A1001235BA /* ELEMENT_STATE.swift */; };
 		DD4AF52920D59455001235BA /* ELEMENT_TYPE.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AF52820D59455001235BA /* ELEMENT_TYPE.swift */; };
+		DD4AF53420D769EC001235BA /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AF53320D769EC001235BA /* config.swift */; };
 		DD906DAA20D4C2E600501074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD906DA920D4C2E600501074 /* AppDelegate.swift */; };
 		DD906DAC20D4C2E600501074 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD906DAB20D4C2E600501074 /* ViewController.swift */; };
 		DD906DAF20D4C2E600501074 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD906DAD20D4C2E600501074 /* Main.storyboard */; };
@@ -285,12 +286,13 @@
 		DD4AF52420D58238001235BA /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		DD4AF52620D593A1001235BA /* ELEMENT_STATE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELEMENT_STATE.swift; sourceTree = "<group>"; };
 		DD4AF52820D59455001235BA /* ELEMENT_TYPE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELEMENT_TYPE.swift; sourceTree = "<group>"; };
+		DD4AF53320D769EC001235BA /* config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
 		DD906DA620D4C2E600501074 /* BlackjackBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackjackBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD906DA920D4C2E600501074 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD906DAB20D4C2E600501074 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DD906DAE20D4C2E600501074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD906DB120D4C2E600501074 /* BlackJackBuddy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BlackJackBuddy.xcdatamodel; sourceTree = "<group>"; };
-		DD906DB320D4C2E800501074 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DD906DB320D4C2E800501074 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = BlackJackBuddy/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		DD906DB620D4C2E800501074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD906DB820D4C2E800501074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD906DBD20D4C2E800501074 /* BlackjackBuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlackjackBuddyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -702,6 +704,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DD4AF53220D769CD001235BA /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				DD4AF53320D769EC001235BA /* config.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		DD906D9D20D4C2E600501074 = {
 			isa = PBXGroup;
 			children = (
@@ -726,6 +736,7 @@
 		DD906DA820D4C2E600501074 /* BlackJackBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				DD4AF53220D769CD001235BA /* Configuration */,
 				DD4AF52320D58212001235BA /* Extensions */,
 				DD4AF2F820D5520A001235BA /* Fonts */,
 				DD4AEF7620D4E894001235BA /* Enumerations */,
@@ -1021,6 +1032,7 @@
 				DD4AEF8020D4F3FD001235BA /* CARD_RANK.swift in Sources */,
 				DD4AEF7A20D4E914001235BA /* Player.swift in Sources */,
 				DD4AEF8220D51D03001235BA /* USER_ACTION.swift in Sources */,
+				DD4AF53420D769EC001235BA /* config.swift in Sources */,
 				DD4AEF7520D4E6B2001235BA /* Card.swift in Sources */,
 				DD4AF52520D58238001235BA /* PaddingLabel.swift in Sources */,
 			);
