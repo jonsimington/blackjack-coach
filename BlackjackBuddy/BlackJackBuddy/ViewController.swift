@@ -90,7 +90,7 @@ class ViewController: UIViewController {
 
     // sets the image for a UIImageView
     func updateCardImage(card: Card, image: UIImageView, imageViewName _: String) {
-        let cardImageName = getCardImageName(card: card)
+        let cardImageName = card._isFaceUp ? getCardImageName(card: card) : "faceDownCard"
         image.image = UIImage(named: cardImageName)
     }
 
@@ -108,10 +108,10 @@ class ViewController: UIViewController {
         playerHandCardsContainer.frame.size.width = playerHandContainer.frame.width - CGFloat(Configuration.CARD_CONTAINER_PADDING_X*2)
 
         // orient first card
-        playerCard1.frame.origin.x = playerHandCardsContainer.frame.origin.x + CGFloat(Configuration.CARD_PADDING_X)
+        orientCardInHand(card: playerCard1, elementToPadFrom: playerHandCardsContainer, firstCard: true)
 
         // orient second card to the right of first card
-        playerCard2.frame.origin.x = playerCard1.frame.origin.x + playerCard1.frame.width + CGFloat(Configuration.CARD_PADDING_X)
+        orientCardInHand(card: playerCard2, elementToPadFrom: playerCard1)
 
         // init player name label
         playerNameLabel.text = player._name.uppercased()
@@ -125,13 +125,26 @@ class ViewController: UIViewController {
         playerScoreLabel.frame.origin.x = playerNameLabel.frame.origin.x + playerNameLabel.frame.width + CGFloat(Configuration.PLAYER_SCORE_PADDING_X)
     }
 
+    func orientCardInHand(card: UIImageView, elementToPadFrom: UIImageView, firstCard: Bool = false) {
+
+        if firstCard {
+            card.frame.origin.x = elementToPadFrom.frame.origin.x + CGFloat(Configuration.CARD_PADDING_X)
+        }
+        else {
+            card.frame.origin.x = elementToPadFrom.frame.origin.x + elementToPadFrom.frame.width + CGFloat(Configuration.CARD_PADDING_X)
+        }
+    }
+
     func initDealerHandUI(dealer: Dealer) {
         // orient cards container
         dealerHandCardsContainer.frame.origin.x = CGFloat(Configuration.CARD_CONTAINER_PADDING_X)
         dealerHandCardsContainer.frame.size.width = dealerHandContainer.frame.width - CGFloat(Configuration.CARD_CONTAINER_PADDING_X*2)
 
         // orient first card
-        dealerCard1.frame.origin.x = dealerHandCardsContainer.frame.origin.x + CGFloat(Configuration.CARD_PADDING_X)
+        orientCardInHand(card: dealerCard1, elementToPadFrom: playerHandCardsContainer, firstCard: true)
+
+        // orient second card
+        orientCardInHand(card: dealerCard2, elementToPadFrom: dealerCard1)
 
         // init dealer name label
         dealerNameLabel.text = dealer._name.uppercased()
@@ -157,7 +170,7 @@ class ViewController: UIViewController {
 
         // init players
         _player = Player(name: "DR VAN NOSTRAND", chips: 0, cards: [])
-        _dealer = Dealer(name: "DEALER", chips: 0, cards: [])
+        _dealer = Dealer(name: "DEALER", chips: 0, cards: [], settings: PlayerSettings())
 
         initPlayerHandUI(player: _player!)
         initDealerHandUI(dealer: _dealer!)
@@ -181,6 +194,11 @@ class ViewController: UIViewController {
         // deal to player again
         dealtCard = (_deck?.dealCard(player: _player!))!
         updateCardImage(card: dealtCard, image: playerCard2, imageViewName: "playerCard2")
+        updateStats()
+
+        // deal face down card to dealer
+        dealtCard = (_deck?.dealCard(player: _dealer!, isFaceUp: false))!
+        updateCardImage(card: dealtCard, image: dealerCard2, imageViewName: "dealerCard2")
         updateStats()
 
         // check to see if user got blackjack or busted

@@ -9,17 +9,19 @@
 import Foundation
 
 class Player {
-    var _cards: [Card] = []
-    var _chips: Int = 0
-    var _name: String = ""
+    var _cards: [Card]
+    var _chips: Int
+    var _name: String
+    var _settings: PlayerSettings
 
-    init(name: String, chips: Int, cards: [Card]) {
+    init(name: String = "", chips: Int = 0, cards: [Card] = [], settings: PlayerSettings = PlayerSettings()) {
         _name = name
         _chips = chips
         _cards = cards
+        _settings = settings
     }
 
-    public var description: String { return "\(_name): \(_cards), \(_chips)" }
+    public var toString: String { return "\(_name): \(_cards), \(_chips)" }
 
     // calculates the player's score
     func score() -> Int {
@@ -40,7 +42,9 @@ class Player {
 
             // get score including elevated Aces
             for c in elevatedHand {
-                total += c._value
+                if c._isFaceUp {
+                    total += c._value
+                }
             }
 
             // if we are still below 21, count the ace as 11
@@ -52,7 +56,9 @@ class Player {
 
         total = 0
         for c in _cards {
-            total += c._value
+            if c._isFaceUp {
+                total += c._value
+            }
         }
 
         return total

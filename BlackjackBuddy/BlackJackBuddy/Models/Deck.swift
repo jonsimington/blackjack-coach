@@ -51,7 +51,7 @@ class Deck {
     }
 
     // deals a card for a Player
-    func dealCard(player: Player) -> Card {
+    func dealCard(player: Player, isFaceUp: Bool = true) -> Card {
         // if deck is empty, we need to build a new deck
         if _cards.count == 0 {
             reloadDeck()
@@ -59,6 +59,9 @@ class Deck {
 
         // get card at top of deck
         let card = _cards[0]
+
+        // make card face down if appropriate
+        card._isFaceUp = isFaceUp
 
         // add card to Player's cards
         player._cards.append(card)

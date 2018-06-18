@@ -133,6 +133,7 @@
 		DD4AF52720D593A1001235BA /* ELEMENT_STATE.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AF52620D593A1001235BA /* ELEMENT_STATE.swift */; };
 		DD4AF52920D59455001235BA /* ELEMENT_TYPE.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AF52820D59455001235BA /* ELEMENT_TYPE.swift */; };
 		DD4AF53420D769EC001235BA /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AF53320D769EC001235BA /* config.swift */; };
+		DD4AF53620D76CCE001235BA /* PlayerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AF53520D76CCE001235BA /* PlayerSettings.swift */; };
 		DD906DAA20D4C2E600501074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD906DA920D4C2E600501074 /* AppDelegate.swift */; };
 		DD906DAC20D4C2E600501074 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD906DAB20D4C2E600501074 /* ViewController.swift */; };
 		DD906DAF20D4C2E600501074 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD906DAD20D4C2E600501074 /* Main.storyboard */; };
@@ -287,6 +288,7 @@
 		DD4AF52620D593A1001235BA /* ELEMENT_STATE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELEMENT_STATE.swift; sourceTree = "<group>"; };
 		DD4AF52820D59455001235BA /* ELEMENT_TYPE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELEMENT_TYPE.swift; sourceTree = "<group>"; };
 		DD4AF53320D769EC001235BA /* config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
+		DD4AF53520D76CCE001235BA /* PlayerSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSettings.swift; sourceTree = "<group>"; };
 		DD906DA620D4C2E600501074 /* BlackjackBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackjackBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD906DA920D4C2E600501074 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD906DAB20D4C2E600501074 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -335,6 +337,7 @@
 				DD4AEF7920D4E914001235BA /* Player.swift */,
 				DD4AEF7B20D4EAC8001235BA /* Dealer.swift */,
 				DD4AEF7D20D4EB83001235BA /* Deck.swift */,
+				DD4AF53520D76CCE001235BA /* PlayerSettings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1035,6 +1038,7 @@
 				DD4AF53420D769EC001235BA /* config.swift in Sources */,
 				DD4AEF7520D4E6B2001235BA /* Card.swift in Sources */,
 				DD4AF52520D58238001235BA /* PaddingLabel.swift in Sources */,
+				DD4AF53620D76CCE001235BA /* PlayerSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,14 +9,16 @@
 import Foundation
 
 class Card {
-    var _rank: CARD_RANK = CARD_RANK.ACE
-    var _value: Int = 0
-    var _suit: CARD_SUIT = CARD_SUIT.CLUBS
+    var _rank: CARD_RANK
+    var _value: Int
+    var _suit: CARD_SUIT
+    var _isFaceUp: Bool
 
-    init(rank: CARD_RANK, value: Int, suit: CARD_SUIT) {
+    init(rank: CARD_RANK = CARD_RANK.ACE, value: Int = 0, suit: CARD_SUIT = CARD_SUIT.CLUBS, isFaceUp: Bool = true) {
         _rank = rank
         _value = value
         _suit = suit
+        _isFaceUp = isFaceUp
     }
 
     public var description: String { return "\(_rank) of \(_suit)" }
