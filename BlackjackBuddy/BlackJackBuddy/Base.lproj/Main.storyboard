@@ -67,126 +67,8 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.16078431372549021" green="0.17254901960784313" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x3X-JW-iiu">
-                                <rect key="frame" x="0.0" y="168" width="375" height="351"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tO9-fV-PxE">
-                                        <rect key="frame" x="207" y="185" width="158" height="48"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <state key="normal" backgroundImage="buttonWarning">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="STAND">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="22" name="RobotoMonoForPowerline-Light"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H4c-RS-q6e">
-                                        <rect key="frame" x="10" y="118" width="158" height="48"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <state key="normal" backgroundImage="buttonHollowPrimary">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="SPLIT">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="18" name="RobotoMonoForPowerline-Light"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4W1-nA-yMp">
-                                        <rect key="frame" x="207" y="118" width="158" height="48"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <state key="normal" backgroundImage="buttonHollowPrimary">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="DOUBLE DOWN">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="18" name="RobotoMonoForPowerline-Light"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="frU-vr-Eao">
-                                        <rect key="frame" x="207" y="51" width="158" height="48"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <state key="normal" backgroundImage="buttonHollowDanger">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="SURRENDER">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="18" name="RobotoMonoForPowerline-Light"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NAl-u2-xx7">
-                                        <rect key="frame" x="10" y="51" width="158" height="48"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <state key="normal" backgroundImage="buttonHollowPrimary">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="INSURANCE">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="18" name="RobotoMonoForPowerline-Light"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ww-bz-0bz">
-                                        <rect key="frame" x="10" y="185" width="158" height="48"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <state key="normal" backgroundImage="buttonSuccess">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="HIT">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="22" name="RobotoMonoForPowerline-Light"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                        <connections>
-                                            <action selector="playerHitButtonOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pLf-kF-Fxx"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ql-H9-OTz">
-                                        <rect key="frame" x="89" y="253" width="196" height="48"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" backgroundImage="buttonPrimary">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="DEAL AGAIN">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="22" name="RobotoMonoForPowerline-Light"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                        <connections>
-                                            <action selector="restartGameButtonOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x67-th-AG7"/>
-                                        </connections>
-                                    </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" image="Loading" translatesAutoresizingMaskIntoConstraints="NO" id="JFZ-WO-vIW">
-                                        <rect key="frame" x="102" y="263" width="27" height="27"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.16078431372549021" green="0.17254901960784313" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JC3-sm-T1M">
-                                <rect key="frame" x="0.0" y="527" width="375" height="123"/>
+                                <rect key="frame" x="0.0" y="655" width="375" height="123"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="outline_Grey_(Use_for_Disabled_outline)" translatesAutoresizingMaskIntoConstraints="NO" id="KjZ-in-WAn">
@@ -233,41 +115,6 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.16078431372549021" green="0.17254901960784313" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="okt-6B-ZEP">
-                                <rect key="frame" x="0.0" y="653" width="375" height="125"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dcz-pq-T3E">
-                                        <rect key="frame" x="8" y="11" width="199" height="26"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Cards Remaining">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="22" name="RobotoMonoForPowerline-Light"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuF-hd-EYG">
-                                        <rect key="frame" x="251" y="11" width="116" height="29"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="52 cards">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="24" name="RobotoMonoForPowerline-Medium"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.16078431372549021" green="0.17254901960784313" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
                             <view hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zHB-p9-auG">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -308,6 +155,166 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PAW-Km-w0Z">
+                                <rect key="frame" x="0.0" y="175" width="375" height="472"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x3X-JW-iiu">
+                                        <rect key="frame" x="0.0" y="61" width="375" height="351"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tO9-fV-PxE">
+                                                <rect key="frame" x="207" y="185" width="158" height="48"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <state key="normal" backgroundImage="buttonWarning">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="STAND">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="22" name="RobotoMonoForPowerline-Light"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H4c-RS-q6e">
+                                                <rect key="frame" x="10" y="118" width="158" height="48"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <state key="normal" backgroundImage="buttonHollowPrimary">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="SPLIT">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="18" name="RobotoMonoForPowerline-Light"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4W1-nA-yMp">
+                                                <rect key="frame" x="207" y="118" width="158" height="48"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <state key="normal" backgroundImage="buttonHollowPrimary">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="DOUBLE DOWN">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="18" name="RobotoMonoForPowerline-Light"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="frU-vr-Eao">
+                                                <rect key="frame" x="207" y="51" width="158" height="48"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <state key="normal" backgroundImage="buttonHollowDanger">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="SURRENDER">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="18" name="RobotoMonoForPowerline-Light"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NAl-u2-xx7">
+                                                <rect key="frame" x="10" y="51" width="158" height="48"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <state key="normal" backgroundImage="buttonHollowPrimary">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="INSURANCE">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="18" name="RobotoMonoForPowerline-Light"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ww-bz-0bz">
+                                                <rect key="frame" x="10" y="185" width="158" height="48"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <state key="normal" backgroundImage="buttonSuccess">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="HIT">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="22" name="RobotoMonoForPowerline-Light"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="playerHitButtonOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pLf-kF-Fxx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ql-H9-OTz">
+                                                <rect key="frame" x="89" y="253" width="196" height="48"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" backgroundImage="buttonPrimary">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="DEAL AGAIN">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="22" name="RobotoMonoForPowerline-Light"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="restartGameButtonOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x67-th-AG7"/>
+                                                </connections>
+                                            </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" image="Loading" translatesAutoresizingMaskIntoConstraints="NO" id="JFZ-WO-vIW">
+                                                <rect key="frame" x="102" y="263" width="27" height="27"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.16078431372549021" green="0.17254901960784313" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="okt-6B-ZEP">
+                                        <rect key="frame" x="0.0" y="31" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dcz-pq-T3E">
+                                                <rect key="frame" x="8" y="11" width="172" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Cards in Deck">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="22" name="RobotoMonoForPowerline-Light"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuF-hd-EYG">
+                                                <rect key="frame" x="251" y="11" width="116" height="29"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="52 cards">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="24" name="RobotoMonoForPowerline-Medium"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.16078431372549021" green="0.17254901960784313" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.16078431372549021" green="0.17254901960784313" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -323,6 +330,7 @@
                         <outlet property="gameResultContainer" destination="zHB-p9-auG" id="QOj-wv-yuI"/>
                         <outlet property="gameResultLabel" destination="w7r-4W-deZ" id="X5b-2d-aba"/>
                         <outlet property="gameResultRestartButton" destination="gNA-ww-QlH" id="sZp-yF-OwE"/>
+                        <outlet property="middleView" destination="PAW-Km-w0Z" id="ZOz-dg-8UL"/>
                         <outlet property="playerCard1" destination="jxw-9w-VLp" id="AWa-Ch-tDY"/>
                         <outlet property="playerCard2" destination="6RC-2c-DbF" id="3i6-ia-v7t"/>
                         <outlet property="playerControlsContainer" destination="x3X-JW-iiu" id="NhE-4U-HyZ"/>
@@ -337,7 +345,9 @@
                         <outlet property="playerStandButton" destination="tO9-fV-PxE" id="IFO-FA-0HW"/>
                         <outlet property="playerSurrenderButton" destination="frU-vr-Eao" id="jDE-Lw-nHq"/>
                         <outlet property="restartGameButton" destination="0ql-H9-OTz" id="opM-gg-ZjD"/>
+                        <outlet property="restartGameLoadingCircle" destination="JFZ-WO-vIW" id="jjz-D5-lu1"/>
                         <outlet property="statsContainer" destination="okt-6B-ZEP" id="Vp0-Dl-RaY"/>
+                        <outlet property="superView" destination="8bC-Xf-vdC" id="cT6-zD-Cpb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

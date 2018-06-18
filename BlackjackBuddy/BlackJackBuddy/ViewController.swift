@@ -15,6 +15,10 @@ class ViewController: UIViewController {
     var _dealer: Dealer?
     var _deck: Deck?
 
+
+    @IBOutlet var superView: UIView!
+    @IBOutlet var middleView: UIView!
+
     // DEALER VIEWS
     @IBOutlet var dealerHandContainer: UIView!
     @IBOutlet var dealerHandCardsContainer: UIImageView!
@@ -37,6 +41,7 @@ class ViewController: UIViewController {
 
     // RESTART GAME VIEWS
     @IBOutlet var restartGameButton: UIButton!
+    @IBOutlet var restartGameLoadingCircle: UIImageView!
 
     @IBAction func restartGameButtonOnClick(_: Any) {
         initGame()
@@ -158,9 +163,18 @@ class ViewController: UIViewController {
         dealerScoreLabel.frame.origin.x = dealerNameLabel.frame.origin.x + dealerNameLabel.frame.width + CGFloat(Configuration.PLAYER_SCORE_PADDING_X)
     }
 
+    func resetPlayerControlButtonStates() {
+        playerInsuranceButton.isEnabled = false
+        playerSplitButton.isEnabled = false
+        playerHitButton.isEnabled = true
+        playerSurrenderButton.isEnabled = false
+        playerDoubleDownButton.isEnabled = false
+        playerStandButton.isEnabled = true
+    }
+
     func initGame() {
-
-
+        resetPlayerControlButtonStates()
+        
         // hide gameResultContainer
         gameResultContainer.isHidden = true
         gameResultContainer.isUserInteractionEnabled = false
@@ -181,6 +195,10 @@ class ViewController: UIViewController {
         }
         _deck?.shuffleDeck()
 
+        initialDeal()
+    }
+
+    func initialDeal() {
         // deal to player
         var dealtCard = ((_deck?.dealCard(player: _player!)))!
         updateCardImage(card: dealtCard, image: playerCard1, imageViewName: "playerCard1")
@@ -200,9 +218,6 @@ class ViewController: UIViewController {
         dealtCard = (_deck?.dealCard(player: _dealer!, isFaceUp: false))!
         updateCardImage(card: dealtCard, image: dealerCard2, imageViewName: "dealerCard2")
         updateStats()
-
-        // check to see if user got blackjack or busted
-        checkIfGameIsOver()
     }
 
     func handlePlayerBlackJack() {
@@ -279,10 +294,75 @@ class ViewController: UIViewController {
         return cardImageName
     }
 
+    func initBaseUI() {
+        // attach superView's frame to the base view
+        superView.frame.origin.x = self.view.frame.origin.x
+        superView.frame.origin.y = self.view.safeAreaInsets.top + self.view.safeAreaInsets.bottom
+
+        // set widths of inner containers to be that of the superView
+        dealerHandContainer.frame.size.width = superView.frame.width
+        middleView.frame.size.width = superView.frame.width
+        playerControlsContainer.frame.size.width = middleView.frame.width
+        playerHandContainer.frame.size.width = superView.frame.width
+        statsContainer.frame.size.width = middleView.frame.width
+        gameResultContainer.frame.size.width = superView.frame.width
+
+        // fix padding of player control buttons to fit new width
+        initplayerControlsContainerUI()
+
+        // attach dealer hand to top of screen
+        dealerHandContainer.frame.origin.y = superView.frame.origin.y
+        
+        // attach player hand to botton of screen
+        playerHandContainer.frame.origin.y = superView.frame.height - playerHandContainer.frame.height
+    }
+
+    func leftPadButton(button: UIButton, elementToPadFrom: UIView) {
+        button.frame.origin.x = elementToPadFrom.frame.origin.x + CGFloat(Configuration.PLAYER_CONTROL_BUTTON_PADDING_X)
+    }
+
+    func rightPadButton(button: UIButton, elementToPadFrom: UIView) {
+        button.frame.origin.x = elementToPadFrom.frame.width -
+            button.frame.width -
+            CGFloat(Configuration.PLAYER_CONTROL_BUTTON_PADDING_X)
+    }
+
+    func topPadButton(button: UIButton, elementToPadFrom: UIButton) {
+        button.frame.origin.y = elementToPadFrom.frame.origin.y + elementToPadFrom.frame.height + CGFloat(Configuration.PLAYER_CONTROL_BUTTON_PADDING_Y)
+    }
+
+    func initplayerControlsContainerUI() {
+        // set left padding for insurance, split and hit buttons
+        leftPadButton(button: playerInsuranceButton, elementToPadFrom: playerControlsContainer)
+        leftPadButton(button: playerSplitButton, elementToPadFrom: playerControlsContainer)
+        leftPadButton(button: playerHitButton, elementToPadFrom: playerControlsContainer)
+
+        // set right padding for surrender, double down, stand buttons
+        rightPadButton(button: playerSurrenderButton, elementToPadFrom: playerControlsContainer)
+        rightPadButton(button: playerDoubleDownButton, elementToPadFrom: playerControlsContainer)
+        rightPadButton(button: playerStandButton, elementToPadFrom: playerControlsContainer)
+
+        // set top padding for split, doubledown, hit, stand, deal again buttons
+        topPadButton(button: playerSplitButton, elementToPadFrom: playerInsuranceButton)
+        topPadButton(button: playerDoubleDownButton, elementToPadFrom: playerSurrenderButton)
+        topPadButton(button: playerHitButton, elementToPadFrom: playerSplitButton)
+        topPadButton(button: playerStandButton, elementToPadFrom: playerDoubleDownButton)
+        topPadButton(button: restartGameButton, elementToPadFrom: playerHitButton)
+        
+        // vertically center deal again button
+        restartGameButton.center.x = playerControlsContainer.center.x
+        restartGameLoadingCircle.frame.origin.x = restartGameButton.frame.origin.x + CGFloat(Configuration.DEAL_AGAIN_LOADING_CIRCLE_PADDING_X)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        initBaseUI()
+
         initGame()
+
+        // check to see if user got blackjack or busted
+        checkIfGameIsOver()
     }
 
     override func didReceiveMemoryWarning() {
