@@ -353,6 +353,6 @@
         <image name="buttonPrimary" width="136" height="48"/>
         <image name="buttonSuccess" width="136" height="48"/>
         <image name="buttonWarning" width="136" height="48"/>
-        <image name="outline_Grey_(Use_for_Disabled_outline)" width="236" height="48"/>
+        <image name="outline_Grey_(Use_for_Disabled_outline)" width="358" height="80"/>
     </resources>
 </document>
