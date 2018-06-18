@@ -113,12 +113,22 @@ class ViewController: UIViewController {
         // init player name label
         playerNameLabel.text = _player?._name.uppercased()
         playerNameLabel.sizeToFit()
-        playerNameLabel.center.x = statsContainer.center.x
+        playerNameLabel.center.x = playerHandContainer.center.x
+
+        // init player score label
+        playerScoreLabel.sizeToFit()
+        playerScoreLabel.center.y = playerNameLabel.center.y
+        playerScoreLabel.frame.origin.x = playerNameLabel.frame.origin.x + playerNameLabel.frame.width + 5
 
         // init dealer name label
         dealerNameLabel.text = _dealer?._name.uppercased()
         dealerNameLabel.sizeToFit()
-        dealerNameLabel.center.x = statsContainer.center.x
+        dealerNameLabel.center.x = dealerHandContainer.center.x
+
+        // init dealer score label
+        dealerScoreLabel.sizeToFit()
+        dealerScoreLabel.center.y = dealerNameLabel.center.y
+        dealerScoreLabel.frame.origin.x = dealerNameLabel.frame.origin.x + dealerNameLabel.frame.width + 5
 
         // init deck
         if _deck == nil {

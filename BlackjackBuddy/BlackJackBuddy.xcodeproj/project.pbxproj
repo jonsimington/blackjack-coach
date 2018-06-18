@@ -132,7 +132,6 @@
 		DD4AF52520D58238001235BA /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AF52420D58238001235BA /* PaddingLabel.swift */; };
 		DD4AF52720D593A1001235BA /* ELEMENT_STATE.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AF52620D593A1001235BA /* ELEMENT_STATE.swift */; };
 		DD4AF52920D59455001235BA /* ELEMENT_TYPE.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AF52820D59455001235BA /* ELEMENT_TYPE.swift */; };
-		DD4AF52E20D5A251001235BA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD4AF52D20D5A251001235BA /* StoreKit.framework */; };
 		DD906DAA20D4C2E600501074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD906DA920D4C2E600501074 /* AppDelegate.swift */; };
 		DD906DAC20D4C2E600501074 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD906DAB20D4C2E600501074 /* ViewController.swift */; };
 		DD906DAF20D4C2E600501074 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD906DAD20D4C2E600501074 /* Main.storyboard */; };
@@ -286,7 +285,6 @@
 		DD4AF52420D58238001235BA /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		DD4AF52620D593A1001235BA /* ELEMENT_STATE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELEMENT_STATE.swift; sourceTree = "<group>"; };
 		DD4AF52820D59455001235BA /* ELEMENT_TYPE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELEMENT_TYPE.swift; sourceTree = "<group>"; };
-		DD4AF52D20D5A251001235BA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		DD906DA620D4C2E600501074 /* BlackjackBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackjackBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD906DA920D4C2E600501074 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD906DAB20D4C2E600501074 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -308,7 +306,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD4AF52E20D5A251001235BA /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -701,7 +698,6 @@
 		DD4AF52A20D59FF8001235BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DD4AF52D20D5A251001235BA /* StoreKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -833,7 +829,7 @@
 						CreatedOnToolsVersion = 9.4.1;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
