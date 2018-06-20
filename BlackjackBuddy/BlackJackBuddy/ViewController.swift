@@ -100,10 +100,12 @@ class ViewController: UIViewController {
 
     // sets the UIImageViews associated with the player's hand and the dealer's hand
     func clearCardImages() {
-        playerCard1.image = nil
-        playerCard2.image = nil
-        dealerCard1.image = nil
-        dealerCard2.image = nil
+        for v in playerHandCardsContainer.subViews(type: UIImageView.self) {
+            v.removeFromSuperview()
+        }
+        for v in dealerHandCardsContainer.subViews(type: UIImageView.self) {
+            v.removeFromSuperview()
+        }
     }
 
     func initPlayerHandUI(player _: Player) {
@@ -128,28 +130,6 @@ class ViewController: UIViewController {
             make.left.equalTo(playerHandContainer.snp.left).offset(Configuration.CARD_CONTAINER_PADDING_X)
             make.right.equalTo(playerHandContainer.snp.right).offset(Configuration.CARD_CONTAINER_PADDING_X * -1)
         }
-
-        playerHandCardsContainer.addSubview(playerCard1)
-        playerHandCardsContainer.addSubview(playerCard2)
-        playerCard1.snp.makeConstraints { (make) -> Void in
-            make.width.equalTo(CGFloat(Configuration.CARD_WIDTH))
-            make.height.equalTo(CGFloat(Configuration.CARD_HEIGHT))
-            make.bottom.equalTo(playerHandCardsContainer.snp.bottom).offset(Configuration.CARD_PADDING_Y * -1)
-                make.top.equalTo(playerHandCardsContainer.snp.top).offset(Configuration.CARD_PADDING_Y)
-            //make.right.equalTo(playerCard2.snp.right).offset(Configuration.CARD_PADDING_X)
-            make.left.equalTo(playerHandCardsContainer.snp.left).offset(Configuration.CARD_PADDING_X)
-        }
-        playerCard2.snp.makeConstraints { (make) -> Void in
-            make.width.equalTo(CGFloat(Configuration.CARD_WIDTH))
-            make.height.equalTo(CGFloat(Configuration.CARD_HEIGHT))
-            make.bottom.equalTo(playerHandCardsContainer.snp.bottom).offset(Configuration.CARD_PADDING_Y * -1)
-            make.top.equalTo(playerHandCardsContainer.snp.top).offset(Configuration.CARD_PADDING_Y)
-            //make.right.equalTo(playerHandCardsContainer.snp.right).offset(Configuration.CARD_PADDING_X)
-            make.left.equalTo(playerCard1.snp.right).offset(Configuration.CARD_PADDING_X)
-        }
-
-        playerCard2.layer.borderColor = UIColor.green.cgColor
-        playerCard2.layer.borderWidth = 3
 
         // init player name label
         playerNameLabel.text = _player?._name.uppercased()
@@ -182,28 +162,6 @@ class ViewController: UIViewController {
             make.right.equalTo(dealerHandContainer.snp.right).offset(Configuration.CARD_CONTAINER_PADDING_X * -1)
             make.top.equalTo(dealerHandContainer.snp.top)
         }
-
-        dealerHandCardsContainer.addSubview(dealerCard1)
-        dealerHandCardsContainer.addSubview(dealerCard2)
-        dealerCard1.snp.makeConstraints { (make) -> Void in
-            make.width.equalTo(CGFloat(Configuration.CARD_WIDTH))
-            make.height.equalTo(CGFloat(Configuration.CARD_HEIGHT))
-            make.bottom.equalTo(dealerHandCardsContainer.snp.bottom).offset(Configuration.CARD_PADDING_Y * -1)
-            make.top.equalTo(dealerHandCardsContainer.snp.top).offset(Configuration.CARD_PADDING_Y)
-            //make.right.equalTo(playerCard2.snp.right).offset(Configuration.CARD_PADDING_X)
-            make.left.equalTo(dealerHandCardsContainer.snp.left).offset(Configuration.CARD_PADDING_X)
-        }
-        dealerCard2.snp.makeConstraints { (make) -> Void in
-            make.width.equalTo(CGFloat(Configuration.CARD_WIDTH))
-            make.height.equalTo(CGFloat(Configuration.CARD_HEIGHT))
-            make.bottom.equalTo(dealerHandCardsContainer.snp.bottom).offset(Configuration.CARD_PADDING_Y * -1)
-            make.top.equalTo(dealerHandCardsContainer.snp.top).offset(Configuration.CARD_PADDING_Y)
-            //make.right.equalTo(playerHandCardsContainer.snp.right).offset(Configuration.CARD_PADDING_X)
-            make.left.equalTo(playerCard1.snp.right).offset(Configuration.CARD_PADDING_X)
-        }
-
-        dealerCard2.layer.borderColor = UIColor.green.cgColor
-        dealerCard2.layer.borderWidth = 3
 
         // init dealer name label
         dealerNameLabel.text = _dealer?._name.uppercased()
@@ -298,36 +256,24 @@ class ViewController: UIViewController {
         restartGameLoadingCircle.center.y = restartGameButton.center.y
     }
 
-    func addCardToHand(cardContainer: UIView, card: Card, player: Player)
-    {
-        var cardOffsetParity = 0
-
-        if player is Dealer {
-            // obj is a string array. Do something with stringArray
-            cardOffsetParity = 1
-        } else {
-            cardOffsetParity = -1
-        }
-
+    func addCardToHand(cardContainer: UIView, card: Card, player _: Player) {
         let newCardImage = UIImageView()
 
-        //CardHelper.updateCardImage(card: card, image: imageView)
         let subviews = cardContainer.allSubViewsOf(type: UIImageView.self)
         let last = subviews.last
 
-        last?.layer.borderColor = UIColor.red.cgColor
-        last?.layer.borderWidth = 4
-
         cardContainer.addSubview(newCardImage)
+
+        let leftAnchor = subviews.count > 1 ? last?.snp.right : last?.snp.left
+
         newCardImage.snp.makeConstraints { (make) -> Void in
             make.width.equalTo(CGFloat(Configuration.CARD_WIDTH))
             make.height.equalTo(CGFloat(Configuration.CARD_HEIGHT))
-            make.bottom.equalTo(cardContainer.snp.bottom).offset(Configuration.CARD_PADDING_Y * cardOffsetParity)
+            make.bottom.equalTo(cardContainer.snp.bottom).offset(Configuration.CARD_PADDING_Y * -1)
             make.top.equalTo(cardContainer.snp.top).offset(Configuration.CARD_PADDING_Y)
-            make.left.equalTo((last?.snp.right)!).offset(Configuration.CARD_PADDING_X)
+            make.left.equalTo(leftAnchor!).offset(Configuration.CARD_PADDING_X)
         }
         CardHelper.updateCardImage(card: card, image: newCardImage)
-
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -349,24 +295,24 @@ class ViewController: UIViewController {
     }
 
     func initialDeal() {
-        // deal to player
-        var dealtCard = ((_deck?.dealCard(player: _player!)))!
-        CardHelper.updateCardImage(card: dealtCard, image: playerCard1)
+        // deal card to player and check for a terminal state
+        var dealtCard = (_deck?.dealCard(player: _player!))!
+        addCardToHand(cardContainer: playerHandCardsContainer!, card: dealtCard, player: _player!)
         updateStats()
 
         // deal to Dealer
         dealtCard = (_deck?.dealCard(player: _dealer!))!
-        CardHelper.updateCardImage(card: dealtCard, image: dealerCard1)
+        addCardToHand(cardContainer: dealerHandCardsContainer!, card: dealtCard, player: _dealer!)
         updateStats()
 
         // deal to player again
         dealtCard = (_deck?.dealCard(player: _player!))!
-        CardHelper.updateCardImage(card: dealtCard, image: playerCard2)
+        addCardToHand(cardContainer: playerHandCardsContainer!, card: dealtCard, player: _player!)
         updateStats()
 
         // deal face down card to dealer
         dealtCard = (_deck?.dealCard(player: _dealer!, isFaceUp: false))!
-        CardHelper.updateCardImage(card: dealtCard, image: dealerCard2)
+        addCardToHand(cardContainer: dealerHandCardsContainer!, card: dealtCard, player: _dealer!)
         updateStats()
     }
 
@@ -413,6 +359,7 @@ class ViewController: UIViewController {
     }
 
     func initGame(firstGame _: Bool = false) {
+        clearCardImages()
         resetPlayerControlButtonStates()
 
         // hide gameResultContainer

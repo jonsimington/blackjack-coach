@@ -56,14 +56,6 @@
                                         </attributedString>
                                         <color key="highlightedColor" red="0.16078431372549021" green="0.17254901960784313" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yNR-ng-XfX">
-                                        <rect key="frame" x="15" y="5" width="50" height="70"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RoG-bE-nqd">
-                                        <rect key="frame" x="83" y="5" width="50" height="70"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.16078431372549021" green="0.17254901960784313" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <viewLayoutGuide key="safeArea" id="uV1-Nc-RMs"/>
@@ -105,14 +97,6 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jxw-9w-VLp">
-                                        <rect key="frame" x="22" y="48" width="50" height="70"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6RC-2c-DbF">
-                                        <rect key="frame" x="81" y="48" width="50" height="70"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                     <view hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zHB-p9-auG">
                                         <rect key="frame" x="80" y="-658" width="375" height="812"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -322,8 +306,6 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <connections>
-                        <outlet property="dealerCard1" destination="yNR-ng-XfX" id="zeJ-Tq-7GF"/>
-                        <outlet property="dealerCard2" destination="RoG-bE-nqd" id="QZO-zB-cYd"/>
                         <outlet property="dealerHandCardsContainer" destination="JEi-vP-O26" id="xeL-cB-ncd"/>
                         <outlet property="dealerHandContainer" destination="4SI-a3-qn6" id="pNl-ZW-Xc3"/>
                         <outlet property="dealerNameLabel" destination="Hyb-tW-WRj" id="umi-rm-6nn"/>
@@ -333,8 +315,6 @@
                         <outlet property="gameResultLabel" destination="w7r-4W-deZ" id="X5b-2d-aba"/>
                         <outlet property="gameResultRestartButton" destination="gNA-ww-QlH" id="sZp-yF-OwE"/>
                         <outlet property="middleView" destination="PAW-Km-w0Z" id="ZOz-dg-8UL"/>
-                        <outlet property="playerCard1" destination="jxw-9w-VLp" id="AWa-Ch-tDY"/>
-                        <outlet property="playerCard2" destination="6RC-2c-DbF" id="3i6-ia-v7t"/>
                         <outlet property="playerControlsContainer" destination="x3X-JW-iiu" id="NhE-4U-HyZ"/>
                         <outlet property="playerDoubleDownButton" destination="4W1-nA-yMp" id="Cak-LF-lKF"/>
                         <outlet property="playerHandCardsContainer" destination="KjZ-in-WAn" id="hfc-7h-66c"/>
