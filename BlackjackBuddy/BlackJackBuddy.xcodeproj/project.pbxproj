@@ -100,7 +100,6 @@
 		DD4AF4EA20D5520D001235BA /* Roboto Mono for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3DF20D5520B001235BA /* Roboto Mono for Powerline.ttf */; };
 		DD4AF4EB20D5520D001235BA /* Roboto Mono Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3E020D5520B001235BA /* Roboto Mono Italic for Powerline.ttf */; };
 		DD4AF4EE20D5520D001235BA /* Roboto Mono Medium Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3E320D5520B001235BA /* Roboto Mono Medium Italic for Powerline.ttf */; };
-		DD4AF4EF20D5520D001235BA /* Roboto Mono Light for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3E420D5520B001235BA /* Roboto Mono Light for Powerline.ttf */; };
 		DD4AF4F020D5520D001235BA /* Roboto Mono Light Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3E520D5520B001235BA /* Roboto Mono Light Italic for Powerline.ttf */; };
 		DD4AF4F220D5520D001235BA /* Inconsolata-g for Powerline.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3E820D5520B001235BA /* Inconsolata-g for Powerline.otf */; };
 		DD4AF4FA20D5520D001235BA /* Inconsolata-dz for Powerline.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3F120D5520B001235BA /* Inconsolata-dz for Powerline.otf */; };
@@ -1004,7 +1003,6 @@
 				DD4AF4C620D5520D001235BA /* DejaVu Sans Mono Bold for Powerline.ttf in Resources */,
 				DD4AF4EA20D5520D001235BA /* Roboto Mono for Powerline.ttf in Resources */,
 				DD4AF4A320D5520D001235BA /* Anonymice Powerline.ttf in Resources */,
-				DD4AF4EF20D5520D001235BA /* Roboto Mono Light for Powerline.ttf in Resources */,
 				DD4AF4AC20D5520D001235BA /* Hack-BoldItalic.ttf in Resources */,
 				DD4AF4BA20D5520D001235BA /* Cousine Italic for Powerline.ttf in Resources */,
 				DD4AF44B20D5520C001235BA /* Source Code Pro Powerline MediumItalic.otf in Resources */,
