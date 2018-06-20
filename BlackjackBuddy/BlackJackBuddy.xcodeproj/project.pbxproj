@@ -14,120 +14,6 @@
 		DD4AEF7E20D4EB83001235BA /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AEF7D20D4EB83001235BA /* Deck.swift */; };
 		DD4AEF8020D4F3FD001235BA /* CARD_RANK.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AEF7F20D4F3FD001235BA /* CARD_RANK.swift */; };
 		DD4AEF8220D51D03001235BA /* USER_ACTION.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AEF8120D51D03001235BA /* USER_ACTION.swift */; };
-		DD4AF42020D5520B001235BA /* Ubuntu Mono derivative Powerline Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF2FB20D5520A001235BA /* Ubuntu Mono derivative Powerline Italic.ttf */; };
-		DD4AF42120D5520B001235BA /* Ubuntu Mono derivative Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF2FC20D5520A001235BA /* Ubuntu Mono derivative Powerline.ttf */; };
-		DD4AF42420D5520B001235BA /* Ubuntu Mono derivative Powerline Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF2FF20D5520A001235BA /* Ubuntu Mono derivative Powerline Bold.ttf */; };
-		DD4AF42520D5520B001235BA /* Ubuntu Mono derivative Powerline Bold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF30020D5520A001235BA /* Ubuntu Mono derivative Powerline Bold Italic.ttf */; };
-		DD4AF42720D5520B001235BA /* Tinos Bold Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF30320D5520A001235BA /* Tinos Bold Italic for Powerline.ttf */; };
-		DD4AF42820D5520B001235BA /* Tinos for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF30420D5520A001235BA /* Tinos for Powerline.ttf */; };
-		DD4AF42B20D5520C001235BA /* Tinos Bold for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF30720D5520A001235BA /* Tinos Bold for Powerline.ttf */; };
-		DD4AF42C20D5520C001235BA /* Tinos Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF30820D5520A001235BA /* Tinos Italic for Powerline.ttf */; };
-		DD4AF42D20D5520C001235BA /* Monofur Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF30A20D5520A001235BA /* Monofur Italic for Powerline.ttf */; };
-		DD4AF42E20D5520C001235BA /* Monofur Bold for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF30B20D5520A001235BA /* Monofur Bold for Powerline.ttf */; };
-		DD4AF42F20D5520C001235BA /* Monofur for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF30C20D5520A001235BA /* Monofur for Powerline.ttf */; };
-		DD4AF43120D5520C001235BA /* Noto Mono for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF30F20D5520A001235BA /* Noto Mono for Powerline.ttf */; };
-		DD4AF43620D5520C001235BA /* Droid Sans Mono for Powerline.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF31520D5520A001235BA /* Droid Sans Mono for Powerline.otf */; };
-		DD4AF43A20D5520C001235BA /* Symbol Neu for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF31B20D5520A001235BA /* Symbol Neu for Powerline.ttf */; };
-		DD4AF43D20D5520C001235BA /* Source Code Pro Powerline LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF31F20D5520A001235BA /* Source Code Pro Powerline LightItalic.otf */; };
-		DD4AF43F20D5520C001235BA /* Source Code Pro Bold for Powerline.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF32120D5520A001235BA /* Source Code Pro Bold for Powerline.otf */; };
-		DD4AF44020D5520C001235BA /* Source Code Pro Powerline Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF32220D5520A001235BA /* Source Code Pro Powerline Italic.otf */; };
-		DD4AF44220D5520C001235BA /* Source Code Pro Powerline ExtraLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF32420D5520A001235BA /* Source Code Pro Powerline ExtraLightItalic.otf */; };
-		DD4AF44320D5520C001235BA /* Source Code Pro Powerline BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF32520D5520A001235BA /* Source Code Pro Powerline BlackItalic.otf */; };
-		DD4AF44420D5520C001235BA /* Source Code Pro Semibold for Powerline.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF32620D5520A001235BA /* Source Code Pro Semibold for Powerline.otf */; };
-		DD4AF44520D5520C001235BA /* Source Code Pro Medium for Powerline.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF32720D5520A001235BA /* Source Code Pro Medium for Powerline.otf */; };
-		DD4AF44620D5520C001235BA /* Source Code Pro Powerline SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF32820D5520A001235BA /* Source Code Pro Powerline SemiboldItalic.otf */; };
-		DD4AF44720D5520C001235BA /* Source Code Pro Powerline BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF32920D5520A001235BA /* Source Code Pro Powerline BoldItalic.otf */; };
-		DD4AF44820D5520C001235BA /* Source Code Pro ExtraLight for Powerline.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF32A20D5520A001235BA /* Source Code Pro ExtraLight for Powerline.otf */; };
-		DD4AF44B20D5520C001235BA /* Source Code Pro Powerline MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF32D20D5520A001235BA /* Source Code Pro Powerline MediumItalic.otf */; };
-		DD4AF44C20D5520C001235BA /* Source Code Pro for Powerline.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF32E20D5520A001235BA /* Source Code Pro for Powerline.otf */; };
-		DD4AF44D20D5520C001235BA /* Source Code Pro Black for Powerline.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF32F20D5520A001235BA /* Source Code Pro Black for Powerline.otf */; };
-		DD4AF44E20D5520C001235BA /* Source Code Pro Light for Powerline.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF33020D5520A001235BA /* Source Code Pro Light for Powerline.otf */; };
-		DD4AF44F20D5520C001235BA /* NovaMono for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF33220D5520A001235BA /* NovaMono for Powerline.ttf */; };
-		DD4AF45420D5520C001235BA /* Droid Sans Mono Dotted for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF33820D5520A001235BA /* Droid Sans Mono Dotted for Powerline.ttf */; };
-		DD4AF45720D5520C001235BA /* Arimo for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF33C20D5520A001235BA /* Arimo for Powerline.ttf */; };
-		DD4AF45820D5520C001235BA /* Arimo Bold Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF33D20D5520A001235BA /* Arimo Bold Italic for Powerline.ttf */; };
-		DD4AF45920D5520C001235BA /* Arimo Bold for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF33E20D5520A001235BA /* Arimo Bold for Powerline.ttf */; };
-		DD4AF45C20D5520C001235BA /* Arimo Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF34120D5520A001235BA /* Arimo Italic for Powerline.ttf */; };
-		DD4AF49A20D5520D001235BA /* Literation Mono Powerline Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF38420D5520A001235BA /* Literation Mono Powerline Italic.ttf */; };
-		DD4AF49B20D5520D001235BA /* Literation Mono Powerline Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF38520D5520A001235BA /* Literation Mono Powerline Bold.ttf */; };
-		DD4AF49C20D5520D001235BA /* Literation Mono Powerline Bold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF38620D5520A001235BA /* Literation Mono Powerline Bold Italic.ttf */; };
-		DD4AF49E20D5520D001235BA /* Literation Mono Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF38820D5520A001235BA /* Literation Mono Powerline.ttf */; };
-		DD4AF4A320D5520D001235BA /* Anonymice Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF38E20D5520A001235BA /* Anonymice Powerline.ttf */; };
-		DD4AF4A420D5520D001235BA /* Anonymice Powerline Bold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF38F20D5520A001235BA /* Anonymice Powerline Bold Italic.ttf */; };
-		DD4AF4A520D5520D001235BA /* Anonymice Powerline Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF39020D5520A001235BA /* Anonymice Powerline Italic.ttf */; };
-		DD4AF4A620D5520D001235BA /* Anonymice Powerline Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF39120D5520A001235BA /* Anonymice Powerline Bold.ttf */; };
-		DD4AF4A920D5520D001235BA /* Hack-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF39520D5520A001235BA /* Hack-Regular.ttf */; };
-		DD4AF4AA20D5520D001235BA /* Hack-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF39620D5520A001235BA /* Hack-Italic.ttf */; };
-		DD4AF4AB20D5520D001235BA /* hack-specimen-for-Powerline.png in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF39720D5520A001235BA /* hack-specimen-for-Powerline.png */; };
-		DD4AF4AC20D5520D001235BA /* Hack-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF39820D5520A001235BA /* Hack-BoldItalic.ttf */; };
-		DD4AF4AF20D5520D001235BA /* Hack-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF39B20D5520A001235BA /* Hack-Bold.ttf */; };
-		DD4AF4B120D5520D001235BA /* ProFont Bold For Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF39E20D5520A001235BA /* ProFont Bold For Powerline.ttf */; };
-		DD4AF4B320D5520D001235BA /* ProFont For Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3A020D5520A001235BA /* ProFont For Powerline.ttf */; };
-		DD4AF4B420D5520D001235BA /* Go Mono for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3A220D5520A001235BA /* Go Mono for Powerline.ttf */; };
-		DD4AF4B620D5520D001235BA /* Go Mono Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3A420D5520A001235BA /* Go Mono Italic for Powerline.ttf */; };
-		DD4AF4B720D5520D001235BA /* Go Mono Bold Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3A520D5520A001235BA /* Go Mono Bold Italic for Powerline.ttf */; };
-		DD4AF4B920D5520D001235BA /* Go Mono Bold for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3A720D5520A001235BA /* Go Mono Bold for Powerline.ttf */; };
-		DD4AF4BA20D5520D001235BA /* Cousine Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3A920D5520A001235BA /* Cousine Italic for Powerline.ttf */; };
-		DD4AF4BB20D5520D001235BA /* Cousine Bold Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3AA20D5520A001235BA /* Cousine Bold Italic for Powerline.ttf */; };
-		DD4AF4BC20D5520D001235BA /* Cousine Bold for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3AB20D5520A001235BA /* Cousine Bold for Powerline.ttf */; };
-		DD4AF4BE20D5520D001235BA /* Cousine for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3AD20D5520A001235BA /* Cousine for Powerline.ttf */; };
-		DD4AF4C120D5520D001235BA /* DejaVu Sans Mono Oblique for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3B120D5520B001235BA /* DejaVu Sans Mono Oblique for Powerline.ttf */; };
-		DD4AF4C220D5520D001235BA /* DejaVu Sans Mono Bold Oblique for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3B220D5520B001235BA /* DejaVu Sans Mono Bold Oblique for Powerline.ttf */; };
-		DD4AF4C420D5520D001235BA /* DejaVu Sans Mono for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3B420D5520B001235BA /* DejaVu Sans Mono for Powerline.ttf */; };
-		DD4AF4C620D5520D001235BA /* DejaVu Sans Mono Bold for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3B620D5520B001235BA /* DejaVu Sans Mono Bold for Powerline.ttf */; };
-		DD4AF4CA20D5520D001235BA /* Inconsolata for Powerline.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3BC20D5520B001235BA /* Inconsolata for Powerline.otf */; };
-		DD4AF4CC20D5520D001235BA /* Inconsolata Bold for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3BE20D5520B001235BA /* Inconsolata Bold for Powerline.ttf */; };
-		DD4AF4CF20D5520D001235BA /* 3270SemiNarrow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3C220D5520B001235BA /* 3270SemiNarrow.ttf */; };
-		DD4AF4D020D5520D001235BA /* 3270Narrow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3C320D5520B001235BA /* 3270Narrow.ttf */; };
-		DD4AF4D220D5520D001235BA /* 3270Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3C520D5520B001235BA /* 3270Medium.ttf */; };
-		DD4AF4D320D5520D001235BA /* Meslo LG S Bold for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3C720D5520B001235BA /* Meslo LG S Bold for Powerline.ttf */; };
-		DD4AF4D420D5520D001235BA /* Meslo LG S Bold Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3C820D5520B001235BA /* Meslo LG S Bold Italic for Powerline.ttf */; };
-		DD4AF4D620D5520D001235BA /* Meslo LG L Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3CA20D5520B001235BA /* Meslo LG L Italic for Powerline.ttf */; };
-		DD4AF4D720D5520D001235BA /* Meslo LG L Regular for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3CB20D5520B001235BA /* Meslo LG L Regular for Powerline.ttf */; };
-		DD4AF4D920D5520D001235BA /* Meslo LG M Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3CD20D5520B001235BA /* Meslo LG M Italic for Powerline.ttf */; };
-		DD4AF4DA20D5520D001235BA /* Meslo LG M Bold Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3CE20D5520B001235BA /* Meslo LG M Bold Italic for Powerline.ttf */; };
-		DD4AF4DB20D5520D001235BA /* Meslo LG S Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3CF20D5520B001235BA /* Meslo LG S Italic for Powerline.ttf */; };
-		DD4AF4DC20D5520D001235BA /* Meslo LG S Regular for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3D020D5520B001235BA /* Meslo LG S Regular for Powerline.ttf */; };
-		DD4AF4DD20D5520D001235BA /* Meslo LG M Bold for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3D120D5520B001235BA /* Meslo LG M Bold for Powerline.ttf */; };
-		DD4AF4DE20D5520D001235BA /* Meslo LG L Bold for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3D220D5520B001235BA /* Meslo LG L Bold for Powerline.ttf */; };
-		DD4AF4DF20D5520D001235BA /* Meslo LG L Bold Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3D320D5520B001235BA /* Meslo LG L Bold Italic for Powerline.ttf */; };
-		DD4AF4E220D5520D001235BA /* Meslo LG M Regular for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3D620D5520B001235BA /* Meslo LG M Regular for Powerline.ttf */; };
-		DD4AF4E320D5520D001235BA /* Roboto Mono Bold for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3D820D5520B001235BA /* Roboto Mono Bold for Powerline.ttf */; };
-		DD4AF4E420D5520D001235BA /* Roboto Mono Medium for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3D920D5520B001235BA /* Roboto Mono Medium for Powerline.ttf */; };
-		DD4AF4E620D5520D001235BA /* Roboto Mono Thin Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3DB20D5520B001235BA /* Roboto Mono Thin Italic for Powerline.ttf */; };
-		DD4AF4E820D5520D001235BA /* Roboto Mono Thin for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3DD20D5520B001235BA /* Roboto Mono Thin for Powerline.ttf */; };
-		DD4AF4E920D5520D001235BA /* Roboto Mono Bold Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3DE20D5520B001235BA /* Roboto Mono Bold Italic for Powerline.ttf */; };
-		DD4AF4EA20D5520D001235BA /* Roboto Mono for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3DF20D5520B001235BA /* Roboto Mono for Powerline.ttf */; };
-		DD4AF4EB20D5520D001235BA /* Roboto Mono Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3E020D5520B001235BA /* Roboto Mono Italic for Powerline.ttf */; };
-		DD4AF4EE20D5520D001235BA /* Roboto Mono Medium Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3E320D5520B001235BA /* Roboto Mono Medium Italic for Powerline.ttf */; };
-		DD4AF4F020D5520D001235BA /* Roboto Mono Light Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3E520D5520B001235BA /* Roboto Mono Light Italic for Powerline.ttf */; };
-		DD4AF4F220D5520D001235BA /* Inconsolata-g for Powerline.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3E820D5520B001235BA /* Inconsolata-g for Powerline.otf */; };
-		DD4AF4FA20D5520D001235BA /* Inconsolata-dz for Powerline.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3F120D5520B001235BA /* Inconsolata-dz for Powerline.otf */; };
-		DD4AF4FC20D5520D001235BA /* Space Mono Bold for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3F520D5520B001235BA /* Space Mono Bold for Powerline.ttf */; };
-		DD4AF4FD20D5520D001235BA /* SpaceMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3F620D5520B001235BA /* SpaceMono-Regular.ttf */; };
-		DD4AF4FE20D5520D001235BA /* Space Mono Bold Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3F720D5520B001235BA /* Space Mono Bold Italic for Powerline.ttf */; };
-		DD4AF4FF20D5520D001235BA /* SpaceMono-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3F820D5520B001235BA /* SpaceMono-BoldItalic.ttf */; };
-		DD4AF50020D5520D001235BA /* SpaceMono-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3F920D5520B001235BA /* SpaceMono-Italic.ttf */; };
-		DD4AF50120D5520D001235BA /* SpaceMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3FA20D5520B001235BA /* SpaceMono-Bold.ttf */; };
-		DD4AF50220D5520D001235BA /* Space Mono Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3FB20D5520B001235BA /* Space Mono Italic for Powerline.ttf */; };
-		DD4AF50520D5520D001235BA /* Space Mono for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF3FE20D5520B001235BA /* Space Mono for Powerline.ttf */; };
-		DD4AF50620D5520E001235BA /* Meslo LG M DZ Regular for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF40020D5520B001235BA /* Meslo LG M DZ Regular for Powerline.ttf */; };
-		DD4AF50720D5520E001235BA /* Meslo LG M DZ Bold Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF40120D5520B001235BA /* Meslo LG M DZ Bold Italic for Powerline.ttf */; };
-		DD4AF50920D5520E001235BA /* Meslo LG S DZ Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF40320D5520B001235BA /* Meslo LG S DZ Italic for Powerline.ttf */; };
-		DD4AF50A20D5520E001235BA /* Meslo LG L DZ Bold for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF40420D5520B001235BA /* Meslo LG L DZ Bold for Powerline.ttf */; };
-		DD4AF50C20D5520E001235BA /* Meslo LG S DZ Bold Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF40620D5520B001235BA /* Meslo LG S DZ Bold Italic for Powerline.ttf */; };
-		DD4AF50D20D5520E001235BA /* Meslo LG L DZ Bold Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF40720D5520B001235BA /* Meslo LG L DZ Bold Italic for Powerline.ttf */; };
-		DD4AF50E20D5520E001235BA /* Meslo LG L DZ Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF40820D5520B001235BA /* Meslo LG L DZ Italic for Powerline.ttf */; };
-		DD4AF50F20D5520E001235BA /* Meslo LG S DZ Bold for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF40920D5520B001235BA /* Meslo LG S DZ Bold for Powerline.ttf */; };
-		DD4AF51120D5520E001235BA /* Meslo LG M DZ Bold for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF40B20D5520B001235BA /* Meslo LG M DZ Bold for Powerline.ttf */; };
-		DD4AF51320D5520E001235BA /* Meslo LG S DZ Regular for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF40D20D5520B001235BA /* Meslo LG S DZ Regular for Powerline.ttf */; };
-		DD4AF51420D5520E001235BA /* Meslo LG L DZ Regular for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF40E20D5520B001235BA /* Meslo LG L DZ Regular for Powerline.ttf */; };
-		DD4AF51520D5520E001235BA /* Meslo LG M DZ Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF40F20D5520B001235BA /* Meslo LG M DZ Italic for Powerline.ttf */; };
-		DD4AF51720D5520E001235BA /* FuraMono-Regular Powerline.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF41220D5520B001235BA /* FuraMono-Regular Powerline.otf */; };
-		DD4AF51920D5520E001235BA /* FuraMono-Bold Powerline.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF41420D5520B001235BA /* FuraMono-Bold Powerline.otf */; };
-		DD4AF51A20D5520E001235BA /* FuraMono-Medium Powerline.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF41520D5520B001235BA /* FuraMono-Medium Powerline.otf */; };
-		DD4AF51D20D5520E001235BA /* Roboto Mono Light for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF41820D5520B001235BA /* Roboto Mono Light for Powerline.ttf */; };
-		DD4AF52020D5520E001235BA /* Droid Sans Mono Slashed for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4AF41C20D5520B001235BA /* Droid Sans Mono Slashed for Powerline.ttf */; };
 		DD4AF52520D58238001235BA /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AF52420D58238001235BA /* PaddingLabel.swift */; };
 		DD4AF52720D593A1001235BA /* ELEMENT_STATE.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AF52620D593A1001235BA /* ELEMENT_STATE.swift */; };
 		DD4AF52920D59455001235BA /* ELEMENT_TYPE.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AF52820D59455001235BA /* ELEMENT_TYPE.swift */; };
@@ -135,6 +21,20 @@
 		DD4AF53620D76CCE001235BA /* PlayerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AF53520D76CCE001235BA /* PlayerSettings.swift */; };
 		DD4AF53920D9D588001235BA /* PaddingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AF53820D9D588001235BA /* PaddingHelper.swift */; };
 		DD4AF53B20D9D6B7001235BA /* CardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AF53A20D9D6B7001235BA /* CardHelper.swift */; };
+		DD4C71D820DA36C1004E5720 /* UIViewSubViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4C71D720DA36C1004E5720 /* UIViewSubViews.swift */; };
+		DD4C720920DA4342004E5720 /* Roboto Mono Bold Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4C71FC20DA433B004E5720 /* Roboto Mono Bold Italic for Powerline.ttf */; };
+		DD4C720A20DA4342004E5720 /* FuraMono-Bold Powerline.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD4C71FD20DA433C004E5720 /* FuraMono-Bold Powerline.otf */; };
+		DD4C720B20DA4342004E5720 /* Roboto Mono for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4C71FE20DA433C004E5720 /* Roboto Mono for Powerline.ttf */; };
+		DD4C720C20DA4342004E5720 /* Roboto Mono Medium Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4C71FF20DA433D004E5720 /* Roboto Mono Medium Italic for Powerline.ttf */; };
+		DD4C720D20DA4342004E5720 /* Roboto Mono Thin Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4C720020DA433D004E5720 /* Roboto Mono Thin Italic for Powerline.ttf */; };
+		DD4C720E20DA4342004E5720 /* FuraMono-Regular Powerline.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD4C720120DA433E004E5720 /* FuraMono-Regular Powerline.otf */; };
+		DD4C720F20DA4342004E5720 /* FuraMono-Medium Powerline.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD4C720220DA433F004E5720 /* FuraMono-Medium Powerline.otf */; };
+		DD4C721020DA4342004E5720 /* Roboto Mono Medium for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4C720320DA433F004E5720 /* Roboto Mono Medium for Powerline.ttf */; };
+		DD4C721120DA4342004E5720 /* Roboto Mono Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4C720420DA4340004E5720 /* Roboto Mono Italic for Powerline.ttf */; };
+		DD4C721220DA4342004E5720 /* Roboto Mono Light Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4C720520DA4340004E5720 /* Roboto Mono Light Italic for Powerline.ttf */; };
+		DD4C721320DA4342004E5720 /* Roboto Mono Light for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4C720620DA4341004E5720 /* Roboto Mono Light for Powerline.ttf */; };
+		DD4C721420DA4342004E5720 /* Roboto Mono Thin for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4C720720DA4341004E5720 /* Roboto Mono Thin for Powerline.ttf */; };
+		DD4C721520DA4342004E5720 /* Roboto Mono Bold for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4C720820DA4342004E5720 /* Roboto Mono Bold for Powerline.ttf */; };
 		DD5C034520D9F9F3004B2843 /* UIViewSafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C034420D9F9F3004B2843 /* UIViewSafeArea.swift */; };
 		DD906DAA20D4C2E600501074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD906DA920D4C2E600501074 /* AppDelegate.swift */; };
 		DD906DAC20D4C2E600501074 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD906DAB20D4C2E600501074 /* ViewController.swift */; };
@@ -175,121 +75,6 @@
 		DD4AEF7D20D4EB83001235BA /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		DD4AEF7F20D4F3FD001235BA /* CARD_RANK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CARD_RANK.swift; sourceTree = "<group>"; };
 		DD4AEF8120D51D03001235BA /* USER_ACTION.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USER_ACTION.swift; sourceTree = "<group>"; };
-		DD4AF2FB20D5520A001235BA /* Ubuntu Mono derivative Powerline Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu Mono derivative Powerline Italic.ttf"; sourceTree = "<group>"; };
-		DD4AF2FC20D5520A001235BA /* Ubuntu Mono derivative Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu Mono derivative Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF2FF20D5520A001235BA /* Ubuntu Mono derivative Powerline Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu Mono derivative Powerline Bold.ttf"; sourceTree = "<group>"; };
-		DD4AF30020D5520A001235BA /* Ubuntu Mono derivative Powerline Bold Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu Mono derivative Powerline Bold Italic.ttf"; sourceTree = "<group>"; };
-		DD4AF30320D5520A001235BA /* Tinos Bold Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tinos Bold Italic for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF30420D5520A001235BA /* Tinos for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tinos for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF30720D5520A001235BA /* Tinos Bold for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tinos Bold for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF30820D5520A001235BA /* Tinos Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tinos Italic for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF30A20D5520A001235BA /* Monofur Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Monofur Italic for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF30B20D5520A001235BA /* Monofur Bold for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Monofur Bold for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF30C20D5520A001235BA /* Monofur for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Monofur for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF30F20D5520A001235BA /* Noto Mono for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Noto Mono for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF31520D5520A001235BA /* Droid Sans Mono for Powerline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Droid Sans Mono for Powerline.otf"; sourceTree = "<group>"; };
-		DD4AF31B20D5520A001235BA /* Symbol Neu for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Symbol Neu for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF31F20D5520A001235BA /* Source Code Pro Powerline LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Source Code Pro Powerline LightItalic.otf"; sourceTree = "<group>"; };
-		DD4AF32120D5520A001235BA /* Source Code Pro Bold for Powerline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Source Code Pro Bold for Powerline.otf"; sourceTree = "<group>"; };
-		DD4AF32220D5520A001235BA /* Source Code Pro Powerline Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Source Code Pro Powerline Italic.otf"; sourceTree = "<group>"; };
-		DD4AF32420D5520A001235BA /* Source Code Pro Powerline ExtraLightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Source Code Pro Powerline ExtraLightItalic.otf"; sourceTree = "<group>"; };
-		DD4AF32520D5520A001235BA /* Source Code Pro Powerline BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Source Code Pro Powerline BlackItalic.otf"; sourceTree = "<group>"; };
-		DD4AF32620D5520A001235BA /* Source Code Pro Semibold for Powerline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Source Code Pro Semibold for Powerline.otf"; sourceTree = "<group>"; };
-		DD4AF32720D5520A001235BA /* Source Code Pro Medium for Powerline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Source Code Pro Medium for Powerline.otf"; sourceTree = "<group>"; };
-		DD4AF32820D5520A001235BA /* Source Code Pro Powerline SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Source Code Pro Powerline SemiboldItalic.otf"; sourceTree = "<group>"; };
-		DD4AF32920D5520A001235BA /* Source Code Pro Powerline BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Source Code Pro Powerline BoldItalic.otf"; sourceTree = "<group>"; };
-		DD4AF32A20D5520A001235BA /* Source Code Pro ExtraLight for Powerline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Source Code Pro ExtraLight for Powerline.otf"; sourceTree = "<group>"; };
-		DD4AF32D20D5520A001235BA /* Source Code Pro Powerline MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Source Code Pro Powerline MediumItalic.otf"; sourceTree = "<group>"; };
-		DD4AF32E20D5520A001235BA /* Source Code Pro for Powerline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Source Code Pro for Powerline.otf"; sourceTree = "<group>"; };
-		DD4AF32F20D5520A001235BA /* Source Code Pro Black for Powerline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Source Code Pro Black for Powerline.otf"; sourceTree = "<group>"; };
-		DD4AF33020D5520A001235BA /* Source Code Pro Light for Powerline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Source Code Pro Light for Powerline.otf"; sourceTree = "<group>"; };
-		DD4AF33220D5520A001235BA /* NovaMono for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NovaMono for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF33820D5520A001235BA /* Droid Sans Mono Dotted for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Droid Sans Mono Dotted for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF33C20D5520A001235BA /* Arimo for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arimo for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF33D20D5520A001235BA /* Arimo Bold Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arimo Bold Italic for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF33E20D5520A001235BA /* Arimo Bold for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arimo Bold for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF34120D5520A001235BA /* Arimo Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arimo Italic for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF38420D5520A001235BA /* Literation Mono Powerline Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Literation Mono Powerline Italic.ttf"; sourceTree = "<group>"; };
-		DD4AF38520D5520A001235BA /* Literation Mono Powerline Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Literation Mono Powerline Bold.ttf"; sourceTree = "<group>"; };
-		DD4AF38620D5520A001235BA /* Literation Mono Powerline Bold Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Literation Mono Powerline Bold Italic.ttf"; sourceTree = "<group>"; };
-		DD4AF38820D5520A001235BA /* Literation Mono Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Literation Mono Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF38E20D5520A001235BA /* Anonymice Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Anonymice Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF38F20D5520A001235BA /* Anonymice Powerline Bold Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Anonymice Powerline Bold Italic.ttf"; sourceTree = "<group>"; };
-		DD4AF39020D5520A001235BA /* Anonymice Powerline Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Anonymice Powerline Italic.ttf"; sourceTree = "<group>"; };
-		DD4AF39120D5520A001235BA /* Anonymice Powerline Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Anonymice Powerline Bold.ttf"; sourceTree = "<group>"; };
-		DD4AF39520D5520A001235BA /* Hack-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hack-Regular.ttf"; sourceTree = "<group>"; };
-		DD4AF39620D5520A001235BA /* Hack-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hack-Italic.ttf"; sourceTree = "<group>"; };
-		DD4AF39720D5520A001235BA /* hack-specimen-for-Powerline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hack-specimen-for-Powerline.png"; sourceTree = "<group>"; };
-		DD4AF39820D5520A001235BA /* Hack-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hack-BoldItalic.ttf"; sourceTree = "<group>"; };
-		DD4AF39B20D5520A001235BA /* Hack-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hack-Bold.ttf"; sourceTree = "<group>"; };
-		DD4AF39E20D5520A001235BA /* ProFont Bold For Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProFont Bold For Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3A020D5520A001235BA /* ProFont For Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProFont For Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3A220D5520A001235BA /* Go Mono for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Go Mono for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3A420D5520A001235BA /* Go Mono Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Go Mono Italic for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3A520D5520A001235BA /* Go Mono Bold Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Go Mono Bold Italic for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3A720D5520A001235BA /* Go Mono Bold for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Go Mono Bold for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3A920D5520A001235BA /* Cousine Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cousine Italic for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3AA20D5520A001235BA /* Cousine Bold Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cousine Bold Italic for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3AB20D5520A001235BA /* Cousine Bold for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cousine Bold for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3AD20D5520A001235BA /* Cousine for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cousine for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3B120D5520B001235BA /* DejaVu Sans Mono Oblique for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVu Sans Mono Oblique for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3B220D5520B001235BA /* DejaVu Sans Mono Bold Oblique for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVu Sans Mono Bold Oblique for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3B420D5520B001235BA /* DejaVu Sans Mono for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVu Sans Mono for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3B620D5520B001235BA /* DejaVu Sans Mono Bold for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVu Sans Mono Bold for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3BC20D5520B001235BA /* Inconsolata for Powerline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inconsolata for Powerline.otf"; sourceTree = "<group>"; };
-		DD4AF3BE20D5520B001235BA /* Inconsolata Bold for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inconsolata Bold for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3C220D5520B001235BA /* 3270SemiNarrow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 3270SemiNarrow.ttf; sourceTree = "<group>"; };
-		DD4AF3C320D5520B001235BA /* 3270Narrow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 3270Narrow.ttf; sourceTree = "<group>"; };
-		DD4AF3C520D5520B001235BA /* 3270Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 3270Medium.ttf; sourceTree = "<group>"; };
-		DD4AF3C720D5520B001235BA /* Meslo LG S Bold for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Meslo LG S Bold for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3C820D5520B001235BA /* Meslo LG S Bold Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Meslo LG S Bold Italic for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3CA20D5520B001235BA /* Meslo LG L Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Meslo LG L Italic for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3CB20D5520B001235BA /* Meslo LG L Regular for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Meslo LG L Regular for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3CD20D5520B001235BA /* Meslo LG M Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Meslo LG M Italic for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3CE20D5520B001235BA /* Meslo LG M Bold Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Meslo LG M Bold Italic for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3CF20D5520B001235BA /* Meslo LG S Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Meslo LG S Italic for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3D020D5520B001235BA /* Meslo LG S Regular for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Meslo LG S Regular for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3D120D5520B001235BA /* Meslo LG M Bold for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Meslo LG M Bold for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3D220D5520B001235BA /* Meslo LG L Bold for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Meslo LG L Bold for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3D320D5520B001235BA /* Meslo LG L Bold Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Meslo LG L Bold Italic for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3D620D5520B001235BA /* Meslo LG M Regular for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Meslo LG M Regular for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3D820D5520B001235BA /* Roboto Mono Bold for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Bold for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3D920D5520B001235BA /* Roboto Mono Medium for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Medium for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3DB20D5520B001235BA /* Roboto Mono Thin Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Thin Italic for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3DD20D5520B001235BA /* Roboto Mono Thin for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Thin for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3DE20D5520B001235BA /* Roboto Mono Bold Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Bold Italic for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3DF20D5520B001235BA /* Roboto Mono for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3E020D5520B001235BA /* Roboto Mono Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Italic for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3E320D5520B001235BA /* Roboto Mono Medium Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Medium Italic for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3E420D5520B001235BA /* Roboto Mono Light for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Light for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3E520D5520B001235BA /* Roboto Mono Light Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Light Italic for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3E820D5520B001235BA /* Inconsolata-g for Powerline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inconsolata-g for Powerline.otf"; sourceTree = "<group>"; };
-		DD4AF3F120D5520B001235BA /* Inconsolata-dz for Powerline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inconsolata-dz for Powerline.otf"; sourceTree = "<group>"; };
-		DD4AF3F520D5520B001235BA /* Space Mono Bold for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Space Mono Bold for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3F620D5520B001235BA /* SpaceMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpaceMono-Regular.ttf"; sourceTree = "<group>"; };
-		DD4AF3F720D5520B001235BA /* Space Mono Bold Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Space Mono Bold Italic for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3F820D5520B001235BA /* SpaceMono-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpaceMono-BoldItalic.ttf"; sourceTree = "<group>"; };
-		DD4AF3F920D5520B001235BA /* SpaceMono-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpaceMono-Italic.ttf"; sourceTree = "<group>"; };
-		DD4AF3FA20D5520B001235BA /* SpaceMono-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpaceMono-Bold.ttf"; sourceTree = "<group>"; };
-		DD4AF3FB20D5520B001235BA /* Space Mono Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Space Mono Italic for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF3FE20D5520B001235BA /* Space Mono for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Space Mono for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF40020D5520B001235BA /* Meslo LG M DZ Regular for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Meslo LG M DZ Regular for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF40120D5520B001235BA /* Meslo LG M DZ Bold Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Meslo LG M DZ Bold Italic for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF40320D5520B001235BA /* Meslo LG S DZ Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Meslo LG S DZ Italic for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF40420D5520B001235BA /* Meslo LG L DZ Bold for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Meslo LG L DZ Bold for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF40620D5520B001235BA /* Meslo LG S DZ Bold Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Meslo LG S DZ Bold Italic for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF40720D5520B001235BA /* Meslo LG L DZ Bold Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Meslo LG L DZ Bold Italic for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF40820D5520B001235BA /* Meslo LG L DZ Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Meslo LG L DZ Italic for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF40920D5520B001235BA /* Meslo LG S DZ Bold for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Meslo LG S DZ Bold for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF40B20D5520B001235BA /* Meslo LG M DZ Bold for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Meslo LG M DZ Bold for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF40D20D5520B001235BA /* Meslo LG S DZ Regular for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Meslo LG S DZ Regular for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF40E20D5520B001235BA /* Meslo LG L DZ Regular for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Meslo LG L DZ Regular for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF40F20D5520B001235BA /* Meslo LG M DZ Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Meslo LG M DZ Italic for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF41220D5520B001235BA /* FuraMono-Regular Powerline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuraMono-Regular Powerline.otf"; sourceTree = "<group>"; };
-		DD4AF41420D5520B001235BA /* FuraMono-Bold Powerline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuraMono-Bold Powerline.otf"; sourceTree = "<group>"; };
-		DD4AF41520D5520B001235BA /* FuraMono-Medium Powerline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuraMono-Medium Powerline.otf"; sourceTree = "<group>"; };
-		DD4AF41820D5520B001235BA /* Roboto Mono Light for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Light for Powerline.ttf"; sourceTree = "<group>"; };
-		DD4AF41C20D5520B001235BA /* Droid Sans Mono Slashed for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Droid Sans Mono Slashed for Powerline.ttf"; sourceTree = "<group>"; };
 		DD4AF52420D58238001235BA /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		DD4AF52620D593A1001235BA /* ELEMENT_STATE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELEMENT_STATE.swift; sourceTree = "<group>"; };
 		DD4AF52820D59455001235BA /* ELEMENT_TYPE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELEMENT_TYPE.swift; sourceTree = "<group>"; };
@@ -297,6 +82,20 @@
 		DD4AF53520D76CCE001235BA /* PlayerSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSettings.swift; sourceTree = "<group>"; };
 		DD4AF53820D9D588001235BA /* PaddingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingHelper.swift; sourceTree = "<group>"; };
 		DD4AF53A20D9D6B7001235BA /* CardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardHelper.swift; sourceTree = "<group>"; };
+		DD4C71D720DA36C1004E5720 /* UIViewSubViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewSubViews.swift; sourceTree = "<group>"; };
+		DD4C71FC20DA433B004E5720 /* Roboto Mono Bold Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Bold Italic for Powerline.ttf"; sourceTree = "<group>"; };
+		DD4C71FD20DA433C004E5720 /* FuraMono-Bold Powerline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuraMono-Bold Powerline.otf"; sourceTree = "<group>"; };
+		DD4C71FE20DA433C004E5720 /* Roboto Mono for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono for Powerline.ttf"; sourceTree = "<group>"; };
+		DD4C71FF20DA433D004E5720 /* Roboto Mono Medium Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Medium Italic for Powerline.ttf"; sourceTree = "<group>"; };
+		DD4C720020DA433D004E5720 /* Roboto Mono Thin Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Thin Italic for Powerline.ttf"; sourceTree = "<group>"; };
+		DD4C720120DA433E004E5720 /* FuraMono-Regular Powerline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuraMono-Regular Powerline.otf"; sourceTree = "<group>"; };
+		DD4C720220DA433F004E5720 /* FuraMono-Medium Powerline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuraMono-Medium Powerline.otf"; sourceTree = "<group>"; };
+		DD4C720320DA433F004E5720 /* Roboto Mono Medium for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Medium for Powerline.ttf"; sourceTree = "<group>"; };
+		DD4C720420DA4340004E5720 /* Roboto Mono Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Italic for Powerline.ttf"; sourceTree = "<group>"; };
+		DD4C720520DA4340004E5720 /* Roboto Mono Light Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Light Italic for Powerline.ttf"; sourceTree = "<group>"; };
+		DD4C720620DA4341004E5720 /* Roboto Mono Light for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Light for Powerline.ttf"; sourceTree = "<group>"; };
+		DD4C720720DA4341004E5720 /* Roboto Mono Thin for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Thin for Powerline.ttf"; sourceTree = "<group>"; };
+		DD4C720820DA4342004E5720 /* Roboto Mono Bold for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Bold for Powerline.ttf"; sourceTree = "<group>"; };
 		DD5C034420D9F9F3004B2843 /* UIViewSafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewSafeArea.swift; sourceTree = "<group>"; };
 		DD906DA620D4C2E600501074 /* BlackjackBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackjackBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD906DA920D4C2E600501074 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -367,339 +166,21 @@
 		DD4AF2F820D5520A001235BA /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				DD4AF2F920D5520A001235BA /* UbuntuMono */,
-				DD4AF30220D5520A001235BA /* Tinos */,
-				DD4AF30920D5520A001235BA /* Monofur */,
-				DD4AF30E20D5520A001235BA /* NotoMono */,
-				DD4AF31220D5520A001235BA /* DroidSansMono */,
-				DD4AF31A20D5520A001235BA /* SymbolNeu */,
-				DD4AF31E20D5520A001235BA /* SourceCodePro */,
-				DD4AF33120D5520A001235BA /* NovaMono */,
-				DD4AF33520D5520A001235BA /* DroidSansMonoDotted */,
-				DD4AF33B20D5520A001235BA /* Arimo */,
-				DD4AF38220D5520A001235BA /* LiberationMono */,
-				DD4AF38B20D5520A001235BA /* AnonymousPro */,
-				DD4AF39420D5520A001235BA /* Hack */,
-				DD4AF39C20D5520A001235BA /* ProFont */,
-				DD4AF3A120D5520A001235BA /* GoMono */,
-				DD4AF3A820D5520A001235BA /* Cousine */,
-				DD4AF3AF20D5520A001235BA /* DejaVuSansMono */,
-				DD4AF3BA20D5520B001235BA /* Inconsolata */,
-				DD4AF3C120D5520B001235BA /* 3270 */,
-				DD4AF3C620D5520B001235BA /* Meslo Slashed */,
-				DD4AF3D720D5520B001235BA /* RobotoMono */,
-				DD4AF3E620D5520B001235BA /* Inconsolata-g */,
-				DD4AF3EC20D5520B001235BA /* InconsolataDz */,
-				DD4AF3F420D5520B001235BA /* SpaceMono */,
-				DD4AF3FF20D5520B001235BA /* Meslo Dotted */,
-				DD4AF41020D5520B001235BA /* FiraMono */,
-				DD4AF41820D5520B001235BA /* Roboto Mono Light for Powerline.ttf */,
-				DD4AF41920D5520B001235BA /* DroidSansMonoSlashed */,
+				DD4C71FD20DA433C004E5720 /* FuraMono-Bold Powerline.otf */,
+				DD4C720220DA433F004E5720 /* FuraMono-Medium Powerline.otf */,
+				DD4C720120DA433E004E5720 /* FuraMono-Regular Powerline.otf */,
+				DD4C720820DA4342004E5720 /* Roboto Mono Bold for Powerline.ttf */,
+				DD4C71FC20DA433B004E5720 /* Roboto Mono Bold Italic for Powerline.ttf */,
+				DD4C71FE20DA433C004E5720 /* Roboto Mono for Powerline.ttf */,
+				DD4C720420DA4340004E5720 /* Roboto Mono Italic for Powerline.ttf */,
+				DD4C720620DA4341004E5720 /* Roboto Mono Light for Powerline.ttf */,
+				DD4C720520DA4340004E5720 /* Roboto Mono Light Italic for Powerline.ttf */,
+				DD4C720320DA433F004E5720 /* Roboto Mono Medium for Powerline.ttf */,
+				DD4C71FF20DA433D004E5720 /* Roboto Mono Medium Italic for Powerline.ttf */,
+				DD4C720720DA4341004E5720 /* Roboto Mono Thin for Powerline.ttf */,
+				DD4C720020DA433D004E5720 /* Roboto Mono Thin Italic for Powerline.ttf */,
 			);
 			path = Fonts;
-			sourceTree = "<group>";
-		};
-		DD4AF2F920D5520A001235BA /* UbuntuMono */ = {
-			isa = PBXGroup;
-			children = (
-				DD4AF2FB20D5520A001235BA /* Ubuntu Mono derivative Powerline Italic.ttf */,
-				DD4AF2FC20D5520A001235BA /* Ubuntu Mono derivative Powerline.ttf */,
-				DD4AF2FF20D5520A001235BA /* Ubuntu Mono derivative Powerline Bold.ttf */,
-				DD4AF30020D5520A001235BA /* Ubuntu Mono derivative Powerline Bold Italic.ttf */,
-			);
-			path = UbuntuMono;
-			sourceTree = "<group>";
-		};
-		DD4AF30220D5520A001235BA /* Tinos */ = {
-			isa = PBXGroup;
-			children = (
-				DD4AF30320D5520A001235BA /* Tinos Bold Italic for Powerline.ttf */,
-				DD4AF30420D5520A001235BA /* Tinos for Powerline.ttf */,
-				DD4AF30720D5520A001235BA /* Tinos Bold for Powerline.ttf */,
-				DD4AF30820D5520A001235BA /* Tinos Italic for Powerline.ttf */,
-			);
-			path = Tinos;
-			sourceTree = "<group>";
-		};
-		DD4AF30920D5520A001235BA /* Monofur */ = {
-			isa = PBXGroup;
-			children = (
-				DD4AF30A20D5520A001235BA /* Monofur Italic for Powerline.ttf */,
-				DD4AF30B20D5520A001235BA /* Monofur Bold for Powerline.ttf */,
-				DD4AF30C20D5520A001235BA /* Monofur for Powerline.ttf */,
-			);
-			path = Monofur;
-			sourceTree = "<group>";
-		};
-		DD4AF30E20D5520A001235BA /* NotoMono */ = {
-			isa = PBXGroup;
-			children = (
-				DD4AF30F20D5520A001235BA /* Noto Mono for Powerline.ttf */,
-			);
-			path = NotoMono;
-			sourceTree = "<group>";
-		};
-		DD4AF31220D5520A001235BA /* DroidSansMono */ = {
-			isa = PBXGroup;
-			children = (
-				DD4AF31520D5520A001235BA /* Droid Sans Mono for Powerline.otf */,
-			);
-			path = DroidSansMono;
-			sourceTree = "<group>";
-		};
-		DD4AF31A20D5520A001235BA /* SymbolNeu */ = {
-			isa = PBXGroup;
-			children = (
-				DD4AF31B20D5520A001235BA /* Symbol Neu for Powerline.ttf */,
-			);
-			path = SymbolNeu;
-			sourceTree = "<group>";
-		};
-		DD4AF31E20D5520A001235BA /* SourceCodePro */ = {
-			isa = PBXGroup;
-			children = (
-				DD4AF31F20D5520A001235BA /* Source Code Pro Powerline LightItalic.otf */,
-				DD4AF32120D5520A001235BA /* Source Code Pro Bold for Powerline.otf */,
-				DD4AF32220D5520A001235BA /* Source Code Pro Powerline Italic.otf */,
-				DD4AF32420D5520A001235BA /* Source Code Pro Powerline ExtraLightItalic.otf */,
-				DD4AF32520D5520A001235BA /* Source Code Pro Powerline BlackItalic.otf */,
-				DD4AF32620D5520A001235BA /* Source Code Pro Semibold for Powerline.otf */,
-				DD4AF32720D5520A001235BA /* Source Code Pro Medium for Powerline.otf */,
-				DD4AF32820D5520A001235BA /* Source Code Pro Powerline SemiboldItalic.otf */,
-				DD4AF32920D5520A001235BA /* Source Code Pro Powerline BoldItalic.otf */,
-				DD4AF32A20D5520A001235BA /* Source Code Pro ExtraLight for Powerline.otf */,
-				DD4AF32D20D5520A001235BA /* Source Code Pro Powerline MediumItalic.otf */,
-				DD4AF32E20D5520A001235BA /* Source Code Pro for Powerline.otf */,
-				DD4AF32F20D5520A001235BA /* Source Code Pro Black for Powerline.otf */,
-				DD4AF33020D5520A001235BA /* Source Code Pro Light for Powerline.otf */,
-			);
-			path = SourceCodePro;
-			sourceTree = "<group>";
-		};
-		DD4AF33120D5520A001235BA /* NovaMono */ = {
-			isa = PBXGroup;
-			children = (
-				DD4AF33220D5520A001235BA /* NovaMono for Powerline.ttf */,
-			);
-			path = NovaMono;
-			sourceTree = "<group>";
-		};
-		DD4AF33520D5520A001235BA /* DroidSansMonoDotted */ = {
-			isa = PBXGroup;
-			children = (
-				DD4AF33820D5520A001235BA /* Droid Sans Mono Dotted for Powerline.ttf */,
-			);
-			path = DroidSansMonoDotted;
-			sourceTree = "<group>";
-		};
-		DD4AF33B20D5520A001235BA /* Arimo */ = {
-			isa = PBXGroup;
-			children = (
-				DD4AF33C20D5520A001235BA /* Arimo for Powerline.ttf */,
-				DD4AF33D20D5520A001235BA /* Arimo Bold Italic for Powerline.ttf */,
-				DD4AF33E20D5520A001235BA /* Arimo Bold for Powerline.ttf */,
-				DD4AF34120D5520A001235BA /* Arimo Italic for Powerline.ttf */,
-			);
-			path = Arimo;
-			sourceTree = "<group>";
-		};
-		DD4AF38220D5520A001235BA /* LiberationMono */ = {
-			isa = PBXGroup;
-			children = (
-				DD4AF38420D5520A001235BA /* Literation Mono Powerline Italic.ttf */,
-				DD4AF38520D5520A001235BA /* Literation Mono Powerline Bold.ttf */,
-				DD4AF38620D5520A001235BA /* Literation Mono Powerline Bold Italic.ttf */,
-				DD4AF38820D5520A001235BA /* Literation Mono Powerline.ttf */,
-			);
-			path = LiberationMono;
-			sourceTree = "<group>";
-		};
-		DD4AF38B20D5520A001235BA /* AnonymousPro */ = {
-			isa = PBXGroup;
-			children = (
-				DD4AF38E20D5520A001235BA /* Anonymice Powerline.ttf */,
-				DD4AF38F20D5520A001235BA /* Anonymice Powerline Bold Italic.ttf */,
-				DD4AF39020D5520A001235BA /* Anonymice Powerline Italic.ttf */,
-				DD4AF39120D5520A001235BA /* Anonymice Powerline Bold.ttf */,
-			);
-			path = AnonymousPro;
-			sourceTree = "<group>";
-		};
-		DD4AF39420D5520A001235BA /* Hack */ = {
-			isa = PBXGroup;
-			children = (
-				DD4AF39520D5520A001235BA /* Hack-Regular.ttf */,
-				DD4AF39620D5520A001235BA /* Hack-Italic.ttf */,
-				DD4AF39720D5520A001235BA /* hack-specimen-for-Powerline.png */,
-				DD4AF39820D5520A001235BA /* Hack-BoldItalic.ttf */,
-				DD4AF39B20D5520A001235BA /* Hack-Bold.ttf */,
-			);
-			path = Hack;
-			sourceTree = "<group>";
-		};
-		DD4AF39C20D5520A001235BA /* ProFont */ = {
-			isa = PBXGroup;
-			children = (
-				DD4AF39E20D5520A001235BA /* ProFont Bold For Powerline.ttf */,
-				DD4AF3A020D5520A001235BA /* ProFont For Powerline.ttf */,
-			);
-			path = ProFont;
-			sourceTree = "<group>";
-		};
-		DD4AF3A120D5520A001235BA /* GoMono */ = {
-			isa = PBXGroup;
-			children = (
-				DD4AF3A220D5520A001235BA /* Go Mono for Powerline.ttf */,
-				DD4AF3A420D5520A001235BA /* Go Mono Italic for Powerline.ttf */,
-				DD4AF3A520D5520A001235BA /* Go Mono Bold Italic for Powerline.ttf */,
-				DD4AF3A720D5520A001235BA /* Go Mono Bold for Powerline.ttf */,
-			);
-			path = GoMono;
-			sourceTree = "<group>";
-		};
-		DD4AF3A820D5520A001235BA /* Cousine */ = {
-			isa = PBXGroup;
-			children = (
-				DD4AF3A920D5520A001235BA /* Cousine Italic for Powerline.ttf */,
-				DD4AF3AA20D5520A001235BA /* Cousine Bold Italic for Powerline.ttf */,
-				DD4AF3AB20D5520A001235BA /* Cousine Bold for Powerline.ttf */,
-				DD4AF3AD20D5520A001235BA /* Cousine for Powerline.ttf */,
-			);
-			path = Cousine;
-			sourceTree = "<group>";
-		};
-		DD4AF3AF20D5520A001235BA /* DejaVuSansMono */ = {
-			isa = PBXGroup;
-			children = (
-				DD4AF3B120D5520B001235BA /* DejaVu Sans Mono Oblique for Powerline.ttf */,
-				DD4AF3B220D5520B001235BA /* DejaVu Sans Mono Bold Oblique for Powerline.ttf */,
-				DD4AF3B420D5520B001235BA /* DejaVu Sans Mono for Powerline.ttf */,
-				DD4AF3B620D5520B001235BA /* DejaVu Sans Mono Bold for Powerline.ttf */,
-			);
-			path = DejaVuSansMono;
-			sourceTree = "<group>";
-		};
-		DD4AF3BA20D5520B001235BA /* Inconsolata */ = {
-			isa = PBXGroup;
-			children = (
-				DD4AF3BC20D5520B001235BA /* Inconsolata for Powerline.otf */,
-				DD4AF3BE20D5520B001235BA /* Inconsolata Bold for Powerline.ttf */,
-			);
-			path = Inconsolata;
-			sourceTree = "<group>";
-		};
-		DD4AF3C120D5520B001235BA /* 3270 */ = {
-			isa = PBXGroup;
-			children = (
-				DD4AF3C220D5520B001235BA /* 3270SemiNarrow.ttf */,
-				DD4AF3C320D5520B001235BA /* 3270Narrow.ttf */,
-				DD4AF3C520D5520B001235BA /* 3270Medium.ttf */,
-			);
-			path = 3270;
-			sourceTree = "<group>";
-		};
-		DD4AF3C620D5520B001235BA /* Meslo Slashed */ = {
-			isa = PBXGroup;
-			children = (
-				DD4AF3C720D5520B001235BA /* Meslo LG S Bold for Powerline.ttf */,
-				DD4AF3C820D5520B001235BA /* Meslo LG S Bold Italic for Powerline.ttf */,
-				DD4AF3CA20D5520B001235BA /* Meslo LG L Italic for Powerline.ttf */,
-				DD4AF3CB20D5520B001235BA /* Meslo LG L Regular for Powerline.ttf */,
-				DD4AF3CD20D5520B001235BA /* Meslo LG M Italic for Powerline.ttf */,
-				DD4AF3CE20D5520B001235BA /* Meslo LG M Bold Italic for Powerline.ttf */,
-				DD4AF3CF20D5520B001235BA /* Meslo LG S Italic for Powerline.ttf */,
-				DD4AF3D020D5520B001235BA /* Meslo LG S Regular for Powerline.ttf */,
-				DD4AF3D120D5520B001235BA /* Meslo LG M Bold for Powerline.ttf */,
-				DD4AF3D220D5520B001235BA /* Meslo LG L Bold for Powerline.ttf */,
-				DD4AF3D320D5520B001235BA /* Meslo LG L Bold Italic for Powerline.ttf */,
-				DD4AF3D620D5520B001235BA /* Meslo LG M Regular for Powerline.ttf */,
-			);
-			path = "Meslo Slashed";
-			sourceTree = "<group>";
-		};
-		DD4AF3D720D5520B001235BA /* RobotoMono */ = {
-			isa = PBXGroup;
-			children = (
-				DD4AF3D820D5520B001235BA /* Roboto Mono Bold for Powerline.ttf */,
-				DD4AF3D920D5520B001235BA /* Roboto Mono Medium for Powerline.ttf */,
-				DD4AF3DB20D5520B001235BA /* Roboto Mono Thin Italic for Powerline.ttf */,
-				DD4AF3DD20D5520B001235BA /* Roboto Mono Thin for Powerline.ttf */,
-				DD4AF3DE20D5520B001235BA /* Roboto Mono Bold Italic for Powerline.ttf */,
-				DD4AF3DF20D5520B001235BA /* Roboto Mono for Powerline.ttf */,
-				DD4AF3E020D5520B001235BA /* Roboto Mono Italic for Powerline.ttf */,
-				DD4AF3E320D5520B001235BA /* Roboto Mono Medium Italic for Powerline.ttf */,
-				DD4AF3E420D5520B001235BA /* Roboto Mono Light for Powerline.ttf */,
-				DD4AF3E520D5520B001235BA /* Roboto Mono Light Italic for Powerline.ttf */,
-			);
-			path = RobotoMono;
-			sourceTree = "<group>";
-		};
-		DD4AF3E620D5520B001235BA /* Inconsolata-g */ = {
-			isa = PBXGroup;
-			children = (
-				DD4AF3E820D5520B001235BA /* Inconsolata-g for Powerline.otf */,
-			);
-			path = "Inconsolata-g";
-			sourceTree = "<group>";
-		};
-		DD4AF3EC20D5520B001235BA /* InconsolataDz */ = {
-			isa = PBXGroup;
-			children = (
-				DD4AF3F120D5520B001235BA /* Inconsolata-dz for Powerline.otf */,
-			);
-			path = InconsolataDz;
-			sourceTree = "<group>";
-		};
-		DD4AF3F420D5520B001235BA /* SpaceMono */ = {
-			isa = PBXGroup;
-			children = (
-				DD4AF3F520D5520B001235BA /* Space Mono Bold for Powerline.ttf */,
-				DD4AF3F620D5520B001235BA /* SpaceMono-Regular.ttf */,
-				DD4AF3F720D5520B001235BA /* Space Mono Bold Italic for Powerline.ttf */,
-				DD4AF3F820D5520B001235BA /* SpaceMono-BoldItalic.ttf */,
-				DD4AF3F920D5520B001235BA /* SpaceMono-Italic.ttf */,
-				DD4AF3FA20D5520B001235BA /* SpaceMono-Bold.ttf */,
-				DD4AF3FB20D5520B001235BA /* Space Mono Italic for Powerline.ttf */,
-				DD4AF3FE20D5520B001235BA /* Space Mono for Powerline.ttf */,
-			);
-			path = SpaceMono;
-			sourceTree = "<group>";
-		};
-		DD4AF3FF20D5520B001235BA /* Meslo Dotted */ = {
-			isa = PBXGroup;
-			children = (
-				DD4AF40020D5520B001235BA /* Meslo LG M DZ Regular for Powerline.ttf */,
-				DD4AF40120D5520B001235BA /* Meslo LG M DZ Bold Italic for Powerline.ttf */,
-				DD4AF40320D5520B001235BA /* Meslo LG S DZ Italic for Powerline.ttf */,
-				DD4AF40420D5520B001235BA /* Meslo LG L DZ Bold for Powerline.ttf */,
-				DD4AF40620D5520B001235BA /* Meslo LG S DZ Bold Italic for Powerline.ttf */,
-				DD4AF40720D5520B001235BA /* Meslo LG L DZ Bold Italic for Powerline.ttf */,
-				DD4AF40820D5520B001235BA /* Meslo LG L DZ Italic for Powerline.ttf */,
-				DD4AF40920D5520B001235BA /* Meslo LG S DZ Bold for Powerline.ttf */,
-				DD4AF40B20D5520B001235BA /* Meslo LG M DZ Bold for Powerline.ttf */,
-				DD4AF40D20D5520B001235BA /* Meslo LG S DZ Regular for Powerline.ttf */,
-				DD4AF40E20D5520B001235BA /* Meslo LG L DZ Regular for Powerline.ttf */,
-				DD4AF40F20D5520B001235BA /* Meslo LG M DZ Italic for Powerline.ttf */,
-			);
-			path = "Meslo Dotted";
-			sourceTree = "<group>";
-		};
-		DD4AF41020D5520B001235BA /* FiraMono */ = {
-			isa = PBXGroup;
-			children = (
-				DD4AF41220D5520B001235BA /* FuraMono-Regular Powerline.otf */,
-				DD4AF41420D5520B001235BA /* FuraMono-Bold Powerline.otf */,
-				DD4AF41520D5520B001235BA /* FuraMono-Medium Powerline.otf */,
-			);
-			path = FiraMono;
-			sourceTree = "<group>";
-		};
-		DD4AF41920D5520B001235BA /* DroidSansMonoSlashed */ = {
-			isa = PBXGroup;
-			children = (
-				DD4AF41C20D5520B001235BA /* Droid Sans Mono Slashed for Powerline.ttf */,
-			);
-			path = DroidSansMonoSlashed;
 			sourceTree = "<group>";
 		};
 		DD4AF52320D58212001235BA /* Extensions */ = {
@@ -707,6 +188,7 @@
 			children = (
 				DD4AF52420D58238001235BA /* PaddingLabel.swift */,
 				DD5C034420D9F9F3004B2843 /* UIViewSafeArea.swift */,
+				DD4C71D720DA36C1004E5720 /* UIViewSubViews.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -916,123 +398,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD4AF4D620D5520D001235BA /* Meslo LG L Italic for Powerline.ttf in Resources */,
-				DD4AF50920D5520E001235BA /* Meslo LG S DZ Italic for Powerline.ttf in Resources */,
-				DD4AF4AA20D5520D001235BA /* Hack-Italic.ttf in Resources */,
-				DD4AF4AF20D5520D001235BA /* Hack-Bold.ttf in Resources */,
-				DD4AF42420D5520B001235BA /* Ubuntu Mono derivative Powerline Bold.ttf in Resources */,
+				DD4C720920DA4342004E5720 /* Roboto Mono Bold Italic for Powerline.ttf in Resources */,
+				DD4C720A20DA4342004E5720 /* FuraMono-Bold Powerline.otf in Resources */,
+				DD4C720B20DA4342004E5720 /* Roboto Mono for Powerline.ttf in Resources */,
+				DD4C720C20DA4342004E5720 /* Roboto Mono Medium Italic for Powerline.ttf in Resources */,
+				DD4C720D20DA4342004E5720 /* Roboto Mono Thin Italic for Powerline.ttf in Resources */,
+				DD4C720E20DA4342004E5720 /* FuraMono-Regular Powerline.otf in Resources */,
+				DD4C720F20DA4342004E5720 /* FuraMono-Medium Powerline.otf in Resources */,
+				DD4C721020DA4342004E5720 /* Roboto Mono Medium for Powerline.ttf in Resources */,
+				DD4C721120DA4342004E5720 /* Roboto Mono Italic for Powerline.ttf in Resources */,
+				DD4C721220DA4342004E5720 /* Roboto Mono Light Italic for Powerline.ttf in Resources */,
+				DD4C721320DA4342004E5720 /* Roboto Mono Light for Powerline.ttf in Resources */,
+				DD4C721420DA4342004E5720 /* Roboto Mono Thin for Powerline.ttf in Resources */,
+				DD4C721520DA4342004E5720 /* Roboto Mono Bold for Powerline.ttf in Resources */,
 				DD906DB720D4C2E800501074 /* LaunchScreen.storyboard in Resources */,
-				DD4AF49B20D5520D001235BA /* Literation Mono Powerline Bold.ttf in Resources */,
-				DD4AF51120D5520E001235BA /* Meslo LG M DZ Bold for Powerline.ttf in Resources */,
-				DD4AF4FF20D5520D001235BA /* SpaceMono-BoldItalic.ttf in Resources */,
-				DD4AF4CA20D5520D001235BA /* Inconsolata for Powerline.otf in Resources */,
-				DD4AF4E820D5520D001235BA /* Roboto Mono Thin for Powerline.ttf in Resources */,
-				DD4AF42B20D5520C001235BA /* Tinos Bold for Powerline.ttf in Resources */,
-				DD4AF4DD20D5520D001235BA /* Meslo LG M Bold for Powerline.ttf in Resources */,
-				DD4AF50620D5520E001235BA /* Meslo LG M DZ Regular for Powerline.ttf in Resources */,
-				DD4AF44620D5520C001235BA /* Source Code Pro Powerline SemiboldItalic.otf in Resources */,
-				DD4AF50F20D5520E001235BA /* Meslo LG S DZ Bold for Powerline.ttf in Resources */,
-				DD4AF45820D5520C001235BA /* Arimo Bold Italic for Powerline.ttf in Resources */,
-				DD4AF4D420D5520D001235BA /* Meslo LG S Bold Italic for Powerline.ttf in Resources */,
-				DD4AF4EB20D5520D001235BA /* Roboto Mono Italic for Powerline.ttf in Resources */,
-				DD4AF4DC20D5520D001235BA /* Meslo LG S Regular for Powerline.ttf in Resources */,
-				DD4AF44020D5520C001235BA /* Source Code Pro Powerline Italic.otf in Resources */,
-				DD4AF42F20D5520C001235BA /* Monofur for Powerline.ttf in Resources */,
-				DD4AF52020D5520E001235BA /* Droid Sans Mono Slashed for Powerline.ttf in Resources */,
-				DD4AF4F220D5520D001235BA /* Inconsolata-g for Powerline.otf in Resources */,
-				DD4AF4E220D5520D001235BA /* Meslo LG M Regular for Powerline.ttf in Resources */,
-				DD4AF45420D5520C001235BA /* Droid Sans Mono Dotted for Powerline.ttf in Resources */,
-				DD4AF49E20D5520D001235BA /* Literation Mono Powerline.ttf in Resources */,
-				DD4AF4AB20D5520D001235BA /* hack-specimen-for-Powerline.png in Resources */,
-				DD4AF4A420D5520D001235BA /* Anonymice Powerline Bold Italic.ttf in Resources */,
-				DD4AF4D320D5520D001235BA /* Meslo LG S Bold for Powerline.ttf in Resources */,
-				DD4AF50D20D5520E001235BA /* Meslo LG L DZ Bold Italic for Powerline.ttf in Resources */,
-				DD4AF44C20D5520C001235BA /* Source Code Pro for Powerline.otf in Resources */,
-				DD4AF4FE20D5520D001235BA /* Space Mono Bold Italic for Powerline.ttf in Resources */,
-				DD4AF50120D5520D001235BA /* SpaceMono-Bold.ttf in Resources */,
-				DD4AF49C20D5520D001235BA /* Literation Mono Powerline Bold Italic.ttf in Resources */,
-				DD4AF4BB20D5520D001235BA /* Cousine Bold Italic for Powerline.ttf in Resources */,
 				DD906DB420D4C2E800501074 /* Assets.xcassets in Resources */,
-				DD4AF51520D5520E001235BA /* Meslo LG M DZ Italic for Powerline.ttf in Resources */,
-				DD4AF42C20D5520C001235BA /* Tinos Italic for Powerline.ttf in Resources */,
-				DD4AF4E920D5520D001235BA /* Roboto Mono Bold Italic for Powerline.ttf in Resources */,
-				DD4AF4CC20D5520D001235BA /* Inconsolata Bold for Powerline.ttf in Resources */,
-				DD4AF4E420D5520D001235BA /* Roboto Mono Medium for Powerline.ttf in Resources */,
-				DD4AF4CF20D5520D001235BA /* 3270SemiNarrow.ttf in Resources */,
-				DD4AF44420D5520C001235BA /* Source Code Pro Semibold for Powerline.otf in Resources */,
-				DD4AF4E620D5520D001235BA /* Roboto Mono Thin Italic for Powerline.ttf in Resources */,
-				DD4AF43A20D5520C001235BA /* Symbol Neu for Powerline.ttf in Resources */,
-				DD4AF45C20D5520C001235BA /* Arimo Italic for Powerline.ttf in Resources */,
-				DD4AF51D20D5520E001235BA /* Roboto Mono Light for Powerline.ttf in Resources */,
-				DD4AF4FA20D5520D001235BA /* Inconsolata-dz for Powerline.otf in Resources */,
-				DD4AF4BC20D5520D001235BA /* Cousine Bold for Powerline.ttf in Resources */,
-				DD4AF44820D5520C001235BA /* Source Code Pro ExtraLight for Powerline.otf in Resources */,
-				DD4AF50E20D5520E001235BA /* Meslo LG L DZ Italic for Powerline.ttf in Resources */,
-				DD4AF45920D5520C001235BA /* Arimo Bold for Powerline.ttf in Resources */,
-				DD4AF4A520D5520D001235BA /* Anonymice Powerline Italic.ttf in Resources */,
-				DD4AF4BE20D5520D001235BA /* Cousine for Powerline.ttf in Resources */,
-				DD4AF4A620D5520D001235BA /* Anonymice Powerline Bold.ttf in Resources */,
-				DD4AF42020D5520B001235BA /* Ubuntu Mono derivative Powerline Italic.ttf in Resources */,
-				DD4AF44E20D5520C001235BA /* Source Code Pro Light for Powerline.otf in Resources */,
-				DD4AF45720D5520C001235BA /* Arimo for Powerline.ttf in Resources */,
-				DD4AF4FD20D5520D001235BA /* SpaceMono-Regular.ttf in Resources */,
-				DD4AF50220D5520D001235BA /* Space Mono Italic for Powerline.ttf in Resources */,
-				DD4AF4C420D5520D001235BA /* DejaVu Sans Mono for Powerline.ttf in Resources */,
 				DD906DAF20D4C2E600501074 /* Main.storyboard in Resources */,
-				DD4AF50720D5520E001235BA /* Meslo LG M DZ Bold Italic for Powerline.ttf in Resources */,
-				DD4AF44220D5520C001235BA /* Source Code Pro Powerline ExtraLightItalic.otf in Resources */,
-				DD4AF4F020D5520D001235BA /* Roboto Mono Light Italic for Powerline.ttf in Resources */,
-				DD4AF42E20D5520C001235BA /* Monofur Bold for Powerline.ttf in Resources */,
-				DD4AF4EE20D5520D001235BA /* Roboto Mono Medium Italic for Powerline.ttf in Resources */,
-				DD4AF44D20D5520C001235BA /* Source Code Pro Black for Powerline.otf in Resources */,
-				DD4AF4DF20D5520D001235BA /* Meslo LG L Bold Italic for Powerline.ttf in Resources */,
-				DD4AF51420D5520E001235BA /* Meslo LG L DZ Regular for Powerline.ttf in Resources */,
-				DD4AF43620D5520C001235BA /* Droid Sans Mono for Powerline.otf in Resources */,
-				DD4AF4DB20D5520D001235BA /* Meslo LG S Italic for Powerline.ttf in Resources */,
-				DD4AF42120D5520B001235BA /* Ubuntu Mono derivative Powerline.ttf in Resources */,
-				DD4AF4DE20D5520D001235BA /* Meslo LG L Bold for Powerline.ttf in Resources */,
-				DD4AF42720D5520B001235BA /* Tinos Bold Italic for Powerline.ttf in Resources */,
-				DD4AF51320D5520E001235BA /* Meslo LG S DZ Regular for Powerline.ttf in Resources */,
-				DD4AF4C220D5520D001235BA /* DejaVu Sans Mono Bold Oblique for Powerline.ttf in Resources */,
-				DD4AF44F20D5520C001235BA /* NovaMono for Powerline.ttf in Resources */,
-				DD4AF51A20D5520E001235BA /* FuraMono-Medium Powerline.otf in Resources */,
-				DD4AF50C20D5520E001235BA /* Meslo LG S DZ Bold Italic for Powerline.ttf in Resources */,
-				DD4AF43D20D5520C001235BA /* Source Code Pro Powerline LightItalic.otf in Resources */,
-				DD4AF4E320D5520D001235BA /* Roboto Mono Bold for Powerline.ttf in Resources */,
-				DD4AF44720D5520C001235BA /* Source Code Pro Powerline BoldItalic.otf in Resources */,
-				DD4AF4FC20D5520D001235BA /* Space Mono Bold for Powerline.ttf in Resources */,
-				DD4AF43F20D5520C001235BA /* Source Code Pro Bold for Powerline.otf in Resources */,
-				DD4AF42820D5520B001235BA /* Tinos for Powerline.ttf in Resources */,
-				DD4AF4B320D5520D001235BA /* ProFont For Powerline.ttf in Resources */,
-				DD4AF4B420D5520D001235BA /* Go Mono for Powerline.ttf in Resources */,
-				DD4AF4D020D5520D001235BA /* 3270Narrow.ttf in Resources */,
-				DD4AF4B120D5520D001235BA /* ProFont Bold For Powerline.ttf in Resources */,
-				DD4AF44320D5520C001235BA /* Source Code Pro Powerline BlackItalic.otf in Resources */,
-				DD4AF4DA20D5520D001235BA /* Meslo LG M Bold Italic for Powerline.ttf in Resources */,
-				DD4AF51720D5520E001235BA /* FuraMono-Regular Powerline.otf in Resources */,
-				DD4AF50020D5520D001235BA /* SpaceMono-Italic.ttf in Resources */,
-				DD4AF4C120D5520D001235BA /* DejaVu Sans Mono Oblique for Powerline.ttf in Resources */,
-				DD4AF50520D5520D001235BA /* Space Mono for Powerline.ttf in Resources */,
-				DD4AF4A920D5520D001235BA /* Hack-Regular.ttf in Resources */,
-				DD4AF50A20D5520E001235BA /* Meslo LG L DZ Bold for Powerline.ttf in Resources */,
-				DD4AF4B620D5520D001235BA /* Go Mono Italic for Powerline.ttf in Resources */,
-				DD4AF42D20D5520C001235BA /* Monofur Italic for Powerline.ttf in Resources */,
-				DD4AF4B920D5520D001235BA /* Go Mono Bold for Powerline.ttf in Resources */,
-				DD4AF43120D5520C001235BA /* Noto Mono for Powerline.ttf in Resources */,
-				DD4AF49A20D5520D001235BA /* Literation Mono Powerline Italic.ttf in Resources */,
-				DD4AF4D720D5520D001235BA /* Meslo LG L Regular for Powerline.ttf in Resources */,
-				DD4AF4C620D5520D001235BA /* DejaVu Sans Mono Bold for Powerline.ttf in Resources */,
-				DD4AF4EA20D5520D001235BA /* Roboto Mono for Powerline.ttf in Resources */,
-				DD4AF4A320D5520D001235BA /* Anonymice Powerline.ttf in Resources */,
-				DD4AF4AC20D5520D001235BA /* Hack-BoldItalic.ttf in Resources */,
-				DD4AF4BA20D5520D001235BA /* Cousine Italic for Powerline.ttf in Resources */,
-				DD4AF44B20D5520C001235BA /* Source Code Pro Powerline MediumItalic.otf in Resources */,
-				DD4AF4D220D5520D001235BA /* 3270Medium.ttf in Resources */,
-				DD4AF4D920D5520D001235BA /* Meslo LG M Italic for Powerline.ttf in Resources */,
-				DD4AF44520D5520C001235BA /* Source Code Pro Medium for Powerline.otf in Resources */,
-				DD4AF42520D5520B001235BA /* Ubuntu Mono derivative Powerline Bold Italic.ttf in Resources */,
-				DD4AF51920D5520E001235BA /* FuraMono-Bold Powerline.otf in Resources */,
-				DD4AF4B720D5520D001235BA /* Go Mono Bold Italic for Powerline.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1113,6 +494,7 @@
 				DD4AF53B20D9D6B7001235BA /* CardHelper.swift in Sources */,
 				DD4AEF7520D4E6B2001235BA /* Card.swift in Sources */,
 				DD4AF52520D58238001235BA /* PaddingLabel.swift in Sources */,
+				DD4C71D820DA36C1004E5720 /* UIViewSubViews.swift in Sources */,
 				DD4AF53620D76CCE001235BA /* PlayerSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

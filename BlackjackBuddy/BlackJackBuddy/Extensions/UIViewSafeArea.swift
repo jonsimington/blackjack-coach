@@ -10,13 +10,12 @@ import Foundation
 import UIKit
 
 extension UIView {
-
     // Top Anchor
     var safeAreaTopAnchor: NSLayoutYAxisAnchor {
         if #available(iOS 11.0, *) {
             return self.safeAreaLayoutGuide.topAnchor
         } else {
-            return self.topAnchor
+            return topAnchor
         }
     }
 
@@ -25,7 +24,7 @@ extension UIView {
         if #available(iOS 11.0, *) {
             return self.safeAreaLayoutGuide.bottomAnchor
         } else {
-            return self.bottomAnchor
+            return bottomAnchor
         }
     }
 
@@ -34,7 +33,7 @@ extension UIView {
         if #available(iOS 11.0, *) {
             return self.safeAreaLayoutGuide.leftAnchor
         } else {
-            return self.leftAnchor
+            return leftAnchor
         }
     }
 
@@ -43,8 +42,7 @@ extension UIView {
         if #available(iOS 11.0, *) {
             return self.safeAreaLayoutGuide.rightAnchor
         } else {
-            return self.rightAnchor
+            return rightAnchor
         }
     }
-
 }

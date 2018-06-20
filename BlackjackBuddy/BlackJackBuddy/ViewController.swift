@@ -6,6 +6,7 @@
 //  Copyright © 2018 Jon Simington. All rights reserved.
 //
 
+import SnapKit
 import UIKit
 
 class ViewController: UIViewController {
@@ -13,6 +14,7 @@ class ViewController: UIViewController {
     var _player: Player?
     var _dealer: Dealer?
     var _deck: Deck?
+    var _currentGameNumber: Int = 0
 
     @IBOutlet var superView: UIView!
     @IBOutlet var middleView: UIView!
@@ -76,11 +78,16 @@ class ViewController: UIViewController {
 
         // deal card to player and check for a terminal state
         let dealtCard = (_deck?.dealCard(player: _player!))!
-        CardHelper.updateCardImage(card: dealtCard, image: playerCard2, imageViewName: "playerCard2")
+        let newCardImageView = addCardToHand(cardContainer: playerHandCardsContainer, card: dealtCard, player: _player!)
+        CardHelper.updateCardImage(card: dealtCard, image: newCardImageView)
         updateStats()
 
         checkIfGameIsOver()
     }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    // UI FUNCTIONS
+    ////////////////////////////////////////////////////////////////////////////////////////////////
 
     // Updates label text for player scores, remaining cards in deck
     func updateStats() {
@@ -99,49 +106,88 @@ class ViewController: UIViewController {
         dealerCard2.image = nil
     }
 
-    func initPlayerHandUI(player: Player) {
-        // orient cards container
-        playerHandCardsContainer.frame.origin.x = CGFloat(Configuration.CARD_CONTAINER_PADDING_X)
-        playerHandCardsContainer.frame.size.width = playerHandContainer.frame.width - CGFloat(Configuration.CARD_CONTAINER_PADDING_X * 2)
+    func orientPlayerCardsInHand() {
+        let playerCardOffsetY = 8
+        let playerCardOffsetX = 2
 
-        // orient first card
+        // orient initial cards in hand
         CardHelper.orientCardInHand(card: playerCard1, elementToPadFrom: playerHandCardsContainer, firstCard: true)
-
-        // orient second card to the right of first card
+        playerCard1.center.x += CGFloat(playerCardOffsetX)
         CardHelper.orientCardInHand(card: playerCard2, elementToPadFrom: playerCard1)
 
+        // fix y offset for cards
+        playerCard1.center.y += CGFloat(playerCardOffsetY)
+        playerCard2.center.y += CGFloat(playerCardOffsetY)
+    }
+
+    func initPlayerHandUI(player _: Player) {
+        let playerNameOffsetY = 3
+
+        // bind playerHandContainer to bottom of superView's safearea
+        view.addSubview(playerHandContainer)
+        playerHandContainer.snp.makeConstraints { (make) -> Void in
+            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
+            make.left.equalTo(self.view.safeAreaLayoutGuide.snp.left)
+            make.right.equalTo(self.view.safeAreaLayoutGuide.snp.right)
+            make.top.equalTo(middleView.snp.bottom)
+        }
+
+        // bind playerHandContainer to bottom of superView's safearea
+        playerHandContainer.addSubview(playerHandCardsContainer)
+        playerHandCardsContainer.snp.makeConstraints { (make) -> Void in
+            make.bottom.equalTo(playerHandContainer.snp.bottom)
+            make.left.equalTo(playerHandContainer.snp.left).offset(Configuration.CARD_CONTAINER_PADDING_X)
+            make.right.equalTo(playerHandContainer.snp.right).offset(Configuration.CARD_CONTAINER_PADDING_X * -1)
+        }
+
+        if _currentGameNumber == 0 {
+            orientPlayerCardsInHand()
+        }
+
         // init player name label
-        playerNameLabel.text = player._name.uppercased()
+        playerNameLabel.text = _player?._name.uppercased()
         playerNameLabel.sizeToFit()
         playerNameLabel.center.x = playerHandContainer.center.x
         playerNameLabel.frame.origin.y = playerHandCardsContainer.frame.origin.y - playerNameLabel.frame.height - CGFloat(Configuration.PLAYER_NAME_PADDING_Y)
 
         // init player score label
         playerScoreLabel.sizeToFit()
-        playerScoreLabel.center.y = playerNameLabel.center.y
+        playerScoreLabel.center.y = playerNameLabel.center.y + CGFloat(playerNameOffsetY)
         playerScoreLabel.frame.origin.x = playerNameLabel.frame.origin.x + playerNameLabel.frame.width + CGFloat(Configuration.PLAYER_SCORE_PADDING_X)
     }
 
-    func initDealerHandUI(dealer: Dealer) {
-        // orient cards container
-        dealerHandCardsContainer.frame.origin.x = CGFloat(Configuration.CARD_CONTAINER_PADDING_X)
-        dealerHandCardsContainer.frame.size.width = dealerHandContainer.frame.width - CGFloat(Configuration.CARD_CONTAINER_PADDING_X * 2)
+    func initDealerHandUI(dealer _: Dealer) {
+        let dealerNameOffsetY = 3
+        // bind dealerHandContainer to top of superView's safeArea
+        view.addSubview(dealerHandContainer)
+        dealerHandContainer.snp.makeConstraints { (make) -> Void in
+            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top)
+            make.left.equalTo(self.view.safeAreaLayoutGuide.snp.left)
+            make.right.equalTo(self.view.safeAreaLayoutGuide.snp.right)
+            make.bottom.equalTo(middleView.snp.top)
+        }
 
-        // orient first card
-        CardHelper.orientCardInHand(card: dealerCard1, elementToPadFrom: playerHandCardsContainer, firstCard: true)
+        // bind dealerHandContainer to bottom of superView's safearea
+        dealerHandContainer.addSubview(dealerHandCardsContainer)
+        dealerHandCardsContainer.snp.makeConstraints { (make) -> Void in
+            // make.bottom.equalTo(dealerHandContainer.snp.bottom)
+            make.left.equalTo(dealerHandContainer.snp.left).offset(Configuration.CARD_CONTAINER_PADDING_X)
+            make.right.equalTo(dealerHandContainer.snp.right).offset(Configuration.CARD_CONTAINER_PADDING_X * -1)
+            make.top.equalTo(dealerHandContainer.snp.top)
+        }
 
-        // orient second card
+        CardHelper.orientCardInHand(card: dealerCard1, elementToPadFrom: dealerHandCardsContainer, firstCard: true)
         CardHelper.orientCardInHand(card: dealerCard2, elementToPadFrom: dealerCard1)
 
         // init dealer name label
-        dealerNameLabel.text = dealer._name.uppercased()
+        dealerNameLabel.text = _dealer?._name.uppercased()
         dealerNameLabel.sizeToFit()
         dealerNameLabel.center.x = dealerHandContainer.center.x
-        dealerNameLabel.frame.origin.y = dealerHandCardsContainer.frame.origin.y + dealerHandCardsContainer.frame.height + CGFloat(Configuration.PLAYER_NAME_PADDING_Y)
+        dealerNameLabel.frame.origin.y = dealerHandContainer.frame.origin.y + playerNameLabel.frame.height + CGFloat(Configuration.PLAYER_NAME_PADDING_Y - dealerNameOffsetY)
 
         // init dealer score label
         dealerScoreLabel.sizeToFit()
-        dealerScoreLabel.center.y = dealerNameLabel.center.y
+        dealerScoreLabel.center.y = dealerNameLabel.center.y + CGFloat(dealerNameOffsetY)
         dealerScoreLabel.frame.origin.x = dealerNameLabel.frame.origin.x + dealerNameLabel.frame.width + CGFloat(Configuration.PLAYER_SCORE_PADDING_X)
     }
 
@@ -154,75 +200,6 @@ class ViewController: UIViewController {
         playerStandButton.isEnabled = true
     }
 
-    func initGame() {
-        resetPlayerControlButtonStates()
-
-        // hide gameResultContainer
-        gameResultContainer.isHidden = true
-        gameResultContainer.isUserInteractionEnabled = false
-
-        // unhide the deal again button from this view
-        restartGameButton.isHidden = false
-
-        // init players
-        _player = Player(name: "DR VAN NOSTRAND", chips: 0, cards: [])
-        _dealer = Dealer(name: "DEALER", chips: 0, cards: [], settings: PlayerSettings())
-
-        initPlayerHandUI(player: _player!)
-        initDealerHandUI(dealer: _dealer!)
-
-        // init deck
-        if _deck == nil {
-            _deck = Deck()
-        }
-        _deck?.shuffleDeck()
-
-        initialDeal()
-    }
-
-    func initialDeal() {
-        // deal to player
-        var dealtCard = ((_deck?.dealCard(player: _player!)))!
-        CardHelper.updateCardImage(card: dealtCard, image: playerCard1, imageViewName: "playerCard1")
-        updateStats()
-
-        // deal to Dealer
-        dealtCard = (_deck?.dealCard(player: _dealer!))!
-        CardHelper.updateCardImage(card: dealtCard, image: dealerCard1, imageViewName: "dealerCard1")
-        updateStats()
-
-        // deal to player again
-        dealtCard = (_deck?.dealCard(player: _player!))!
-        CardHelper.updateCardImage(card: dealtCard, image: playerCard2, imageViewName: "playerCard2")
-        updateStats()
-
-        // deal face down card to dealer
-        dealtCard = (_deck?.dealCard(player: _dealer!, isFaceUp: false))!
-        CardHelper.updateCardImage(card: dealtCard, image: dealerCard2, imageViewName: "dealerCard2")
-        updateStats()
-    }
-
-    func handlePlayerBlackJack() {
-        // hide restart game button from other view
-        restartGameButton.isHidden = true
-
-        // set game win status text
-        gameResultLabel.text = "Blackjack!  You Win!"
-        gameResultLabel.textColor = UIColor.green
-        gameResultLabel.backgroundColor = UIColor.darkGray.withAlphaComponent(0.75)
-        gameResultLabel.center.x = gameResultContainer.center.x
-        gameResultLabel.sizeToFit()
-
-        // set label's padding
-        let labelPadding = CGFloat(10)
-        setGameResultLabelPadding(labelPadding: labelPadding)
-
-        // show the game result overlay
-        gameResultContainer.backgroundColor = UIColor.green.withAlphaComponent(0.15)
-        gameResultContainer.isUserInteractionEnabled = true
-        gameResultContainer.isHidden = false
-    }
-
     func setGameResultLabelPadding(labelPadding: CGFloat) {
         // left-padding
         gameResultLabel.frame.origin.x = gameResultContainer.frame.minX + labelPadding
@@ -231,80 +208,23 @@ class ViewController: UIViewController {
         gameResultLabel.frame.size.width = gameResultContainer.frame.width - labelPadding * 2
     }
 
-    func handlePlayerBust() {
-        // hide restart game button from other view
-        restartGameButton.isHidden = true
-
-        // set game over status text
-        gameResultLabel.text = "Dang, broheim, you busted."
-        gameResultLabel.textColor = UIColor.red
-        gameResultLabel.backgroundColor = UIColor.darkGray.withAlphaComponent(0.75)
-        gameResultLabel.center.x = gameResultContainer.center.x
-        gameResultLabel.sizeToFit()
-
-        // set label's padding
-        let labelPadding = CGFloat(10)
-        setGameResultLabelPadding(labelPadding: labelPadding)
-
-        // show the game result overlay
-        gameResultContainer.backgroundColor = UIColor.red.withAlphaComponent(0.15)
-        gameResultContainer.isUserInteractionEnabled = true
-        gameResultContainer.isHidden = false
-    }
-
-    // determines if user busted or got blackjack and updates the UI accordingly
-    func checkIfGameIsOver() {
-        // check if user busted
-        if (_player?.score())! > 21 {
-            handlePlayerBust()
-        } else if _player?.score() == 21 {
-            handlePlayerBlackJack()
-        } else {
-            // enable hit and stand buttons
-            playerHitButton.isEnabled = true
-            playerStandButton.isEnabled = true
-        }
-    }
-
     func initBaseUI() {
-        dealerHandContainer.isHidden = true
-        superView.backgroundColor = UIColor.cyan
-        superView.translatesAutoresizingMaskIntoConstraints = false
-        if #available(iOS 11.0, *) {
-            let guide = self.view.safeAreaLayoutGuide
-            superView.trailingAnchor.constraint(equalTo: guide.trailingAnchor).isActive = true
-            superView.leadingAnchor.constraint(equalTo: guide.leadingAnchor).isActive = true
-            superView.bottomAnchor.constraint(equalTo: guide.bottomAnchor).isActive = true
-            superView.topAnchor.constraint(equalTo: guide.topAnchor).isActive = true
-        } else {
-            NSLayoutConstraint(item: superView, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1.0, constant: 0).isActive = true
-            NSLayoutConstraint(item: superView, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1.0, constant: 0).isActive = true
-            NSLayoutConstraint(item: superView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1.0, constant: 0).isActive = true
-            NSLayoutConstraint(item: superView, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1.0, constant: 0).isActive = true
+        // show borders on view edges for debugging
+        if Configuration.SHOW_VIEW_OUTLINE_BORDERS {
+            dealerHandContainer.layer.borderColor = UIColor.purple.cgColor
+            dealerHandContainer.layer.borderWidth = 2
+            middleView.layer.borderColor = UIColor.orange.cgColor
+            middleView.layer.borderWidth = 4
+            playerHandContainer.layer.borderColor = UIColor.purple.cgColor
+            playerHandContainer.layer.borderWidth = 2
+            statsContainer.layer.borderColor = UIColor.green.cgColor
+            statsContainer.layer.borderWidth = 3
+            playerControlsContainer.layer.borderColor = UIColor.green.cgColor
+            playerControlsContainer.layer.borderWidth = 3
         }
 
-        let margins = view.layoutMarginsGuide
-        NSLayoutConstraint.activate([
-            superView.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
-            superView.trailingAnchor.constraint(equalTo: margins.trailingAnchor)
-            ])
-
-        if #available(iOS 11, *) {
-            let guide = view.safeAreaLayoutGuide
-            NSLayoutConstraint.activate([
-                superView.topAnchor.constraintEqualToSystemSpacingBelow(guide.topAnchor, multiplier: 1.0),
-                guide.bottomAnchor.constraintEqualToSystemSpacingBelow(superView.bottomAnchor, multiplier: 1.0)
-                ])
-
-        } else {
-            let standardSpacing: CGFloat = 8.0
-            NSLayoutConstraint.activate([
-                superView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: standardSpacing),
-                bottomLayoutGuide.topAnchor.constraint(equalTo: superView.bottomAnchor, constant: standardSpacing)
-                ])
-        }
-
-
+        // bind middleView's subviews to top and bottom
+        statsContainer.frame.origin.y = CGFloat(0)
 
         // set widths of inner containers to be that of the superView
         dealerHandContainer.frame.size.width = superView.frame.width
@@ -316,12 +236,10 @@ class ViewController: UIViewController {
 
         // fix padding of player control buttons to fit new width
         initplayerControlsContainerUI()
+    }
 
-        // attach dealer hand to top of screen
-        dealerHandContainer.frame.origin.y = superView.frame.origin.y
-
-        // attach player hand to botton of screen
-        playerHandContainer.frame.origin.y = superView.frame.height - playerHandContainer.frame.height
+    func bringGameResultViewToFront() {
+        view.addSubview(gameResultContainer)
     }
 
     func initplayerControlsContainerUI() {
@@ -345,6 +263,143 @@ class ViewController: UIViewController {
         // vertically center deal again button
         restartGameButton.center.x = playerControlsContainer.center.x
         restartGameLoadingCircle.frame.origin.x = restartGameButton.frame.origin.x + CGFloat(Configuration.DEAL_AGAIN_LOADING_CIRCLE_PADDING_X)
+        restartGameLoadingCircle.center.y = restartGameButton.center.y
+    }
+
+    func addCardToHand(cardContainer: UIView, card: Card, player: Player) -> UIImageView {
+        _ = _player?._cards.count
+
+        let imageView = UIImageView()
+
+        CardHelper.updateCardImage(card: card, image: imageView)
+
+        let last = cardContainer.allSubViewsOf(type: UIImageView.self).last
+        _ = cardContainer.allSubViewsOf(type: UIImageView.self).first
+
+        CardHelper.orientCardInHand(card: imageView, elementToPadFrom: last!)
+
+        if player is Dealer {
+            // obj is a string array. Do something with stringArray
+
+            // CardHelper.orientCardInHand(card: imageView, elementToPadFrom: lastCard)
+        } else {
+            // obj is not a string array
+        }
+
+        // copy frame from playerCard1
+        imageView.frame = playerCard1.frame
+
+        return imageView
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    // GAME FUNCTIONS
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
+    // determines if user busted or got blackjack and updates the UI accordingly
+    func checkIfGameIsOver() {
+        // check if user busted
+        if (_player?.score())! > 21 {
+            handlePlayerBust()
+        } else if _player?.score() == 21 {
+            handlePlayerBlackJack()
+        } else {
+            // enable hit and stand buttons
+            playerHitButton.isEnabled = true
+            playerStandButton.isEnabled = true
+        }
+    }
+
+    func initialDeal() {
+        // deal to player
+        var dealtCard = ((_deck?.dealCard(player: _player!)))!
+        CardHelper.updateCardImage(card: dealtCard, image: playerCard1)
+        updateStats()
+
+        // deal to Dealer
+        dealtCard = (_deck?.dealCard(player: _dealer!))!
+        CardHelper.updateCardImage(card: dealtCard, image: dealerCard1)
+        updateStats()
+
+        // deal to player again
+        dealtCard = (_deck?.dealCard(player: _player!))!
+        CardHelper.updateCardImage(card: dealtCard, image: playerCard2)
+        updateStats()
+
+        // deal face down card to dealer
+        dealtCard = (_deck?.dealCard(player: _dealer!, isFaceUp: false))!
+        CardHelper.updateCardImage(card: dealtCard, image: dealerCard2)
+        updateStats()
+    }
+
+    func handlePlayerBust() {
+        // hide restart game button from other view
+        restartGameButton.isHidden = true
+
+        // set game over status text
+        gameResultLabel.text = "Dang, you busted."
+        gameResultLabel.textColor = UIColor(named: "tomato")
+        gameResultLabel.backgroundColor = UIColor.darkGray.withAlphaComponent(1)
+        gameResultLabel.center.x = gameResultContainer.center.x
+        gameResultLabel.sizeToFit()
+
+        // set label's padding
+        let labelPadding = CGFloat(10)
+        setGameResultLabelPadding(labelPadding: labelPadding)
+
+        // show the game result overlay
+        gameResultContainer.backgroundColor = UIColor.red.withAlphaComponent(0.15)
+        gameResultContainer.isUserInteractionEnabled = true
+        gameResultContainer.isHidden = false
+    }
+
+    func handlePlayerBlackJack() {
+        // hide restart game button from other view
+        restartGameButton.isHidden = true
+
+        // set game win status text
+        gameResultLabel.text = "Blackjack!  You Win!"
+        gameResultLabel.textColor = .green
+        gameResultLabel.backgroundColor = UIColor.darkGray.withAlphaComponent(1)
+        gameResultLabel.center.x = gameResultContainer.center.x
+        gameResultLabel.sizeToFit()
+
+        // set label's padding
+        let labelPadding = CGFloat(10)
+        setGameResultLabelPadding(labelPadding: labelPadding)
+
+        // show the game result overlay
+        gameResultContainer.backgroundColor = UIColor.green.withAlphaComponent(0.15)
+        gameResultContainer.isUserInteractionEnabled = true
+        gameResultContainer.isHidden = false
+    }
+
+    func initGame(firstGame _: Bool = false) {
+        resetPlayerControlButtonStates()
+
+        // hide gameResultContainer
+        gameResultContainer.isHidden = true
+        gameResultContainer.isUserInteractionEnabled = false
+
+        // unhide the deal again button from this view
+        restartGameButton.isHidden = false
+
+        // init players
+        _player = Player(name: "DR VAN NOSTRAND", chips: 0, cards: [])
+        _dealer = Dealer(name: "DEALER", chips: 0, cards: [], settings: PlayerSettings())
+
+        initPlayerHandUI(player: _player!)
+        initDealerHandUI(dealer: _dealer!)
+        bringGameResultViewToFront()
+
+        // init deck
+        if _deck == nil {
+            _deck = Deck()
+        }
+        _deck?.shuffleDeck()
+
+        initialDeal()
+        _currentGameNumber += 1
     }
 
     override func viewDidLoad() {
@@ -352,7 +407,7 @@ class ViewController: UIViewController {
 
         initBaseUI()
 
-        initGame()
+        initGame(firstGame: true)
 
         // check to see if user got blackjack or busted
         checkIfGameIsOver()

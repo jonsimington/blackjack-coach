@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="BlackJackBuddy" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BlackJackBuddy" TARGET_NAME="BlackjackBuddy" CONFIG_NAME="Debug" SCHEME_NAME="BlackJackBuddy" IS_LOCATION_SIMULATION_ALLOWED="true" RUN_TARGET_PROJECT_NAME="BlackJackBuddy" RUN_TARGET_NAME="BlackjackBuddy" MAKE_ACTIVE="TRUE">
+    <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+      <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+    </EXTENSION>
+    <method />
+  </configuration>
+</component>

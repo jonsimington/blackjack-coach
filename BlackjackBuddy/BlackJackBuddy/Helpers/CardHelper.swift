@@ -11,7 +11,7 @@ import UIKit
 
 class CardHelper {
     // sets the image for a UIImageView
-    static func updateCardImage(card: Card, image: UIImageView, imageViewName _: String) {
+    static func updateCardImage(card: Card, image: UIImageView) {
         let cardImageName = card._isFaceUp ? CardHelper.getCardImageName(card: card) : "faceDownCard"
         image.image = UIImage(named: cardImageName)
     }
