@@ -134,6 +134,8 @@
 		DD4AF52920D59455001235BA /* ELEMENT_TYPE.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AF52820D59455001235BA /* ELEMENT_TYPE.swift */; };
 		DD4AF53420D769EC001235BA /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AF53320D769EC001235BA /* config.swift */; };
 		DD4AF53620D76CCE001235BA /* PlayerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AF53520D76CCE001235BA /* PlayerSettings.swift */; };
+		DD4AF53920D9D588001235BA /* PaddingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AF53820D9D588001235BA /* PaddingHelper.swift */; };
+		DD4AF53B20D9D6B7001235BA /* CardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AF53A20D9D6B7001235BA /* CardHelper.swift */; };
 		DD906DAA20D4C2E600501074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD906DA920D4C2E600501074 /* AppDelegate.swift */; };
 		DD906DAC20D4C2E600501074 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD906DAB20D4C2E600501074 /* ViewController.swift */; };
 		DD906DAF20D4C2E600501074 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD906DAD20D4C2E600501074 /* Main.storyboard */; };
@@ -289,6 +291,8 @@
 		DD4AF52820D59455001235BA /* ELEMENT_TYPE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELEMENT_TYPE.swift; sourceTree = "<group>"; };
 		DD4AF53320D769EC001235BA /* config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
 		DD4AF53520D76CCE001235BA /* PlayerSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSettings.swift; sourceTree = "<group>"; };
+		DD4AF53820D9D588001235BA /* PaddingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingHelper.swift; sourceTree = "<group>"; };
+		DD4AF53A20D9D6B7001235BA /* CardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardHelper.swift; sourceTree = "<group>"; };
 		DD906DA620D4C2E600501074 /* BlackjackBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackjackBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD906DA920D4C2E600501074 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD906DAB20D4C2E600501074 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -715,6 +719,15 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		DD4AF53720D9D569001235BA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DD4AF53820D9D588001235BA /* PaddingHelper.swift */,
+				DD4AF53A20D9D6B7001235BA /* CardHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		DD906D9D20D4C2E600501074 = {
 			isa = PBXGroup;
 			children = (
@@ -739,6 +752,7 @@
 		DD906DA820D4C2E600501074 /* BlackJackBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				DD4AF53720D9D569001235BA /* Helpers */,
 				DD4AF53220D769CD001235BA /* Configuration */,
 				DD4AF52320D58212001235BA /* Extensions */,
 				DD4AF2F820D5520A001235BA /* Fonts */,
@@ -1029,6 +1043,7 @@
 				DD4AEF7C20D4EAC8001235BA /* Dealer.swift in Sources */,
 				DD906DB220D4C2E600501074 /* BlackJackBuddy.xcdatamodeld in Sources */,
 				DD4AF52720D593A1001235BA /* ELEMENT_STATE.swift in Sources */,
+				DD4AF53920D9D588001235BA /* PaddingHelper.swift in Sources */,
 				DD4AF52920D59455001235BA /* ELEMENT_TYPE.swift in Sources */,
 				DD4AEF7E20D4EB83001235BA /* Deck.swift in Sources */,
 				DD906DAA20D4C2E600501074 /* AppDelegate.swift in Sources */,
@@ -1036,6 +1051,7 @@
 				DD4AEF7A20D4E914001235BA /* Player.swift in Sources */,
 				DD4AEF8220D51D03001235BA /* USER_ACTION.swift in Sources */,
 				DD4AF53420D769EC001235BA /* config.swift in Sources */,
+				DD4AF53B20D9D6B7001235BA /* CardHelper.swift in Sources */,
 				DD4AEF7520D4E6B2001235BA /* Card.swift in Sources */,
 				DD4AF52520D58238001235BA /* PaddingLabel.swift in Sources */,
 				DD4AF53620D76CCE001235BA /* PlayerSettings.swift in Sources */,

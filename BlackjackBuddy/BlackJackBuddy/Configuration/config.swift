@@ -18,4 +18,3 @@ struct Configuration {
     static let DEAL_AGAIN_LOADING_CIRCLE_PADDING_X = 10
     static let STATUS_BAR_OFFSET = 20
 }
-

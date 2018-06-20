@@ -8,13 +8,11 @@
 
 import UIKit
 
-
 class ViewController: UIViewController {
     // LOCAL VARS
     var _player: Player?
     var _dealer: Dealer?
     var _deck: Deck?
-
 
     @IBOutlet var superView: UIView!
     @IBOutlet var middleView: UIView!
@@ -78,7 +76,7 @@ class ViewController: UIViewController {
 
         // deal card to player and check for a terminal state
         let dealtCard = (_deck?.dealCard(player: _player!))!
-        updateCardImage(card: dealtCard, image: playerCard2, imageViewName: "playerCard2")
+        CardHelper.updateCardImage(card: dealtCard, image: playerCard2, imageViewName: "playerCard2")
         updateStats()
 
         checkIfGameIsOver()
@@ -93,12 +91,6 @@ class ViewController: UIViewController {
         deckCountLabel.text = "\(_deck?._cards.count ?? 52) cards"
     }
 
-    // sets the image for a UIImageView
-    func updateCardImage(card: Card, image: UIImageView, imageViewName _: String) {
-        let cardImageName = card._isFaceUp ? getCardImageName(card: card) : "faceDownCard"
-        image.image = UIImage(named: cardImageName)
-    }
-
     // sets the UIImageViews associated with the player's hand and the dealer's hand
     func clearCardImages() {
         playerCard1.image = nil
@@ -110,13 +102,13 @@ class ViewController: UIViewController {
     func initPlayerHandUI(player: Player) {
         // orient cards container
         playerHandCardsContainer.frame.origin.x = CGFloat(Configuration.CARD_CONTAINER_PADDING_X)
-        playerHandCardsContainer.frame.size.width = playerHandContainer.frame.width - CGFloat(Configuration.CARD_CONTAINER_PADDING_X*2)
+        playerHandCardsContainer.frame.size.width = playerHandContainer.frame.width - CGFloat(Configuration.CARD_CONTAINER_PADDING_X * 2)
 
         // orient first card
-        orientCardInHand(card: playerCard1, elementToPadFrom: playerHandCardsContainer, firstCard: true)
+        CardHelper.orientCardInHand(card: playerCard1, elementToPadFrom: playerHandCardsContainer, firstCard: true)
 
         // orient second card to the right of first card
-        orientCardInHand(card: playerCard2, elementToPadFrom: playerCard1)
+        CardHelper.orientCardInHand(card: playerCard2, elementToPadFrom: playerCard1)
 
         // init player name label
         playerNameLabel.text = player._name.uppercased()
@@ -130,26 +122,16 @@ class ViewController: UIViewController {
         playerScoreLabel.frame.origin.x = playerNameLabel.frame.origin.x + playerNameLabel.frame.width + CGFloat(Configuration.PLAYER_SCORE_PADDING_X)
     }
 
-    func orientCardInHand(card: UIImageView, elementToPadFrom: UIImageView, firstCard: Bool = false) {
-
-        if firstCard {
-            card.frame.origin.x = elementToPadFrom.frame.origin.x + CGFloat(Configuration.CARD_PADDING_X)
-        }
-        else {
-            card.frame.origin.x = elementToPadFrom.frame.origin.x + elementToPadFrom.frame.width + CGFloat(Configuration.CARD_PADDING_X)
-        }
-    }
-
     func initDealerHandUI(dealer: Dealer) {
         // orient cards container
         dealerHandCardsContainer.frame.origin.x = CGFloat(Configuration.CARD_CONTAINER_PADDING_X)
-        dealerHandCardsContainer.frame.size.width = dealerHandContainer.frame.width - CGFloat(Configuration.CARD_CONTAINER_PADDING_X*2)
+        dealerHandCardsContainer.frame.size.width = dealerHandContainer.frame.width - CGFloat(Configuration.CARD_CONTAINER_PADDING_X * 2)
 
         // orient first card
-        orientCardInHand(card: dealerCard1, elementToPadFrom: playerHandCardsContainer, firstCard: true)
+        CardHelper.orientCardInHand(card: dealerCard1, elementToPadFrom: playerHandCardsContainer, firstCard: true)
 
         // orient second card
-        orientCardInHand(card: dealerCard2, elementToPadFrom: dealerCard1)
+        CardHelper.orientCardInHand(card: dealerCard2, elementToPadFrom: dealerCard1)
 
         // init dealer name label
         dealerNameLabel.text = dealer._name.uppercased()
@@ -174,7 +156,7 @@ class ViewController: UIViewController {
 
     func initGame() {
         resetPlayerControlButtonStates()
-        
+
         // hide gameResultContainer
         gameResultContainer.isHidden = true
         gameResultContainer.isUserInteractionEnabled = false
@@ -201,22 +183,22 @@ class ViewController: UIViewController {
     func initialDeal() {
         // deal to player
         var dealtCard = ((_deck?.dealCard(player: _player!)))!
-        updateCardImage(card: dealtCard, image: playerCard1, imageViewName: "playerCard1")
+        CardHelper.updateCardImage(card: dealtCard, image: playerCard1, imageViewName: "playerCard1")
         updateStats()
 
         // deal to Dealer
         dealtCard = (_deck?.dealCard(player: _dealer!))!
-        updateCardImage(card: dealtCard, image: dealerCard1, imageViewName: "dealerCard1")
+        CardHelper.updateCardImage(card: dealtCard, image: dealerCard1, imageViewName: "dealerCard1")
         updateStats()
 
         // deal to player again
         dealtCard = (_deck?.dealCard(player: _player!))!
-        updateCardImage(card: dealtCard, image: playerCard2, imageViewName: "playerCard2")
+        CardHelper.updateCardImage(card: dealtCard, image: playerCard2, imageViewName: "playerCard2")
         updateStats()
 
         // deal face down card to dealer
         dealtCard = (_deck?.dealCard(player: _dealer!, isFaceUp: false))!
-        updateCardImage(card: dealtCard, image: dealerCard2, imageViewName: "dealerCard2")
+        CardHelper.updateCardImage(card: dealtCard, image: dealerCard2, imageViewName: "dealerCard2")
         updateStats()
     }
 
@@ -246,12 +228,10 @@ class ViewController: UIViewController {
         gameResultLabel.frame.origin.x = gameResultContainer.frame.minX + labelPadding
 
         // right-padding
-        gameResultLabel.frame.size.width = gameResultContainer.frame.width - labelPadding*2
+        gameResultLabel.frame.size.width = gameResultContainer.frame.width - labelPadding * 2
     }
 
     func handlePlayerBust() {
-
-
         // hide restart game button from other view
         restartGameButton.isHidden = true
 
@@ -265,7 +245,6 @@ class ViewController: UIViewController {
         // set label's padding
         let labelPadding = CGFloat(10)
         setGameResultLabelPadding(labelPadding: labelPadding)
-
 
         // show the game result overlay
         gameResultContainer.backgroundColor = UIColor.red.withAlphaComponent(0.15)
@@ -287,17 +266,10 @@ class ViewController: UIViewController {
         }
     }
 
-    func getCardImageName(card: Card) -> String {
-        let dealtRank = card._rank.getImageName()
-        let dealtSuit = card._suit.getImageName()
-        let cardImageName = "\(dealtRank)_\(dealtSuit)"
-        return cardImageName
-    }
-
     func initBaseUI() {
         // attach superView's frame to the base view
-        superView.frame.origin.x = self.view.frame.origin.x
-        superView.frame.origin.y = self.view.safeAreaInsets.top + self.view.safeAreaInsets.bottom
+        superView.frame.origin.x = view.frame.origin.x
+        superView.frame.origin.y = view.safeAreaInsets.top + view.safeAreaInsets.bottom
 
         // set widths of inner containers to be that of the superView
         dealerHandContainer.frame.size.width = superView.frame.width
@@ -312,43 +284,29 @@ class ViewController: UIViewController {
 
         // attach dealer hand to top of screen
         dealerHandContainer.frame.origin.y = superView.frame.origin.y
-        
+
         // attach player hand to botton of screen
         playerHandContainer.frame.origin.y = superView.frame.height - playerHandContainer.frame.height
     }
 
-    func leftPadButton(button: UIButton, elementToPadFrom: UIView) {
-        button.frame.origin.x = elementToPadFrom.frame.origin.x + CGFloat(Configuration.PLAYER_CONTROL_BUTTON_PADDING_X)
-    }
-
-    func rightPadButton(button: UIButton, elementToPadFrom: UIView) {
-        button.frame.origin.x = elementToPadFrom.frame.width -
-            button.frame.width -
-            CGFloat(Configuration.PLAYER_CONTROL_BUTTON_PADDING_X)
-    }
-
-    func topPadButton(button: UIButton, elementToPadFrom: UIButton) {
-        button.frame.origin.y = elementToPadFrom.frame.origin.y + elementToPadFrom.frame.height + CGFloat(Configuration.PLAYER_CONTROL_BUTTON_PADDING_Y)
-    }
-
     func initplayerControlsContainerUI() {
         // set left padding for insurance, split and hit buttons
-        leftPadButton(button: playerInsuranceButton, elementToPadFrom: playerControlsContainer)
-        leftPadButton(button: playerSplitButton, elementToPadFrom: playerControlsContainer)
-        leftPadButton(button: playerHitButton, elementToPadFrom: playerControlsContainer)
+        PaddingHelper.leftPadButton(button: playerInsuranceButton, elementToPadFrom: playerControlsContainer)
+        PaddingHelper.leftPadButton(button: playerSplitButton, elementToPadFrom: playerControlsContainer)
+        PaddingHelper.leftPadButton(button: playerHitButton, elementToPadFrom: playerControlsContainer)
 
         // set right padding for surrender, double down, stand buttons
-        rightPadButton(button: playerSurrenderButton, elementToPadFrom: playerControlsContainer)
-        rightPadButton(button: playerDoubleDownButton, elementToPadFrom: playerControlsContainer)
-        rightPadButton(button: playerStandButton, elementToPadFrom: playerControlsContainer)
+        PaddingHelper.rightPadButton(button: playerSurrenderButton, elementToPadFrom: playerControlsContainer)
+        PaddingHelper.rightPadButton(button: playerDoubleDownButton, elementToPadFrom: playerControlsContainer)
+        PaddingHelper.rightPadButton(button: playerStandButton, elementToPadFrom: playerControlsContainer)
 
         // set top padding for split, doubledown, hit, stand, deal again buttons
-        topPadButton(button: playerSplitButton, elementToPadFrom: playerInsuranceButton)
-        topPadButton(button: playerDoubleDownButton, elementToPadFrom: playerSurrenderButton)
-        topPadButton(button: playerHitButton, elementToPadFrom: playerSplitButton)
-        topPadButton(button: playerStandButton, elementToPadFrom: playerDoubleDownButton)
-        topPadButton(button: restartGameButton, elementToPadFrom: playerHitButton)
-        
+        PaddingHelper.topPadButton(button: playerSplitButton, elementToPadFrom: playerInsuranceButton)
+        PaddingHelper.topPadButton(button: playerDoubleDownButton, elementToPadFrom: playerSurrenderButton)
+        PaddingHelper.topPadButton(button: playerHitButton, elementToPadFrom: playerSplitButton)
+        PaddingHelper.topPadButton(button: playerStandButton, elementToPadFrom: playerDoubleDownButton)
+        PaddingHelper.topPadButton(button: restartGameButton, elementToPadFrom: playerHitButton)
+
         // vertically center deal again button
         restartGameButton.center.x = playerControlsContainer.center.x
         restartGameLoadingCircle.frame.origin.x = restartGameButton.frame.origin.x + CGFloat(Configuration.DEAL_AGAIN_LOADING_CIRCLE_PADDING_X)
