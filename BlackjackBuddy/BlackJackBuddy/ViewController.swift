@@ -267,9 +267,44 @@ class ViewController: UIViewController {
     }
 
     func initBaseUI() {
-        // attach superView's frame to the base view
-        superView.frame.origin.x = view.frame.origin.x
-        superView.frame.origin.y = view.safeAreaInsets.top + view.safeAreaInsets.bottom
+        dealerHandContainer.isHidden = true
+        superView.backgroundColor = UIColor.cyan
+        superView.translatesAutoresizingMaskIntoConstraints = false
+        if #available(iOS 11.0, *) {
+            let guide = self.view.safeAreaLayoutGuide
+            superView.trailingAnchor.constraint(equalTo: guide.trailingAnchor).isActive = true
+            superView.leadingAnchor.constraint(equalTo: guide.leadingAnchor).isActive = true
+            superView.bottomAnchor.constraint(equalTo: guide.bottomAnchor).isActive = true
+            superView.topAnchor.constraint(equalTo: guide.topAnchor).isActive = true
+        } else {
+            NSLayoutConstraint(item: superView, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1.0, constant: 0).isActive = true
+            NSLayoutConstraint(item: superView, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1.0, constant: 0).isActive = true
+            NSLayoutConstraint(item: superView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1.0, constant: 0).isActive = true
+            NSLayoutConstraint(item: superView, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1.0, constant: 0).isActive = true
+        }
+
+        let margins = view.layoutMarginsGuide
+        NSLayoutConstraint.activate([
+            superView.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
+            superView.trailingAnchor.constraint(equalTo: margins.trailingAnchor)
+            ])
+
+        if #available(iOS 11, *) {
+            let guide = view.safeAreaLayoutGuide
+            NSLayoutConstraint.activate([
+                superView.topAnchor.constraintEqualToSystemSpacingBelow(guide.topAnchor, multiplier: 1.0),
+                guide.bottomAnchor.constraintEqualToSystemSpacingBelow(superView.bottomAnchor, multiplier: 1.0)
+                ])
+
+        } else {
+            let standardSpacing: CGFloat = 8.0
+            NSLayoutConstraint.activate([
+                superView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: standardSpacing),
+                bottomLayoutGuide.topAnchor.constraint(equalTo: superView.bottomAnchor, constant: standardSpacing)
+                ])
+        }
+
+
 
         // set widths of inner containers to be that of the superView
         dealerHandContainer.frame.size.width = superView.frame.width
