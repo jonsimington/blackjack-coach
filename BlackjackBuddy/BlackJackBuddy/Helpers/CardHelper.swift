@@ -27,6 +27,7 @@ class CardHelper {
         if firstCard {
             card.frame.origin.x = elementToPadFrom.frame.origin.x + CGFloat(Configuration.CARD_PADDING_X)
         } else {
+            print("original x: \(card.frame.origin.x) new x: \(elementToPadFrom.frame.origin.x + elementToPadFrom.frame.width + CGFloat(Configuration.CARD_PADDING_X))")
             card.frame.origin.x = elementToPadFrom.frame.origin.x + elementToPadFrom.frame.width + CGFloat(Configuration.CARD_PADDING_X)
         }
     }

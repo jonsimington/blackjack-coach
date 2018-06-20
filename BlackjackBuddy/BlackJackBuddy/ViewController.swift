@@ -29,6 +29,7 @@ class ViewController: UIViewController {
     // PLAYER VIEWS
     @IBOutlet var playerHandContainer: UIView!
     @IBOutlet var playerHandCardsContainer: UIImageView!
+    @IBOutlet var playerCardsStack: UIStackView!
     @IBOutlet var playerCard1: UIImageView!
     @IBOutlet var playerCard2: UIImageView!
     @IBOutlet var playerNameLabel: UILabel!
@@ -77,8 +78,8 @@ class ViewController: UIViewController {
 
         // deal card to player and check for a terminal state
         let dealtCard = (_deck?.dealCard(player: _player!))!
-        let newCardImageView = addCardToHand(cardContainer: playerHandCardsContainer, card: dealtCard, player: _player!)
-        CardHelper.updateCardImage(card: dealtCard, image: newCardImageView)
+        addCardToHand(cardContainer: playerHandCardsContainer!, card: dealtCard, player: _player!)
+
         updateStats()
 
         checkIfGameIsOver()
@@ -105,26 +106,14 @@ class ViewController: UIViewController {
         dealerCard2.image = nil
     }
 
-    func orientPlayerCardsInHand() {
-        let playerCardOffsetY = 8
-        let playerCardOffsetX = 2
-
-        // orient initial cards in hand
-        CardHelper.orientCardInHand(card: playerCard1, elementToPadFrom: playerHandCardsContainer, firstCard: true)
-        playerCard1.center.x += CGFloat(playerCardOffsetX)
-        CardHelper.orientCardInHand(card: playerCard2, elementToPadFrom: playerCard1)
-
-        // fix y offset for cards
-        playerCard1.center.y += CGFloat(playerCardOffsetY)
-        playerCard2.center.y += CGFloat(playerCardOffsetY)
-    }
-
     func initPlayerHandUI(player _: Player) {
         let playerNameOffsetY = 3
 
         // bind playerHandContainer to bottom of superView's safearea
         view.addSubview(playerHandContainer)
         playerHandContainer.snp.makeConstraints { (make) -> Void in
+            make.width.equalTo(dealerHandContainer.snp.width)
+            make.height.equalTo(dealerHandContainer.snp.height)
             make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
             make.left.equalTo(self.view.safeAreaLayoutGuide.snp.left)
             make.right.equalTo(self.view.safeAreaLayoutGuide.snp.right)
@@ -134,14 +123,33 @@ class ViewController: UIViewController {
         // bind playerHandContainer to bottom of superView's safearea
         playerHandContainer.addSubview(playerHandCardsContainer)
         playerHandCardsContainer.snp.makeConstraints { (make) -> Void in
+
             make.bottom.equalTo(playerHandContainer.snp.bottom)
             make.left.equalTo(playerHandContainer.snp.left).offset(Configuration.CARD_CONTAINER_PADDING_X)
             make.right.equalTo(playerHandContainer.snp.right).offset(Configuration.CARD_CONTAINER_PADDING_X * -1)
         }
 
-        if _currentGameNumber == 0 {
-            orientPlayerCardsInHand()
+        playerHandCardsContainer.addSubview(playerCard1)
+        playerHandCardsContainer.addSubview(playerCard2)
+        playerCard1.snp.makeConstraints { (make) -> Void in
+            make.width.equalTo(CGFloat(Configuration.CARD_WIDTH))
+            make.height.equalTo(CGFloat(Configuration.CARD_HEIGHT))
+            make.bottom.equalTo(playerHandCardsContainer.snp.bottom).offset(Configuration.CARD_PADDING_Y * -1)
+                make.top.equalTo(playerHandCardsContainer.snp.top).offset(Configuration.CARD_PADDING_Y)
+            //make.right.equalTo(playerCard2.snp.right).offset(Configuration.CARD_PADDING_X)
+            make.left.equalTo(playerHandCardsContainer.snp.left).offset(Configuration.CARD_PADDING_X)
         }
+        playerCard2.snp.makeConstraints { (make) -> Void in
+            make.width.equalTo(CGFloat(Configuration.CARD_WIDTH))
+            make.height.equalTo(CGFloat(Configuration.CARD_HEIGHT))
+            make.bottom.equalTo(playerHandCardsContainer.snp.bottom).offset(Configuration.CARD_PADDING_Y * -1)
+            make.top.equalTo(playerHandCardsContainer.snp.top).offset(Configuration.CARD_PADDING_Y)
+            //make.right.equalTo(playerHandCardsContainer.snp.right).offset(Configuration.CARD_PADDING_X)
+            make.left.equalTo(playerCard1.snp.right).offset(Configuration.CARD_PADDING_X)
+        }
+
+        playerCard2.layer.borderColor = UIColor.green.cgColor
+        playerCard2.layer.borderWidth = 3
 
         // init player name label
         playerNameLabel.text = _player?._name.uppercased()
@@ -175,8 +183,27 @@ class ViewController: UIViewController {
             make.top.equalTo(dealerHandContainer.snp.top)
         }
 
-        CardHelper.orientCardInHand(card: dealerCard1, elementToPadFrom: dealerHandCardsContainer, firstCard: true)
-        CardHelper.orientCardInHand(card: dealerCard2, elementToPadFrom: dealerCard1)
+        dealerHandCardsContainer.addSubview(dealerCard1)
+        dealerHandCardsContainer.addSubview(dealerCard2)
+        dealerCard1.snp.makeConstraints { (make) -> Void in
+            make.width.equalTo(CGFloat(Configuration.CARD_WIDTH))
+            make.height.equalTo(CGFloat(Configuration.CARD_HEIGHT))
+            make.bottom.equalTo(dealerHandCardsContainer.snp.bottom).offset(Configuration.CARD_PADDING_Y * -1)
+            make.top.equalTo(dealerHandCardsContainer.snp.top).offset(Configuration.CARD_PADDING_Y)
+            //make.right.equalTo(playerCard2.snp.right).offset(Configuration.CARD_PADDING_X)
+            make.left.equalTo(dealerHandCardsContainer.snp.left).offset(Configuration.CARD_PADDING_X)
+        }
+        dealerCard2.snp.makeConstraints { (make) -> Void in
+            make.width.equalTo(CGFloat(Configuration.CARD_WIDTH))
+            make.height.equalTo(CGFloat(Configuration.CARD_HEIGHT))
+            make.bottom.equalTo(dealerHandCardsContainer.snp.bottom).offset(Configuration.CARD_PADDING_Y * -1)
+            make.top.equalTo(dealerHandCardsContainer.snp.top).offset(Configuration.CARD_PADDING_Y)
+            //make.right.equalTo(playerHandCardsContainer.snp.right).offset(Configuration.CARD_PADDING_X)
+            make.left.equalTo(playerCard1.snp.right).offset(Configuration.CARD_PADDING_X)
+        }
+
+        dealerCard2.layer.borderColor = UIColor.green.cgColor
+        dealerCard2.layer.borderWidth = 3
 
         // init dealer name label
         dealerNameLabel.text = _dealer?._name.uppercased()
@@ -239,6 +266,12 @@ class ViewController: UIViewController {
 
     func bringGameResultViewToFront() {
         view.addSubview(gameResultContainer)
+        gameResultContainer.snp.makeConstraints { (make) -> Void in
+            make.left.equalTo(view.snp.left)
+            make.right.equalTo(view.snp.right)
+            make.top.equalTo(view.snp.top)
+            make.bottom.equalTo(view.snp.bottom)
+        }
     }
 
     func initplayerControlsContainerUI() {
@@ -265,30 +298,36 @@ class ViewController: UIViewController {
         restartGameLoadingCircle.center.y = restartGameButton.center.y
     }
 
-    func addCardToHand(cardContainer: UIView, card: Card, player: Player) -> UIImageView {
-        _ = _player?._cards.count
-
-        let imageView = UIImageView()
-
-        CardHelper.updateCardImage(card: card, image: imageView)
-
-        let last = cardContainer.allSubViewsOf(type: UIImageView.self).last
-        _ = cardContainer.allSubViewsOf(type: UIImageView.self).first
-
-        CardHelper.orientCardInHand(card: imageView, elementToPadFrom: last!)
+    func addCardToHand(cardContainer: UIView, card: Card, player: Player)
+    {
+        var cardOffsetParity = 0
 
         if player is Dealer {
             // obj is a string array. Do something with stringArray
-
-            // CardHelper.orientCardInHand(card: imageView, elementToPadFrom: lastCard)
+            cardOffsetParity = 1
         } else {
-            // obj is not a string array
+            cardOffsetParity = -1
         }
 
-        // copy frame from playerCard1
-        imageView.frame = playerCard1.frame
+        let newCardImage = UIImageView()
 
-        return imageView
+        //CardHelper.updateCardImage(card: card, image: imageView)
+        let subviews = cardContainer.allSubViewsOf(type: UIImageView.self)
+        let last = subviews.last
+
+        last?.layer.borderColor = UIColor.red.cgColor
+        last?.layer.borderWidth = 4
+
+        cardContainer.addSubview(newCardImage)
+        newCardImage.snp.makeConstraints { (make) -> Void in
+            make.width.equalTo(CGFloat(Configuration.CARD_WIDTH))
+            make.height.equalTo(CGFloat(Configuration.CARD_HEIGHT))
+            make.bottom.equalTo(cardContainer.snp.bottom).offset(Configuration.CARD_PADDING_Y * cardOffsetParity)
+            make.top.equalTo(cardContainer.snp.top).offset(Configuration.CARD_PADDING_Y)
+            make.left.equalTo((last?.snp.right)!).offset(Configuration.CARD_PADDING_X)
+        }
+        CardHelper.updateCardImage(card: card, image: newCardImage)
+
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////

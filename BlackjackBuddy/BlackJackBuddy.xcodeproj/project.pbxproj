@@ -464,7 +464,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"~/code/blackjackbuddy\"";
+			shellScript = "#\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"~/code/blackjackbuddy\"";
 		};
 		FB0AAD0EA3ABAC2F101CB481 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

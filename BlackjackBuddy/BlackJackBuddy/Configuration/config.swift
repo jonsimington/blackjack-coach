@@ -21,4 +21,6 @@ struct Configuration {
     static let SHOW_VIEW_OUTLINE_BORDERS = false
     static let LABEL_PADDING_Y = 5
     static let LABEL_PADDING_X = 10
+    static let CARD_WIDTH = 50
+    static let CARD_HEIGHT = 70
 }
