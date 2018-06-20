@@ -295,6 +295,7 @@
 			buildConfigurationList = DD906DD120D4C2E800501074 /* Build configuration list for PBXNativeTarget "BlackjackBuddy" */;
 			buildPhases = (
 				FB0AAD0EA3ABAC2F101CB481 /* [CP] Check Pods Manifest.lock */,
+				DD12908A20DA572500B8F35F /* ShellScript */,
 				DD906DA220D4C2E600501074 /* Sources */,
 				DD906DA320D4C2E600501074 /* Frameworks */,
 				DD906DA420D4C2E600501074 /* Resources */,
@@ -451,6 +452,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/BlackJackBuddy/Pods/Target Support Files/Pods-BlackjackBuddy/Pods-BlackjackBuddy-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		DD12908A20DA572500B8F35F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"~/code/blackjackbuddy\"";
 		};
 		FB0AAD0EA3ABAC2F101CB481 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

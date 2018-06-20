@@ -58,7 +58,6 @@ class ViewController: UIViewController {
 
     // PLAYER CONTROLS VIEWS
     @IBOutlet var playerControlsContainer: UIView!
-    @IBOutlet var playerHitStandContainer: UIView!
     @IBOutlet var playerStandButton: UIButton!
     @IBOutlet var playerSplitButton: UIButton!
     @IBOutlet var playerDoubleDownButton: UIButton!
