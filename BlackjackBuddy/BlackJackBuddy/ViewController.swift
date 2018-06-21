@@ -22,16 +22,11 @@ class ViewController: UIViewController {
     // DEALER VIEWS
     @IBOutlet var dealerHandContainer: UIView!
     @IBOutlet var dealerHandCardsContainer: UIImageView!
-    @IBOutlet var dealerCard1: UIImageView!
-    @IBOutlet var dealerCard2: UIImageView!
     @IBOutlet var dealerNameLabel: UILabel!
 
     // PLAYER VIEWS
     @IBOutlet var playerHandContainer: UIView!
     @IBOutlet var playerHandCardsContainer: UIImageView!
-    @IBOutlet var playerCardsStack: UIStackView!
-    @IBOutlet var playerCard1: UIImageView!
-    @IBOutlet var playerCard2: UIImageView!
     @IBOutlet var playerNameLabel: UILabel!
 
     // STATS VIEWS
@@ -118,6 +113,8 @@ class ViewController: UIViewController {
             make.bottom.equalTo(playerHandContainer.snp.bottom)
             make.left.equalTo(playerHandContainer.snp.left).offset(Configuration.CARD_CONTAINER_PADDING_X)
             make.right.equalTo(playerHandContainer.snp.right).offset(Configuration.CARD_CONTAINER_PADDING_X * -1)
+            make.height.equalTo(playerHandContainer.snp.height).multipliedBy(0.50)
+            make.bottom.equalTo(playerHandContainer.snp.bottom)
         }
 
         // init player name label
@@ -127,7 +124,7 @@ class ViewController: UIViewController {
             make.top.equalTo(playerHandContainer.snp.top).offset(Configuration.PLAYER_NAME_PADDING_Y)
             make.bottom.equalTo(playerHandCardsContainer.snp.top).offset(Configuration.PLAYER_NAME_PADDING_Y * -1)
             make.centerX.equalTo(playerHandContainer.snp.centerX)
-            make.width.greaterThanOrEqualTo(50)
+            make.width.greaterThanOrEqualTo(300)
         }
         
         // init player score label
@@ -135,6 +132,7 @@ class ViewController: UIViewController {
         playerScoreLabel.snp.makeConstraints{(make) -> Void in
             make.centerY.equalTo(playerNameLabel.snp.centerY)
             make.left.equalTo(playerNameLabel.snp.right)
+            make.height.equalTo(playerNameLabel)
         }
     }
 
@@ -148,24 +146,26 @@ class ViewController: UIViewController {
             make.left.equalTo(dealerHandContainer.snp.left).offset(Configuration.CARD_CONTAINER_PADDING_X)
             make.right.equalTo(dealerHandContainer.snp.right).offset(Configuration.CARD_CONTAINER_PADDING_X * -1)
             make.top.equalTo(dealerHandContainer.snp.top)
+            make.height.equalTo(dealerHandContainer.snp.height).multipliedBy(0.50)
+
         }
 
         // init dealer name label
         dealerNameLabel.text = _dealer?._name.uppercased()
         dealerHandContainer.addSubview(dealerNameLabel)
-//        var f = Configuration.PLAYER_NAME_FONT
         dealerNameLabel.snp.makeConstraints{(make) -> Void in
             make.top.equalTo(dealerHandCardsContainer.snp.bottom).offset(Configuration.PLAYER_NAME_PADDING_Y)
             make.bottom.equalTo(dealerHandContainer.snp.bottom).offset(Configuration.PLAYER_NAME_PADDING_Y * -1)
             make.centerX.equalTo(dealerHandContainer.snp.centerX)
         }
-        dealerNameLabel.sizeToFit()
+        //dealerNameLabel.sizeToFit()
         // init dealer score label
         dealerHandContainer.addSubview(dealerScoreLabel)
 
         dealerScoreLabel.snp.makeConstraints{(make) -> Void in
-            make.centerY.equalTo(dealerScoreLabel.snp.centerY)
-            make.left.equalTo(dealerScoreLabel.snp.right)
+            make.centerY.equalTo(dealerNameLabel.snp.centerY)
+            make.left.equalTo(dealerNameLabel.snp.right)
+            make.height.equalTo(dealerNameLabel)
         }
     }
 
@@ -187,20 +187,6 @@ class ViewController: UIViewController {
     }
 
     func initBaseUI() {
-        // show borders on view edges for debugging
-        if Configuration.SHOW_VIEW_OUTLINE_BORDERS {
-            dealerHandContainer.layer.borderColor = UIColor.purple.cgColor
-            dealerHandContainer.layer.borderWidth = 2
-            middleView.layer.borderColor = UIColor.orange.cgColor
-            middleView.layer.borderWidth = 4
-            playerHandContainer.layer.borderColor = UIColor.purple.cgColor
-            playerHandContainer.layer.borderWidth = 2
-            statsContainer.layer.borderColor = UIColor.green.cgColor
-            statsContainer.layer.borderWidth = 3
-            playerControlsContainer.layer.borderColor = UIColor.green.cgColor
-            playerControlsContainer.layer.borderWidth = 3
-        }
-        
         // bind playerHandContainer to bottom of superView's safearea
         view.addSubview(playerHandContainer)
         playerHandContainer.snp.makeConstraints { (make) -> Void in
@@ -220,8 +206,25 @@ class ViewController: UIViewController {
             make.left.equalTo(self.view.safeAreaLayoutGuide.snp.left)
             make.right.equalTo(self.view.safeAreaLayoutGuide.snp.right)
             make.height.equalTo(self.view.safeAreaLayoutGuide).multipliedBy(0.12)
-
-            //make.bottom.equalTo(middleView.snp.top)
+        }
+        
+        // init player controls view
+        middleView.addSubview(playerControlsContainer)
+        middleView.addSubview(statsContainer)
+        
+        
+        statsContainer.snp.makeConstraints{(make) -> Void in
+            make.top.equalTo(middleView.snp.top)
+            make.centerX.equalTo(middleView)
+            print("stats \(statsContainer.snp.centerX) middle \(middleView.snp.centerX)")
+        }
+        
+        statsContainer.layer.borderColor = UIColor.green.cgColor
+        statsContainer.layer.borderWidth = 3
+        playerControlsContainer.snp.makeConstraints{(make) -> Void in
+            make.top.equalTo(statsContainer.snp.top)
+            make.bottom.equalTo(middleView.snp.bottom)
+            make.centerX.equalTo(middleView)
         }
         
         // bind middle view between card hands containers
@@ -233,29 +236,43 @@ class ViewController: UIViewController {
             make.right.equalTo(view.snp.right)
         }
         
-        middleView.addSubview(playerControlsContainer)
-        middleView.addSubview(statsContainer)
+       
+       
         
-        statsContainer.layer.borderColor = UIColor.green.cgColor
-        statsContainer.layer.borderWidth = 3
+        playerControlsContainer.addSubview(playerInsuranceButton)
+        playerControlsContainer.addSubview(playerSurrenderButton)
+        playerControlsContainer.addSubview(playerSplitButton)
+        playerControlsContainer.addSubview(playerDoubleDownButton)
+        playerControlsContainer.addSubview(playerHitButton)
+        playerControlsContainer.addSubview(playerStandButton)
+        playerControlsContainer.addSubview(restartGameButton)
         
-        statsContainer.snp.makeConstraints{(make) -> Void in
-            make.top.equalTo(middleView.snp.top)
-            //make.bottom.equalTo(playerControlsContainer.snp.top)
-            make.right.equalTo(middleView.snp.right)
-            make.left.equalTo(middleView.snp.left)
-            make.centerX.equalTo(middleView.snp.centerX)
-        }
-        
-        playerControlsContainer.snp.makeConstraints{(make) -> Void in
-            make.top.equalTo(statsContainer.snp.bottom)
-            make.bottom.equalTo(middleView.snp.bottom)
-            make.right.equalTo(middleView.snp.right)
-            make.left.equalTo(middleView.snp.left)
+        playerInsuranceButton.snp.makeConstraints{(make) -> Void in
+            make.top.equalTo(playerControlsContainer)
+            make.left.equalTo(playerControlsContainer)
         }
 
-        // fix padding of player control buttons to fit new width
-        //initplayerControlsContainerUI()
+        // show borders on view edges for debugging
+        if Configuration.SHOW_VIEW_OUTLINE_BORDERS {
+            dealerHandContainer.layer.borderColor = UIColor.purple.cgColor
+            dealerHandContainer.layer.borderWidth = 2
+            middleView.layer.borderColor = UIColor.orange.cgColor
+            middleView.layer.borderWidth = 4
+            playerHandContainer.layer.borderColor = UIColor.purple.cgColor
+            playerHandContainer.layer.borderWidth = 2
+            playerNameLabel.layer.borderColor = UIColor.green.cgColor
+            playerNameLabel.layer.borderWidth = 3
+            playerScoreLabel.layer.borderColor = UIColor.red.cgColor
+            playerScoreLabel.layer.borderWidth = 3
+            dealerNameLabel.layer.borderColor = UIColor.green.cgColor
+            dealerNameLabel.layer.borderWidth = 3
+            dealerScoreLabel.layer.borderColor = UIColor.red.cgColor
+            dealerScoreLabel.layer.borderWidth = 3
+            statsContainer.layer.borderColor = UIColor.green.cgColor
+            statsContainer.layer.borderWidth = 3
+            playerControlsContainer.layer.borderColor = UIColor.green.cgColor
+            playerControlsContainer.layer.borderWidth = 3
+        }
     }
 
     func bringGameResultViewToFront() {
@@ -304,7 +321,6 @@ class ViewController: UIViewController {
 
         newCardImage.snp.makeConstraints { (make) -> Void in
             make.width.equalTo(CGFloat(Configuration.CARD_WIDTH))
-            make.height.equalTo(CGFloat(Configuration.CARD_HEIGHT))
             make.bottom.equalTo(cardContainer.snp.bottom).offset(Configuration.CARD_PADDING_Y * -1)
             make.top.equalTo(cardContainer.snp.top).offset(Configuration.CARD_PADDING_Y)
             make.left.equalTo(leftAnchor!).offset(Configuration.CARD_PADDING_X)
@@ -436,6 +452,7 @@ class ViewController: UIViewController {
         // check to see if user got blackjack or busted
         checkIfGameIsOver()
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		834FACE120DABA6D00D2F8C3 /* UserSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834FACE020DABA6D00D2F8C3 /* UserSetupViewController.swift */; };
 		834FACE720DC344A00D2F8C3 /* UIFontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834FACE620DC344A00D2F8C3 /* UIFontSize.swift */; };
+		83EC07F520DC5ED300A252F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD906DAB20D4C2E600501074 /* ViewController.swift */; };
 		DD4AEF7520D4E6B2001235BA /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AEF7420D4E6B2001235BA /* Card.swift */; };
 		DD4AEF7820D4E8A3001235BA /* CARD_SUIT.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AEF7720D4E8A3001235BA /* CARD_SUIT.swift */; };
 		DD4AEF7A20D4E914001235BA /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AEF7920D4E914001235BA /* Player.swift */; };
@@ -39,7 +40,6 @@
 		DD4C721520DA4342004E5720 /* Roboto Mono Bold for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD4C720820DA4342004E5720 /* Roboto Mono Bold for Powerline.ttf */; };
 		DD5C034520D9F9F3004B2843 /* UIViewSafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C034420D9F9F3004B2843 /* UIViewSafeArea.swift */; };
 		DD906DAA20D4C2E600501074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD906DA920D4C2E600501074 /* AppDelegate.swift */; };
-		DD906DAC20D4C2E600501074 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD906DAB20D4C2E600501074 /* ViewController.swift */; };
 		DD906DAF20D4C2E600501074 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD906DAD20D4C2E600501074 /* Main.storyboard */; };
 		DD906DB220D4C2E600501074 /* BlackJackBuddy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD906DB020D4C2E600501074 /* BlackJackBuddy.xcdatamodeld */; };
 		DD906DB420D4C2E800501074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD906DB320D4C2E800501074 /* Assets.xcassets */; };
@@ -500,7 +500,6 @@
 				DD5C034520D9F9F3004B2843 /* UIViewSafeArea.swift in Sources */,
 				834FACE720DC344A00D2F8C3 /* UIFontSize.swift in Sources */,
 				DD4AEF7820D4E8A3001235BA /* CARD_SUIT.swift in Sources */,
-				DD906DAC20D4C2E600501074 /* ViewController.swift in Sources */,
 				DD4AEF7C20D4EAC8001235BA /* Dealer.swift in Sources */,
 				DD906DB220D4C2E600501074 /* BlackJackBuddy.xcdatamodeld in Sources */,
 				DD4AF52720D593A1001235BA /* ELEMENT_STATE.swift in Sources */,
@@ -516,6 +515,7 @@
 				DD4AEF7520D4E6B2001235BA /* Card.swift in Sources */,
 				DD4AF52520D58238001235BA /* PaddingLabel.swift in Sources */,
 				DD4C71D820DA36C1004E5720 /* UIViewSubViews.swift in Sources */,
+				83EC07F520DC5ED300A252F1 /* ViewController.swift in Sources */,
 				DD4AF53620D76CCE001235BA /* PlayerSettings.swift in Sources */,
 				834FACE120DABA6D00D2F8C3 /* UserSetupViewController.swift in Sources */,
 			);
