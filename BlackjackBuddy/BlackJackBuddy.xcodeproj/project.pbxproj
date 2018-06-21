@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		834FACE120DABA6D00D2F8C3 /* UserSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834FACE020DABA6D00D2F8C3 /* UserSetupViewController.swift */; };
+		834FACE720DC344A00D2F8C3 /* UIFontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834FACE620DC344A00D2F8C3 /* UIFontSize.swift */; };
 		DD4AEF7520D4E6B2001235BA /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AEF7420D4E6B2001235BA /* Card.swift */; };
 		DD4AEF7820D4E8A3001235BA /* CARD_SUIT.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AEF7720D4E8A3001235BA /* CARD_SUIT.swift */; };
 		DD4AEF7A20D4E914001235BA /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AEF7920D4E914001235BA /* Player.swift */; };
@@ -66,6 +68,8 @@
 
 /* Begin PBXFileReference section */
 		4E9DAB52EC393402D7B2E898 /* Pods-BlackjackBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlackjackBuddy.release.xcconfig"; path = "BlackJackBuddy/Pods/Target Support Files/Pods-BlackjackBuddy/Pods-BlackjackBuddy.release.xcconfig"; sourceTree = "<group>"; };
+		834FACE020DABA6D00D2F8C3 /* UserSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSetupViewController.swift; sourceTree = "<group>"; };
+		834FACE620DC344A00D2F8C3 /* UIFontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontSize.swift; sourceTree = "<group>"; };
 		99835842FE92FD03AA463092 /* Pods_BlackjackBuddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlackjackBuddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D1953746542866FC0287BF /* Pods-BlackjackBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlackjackBuddy.debug.xcconfig"; path = "BlackJackBuddy/Pods/Target Support Files/Pods-BlackjackBuddy/Pods-BlackjackBuddy.debug.xcconfig"; sourceTree = "<group>"; };
 		DD4AEF7420D4E6B2001235BA /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -189,6 +193,7 @@
 				DD4AF52420D58238001235BA /* PaddingLabel.swift */,
 				DD5C034420D9F9F3004B2843 /* UIViewSafeArea.swift */,
 				DD4C71D720DA36C1004E5720 /* UIViewSubViews.swift */,
+				834FACE620DC344A00D2F8C3 /* UIFontSize.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -256,6 +261,7 @@
 				DD906DB520D4C2E800501074 /* LaunchScreen.storyboard */,
 				DD906DB820D4C2E800501074 /* Info.plist */,
 				DD906DB020D4C2E600501074 /* BlackJackBuddy.xcdatamodeld */,
+				834FACE020DABA6D00D2F8C3 /* UserSetupViewController.swift */,
 			);
 			path = BlackJackBuddy;
 			sourceTree = "<group>";
@@ -492,6 +498,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD5C034520D9F9F3004B2843 /* UIViewSafeArea.swift in Sources */,
+				834FACE720DC344A00D2F8C3 /* UIFontSize.swift in Sources */,
 				DD4AEF7820D4E8A3001235BA /* CARD_SUIT.swift in Sources */,
 				DD906DAC20D4C2E600501074 /* ViewController.swift in Sources */,
 				DD4AEF7C20D4EAC8001235BA /* Dealer.swift in Sources */,
@@ -510,6 +517,7 @@
 				DD4AF52520D58238001235BA /* PaddingLabel.swift in Sources */,
 				DD4C71D820DA36C1004E5720 /* UIViewSubViews.swift in Sources */,
 				DD4AF53620D76CCE001235BA /* PlayerSettings.swift in Sources */,
+				834FACE120DABA6D00D2F8C3 /* UserSetupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

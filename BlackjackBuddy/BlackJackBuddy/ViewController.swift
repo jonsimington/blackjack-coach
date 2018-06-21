@@ -112,17 +112,6 @@ class ViewController: UIViewController {
         let playerNameOffsetY = 3
 
         // bind playerHandContainer to bottom of superView's safearea
-        view.addSubview(playerHandContainer)
-        playerHandContainer.snp.makeConstraints { (make) -> Void in
-            make.width.equalTo(dealerHandContainer.snp.width)
-            make.height.equalTo(dealerHandContainer.snp.height)
-            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
-            make.left.equalTo(self.view.safeAreaLayoutGuide.snp.left)
-            make.right.equalTo(self.view.safeAreaLayoutGuide.snp.right)
-            make.top.equalTo(middleView.snp.bottom)
-        }
-
-        // bind playerHandContainer to bottom of superView's safearea
         playerHandContainer.addSubview(playerHandCardsContainer)
         playerHandCardsContainer.snp.makeConstraints { (make) -> Void in
 
@@ -133,27 +122,25 @@ class ViewController: UIViewController {
 
         // init player name label
         playerNameLabel.text = _player?._name.uppercased()
-        playerNameLabel.sizeToFit()
-        playerNameLabel.center.x = playerHandContainer.center.x
-        playerNameLabel.frame.origin.y = playerHandCardsContainer.frame.origin.y - playerNameLabel.frame.height - CGFloat(Configuration.PLAYER_NAME_PADDING_Y)
-
+        playerHandContainer.addSubview(playerNameLabel)
+        playerNameLabel.snp.makeConstraints{(make) -> Void in
+            make.top.equalTo(playerHandContainer.snp.top).offset(Configuration.PLAYER_NAME_PADDING_Y)
+            make.bottom.equalTo(playerHandCardsContainer.snp.top).offset(Configuration.PLAYER_NAME_PADDING_Y * -1)
+            make.centerX.equalTo(playerHandContainer.snp.centerX)
+            make.width.greaterThanOrEqualTo(50)
+        }
+        
         // init player score label
-        playerScoreLabel.sizeToFit()
-        playerScoreLabel.center.y = playerNameLabel.center.y + CGFloat(playerNameOffsetY)
-        playerScoreLabel.frame.origin.x = playerNameLabel.frame.origin.x + playerNameLabel.frame.width + CGFloat(Configuration.PLAYER_SCORE_PADDING_X)
+        playerHandContainer.addSubview(playerScoreLabel)
+        playerScoreLabel.snp.makeConstraints{(make) -> Void in
+            make.centerY.equalTo(playerNameLabel.snp.centerY)
+            make.left.equalTo(playerNameLabel.snp.right)
+        }
     }
 
     func initDealerHandUI(dealer _: Dealer) {
         let dealerNameOffsetY = 3
-        // bind dealerHandContainer to top of superView's safeArea
-        view.addSubview(dealerHandContainer)
-        dealerHandContainer.snp.makeConstraints { (make) -> Void in
-            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top)
-            make.left.equalTo(self.view.safeAreaLayoutGuide.snp.left)
-            make.right.equalTo(self.view.safeAreaLayoutGuide.snp.right)
-            make.bottom.equalTo(middleView.snp.top)
-        }
-
+        
         // bind dealerHandContainer to bottom of superView's safearea
         dealerHandContainer.addSubview(dealerHandCardsContainer)
         dealerHandCardsContainer.snp.makeConstraints { (make) -> Void in
@@ -165,14 +152,21 @@ class ViewController: UIViewController {
 
         // init dealer name label
         dealerNameLabel.text = _dealer?._name.uppercased()
+        dealerHandContainer.addSubview(dealerNameLabel)
+//        var f = Configuration.PLAYER_NAME_FONT
+        dealerNameLabel.snp.makeConstraints{(make) -> Void in
+            make.top.equalTo(dealerHandCardsContainer.snp.bottom).offset(Configuration.PLAYER_NAME_PADDING_Y)
+            make.bottom.equalTo(dealerHandContainer.snp.bottom).offset(Configuration.PLAYER_NAME_PADDING_Y * -1)
+            make.centerX.equalTo(dealerHandContainer.snp.centerX)
+        }
         dealerNameLabel.sizeToFit()
-        dealerNameLabel.center.x = dealerHandContainer.center.x
-        dealerNameLabel.frame.origin.y = dealerHandContainer.frame.origin.y + playerNameLabel.frame.height + CGFloat(Configuration.PLAYER_NAME_PADDING_Y - dealerNameOffsetY)
-
         // init dealer score label
-        dealerScoreLabel.sizeToFit()
-        dealerScoreLabel.center.y = dealerNameLabel.center.y + CGFloat(dealerNameOffsetY)
-        dealerScoreLabel.frame.origin.x = dealerNameLabel.frame.origin.x + dealerNameLabel.frame.width + CGFloat(Configuration.PLAYER_SCORE_PADDING_X)
+        dealerHandContainer.addSubview(dealerScoreLabel)
+
+        dealerScoreLabel.snp.makeConstraints{(make) -> Void in
+            make.centerY.equalTo(dealerScoreLabel.snp.centerY)
+            make.left.equalTo(dealerScoreLabel.snp.right)
+        }
     }
 
     func resetPlayerControlButtonStates() {
@@ -206,20 +200,62 @@ class ViewController: UIViewController {
             playerControlsContainer.layer.borderColor = UIColor.green.cgColor
             playerControlsContainer.layer.borderWidth = 3
         }
+        
+        // bind playerHandContainer to bottom of superView's safearea
+        view.addSubview(playerHandContainer)
+        playerHandContainer.snp.makeConstraints { (make) -> Void in
+            make.width.equalTo(dealerHandContainer.snp.width)
+            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
+            make.left.equalTo(self.view.safeAreaLayoutGuide.snp.left)
+            make.right.equalTo(self.view.safeAreaLayoutGuide.snp.right)
+            make.height.equalTo(self.view.safeAreaLayoutGuide).multipliedBy(0.12)
 
-        // bind middleView's subviews to top and bottom
-        statsContainer.frame.origin.y = CGFloat(0)
+            //make.top.equalTo(middleView.snp.bottom)
+        }
+        
+        // bind dealerHandContainer to top of superView's safeArea
+        view.addSubview(dealerHandContainer)
+        dealerHandContainer.snp.makeConstraints { (make) -> Void in
+            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top)
+            make.left.equalTo(self.view.safeAreaLayoutGuide.snp.left)
+            make.right.equalTo(self.view.safeAreaLayoutGuide.snp.right)
+            make.height.equalTo(self.view.safeAreaLayoutGuide).multipliedBy(0.12)
 
-        // set widths of inner containers to be that of the superView
-        dealerHandContainer.frame.size.width = superView.frame.width
-        middleView.frame.size.width = superView.frame.width
-        playerControlsContainer.frame.size.width = middleView.frame.width
-        playerHandContainer.frame.size.width = superView.frame.width
-        statsContainer.frame.size.width = middleView.frame.width
-        gameResultContainer.frame.size.width = superView.frame.width
+            //make.bottom.equalTo(middleView.snp.top)
+        }
+        
+        // bind middle view between card hands containers
+        view.addSubview(middleView)
+        middleView.snp.makeConstraints{(make) -> Void in
+            make.bottom.equalTo(playerHandContainer.snp.top)
+            make.top.equalTo(dealerHandContainer.snp.bottom)
+            make.left.equalTo(view.snp.left)
+            make.right.equalTo(view.snp.right)
+        }
+        
+        middleView.addSubview(playerControlsContainer)
+        middleView.addSubview(statsContainer)
+        
+        statsContainer.layer.borderColor = UIColor.green.cgColor
+        statsContainer.layer.borderWidth = 3
+        
+        statsContainer.snp.makeConstraints{(make) -> Void in
+            make.top.equalTo(middleView.snp.top)
+            //make.bottom.equalTo(playerControlsContainer.snp.top)
+            make.right.equalTo(middleView.snp.right)
+            make.left.equalTo(middleView.snp.left)
+            make.centerX.equalTo(middleView.snp.centerX)
+        }
+        
+        playerControlsContainer.snp.makeConstraints{(make) -> Void in
+            make.top.equalTo(statsContainer.snp.bottom)
+            make.bottom.equalTo(middleView.snp.bottom)
+            make.right.equalTo(middleView.snp.right)
+            make.left.equalTo(middleView.snp.left)
+        }
 
         // fix padding of player control buttons to fit new width
-        initplayerControlsContainerUI()
+        //initplayerControlsContainerUI()
     }
 
     func bringGameResultViewToFront() {
@@ -358,6 +394,7 @@ class ViewController: UIViewController {
         gameResultContainer.isHidden = false
     }
 
+
     func initGame(firstGame _: Bool = false) {
         clearCardImages()
         resetPlayerControlButtonStates()
@@ -375,6 +412,8 @@ class ViewController: UIViewController {
 
         initPlayerHandUI(player: _player!)
         initDealerHandUI(dealer: _dealer!)
+        
+        
         bringGameResultViewToFront()
 
         // init deck

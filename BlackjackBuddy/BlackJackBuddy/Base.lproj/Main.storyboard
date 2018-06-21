@@ -40,9 +40,9 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hyb-tW-WRj" customClass="PaddingLabel" customModule="BlackjackBuddy" customModuleProvider="target">
-                                        <rect key="frame" x="137" y="83" width="102" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                    <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" layoutMarginsFollowReadableWidth="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hyb-tW-WRj" customClass="PaddingLabel" customModule="BlackjackBuddy" customModuleProvider="target">
+                                        <rect key="frame" x="133" y="82" width="105" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="0.58431372549019611" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Dealer">
@@ -82,7 +82,7 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnE-0O-4a4" customClass="PaddingLabel" customModule="BlackjackBuddy" customModuleProvider="target">
+                                    <label opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnE-0O-4a4" customClass="PaddingLabel" customModule="BlackjackBuddy" customModuleProvider="target">
                                         <rect key="frame" x="137" y="0.0" width="100" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" red="1" green="0.58431372549019611" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
@@ -339,13 +339,95 @@
         <!--UserSetup-->
         <scene sceneID="Yvp-2J-ZmN">
             <objects>
-                <viewController title="UserSetup" id="Rk7-eR-v7K" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" title="UserSetup" id="Rk7-eR-v7K" customClass="UserSetupViewController" customModule="BlackjackBuddy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z5I-SK-VpH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10s-uT-kqp">
+                                <rect key="frame" x="65" y="178" width="244" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Enter Your Name">
+                                        <attributes>
+                                            <color key="NSColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="27" name="RobotoMonoForPowerline-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" background="inputWarning" translatesAutoresizingMaskIntoConstraints="NO" id="4zd-XL-5XV">
+                                <rect key="frame" x="16" y="218" width="343" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRb-Wn-LS9">
+                                <rect key="frame" x="9" y="370" width="357" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Number of Decks to Use">
+                                        <attributes>
+                                            <color key="NSColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="27" name="RobotoMonoForPowerline-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="f5q-lW-J48">
+                                <rect key="frame" x="14" y="419" width="347" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="numberOfDecksSliderValueDidChange:" destination="Rk7-eR-v7K" eventType="valueChanged" id="Zja-Vd-F4b"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Kv-LU-NrG">
+                                <rect key="frame" x="94" y="456" width="161" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="1">
+                                        <attributes>
+                                            <color key="NSColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="27" name="RobotoMonoForPowerline-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GTa-oI-czZ">
+                                <rect key="frame" x="94" y="573" width="187" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="buttonHollowWarning">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="PLAY">
+                                            <attributes>
+                                                <font key="NSFont" size="45" name="RobotoMonoForPowerline-Light"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="playButtonOnClick:" destination="Rk7-eR-v7K" eventType="touchUpInside" id="rEZ-O1-jhX"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="UserSetupViewController" id="YBV-Wo-Mks"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.16078431372549021" green="0.17254901960784313" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="lqH-In-1mD"/>
                     </view>
+                    <connections>
+                        <outlet property="numberOfDecksLabel" destination="1Kv-LU-NrG" id="9Ga-kE-9MI"/>
+                        <outlet property="numberOfDecksSlider" destination="f5q-lW-J48" id="T6H-yb-0zQ"/>
+                        <outlet property="playButton" destination="GTa-oI-czZ" id="yAK-41-rGh"/>
+                        <outlet property="userNameTextField" destination="4zd-XL-5XV" id="F6t-qY-h2G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M2o-9F-fRk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -357,9 +439,11 @@
         <image name="buttonHollowDanger" width="136" height="48"/>
         <image name="buttonHollowPrimary" width="136" height="48"/>
         <image name="buttonHollowSuccess" width="136" height="48"/>
+        <image name="buttonHollowWarning" width="136" height="48"/>
         <image name="buttonPrimary" width="136" height="48"/>
         <image name="buttonSuccess" width="136" height="48"/>
         <image name="buttonWarning" width="136" height="48"/>
+        <image name="inputWarning" width="368" height="48"/>
         <image name="outline_Grey_(Use_for_Disabled_outline)" width="358" height="80"/>
     </resources>
 </document>

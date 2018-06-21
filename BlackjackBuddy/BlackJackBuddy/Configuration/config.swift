@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Configuration {
     static let CARD_CONTAINER_PADDING_X = 10
@@ -18,9 +19,10 @@ struct Configuration {
     static let PLAYER_CONTROL_BUTTON_PADDING_Y = 25
     static let DEAL_AGAIN_LOADING_CIRCLE_PADDING_X = 10
     static let STATUS_BAR_OFFSET = 20
-    static let SHOW_VIEW_OUTLINE_BORDERS = false
+    static let SHOW_VIEW_OUTLINE_BORDERS = true
     static let LABEL_PADDING_Y = 5
     static let LABEL_PADDING_X = 10
     static let CARD_WIDTH = 50
     static let CARD_HEIGHT = 70
+    static let PLAYER_NAME_FONT = UIFont(name: "FuraMono-Bold Powerline", size: 24.0)
 }

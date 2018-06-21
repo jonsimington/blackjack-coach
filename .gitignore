@@ -76,3 +76,5 @@ fastlane/test_output
 auto-save-list
 tramp
 .\#*
+
+.DS_Store
