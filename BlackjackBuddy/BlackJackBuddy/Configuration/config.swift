@@ -19,7 +19,7 @@ struct Configuration {
     static let PLAYER_CONTROL_BUTTON_PADDING_Y = 15
     static let DEAL_AGAIN_LOADING_CIRCLE_PADDING_X = 10
     static let STATUS_BAR_OFFSET = 20
-    static let SHOW_VIEW_OUTLINE_BORDERS = true
+    static let SHOW_VIEW_OUTLINE_BORDERS = false
     static let LABEL_PADDING_Y = 5
     static let LABEL_PADDING_X = 10
     static let CARD_WIDTH = 5

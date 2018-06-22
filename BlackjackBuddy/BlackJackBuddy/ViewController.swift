@@ -379,7 +379,7 @@ class ViewController: UIViewController {
             make.centerY.equalTo(view)
             make.width.equalTo(restartGameButton)
             make.height.equalTo(gameResultRestartButton.snp.width)
-                .multipliedBy(CGFloat(1.5) / CGFloat(3))
+                .multipliedBy(CGFloat(1) / CGFloat(4))
         }
 
         gameResultLabel.sizeToFit()
