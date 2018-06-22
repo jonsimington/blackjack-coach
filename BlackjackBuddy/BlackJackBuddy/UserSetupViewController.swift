@@ -9,21 +9,20 @@
 import UIKit
 
 class UserSetupViewController: UIViewController {
-    
-    @IBOutlet weak var userNameTextField: UITextField!
-    @IBOutlet weak var numberOfDecksSlider: UISlider!
+    @IBOutlet var userNameTextField: UITextField!
+    @IBOutlet var numberOfDecksSlider: UISlider!
     @IBAction func numberOfDecksSliderValueDidChange(_ sender: UISlider) {
-        let currentValue = Int((sender).value)
+        let currentValue = Int(sender.value)
         numberOfDecksLabel.text = "\(currentValue) Decks"
     }
-    @IBOutlet weak var numberOfDecksLabel: UILabel!
-    
-    
-    @IBOutlet weak var playButton: UIButton!
-    @IBAction func playButtonOnClick(_ sender: Any) {
+
+    @IBOutlet var numberOfDecksLabel: UILabel!
+
+    @IBOutlet var playButton: UIButton!
+    @IBAction func playButtonOnClick(_: Any) {
         performSegue(withIdentifier: "View", sender: self)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,16 +33,14 @@ class UserSetupViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
-    // MARK: - Navigation
+     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
 }
