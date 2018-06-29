@@ -10,6 +10,8 @@
 		834FACE120DABA6D00D2F8C3 /* UserSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834FACE020DABA6D00D2F8C3 /* UserSetupViewController.swift */; };
 		834FACE720DC344A00D2F8C3 /* UIFontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834FACE620DC344A00D2F8C3 /* UIFontSize.swift */; };
 		83EC07F520DC5ED300A252F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD906DAB20D4C2E600501074 /* ViewController.swift */; };
+		DD1335DB20E60B9700FAE7A9 /* UIDeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1335DA20E60B9700FAE7A9 /* UIDeviceInfo.swift */; };
+		DD1335DD20E6157300FAE7A9 /* TapticHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1335DC20E6157300FAE7A9 /* TapticHelper.swift */; };
 		DD4AEF7520D4E6B2001235BA /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AEF7420D4E6B2001235BA /* Card.swift */; };
 		DD4AEF7820D4E8A3001235BA /* CARD_SUIT.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AEF7720D4E8A3001235BA /* CARD_SUIT.swift */; };
 		DD4AEF7A20D4E914001235BA /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AEF7920D4E914001235BA /* Player.swift */; };
@@ -72,6 +74,8 @@
 		834FACE620DC344A00D2F8C3 /* UIFontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontSize.swift; sourceTree = "<group>"; };
 		99835842FE92FD03AA463092 /* Pods_BlackjackBuddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlackjackBuddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D1953746542866FC0287BF /* Pods-BlackjackBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlackjackBuddy.debug.xcconfig"; path = "BlackJackBuddy/Pods/Target Support Files/Pods-BlackjackBuddy/Pods-BlackjackBuddy.debug.xcconfig"; sourceTree = "<group>"; };
+		DD1335DA20E60B9700FAE7A9 /* UIDeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceInfo.swift; sourceTree = "<group>"; };
+		DD1335DC20E6157300FAE7A9 /* TapticHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapticHelper.swift; sourceTree = "<group>"; };
 		DD4AEF7420D4E6B2001235BA /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		DD4AEF7720D4E8A3001235BA /* CARD_SUIT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CARD_SUIT.swift; sourceTree = "<group>"; };
 		DD4AEF7920D4E914001235BA /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -194,6 +198,7 @@
 				DD5C034420D9F9F3004B2843 /* UIViewSafeArea.swift */,
 				DD4C71D720DA36C1004E5720 /* UIViewSubViews.swift */,
 				834FACE620DC344A00D2F8C3 /* UIFontSize.swift */,
+				DD1335DA20E60B9700FAE7A9 /* UIDeviceInfo.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -219,6 +224,7 @@
 			children = (
 				DD4AF53820D9D588001235BA /* PaddingHelper.swift */,
 				DD4AF53A20D9D6B7001235BA /* CardHelper.swift */,
+				DD1335DC20E6157300FAE7A9 /* TapticHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -364,6 +370,7 @@
 				TargetAttributes = {
 					DD906DA520D4C2E600501074 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
@@ -372,10 +379,12 @@
 					};
 					DD906DBC20D4C2E800501074 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = DD906DA520D4C2E600501074;
 					};
 					DD906DC720D4C2E800501074 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = DD906DA520D4C2E600501074;
 					};
 				};
@@ -512,9 +521,11 @@
 				DD4AEF8220D51D03001235BA /* USER_ACTION.swift in Sources */,
 				DD4AF53420D769EC001235BA /* config.swift in Sources */,
 				DD4AF53B20D9D6B7001235BA /* CardHelper.swift in Sources */,
+				DD1335DB20E60B9700FAE7A9 /* UIDeviceInfo.swift in Sources */,
 				DD4AEF7520D4E6B2001235BA /* Card.swift in Sources */,
 				DD4AF52520D58238001235BA /* PaddingLabel.swift in Sources */,
 				DD4C71D820DA36C1004E5720 /* UIViewSubViews.swift in Sources */,
+				DD1335DD20E6157300FAE7A9 /* TapticHelper.swift in Sources */,
 				83EC07F520DC5ED300A252F1 /* ViewController.swift in Sources */,
 				DD4AF53620D76CCE001235BA /* PlayerSettings.swift in Sources */,
 				834FACE120DABA6D00D2F8C3 /* UserSetupViewController.swift in Sources */,
@@ -703,7 +714,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.simington.blackjackbuddy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -725,7 +736,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.simington.blackjackbuddy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -745,7 +756,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.simington.BlackjackBuddyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlackjackBuddy.app/BlackjackBuddy";
 			};
@@ -766,7 +777,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.simington.BlackjackBuddyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlackjackBuddy.app/BlackjackBuddy";
 			};
@@ -786,7 +797,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.simington.BlackjackBuddyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = BlackjackBuddy;
 			};
@@ -806,7 +817,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.simington.BlackjackBuddyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = BlackjackBuddy;
 			};

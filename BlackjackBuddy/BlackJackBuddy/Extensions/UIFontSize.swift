@@ -11,7 +11,7 @@ import UIKit
 
 extension UIFont {
     func textWidth(text: String) -> CGFloat {
-        let attributes = [NSAttributedStringKey.font: self]
+        let attributes = [NSAttributedString.Key.font: self]
         return text.size(withAttributes: attributes).width
     }
 }

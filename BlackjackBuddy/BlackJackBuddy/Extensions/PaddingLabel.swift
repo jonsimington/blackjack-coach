@@ -11,7 +11,7 @@ import UIKit
 class PaddingLabel: UILabel {
     let padding = UIEdgeInsets(top: CGFloat(Configuration.LABEL_PADDING_Y), left: CGFloat(Configuration.LABEL_PADDING_X), bottom: CGFloat(Configuration.LABEL_PADDING_Y), right: CGFloat(Configuration.LABEL_PADDING_X))
     override func drawText(in rect: CGRect) {
-        super.drawText(in: UIEdgeInsetsInsetRect(rect, padding))
+        super.drawText(in: rect.inset(by: padding))
     }
 
     // Override -intrinsicContentSize: for Auto layout code

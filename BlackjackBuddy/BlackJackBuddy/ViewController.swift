@@ -41,6 +41,7 @@ class ViewController: UIViewController {
     @IBOutlet var restartGameLoadingCircle: UIImageView!
 
     @IBAction func restartGameButtonOnClick(_: Any) {
+        TapticHelper.playNotificationError()
         initGame()
     }
 
@@ -63,6 +64,8 @@ class ViewController: UIViewController {
     @IBOutlet var playerHitButton: UIButton!
 
     @IBAction func playerHitButtonOnClick(_: Any) {
+        TapticHelper.playTapticCancelled()
+
         // disable hit and stand buttons
         playerHitButton.isEnabled = false
         playerStandButton.isEnabled = false
@@ -80,6 +83,9 @@ class ViewController: UIViewController {
 
         checkIfGameIsOver()
     }
+
+    
+
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
     // UI FUNCTIONS
@@ -453,6 +459,8 @@ class ViewController: UIViewController {
     }
 
     func handlePlayerBust() {
+        TapticHelper.playTapticCancelled()
+        TapticHelper.playTapticCancelled()
         // hide restart game button from other view
         restartGameButton.isHidden = true
         restartGameLoadingCircle.isHidden = true
@@ -475,6 +483,12 @@ class ViewController: UIViewController {
     }
 
     func handlePlayerBlackJack() {
+        TapticHelper.playTapticCancelled()
+        TapticHelper.playTapticCancelled()
+        TapticHelper.playTapticCancelled()
+        TapticHelper.playTapticCancelled()
+        TapticHelper.playTapticCancelled()
+        TapticHelper.playTapticCancelled()
         // hide restart game button from other view
         restartGameButton.isHidden = true
         restartGameLoadingCircle.isHidden = true
@@ -539,6 +553,10 @@ class ViewController: UIViewController {
 
         // check to see if user got blackjack or busted
         checkIfGameIsOver()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
 
     override func didReceiveMemoryWarning() {
