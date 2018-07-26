@@ -78,3 +78,6 @@ tramp
 .\#*
 
 .DS_Store
+
+*/Pods/*
+Pods/

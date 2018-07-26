@@ -7,4 +7,5 @@ use_frameworks!
 target 'BlackjackBuddy' do
     pod 'SnapKit'
     pod 'SwiftFormat/CLI'
+    pod 'HandySwift', '~> 2.4'
 end

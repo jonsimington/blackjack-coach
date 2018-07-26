@@ -162,6 +162,9 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </state>
+                                                <connections>
+                                                    <action selector="playerStandButtonOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vWE-7x-QS0"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H4c-RS-q6e">
                                                 <rect key="frame" x="10" y="118" width="158" height="48"/>

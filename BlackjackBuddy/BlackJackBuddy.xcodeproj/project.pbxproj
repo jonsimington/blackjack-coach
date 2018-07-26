@@ -460,10 +460,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/BlackJackBuddy/Pods/Target Support Files/Pods-BlackjackBuddy/Pods-BlackjackBuddy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/HandySwift/HandySwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandySwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

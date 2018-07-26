@@ -8,6 +8,7 @@
 
 import SnapKit
 import UIKit
+import HandySwift
 
 class BlackJackViewController: UIViewController {
     // LOCAL VARS
@@ -60,6 +61,46 @@ class BlackJackViewController: UIViewController {
     // PLAYER CONTROLS VIEWS
     @IBOutlet var playerControlsContainer: UIView!
     @IBOutlet var playerStandButton: UIButton!
+
+    @IBAction func playerStandButtonOnClick(_ sender: Any) {
+        // turn dealer's second card face up
+        _dealer?._cards[1]._isFaceUp = true
+
+        // remove dealer's card images
+        clearCardImages(player: "dealer")
+
+        // re-add the cards to the dealer's hand now that the second card is face up
+        for card in (_dealer?._cards)! {
+            addCardToHand(cardContainer: dealerHandCardsContainer, card: card, player: _dealer!)
+        }
+
+        // update stats now that the card is flipped
+        updateStats()
+
+        // it's dealer's turn when the player stands
+        while (_dealer?.score())! < 17 {
+            delay(by: .seconds(0.5)) {
+                let dealtCard = self._deck?.dealCard(player: self._dealer!)
+
+                self.addCardToHand(cardContainer: self.dealerHandCardsContainer, card: dealtCard!, player: self._dealer!)
+                self.updateStats()
+            }
+
+            // dealer bust -> player wins
+            if (_dealer?.score())! > 21 {
+                handlePlayerBlackJack()
+            }
+            // dealer blackjack -> dealer wins
+            else if _dealer?.score() == 21 {
+                handlePlayerBust()
+            }
+
+        }
+    }
+
+
+
+
     @IBOutlet var playerSplitButton: UIButton!
     @IBOutlet var playerDoubleDownButton: UIButton!
     @IBOutlet var playerInsuranceButton: UIButton!
@@ -105,6 +146,18 @@ class BlackJackViewController: UIViewController {
         }
         for v in dealerHandCardsContainer.subViews(type: UIImageView.self) {
             v.removeFromSuperview()
+        }
+    }
+    func clearCardImages(player: String) {
+        if player == "dealer" {
+            for v in dealerHandCardsContainer.subViews(type: UIImageView.self) {
+                v.removeFromSuperview()
+            }
+        }
+        else if player == "player" {
+            for v in playerHandCardsContainer.subViews(type: UIImageView.self) {
+                v.removeFromSuperview()
+            }
         }
     }
 
