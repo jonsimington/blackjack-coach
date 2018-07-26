@@ -9,12 +9,17 @@
 import SnapKit
 import UIKit
 
-class ViewController: UIViewController {
+class BlackJackViewController: UIViewController {
     // LOCAL VARS
     var _player: Player?
     var _dealer: Dealer?
     var _deck: Deck?
     var _currentGameNumber: Int = 0
+    var _playerName: String?
+    var _numberOfDecks: Int?
+
+    var _user: User?;
+
 
     @IBOutlet var superView: UIView!
     @IBOutlet var middleView: UIView!
@@ -267,7 +272,7 @@ class ViewController: UIViewController {
             make.top.equalTo(playerControlsContainer)
                 .offset(Configuration.PLAYER_CONTROL_BUTTON_PADDING_Y)
             make.right.equalTo(playerControlsContainer)
-                .offset(Configuration.PLAYER_CONTROL_BUTTON_PADDING_X * -1)
+                .offset(Configuration.PLAYER_CONTROL_BUTTON_PADDING_X * -3)
             make.width.equalTo(playerInsuranceButton)
         }
 
@@ -284,7 +289,7 @@ class ViewController: UIViewController {
                 .offset(Configuration.PLAYER_CONTROL_BUTTON_PADDING_Y)
             make.width.equalTo(playerInsuranceButton)
             make.right.equalTo(playerControlsContainer)
-                .offset(Configuration.PLAYER_CONTROL_BUTTON_PADDING_X * -1)
+                .offset(Configuration.PLAYER_CONTROL_BUTTON_PADDING_X * -3)
         }
 
         playerHitButton.snp.makeConstraints { (make) -> Void in
@@ -300,7 +305,7 @@ class ViewController: UIViewController {
                 .offset(Configuration.PLAYER_CONTROL_BUTTON_PADDING_Y)
             make.width.equalTo(playerInsuranceButton)
             make.right.equalTo(playerControlsContainer)
-                .offset(Configuration.PLAYER_CONTROL_BUTTON_PADDING_X * -1)
+                .offset(Configuration.PLAYER_CONTROL_BUTTON_PADDING_X * -3)
         }
 
         restartGameButton.snp.makeConstraints { (make) -> Void in
@@ -512,7 +517,7 @@ class ViewController: UIViewController {
 
     func initGame(firstGame _: Bool = false) {
         // init players
-        _player = Player(name: "DR VAN NOSTRAND", chips: 0, cards: [])
+        _player = Player(name: _user?.name == nil || _user?.name == "" ? "DR VAN NOSTRAND" : (_user?.name)!, chips: 0, cards: [])
         _dealer = Dealer(name: "DEALER", chips: 0, cards: [], settings: PlayerSettings())
         playerNameLabel.text = _player?._name.uppercased()
         dealerNameLabel.text = _dealer?._name.uppercased()
@@ -532,7 +537,7 @@ class ViewController: UIViewController {
 
         // init deck
         if _deck == nil {
-            _deck = Deck()
+            _deck = Deck(numberOfDecks: _user?.numberOfDecks == nil ? 1 : (_user?.numberOfDecks)!)
         }
         _deck?.shuffleDeck()
 
@@ -544,7 +549,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         // init players
-        _player = Player(name: "DR VAN NOSTRAND", chips: 0, cards: [])
+        _player = Player(name: _user?.name == nil || _user?.name == "" ? "DR VAN NOSTRAND" : (_user?.name)!, chips: 0, cards: [])
         _dealer = Dealer(name: "DEALER", chips: 0, cards: [], settings: PlayerSettings())
 
         initBaseUI()

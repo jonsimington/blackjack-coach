@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		834FACE120DABA6D00D2F8C3 /* UserSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834FACE020DABA6D00D2F8C3 /* UserSetupViewController.swift */; };
 		834FACE720DC344A00D2F8C3 /* UIFontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834FACE620DC344A00D2F8C3 /* UIFontSize.swift */; };
-		83EC07F520DC5ED300A252F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD906DAB20D4C2E600501074 /* ViewController.swift */; };
+		83EC07F520DC5ED300A252F1 /* BlackJackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD906DAB20D4C2E600501074 /* BlackJackViewController.swift */; };
 		DD1335DB20E60B9700FAE7A9 /* UIDeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1335DA20E60B9700FAE7A9 /* UIDeviceInfo.swift */; };
 		DD1335DD20E6157300FAE7A9 /* TapticHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1335DC20E6157300FAE7A9 /* TapticHelper.swift */; };
 		DD4AEF7520D4E6B2001235BA /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4AEF7420D4E6B2001235BA /* Card.swift */; };
@@ -107,7 +107,7 @@
 		DD5C034420D9F9F3004B2843 /* UIViewSafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewSafeArea.swift; sourceTree = "<group>"; };
 		DD906DA620D4C2E600501074 /* BlackjackBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackjackBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD906DA920D4C2E600501074 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DD906DAB20D4C2E600501074 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DD906DAB20D4C2E600501074 /* BlackJackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackJackViewController.swift; sourceTree = "<group>"; };
 		DD906DAE20D4C2E600501074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD906DB120D4C2E600501074 /* BlackJackBuddy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BlackJackBuddy.xcdatamodel; sourceTree = "<group>"; };
 		DD906DB320D4C2E800501074 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = BlackJackBuddy/Assets.xcassets; sourceTree = SOURCE_ROOT; };
@@ -261,7 +261,7 @@
 				DD4AEF7620D4E894001235BA /* Enumerations */,
 				DD4AEF7320D4E69D001235BA /* Models */,
 				DD906DA920D4C2E600501074 /* AppDelegate.swift */,
-				DD906DAB20D4C2E600501074 /* ViewController.swift */,
+				DD906DAB20D4C2E600501074 /* BlackJackViewController.swift */,
 				DD906DAD20D4C2E600501074 /* Main.storyboard */,
 				DD906DB320D4C2E800501074 /* Assets.xcassets */,
 				DD906DB520D4C2E800501074 /* LaunchScreen.storyboard */,
@@ -526,7 +526,7 @@
 				DD4AF52520D58238001235BA /* PaddingLabel.swift in Sources */,
 				DD4C71D820DA36C1004E5720 /* UIViewSubViews.swift in Sources */,
 				DD1335DD20E6157300FAE7A9 /* TapticHelper.swift in Sources */,
-				83EC07F520DC5ED300A252F1 /* ViewController.swift in Sources */,
+				83EC07F520DC5ED300A252F1 /* BlackJackViewController.swift in Sources */,
 				DD4AF53620D76CCE001235BA /* PlayerSettings.swift in Sources */,
 				834FACE120DABA6D00D2F8C3 /* UserSetupViewController.swift in Sources */,
 			);

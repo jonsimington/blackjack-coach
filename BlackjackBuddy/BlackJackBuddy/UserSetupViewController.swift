@@ -8,7 +8,15 @@
 
 import UIKit
 
+struct User {
+    var name = "";
+    var numberOfDecks = 0;
+}
+
 class UserSetupViewController: UIViewController {
+    var _user: User?;
+
+
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var numberOfDecksSlider: UISlider!
     @IBAction func numberOfDecksSliderValueDidChange(_ sender: UISlider) {
@@ -20,7 +28,7 @@ class UserSetupViewController: UIViewController {
 
     @IBOutlet var playButton: UIButton!
     @IBAction func playButtonOnClick(_: Any) {
-        performSegue(withIdentifier: "View", sender: self)
+        _user = User(name: userNameTextField.text!, numberOfDecks: Int(numberOfDecksSlider.value))
     }
 
     override func viewDidLoad() {
@@ -34,13 +42,12 @@ class UserSetupViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    /*
-     // MARK: - Navigation
+    // SEGUES
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationViewController = segue.destination as? BlackJackViewController {
+            _user = User(name: userNameTextField.text!, numberOfDecks: Int(numberOfDecksSlider.value))
+            destinationViewController._user = _user
+        }
+    }
 
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
 }

@@ -24,16 +24,19 @@ class Deck {
     var _cards: [Card] = []
 
     // constructor
-    init() {
+    init(numberOfDecks: Int) {
         _cards = []
 
-        for suit in suits {
-            for rank in ranks {
-                let rankValue = CARD_RANK.getValue(rank)()
-                let card = Card(rank: rank, value: rankValue, suit: suit)
-                _cards.append(card)
+        for _ in 1...numberOfDecks {
+            for suit in suits {
+                for rank in ranks {
+                    let rankValue = CARD_RANK.getValue(rank)()
+                    let card = Card(rank: rank, value: rankValue, suit: suit)
+                    _cards.append(card)
+                }
             }
         }
+
     }
 
     // regenerates the deck and shuffles
