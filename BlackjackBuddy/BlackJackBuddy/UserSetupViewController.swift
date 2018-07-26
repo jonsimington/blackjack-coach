@@ -16,14 +16,17 @@ struct User {
 class UserSetupViewController: UIViewController {
     var _user: User?
 
+    @IBOutlet var userNameLabel: UILabel!
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var numberOfDecksSlider: UISlider!
     @IBAction func numberOfDecksSliderValueDidChange(_ sender: UISlider) {
         let currentValue = Int(sender.value)
-        numberOfDecksLabel.text = "\(currentValue) Decks"
+        let deckPluralization = currentValue == 1 ? "Deck" : "Decks"
+        numberOfDecksLabel.text = "\(currentValue) \(deckPluralization)"
     }
 
     @IBOutlet var numberOfDecksLabel: UILabel!
+    @IBOutlet var numberOfDecksSliderDescription: UILabel!
 
     @IBOutlet var playButton: UIButton!
     @IBAction func playButtonOnClick(_: Any) {
@@ -32,6 +35,8 @@ class UserSetupViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        LayoutHelper.initBaseUserSetupUI(_view: view, _viewController: self)
 
         // Do any additional setup after loading the view.
     }

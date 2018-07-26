@@ -344,7 +344,7 @@
                                         <attributes>
                                             <color key="NSColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="27" name="RobotoMonoForPowerline-Light"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -357,7 +357,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRb-Wn-LS9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MRb-Wn-LS9">
                                 <rect key="frame" x="9" y="370" width="357" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
@@ -365,7 +365,7 @@
                                         <attributes>
                                             <color key="NSColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="27" name="RobotoMonoForPowerline-Light"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -382,7 +382,7 @@
                                 <rect key="frame" x="94" y="456" width="161" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="1">
+                                    <fragment content="1 Deck">
                                         <attributes>
                                             <color key="NSColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="27" name="RobotoMonoForPowerline-Light"/>
@@ -417,7 +417,9 @@
                     <connections>
                         <outlet property="numberOfDecksLabel" destination="1Kv-LU-NrG" id="9Ga-kE-9MI"/>
                         <outlet property="numberOfDecksSlider" destination="f5q-lW-J48" id="T6H-yb-0zQ"/>
+                        <outlet property="numberOfDecksSliderDescription" destination="MRb-Wn-LS9" id="AvO-ZS-ZVy"/>
                         <outlet property="playButton" destination="GTa-oI-czZ" id="yAK-41-rGh"/>
+                        <outlet property="userNameLabel" destination="10s-uT-kqp" id="TXG-0g-EBV"/>
                         <outlet property="userNameTextField" destination="4zd-XL-5XV" id="F6t-qY-h2G"/>
                     </connections>
                 </viewController>

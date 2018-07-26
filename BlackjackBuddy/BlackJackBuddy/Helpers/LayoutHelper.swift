@@ -7,9 +7,66 @@
 //
 
 import Foundation
+import SnapKit
 import UIKit
 
 class LayoutHelper {
+    static func initBaseUserSetupUI(_view: UIView, _viewController: UserSetupViewController) {
+        let topPadding = _view.safeAreaInsets.top
+        let bottomPadding = _view.safeAreaInsets.bottom
+
+        _viewController.numberOfDecksSlider.snp.makeConstraints { (make) -> Void in
+            make.left.equalTo(_view).offset(Configuration.CARD_CONTAINER_PADDING_X)
+            make.right.equalTo(_view).inset(Configuration.CARD_CONTAINER_PADDING_X)
+            make.center.equalTo(_view)
+        }
+
+        _viewController.numberOfDecksLabel.snp.makeConstraints { (make) -> Void in
+            make.centerX.equalTo(_view)
+            make.top.equalTo(_viewController.numberOfDecksSlider.snp.bottom).offset(Configuration.LABEL_PADDING_Y * 2)
+        }
+
+        _viewController.numberOfDecksSliderDescription.snp.makeConstraints { (make) -> Void in
+            make.left.equalTo(_view).offset(Configuration.CARD_CONTAINER_PADDING_X)
+            make.right.equalTo(_view).inset(Configuration.CARD_CONTAINER_PADDING_X)
+            make.centerX.equalTo(_view)
+            make.bottom.equalTo(_viewController.numberOfDecksSlider.snp.top).offset(Configuration.LABEL_PADDING_Y * -2)
+        }
+
+        _viewController.playButton.snp.makeConstraints { (make) -> Void in
+            make.left.equalTo(_view).offset(Configuration.CARD_CONTAINER_PADDING_X)
+            make.right.equalTo(_view).inset(Configuration.CARD_CONTAINER_PADDING_X)
+            make.centerX.equalTo(_view)
+            make.height.equalTo(_viewController.playButton.snp.width).multipliedBy(0.25)
+
+            let safeAreaBottomY = _view.frame.maxY + (CGFloat(bottomPadding) * 3)
+            let numberOfDecksLabelBottomY = _viewController.numberOfDecksLabel.frame.maxY
+            make.centerY.equalTo(((safeAreaBottomY - numberOfDecksLabelBottomY) / 2) + numberOfDecksLabelBottomY)
+        }
+
+        _viewController.userNameTextField.snp.makeConstraints { (make) -> Void in
+            make.left.equalTo(_view).offset(Configuration.CARD_CONTAINER_PADDING_X)
+            make.right.equalTo(_view).inset(Configuration.CARD_CONTAINER_PADDING_X)
+            make.centerX.equalTo(_view)
+            make.height.equalTo(_viewController.userNameTextField.snp.width).multipliedBy(0.15)
+
+            let safeAreaTopY = _view.frame.minY + CGFloat(topPadding)
+            let numberOfDecksLabelTopY = _viewController.numberOfDecksSliderDescription.frame.minY
+            make.centerY.equalTo(((numberOfDecksLabelTopY - safeAreaTopY) / 2) + safeAreaTopY)
+        }
+
+        _viewController.userNameLabel.snp.makeConstraints { (make) -> Void in
+            make.left.equalTo(_view).offset(Configuration.CARD_CONTAINER_PADDING_X)
+            make.right.equalTo(_view).inset(Configuration.CARD_CONTAINER_PADDING_X)
+            make.centerX.equalTo(_view)
+            make.width.equalTo(_viewController.userNameTextField)
+            make.bottom.equalTo(_viewController.userNameTextField.snp.top).offset(Configuration.LABEL_PADDING_Y * -1)
+        }
+    }
+
+    static func initBaseLaunchScreenUI(_view _: UIView, _viewController _: BlackJackViewController) {
+    }
+
     static func initBaseBlackJackUI(_view: UIView, _viewController: BlackJackViewController) {
         // bind playerHandContainer to bottom of superView's safearea
         _view.addSubview(_viewController.playerHandContainer)

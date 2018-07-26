@@ -17,7 +17,6 @@ class BlackJackViewController: UIViewController {
     var _currentGameNumber: Int = 0
     var _playerName: String?
     var _numberOfDecks: Int?
-
     var _user: User?
 
     @IBOutlet var superView: UIView!
@@ -125,8 +124,6 @@ class BlackJackViewController: UIViewController {
         // right-padding
         gameResultLabel.frame.size.width = gameResultContainer.frame.width - labelPadding * 2
     }
-
-
 
     func bringGameResultViewToFront() {
         view.addSubview(gameResultContainer)
