@@ -11,7 +11,7 @@ import Foundation
 let ranks: [CARD_RANK] = [
     CARD_RANK.ACE, CARD_RANK.TWO, CARD_RANK.THREE,
     CARD_RANK.FOUR, CARD_RANK.FIVE, CARD_RANK.SIX,
-    CARD_RANK.SEVEN, CARD_RANK.EIGHT, CARD_RANK.NINE,
+    CARD_RANK.SEVEN, CARD_RANK.EIGHT, CARD_RANK.NINE, CARD_RANK.TEN,
     CARD_RANK.JACK, CARD_RANK.QUEEN, CARD_RANK.KING,
 ]
 
@@ -22,44 +22,40 @@ let suits: [CARD_SUIT] = [
 
 class Deck {
     var _cards: [Card] = []
+    var _numberOfDecks: Int = 1
 
     // constructor
     init(numberOfDecks: Int) {
-        _cards = []
+        _numberOfDecks = numberOfDecks
 
-        for _ in 1...numberOfDecks {
+        createNewDeck()
+    }
+
+    func createNewDeck() {
+        _cards = []
+        for deckNumber in 1 ... _numberOfDecks {
+            var cardNumber = 1
             for suit in suits {
                 for rank in ranks {
                     let rankValue = CARD_RANK.getValue(rank)()
                     let card = Card(rank: rank, value: rankValue, suit: suit)
+                    print("(\(deckNumber),\(cardNumber)) Created \(card.description)")
                     _cards.append(card)
+                    cardNumber += 1
                 }
             }
         }
-
+        print("Created new deck with \(_cards.count) cards from \(_numberOfDecks) decks")
     }
 
     // regenerates the deck and shuffles
     func reloadDeck() {
-        _cards = []
-
-        for suit in suits {
-            for rank in ranks {
-                let rankValue = CARD_RANK.getValue(rank)()
-                let card = Card(rank: rank, value: rankValue, suit: suit)
-                _cards.append(card)
-            }
-        }
+        createNewDeck()
         shuffleDeck()
     }
 
     // deals a card for a Player
     func dealCard(player: Player, isFaceUp: Bool = true) -> Card {
-        // if deck is empty, we need to build a new deck
-        if _cards.count == 0 {
-            reloadDeck()
-        }
-
         // get card at top of deck
         let card = _cards[0]
 
@@ -83,11 +79,19 @@ class Deck {
 
         print("Dealt (\(card.description)) to (\(player._name)) --> \(currentPlayerScore)")
 
+        // if deck is empty, we need to build a new deck
+        if _cards.count == 0 {
+            reloadDeck()
+        }
+
         return card
     }
 
     // shuffles the deck
     func shuffleDeck() {
+        if _cards.count == 0 {
+            reloadDeck()
+        }
         let originalDeck = _cards
 
         var last = _cards.count - 1
@@ -101,6 +105,7 @@ class Deck {
         }
 
         if _cards == originalDeck {
+            shuffleDeck()
             print("Shuffled deck is the same as original!")
         }
     }

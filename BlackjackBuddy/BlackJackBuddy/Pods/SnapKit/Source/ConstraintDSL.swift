@@ -50,7 +50,6 @@ public protocol ConstraintBasicAttributesDSL: ConstraintDSL {
 }
 
 extension ConstraintBasicAttributesDSL {
-
     // MARK: Basics
 
     public var left: ConstraintItem {
@@ -110,7 +109,6 @@ public protocol ConstraintAttributesDSL: ConstraintBasicAttributesDSL {
 }
 
 extension ConstraintAttributesDSL {
-
     // MARK: Baselines
 
     @available(*, deprecated: 3.0, message: "Use .lastBaseline instead")

@@ -18,8 +18,7 @@ class BlackJackViewController: UIViewController {
     var _playerName: String?
     var _numberOfDecks: Int?
 
-    var _user: User?;
-
+    var _user: User?
 
     @IBOutlet var superView: UIView!
     @IBOutlet var middleView: UIView!
@@ -88,9 +87,6 @@ class BlackJackViewController: UIViewController {
 
         checkIfGameIsOver()
     }
-
-    
-
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
     // UI FUNCTIONS
@@ -515,12 +511,20 @@ class BlackJackViewController: UIViewController {
         gameResultContainer.isHidden = false
     }
 
-    func initGame(firstGame _: Bool = false) {
-        // init players
-        _player = Player(name: _user?.name == nil || _user?.name == "" ? "DR VAN NOSTRAND" : (_user?.name)!, chips: 0, cards: [])
-        _dealer = Dealer(name: "DEALER", chips: 0, cards: [], settings: PlayerSettings())
-        playerNameLabel.text = _player?._name.uppercased()
-        dealerNameLabel.text = _dealer?._name.uppercased()
+    func initGame(firstGame: Bool = false) {
+        if firstGame {
+            // init players
+            let userName = _user?.name == nil || _user?.name == "" ? "DR VAN NOSTRAND" : (_user?.name)!
+            let userNumberOfDecks = _user?.numberOfDecks == nil ? 1 : _user?.numberOfDecks
+            _player = Player(name: userName, chips: 0, cards: [], settings: PlayerSettings(suggestionsEnabled: true, numberOfDecks: userNumberOfDecks!, name: userName))
+            _dealer = Dealer(name: "DEALER", chips: 0, cards: [], settings: PlayerSettings(suggestionsEnabled: true, numberOfDecks: userNumberOfDecks!, name: userName))
+
+            playerNameLabel.text = _player?._name.uppercased()
+            dealerNameLabel.text = _dealer?._name.uppercased()
+        }
+
+        _player?._cards = []
+        _dealer?._cards = []
 
         clearCardImages()
         resetPlayerControlButtonStates()

@@ -9,13 +9,12 @@
 import UIKit
 
 struct User {
-    var name = "";
-    var numberOfDecks = 0;
+    var name = ""
+    var numberOfDecks = 0
 }
 
 class UserSetupViewController: UIViewController {
-    var _user: User?;
-
+    var _user: User?
 
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var numberOfDecksSlider: UISlider!
@@ -28,7 +27,7 @@ class UserSetupViewController: UIViewController {
 
     @IBOutlet var playButton: UIButton!
     @IBAction func playButtonOnClick(_: Any) {
-        _user = User(name: userNameTextField.text!, numberOfDecks: Int(numberOfDecksSlider.value))
+//        _user = User(name: userNameTextField.text!, numberOfDecks: Int(numberOfDecksSlider.value))
     }
 
     override func viewDidLoad() {
@@ -43,11 +42,10 @@ class UserSetupViewController: UIViewController {
     }
 
     // SEGUES
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
         if let destinationViewController = segue.destination as? BlackJackViewController {
             _user = User(name: userNameTextField.text!, numberOfDecks: Int(numberOfDecksSlider.value))
             destinationViewController._user = _user
         }
     }
-
 }
