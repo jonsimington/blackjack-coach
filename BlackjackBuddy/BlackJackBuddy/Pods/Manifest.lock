@@ -1,20 +1,24 @@
 PODS:
+  - HandySwift (2.6.0)
   - SnapKit (4.0.0)
   - SwiftFormat/CLI (0.33.7)
 
 DEPENDENCIES:
+  - HandySwift (~> 2.4)
   - SnapKit
   - SwiftFormat/CLI
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - HandySwift
     - SnapKit
     - SwiftFormat
 
 SPEC CHECKSUMS:
+  HandySwift: 510039979f68ab2c6866f1707634815654ed329b
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftFormat: 2e9b261a2ded97bc2aff2710c9826c6548a45bdb
 
-PODFILE CHECKSUM: 5c1a377db8f529eac4a2e727b59e3551cbcf8a29
+PODFILE CHECKSUM: 8c311d0dab03322a2ddc82ebb76c5e85f10ad813
 
 COCOAPODS: 1.5.3

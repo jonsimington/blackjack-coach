@@ -6,9 +6,10 @@
 //  Copyright © 2018 Jon Simington. All rights reserved.
 //
 
+import Dispatch
+import HandySwift
 import SnapKit
 import UIKit
-import HandySwift
 
 class BlackJackViewController: UIViewController {
     // LOCAL VARS
@@ -62,7 +63,33 @@ class BlackJackViewController: UIViewController {
     @IBOutlet var playerControlsContainer: UIView!
     @IBOutlet var playerStandButton: UIButton!
 
-    @IBAction func playerStandButtonOnClick(_ sender: Any) {
+    func checkDealerGameOver() {
+        if (_dealer?.score())! >= 17 {
+            // dealer bust -> player wins
+            if (_dealer?.score())! > 21 {
+                handleDealerBust()
+
+            // dealer blackjack
+            } else if _dealer?.score() == 21 {
+                handleDealerBlackJack()
+            }
+            // otherwise, dealer's score, d, 17 <= d < 21
+            // winner is the player with the highest score
+            else {
+                if _player?.score() ?? 0 > _dealer?.score() ?? 0 {
+                    handlePlayerWinByScore()
+                }
+                else if _dealer?.score() ?? 0 > _player?.score() ?? 0 {
+                    handleDealerWinByScore()
+                }
+                else if _player?.score() ?? 0 == _dealer?.score() ?? 0 {
+                    handleTieByScore()
+                }
+            }
+        }
+    }
+
+    @IBAction func playerStandButtonOnClick(_: Any) {
         // turn dealer's second card face up
         _dealer?._cards[1]._isFaceUp = true
 
@@ -76,30 +103,28 @@ class BlackJackViewController: UIViewController {
 
         // update stats now that the card is flipped
         updateStats()
+        checkDealerGameOver()
 
         // it's dealer's turn when the player stands
+        // dealer draws a card until their score is >= 17
         while (_dealer?.score())! < 17 {
-            delay(by: .seconds(0.5)) {
-                let dealtCard = self._deck?.dealCard(player: self._dealer!)
-
-                self.addCardToHand(cardContainer: self.dealerHandCardsContainer, card: dealtCard!, player: self._dealer!)
-                self.updateStats()
-            }
-
-            // dealer bust -> player wins
-            if (_dealer?.score())! > 21 {
-                handlePlayerBlackJack()
-            }
-            // dealer blackjack -> dealer wins
-            else if _dealer?.score() == 21 {
-                handlePlayerBust()
-            }
-
+            let dealtCard = _deck?.dealCard(player: _dealer!)
+            addCardToHand(cardContainer: dealerHandCardsContainer, card: dealtCard!, player: _dealer!)
+            updateStats()
         }
+
+        // check one last time if dealer lost
+        checkDealerGameOver()
     }
 
+    // method called when the timer triggers
+    @objc func myFunc(_: Timer) {
 
+    }
 
+    // finally, actual action
+    func dealCardToDealer(_: Int) {
+    }
 
     @IBOutlet var playerSplitButton: UIButton!
     @IBOutlet var playerDoubleDownButton: UIButton!
@@ -148,13 +173,13 @@ class BlackJackViewController: UIViewController {
             v.removeFromSuperview()
         }
     }
+
     func clearCardImages(player: String) {
         if player == "dealer" {
             for v in dealerHandCardsContainer.subViews(type: UIImageView.self) {
                 v.removeFromSuperview()
             }
-        }
-        else if player == "player" {
+        } else if player == "player" {
             for v in playerHandCardsContainer.subViews(type: UIImageView.self) {
                 v.removeFromSuperview()
             }
@@ -189,13 +214,20 @@ class BlackJackViewController: UIViewController {
 
         gameResultRestartButton.snp.makeConstraints { (make) -> Void in
             make.centerX.equalTo(view)
-            make.centerY.equalTo(view)
-            make.width.equalTo(restartGameButton)
+            make.bottom.equalTo(playerNameLabel.snp.top).offset(Configuration.PLAYER_CONTROL_BUTTON_PADDING_Y * -1)
+            make.left.equalTo(playerInsuranceButton)
+            make.right.equalTo(playerSurrenderButton)
             make.height.equalTo(gameResultRestartButton.snp.width)
                 .multipliedBy(CGFloat(1) / CGFloat(4))
         }
 
         gameResultLabel.sizeToFit()
+        gameResultLabel.snp.makeConstraints { (make) -> Void in
+            make.top.equalTo(dealerNameLabel.snp.bottom).offset(Configuration.PLAYER_CONTROL_BUTTON_PADDING_Y)
+            make.left.equalTo(playerInsuranceButton)
+            make.right.equalTo(playerSurrenderButton)
+            make.centerX.equalTo(view)
+        }
     }
 
     func addCardToHand(cardContainer: UIView, card: Card, player _: Player) {
@@ -273,7 +305,7 @@ class BlackJackViewController: UIViewController {
         restartGameLoadingCircle.isHidden = true
 
         // set game over status text
-        gameResultLabel.text = "Dang, you busted."
+        gameResultLabel.text = "Dang,\nyou busted.\n(\(_player?.score() ?? 0))"
         gameResultLabel.textColor = UIColor(named: "tomato")
         gameResultLabel.backgroundColor = UIColor.darkGray.withAlphaComponent(1)
         gameResultLabel.center.x = gameResultContainer.center.x
@@ -313,6 +345,132 @@ class BlackJackViewController: UIViewController {
 
         // show the game result overlay
         gameResultContainer.backgroundColor = UIColor.green.withAlphaComponent(0.15)
+        gameResultContainer.isUserInteractionEnabled = true
+        gameResultContainer.isHidden = false
+    }
+
+    func handleDealerWinByScore() {
+        TapticHelper.playTapticCancelled()
+        TapticHelper.playTapticCancelled()
+        // hide restart game button from other view
+        restartGameButton.isHidden = true
+        restartGameLoadingCircle.isHidden = true
+
+        // set game over status text
+        gameResultLabel.text = "Dealer wins by\nhigher score\n\(_dealer?.score() ?? 0) vs \(_player?.score() ?? 0)"
+        gameResultLabel.textColor = UIColor(named: "tomato")
+        gameResultLabel.backgroundColor = UIColor.darkGray.withAlphaComponent(1)
+        gameResultLabel.center.x = gameResultContainer.center.x
+        gameResultLabel.sizeToFit()
+
+        // set label's padding
+        let labelPadding = CGFloat(10)
+        setGameResultLabelPadding(labelPadding: labelPadding)
+
+        // show the game result overlay
+        gameResultContainer.backgroundColor = UIColor.red.withAlphaComponent(0.15)
+        gameResultContainer.isUserInteractionEnabled = true
+        gameResultContainer.isHidden = false
+    }
+
+    func handlePlayerWinByScore() {
+        TapticHelper.playTapticCancelled()
+        TapticHelper.playTapticCancelled()
+        TapticHelper.playTapticCancelled()
+        TapticHelper.playTapticCancelled()
+        TapticHelper.playTapticCancelled()
+        TapticHelper.playTapticCancelled()
+        // hide restart game button from other view
+        restartGameButton.isHidden = true
+        restartGameLoadingCircle.isHidden = true
+
+        // set game win status text
+        gameResultLabel.text = "You win by\nhigher score\n\(_player?.score() ?? 0) vs \(_dealer?.score() ?? 0)"
+        gameResultLabel.textColor = .green
+        gameResultLabel.backgroundColor = UIColor.darkGray.withAlphaComponent(1)
+        gameResultLabel.center.x = gameResultContainer.center.x
+        gameResultLabel.sizeToFit()
+
+        // set label's padding
+        let labelPadding = CGFloat(10)
+        setGameResultLabelPadding(labelPadding: labelPadding)
+
+        // show the game result overlay
+        gameResultContainer.backgroundColor = UIColor.green.withAlphaComponent(0.15)
+        gameResultContainer.isUserInteractionEnabled = true
+        gameResultContainer.isHidden = false
+    }
+
+    func handleTieByScore() {
+        // hide restart game button from other view
+        restartGameButton.isHidden = true
+        restartGameLoadingCircle.isHidden = true
+
+        // set game win status text
+        gameResultLabel.text = "It's a tie!\nBoth players have\nthe same score"
+        gameResultLabel.textColor = .yellow
+        gameResultLabel.backgroundColor = UIColor.darkGray.withAlphaComponent(1)
+        gameResultLabel.center.x = gameResultContainer.center.x
+        gameResultLabel.sizeToFit()
+
+        // set label's padding
+        let labelPadding = CGFloat(10)
+        setGameResultLabelPadding(labelPadding: labelPadding)
+
+        // show the game result overlay
+        gameResultContainer.backgroundColor = UIColor.green.withAlphaComponent(0.15)
+        gameResultContainer.isUserInteractionEnabled = true
+        gameResultContainer.isHidden = false
+    }
+
+    func handleDealerBust() {
+        TapticHelper.playTapticCancelled()
+        TapticHelper.playTapticCancelled()
+        TapticHelper.playTapticCancelled()
+        TapticHelper.playTapticCancelled()
+        TapticHelper.playTapticCancelled()
+        TapticHelper.playTapticCancelled()
+        // hide restart game button from other view
+        restartGameButton.isHidden = true
+        restartGameLoadingCircle.isHidden = true
+
+        // set game win status text
+        gameResultLabel.text = "Dealer Busted!\n(\(_dealer?.score() ?? 0))\nYou Win!"
+        gameResultLabel.textColor = .green
+        gameResultLabel.backgroundColor = UIColor.darkGray.withAlphaComponent(1)
+        gameResultLabel.center.x = gameResultContainer.center.x
+        gameResultLabel.sizeToFit()
+
+        // set label's padding
+        let labelPadding = CGFloat(10)
+        setGameResultLabelPadding(labelPadding: labelPadding)
+
+        // show the game result overlay
+        gameResultContainer.backgroundColor = UIColor.green.withAlphaComponent(0.15)
+        gameResultContainer.isUserInteractionEnabled = true
+        gameResultContainer.isHidden = false
+    }
+
+    func handleDealerBlackJack() {
+        TapticHelper.playTapticCancelled()
+        TapticHelper.playTapticCancelled()
+        // hide restart game button from other view
+        restartGameButton.isHidden = true
+        restartGameLoadingCircle.isHidden = true
+
+        // set game over status text
+        gameResultLabel.text = "Dang, Dealer got BlackJack."
+        gameResultLabel.textColor = UIColor(named: "tomato")
+        gameResultLabel.backgroundColor = UIColor.darkGray.withAlphaComponent(1)
+        gameResultLabel.center.x = gameResultContainer.center.x
+        gameResultLabel.sizeToFit()
+
+        // set label's padding
+        let labelPadding = CGFloat(10)
+        setGameResultLabelPadding(labelPadding: labelPadding)
+
+        // show the game result overlay
+        gameResultContainer.backgroundColor = UIColor.red.withAlphaComponent(0.15)
         gameResultContainer.isUserInteractionEnabled = true
         gameResultContainer.isHidden = false
     }

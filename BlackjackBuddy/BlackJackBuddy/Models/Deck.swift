@@ -89,7 +89,7 @@ class Deck {
 
     // shuffles the deck
     func shuffleDeck() {
-        if _cards.count == 0 {
+        if _cards.count < 2 {
             reloadDeck()
         }
         let originalDeck = _cards

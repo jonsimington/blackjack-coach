@@ -46,6 +46,18 @@ class UserSetupViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        userNameTextField.delegate = self as? UITextFieldDelegate
+        userNameTextField.returnKeyType = .done
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+
     // SEGUES
     override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
         if let destinationViewController = segue.destination as? BlackJackViewController {
