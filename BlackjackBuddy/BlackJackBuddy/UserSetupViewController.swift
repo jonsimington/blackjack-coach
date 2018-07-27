@@ -13,7 +13,7 @@ struct User {
     var numberOfDecks = 0
 }
 
-class UserSetupViewController: UIViewController {
+class UserSetupViewController: UIViewController, UITextFieldDelegate {
     var _user: User?
 
     @IBOutlet var userNameLabel: UILabel!
@@ -49,7 +49,7 @@ class UserSetupViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        userNameTextField.delegate = self as? UITextFieldDelegate
+        userNameTextField.delegate = self
         userNameTextField.returnKeyType = .done
     }
 

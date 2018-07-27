@@ -248,8 +248,8 @@ class LayoutHelper {
         _viewController.restartGameButton.snp.makeConstraints { (make) -> Void in
             make.top.equalTo(_viewController.playerHitButton.snp.bottom)
                 .offset(Configuration.PLAYER_CONTROL_BUTTON_PADDING_Y)
-            make.left.equalTo(_viewController.middleView).offset(Configuration.PLAYER_CONTROL_BUTTON_PADDING_X)
-            make.right.equalTo(_viewController.middleView).inset(Configuration.PLAYER_CONTROL_BUTTON_PADDING_X)
+            make.left.equalTo(_viewController.playerHitButton)
+            make.right.equalTo(_viewController.playerStandButton)
         }
         _viewController.playerControlsContainer.addSubview(_viewController.restartGameLoadingCircle)
 

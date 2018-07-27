@@ -69,20 +69,15 @@ class BlackJackViewController: UIViewController {
             if (_dealer?.score())! > 21 {
                 handleDealerBust()
 
-            // dealer blackjack
+                // dealer blackjack
             } else if _dealer?.score() == 21 {
                 handleDealerBlackJack()
-            }
-            // otherwise, dealer's score, d, 17 <= d < 21
-            // winner is the player with the highest score
-            else {
+            } else {
                 if _player?.score() ?? 0 > _dealer?.score() ?? 0 {
                     handlePlayerWinByScore()
-                }
-                else if _dealer?.score() ?? 0 > _player?.score() ?? 0 {
+                } else if _dealer?.score() ?? 0 > _player?.score() ?? 0 {
                     handleDealerWinByScore()
-                }
-                else if _player?.score() ?? 0 == _dealer?.score() ?? 0 {
+                } else if _player?.score() ?? 0 == _dealer?.score() ?? 0 {
                     handleTieByScore()
                 }
             }
@@ -115,15 +110,6 @@ class BlackJackViewController: UIViewController {
 
         // check one last time if dealer lost
         checkDealerGameOver()
-    }
-
-    // method called when the timer triggers
-    @objc func myFunc(_: Timer) {
-
-    }
-
-    // finally, actual action
-    func dealCardToDealer(_: Int) {
     }
 
     @IBOutlet var playerSplitButton: UIButton!
@@ -418,7 +404,7 @@ class BlackJackViewController: UIViewController {
         setGameResultLabelPadding(labelPadding: labelPadding)
 
         // show the game result overlay
-        gameResultContainer.backgroundColor = UIColor.green.withAlphaComponent(0.15)
+        gameResultContainer.backgroundColor = UIColor.yellow.withAlphaComponent(0.15)
         gameResultContainer.isUserInteractionEnabled = true
         gameResultContainer.isHidden = false
     }
@@ -478,7 +464,7 @@ class BlackJackViewController: UIViewController {
     func initGame(firstGame: Bool = false) {
         if firstGame {
             // init players
-            let userName = _user?.name == nil || _user?.name == "" ? "DR VAN NOSTRAND" : (_user?.name)!
+            let userName = _user?.name == nil || _user?.name == "" ? "PLAYER" : (_user?.name)!
             let userNumberOfDecks = _user?.numberOfDecks == nil ? 1 : _user?.numberOfDecks
             _player = Player(name: userName, chips: 0, cards: [], settings: PlayerSettings(suggestionsEnabled: true, numberOfDecks: userNumberOfDecks!, name: userName))
             _dealer = Dealer(name: "DEALER", chips: 0, cards: [], settings: PlayerSettings(suggestionsEnabled: true, numberOfDecks: userNumberOfDecks!, name: userName))
@@ -517,7 +503,7 @@ class BlackJackViewController: UIViewController {
         super.viewDidLoad()
 
         // init players
-        _player = Player(name: _user?.name == nil || _user?.name == "" ? "DR VAN NOSTRAND" : (_user?.name)!, chips: 0, cards: [])
+        _player = Player(name: _user?.name == nil || _user?.name == "" ? "PLAYER" : (_user?.name)!, chips: 0, cards: [])
         _dealer = Dealer(name: "DEALER", chips: 0, cards: [], settings: PlayerSettings())
 
         LayoutHelper.initBaseBlackJackUI(_view: view, _viewController: self)
