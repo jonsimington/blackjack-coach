@@ -1,5 +1,4 @@
 format:
-	swiftformat .
 	swiftlint autocorrect
 
 clean-pods:
