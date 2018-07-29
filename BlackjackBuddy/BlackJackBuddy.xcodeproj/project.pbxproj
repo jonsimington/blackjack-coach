@@ -52,6 +52,7 @@
 		DDB26A18210DB09D001564A9 /* SharingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB26A17210DB09D001564A9 /* SharingManager.swift */; };
 		DDCE72A22109BFC100C75A4B /* LayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCE72A12109BFC100C75A4B /* LayoutHelper.swift */; };
 		DDD83C2F210DC0D80086B9D8 /* HAND_VALUE_TYPE.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD83C2E210DC0D80086B9D8 /* HAND_VALUE_TYPE.swift */; };
+		DDD83C31210DFBFE0086B9D8 /* SuggestedPlayHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD83C30210DFBFE0086B9D8 /* SuggestedPlayHelper.swift */; };
 		F834ED5B7C546F174F0C41D3 /* Pods_BlackjackBuddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99835842FE92FD03AA463092 /* Pods_BlackjackBuddy.framework */; };
 /* End PBXBuildFile section */
 
@@ -127,6 +128,7 @@
 		DDB26A17210DB09D001564A9 /* SharingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingManager.swift; sourceTree = "<group>"; };
 		DDCE72A12109BFC100C75A4B /* LayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutHelper.swift; sourceTree = "<group>"; };
 		DDD83C2E210DC0D80086B9D8 /* HAND_VALUE_TYPE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HAND_VALUE_TYPE.swift; sourceTree = "<group>"; };
+		DDD83C30210DFBFE0086B9D8 /* SuggestedPlayHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestedPlayHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +238,7 @@
 				DD4AF53A20D9D6B7001235BA /* CardHelper.swift */,
 				DD1335DC20E6157300FAE7A9 /* TapticHelper.swift */,
 				DDCE72A12109BFC100C75A4B /* LayoutHelper.swift */,
+				DDD83C30210DFBFE0086B9D8 /* SuggestedPlayHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -486,15 +489,11 @@
 			inputPaths = (
 				"${SRCROOT}/BlackJackBuddy/Pods/Target Support Files/Pods-BlackjackBuddy/Pods-BlackjackBuddy-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/HandySwift/HandySwift.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandySwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,6 +544,7 @@
 				DD4AEF7820D4E8A3001235BA /* CARD_SUIT.swift in Sources */,
 				DD4AEF7C20D4EAC8001235BA /* Dealer.swift in Sources */,
 				DDD83C2F210DC0D80086B9D8 /* HAND_VALUE_TYPE.swift in Sources */,
+				DDD83C31210DFBFE0086B9D8 /* SuggestedPlayHelper.swift in Sources */,
 				DD906DB220D4C2E600501074 /* BlackJackBuddy.xcdatamodeld in Sources */,
 				DD4AF52720D593A1001235BA /* ELEMENT_STATE.swift in Sources */,
 				DD4AF53920D9D588001235BA /* PaddingHelper.swift in Sources */,

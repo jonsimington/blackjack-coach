@@ -31,20 +31,17 @@ class BlackJackViewController: UIViewController {
     @IBOutlet var playerRecordDescriptionLabel: UILabel!
     @IBOutlet var playerRecordContainer: UIView!
     @IBOutlet var dealerRecordContainer: UIView!
-    
-    
+
     // DEALER VIEWS
     @IBOutlet var dealerHandContainer: UIView!
     @IBOutlet var dealerHandCardsContainer: UIImageView!
     @IBOutlet var dealerNameLabel: UILabel!
 
-    
     // PLAYER VIEWS
     @IBOutlet var playerHandContainer: UIView!
     @IBOutlet var playerHandCardsContainer: UIImageView!
     @IBOutlet var playerNameLabel: UILabel!
 
-    
     // STATS VIEWS
     @IBOutlet var statsContainer: UIView!
     @IBOutlet var deckCountLabel: UILabel!
@@ -148,6 +145,8 @@ class BlackJackViewController: UIViewController {
         updateStats()
 
         checkIfGameIsOver()
+
+        print("Suggested play is \(SuggestedPlayHelper.determineSuggestedPlay(_player: _player!, _dealer: _dealer!))")
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -294,7 +293,6 @@ class BlackJackViewController: UIViewController {
         addCardToHand(cardContainer: dealerHandCardsContainer!, card: dealtCard, player: _dealer!)
         updateStats()
         print("------------------------------------------------------------")
-
     }
 
     fileprivate func UpdatePlayerRecordLabels() {
@@ -362,7 +360,6 @@ class BlackJackViewController: UIViewController {
         _player?._record._wins += 1
         _dealer?._record._losses += 1
         UpdatePlayerRecordLabels()
-
     }
 
     func handleDealerWinByscore() {
@@ -392,7 +389,6 @@ class BlackJackViewController: UIViewController {
         _dealer?._record._wins += 1
         _player?._record._losses += 1
         UpdatePlayerRecordLabels()
-
     }
 
     func handlePlayerWinByscore() {
@@ -426,7 +422,6 @@ class BlackJackViewController: UIViewController {
         _player?._record._wins += 1
         _dealer?._record._losses += 1
         UpdatePlayerRecordLabels()
-
     }
 
     func handleTieByscore() {
@@ -454,7 +449,6 @@ class BlackJackViewController: UIViewController {
         _dealer?._record._ties += 1
         _player?._record._ties += 1
         UpdatePlayerRecordLabels()
-
     }
 
     func handleDealerBust() {
@@ -488,7 +482,6 @@ class BlackJackViewController: UIViewController {
         _dealer?._record._losses += 1
         _player?._record._wins += 1
         UpdatePlayerRecordLabels()
-
     }
 
     func handleDealerBlackJack() {
@@ -518,8 +511,6 @@ class BlackJackViewController: UIViewController {
         _dealer?._record._wins += 1
         _player?._record._losses += 1
         UpdatePlayerRecordLabels()
-
-
     }
 
     func initGame(firstGame: Bool = false) {
@@ -535,7 +526,6 @@ class BlackJackViewController: UIViewController {
         }
 
         UpdatePlayerRecordLabels()
-
 
         _player?._cards = []
         _dealer?._cards = []
@@ -560,6 +550,8 @@ class BlackJackViewController: UIViewController {
         _deck?.shuffleDeck()
 
         initialDeal()
+
+        print("Suggested play is \(SuggestedPlayHelper.determineSuggestedPlay(_player: _player!, _dealer: _dealer!))")
         _currentGameNumber += 1
     }
 

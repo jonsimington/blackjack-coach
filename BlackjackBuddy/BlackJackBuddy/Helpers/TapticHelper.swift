@@ -51,7 +51,6 @@ class TapticHelper {
         // Cancelled
         let cancelled = SystemSoundID(1521)
         AudioServicesPlaySystemSoundWithCompletion(cancelled, {
-            print("did cancelled")
         })
     }
 

@@ -32,7 +32,7 @@ class Player {
         let acesInHand = _cards.filter { $0._rank == CARD_RANK.ACE }
         let nonAcesInHand = _cards.filter { $0._rank != CARD_RANK.ACE }
         let hiddenAces = acesInHand.filter { $0._isFaceUp == false }
-        let faceUpCards = _cards.filter { $0._isFaceUp == true}
+        let faceUpCards = _cards.filter { $0._isFaceUp == true }
 
         var handValueType = HAND_VALUE_TYPE.HARD
 

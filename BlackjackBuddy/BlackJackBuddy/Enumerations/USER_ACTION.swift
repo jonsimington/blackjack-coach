@@ -8,11 +8,11 @@
 
 import Foundation
 
-enum USER_ACTION {
-    case HIT
-    case STAND
-    case SPLIT
-    case DOUBLE_DOWN
-    case INSURANCE
-    case SURRENDER
+enum USER_ACTION: String {
+    case HIT = "H"
+    case STAND = "S"
+    case SPLIT = "P"
+    case DOUBLE_DOWN = "D"
+    case INSURANCE = "I"
+    case SURRENDER = "R"
 }

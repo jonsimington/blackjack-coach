@@ -13,7 +13,7 @@ class PlayerRecord {
     var _losses: Int
     var _ties: Int
 
-    var _ratio: Float  {
+    var _ratio: Float {
         if _losses > 0 {
             return Float(_wins) / Float(_losses)
         }

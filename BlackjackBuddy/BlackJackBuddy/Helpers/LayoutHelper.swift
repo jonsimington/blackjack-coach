@@ -170,7 +170,7 @@ class LayoutHelper {
         _viewController.middleView.addSubview(_viewController.dealerRecordContainer)
 
         // Player record container
-        _viewController.playerRecordContainer.snp.makeConstraints{(make) -> Void in
+        _viewController.playerRecordContainer.snp.makeConstraints { (make) -> Void in
             make.bottom.equalTo(_viewController.middleView)
             make.left.equalTo(_viewController.middleView)
             make.right.equalTo(_viewController.middleView)
@@ -180,7 +180,7 @@ class LayoutHelper {
         _viewController.playerRecordContainer.addSubview(_viewController.playerRecordLabel)
         _viewController.playerRecordContainer.addSubview(_viewController.playerRecordDescriptionLabel)
 
-        _viewController.playerRecordDescriptionLabel.snp.makeConstraints{(make) -> Void in
+        _viewController.playerRecordDescriptionLabel.snp.makeConstraints { (make) -> Void in
             make.left.equalTo(_viewController.playerHandCardsContainer)
             make.right.equalTo(_viewController.playerRecordLabel.snp.left).offset(-10)
             make.centerY.equalTo(_viewController.playerRecordContainer)
@@ -188,7 +188,7 @@ class LayoutHelper {
             make.bottom.equalTo(_viewController.playerRecordContainer)
         }
 
-        _viewController.playerRecordLabel.snp.makeConstraints{(make) -> Void in
+        _viewController.playerRecordLabel.snp.makeConstraints { (make) -> Void in
             make.left.equalTo(_viewController.playerRecordDescriptionLabel.snp.right).offset(10)
             make.centerY.equalTo(_viewController.playerRecordContainer)
             make.right.equalTo(_viewController.playerHandCardsContainer)
@@ -197,7 +197,7 @@ class LayoutHelper {
         }
 
         // Dealer record container
-        _viewController.dealerRecordContainer.snp.makeConstraints{(make) -> Void in
+        _viewController.dealerRecordContainer.snp.makeConstraints { (make) -> Void in
             make.top.equalTo(_viewController.middleView)
             make.left.equalTo(_viewController.middleView)
             make.right.equalTo(_viewController.middleView)
@@ -208,23 +208,21 @@ class LayoutHelper {
         _viewController.dealerRecordContainer.addSubview(_viewController.dealerRecordLabel)
         _viewController.dealerRecordContainer.addSubview(_viewController.dealerRecordDescriptionLabel)
 
-        _viewController.dealerRecordDescriptionLabel.snp.makeConstraints{(make) -> Void in
+        _viewController.dealerRecordDescriptionLabel.snp.makeConstraints { (make) -> Void in
             make.left.equalTo(_viewController.dealerHandCardsContainer)
             make.right.equalTo(_viewController.dealerRecordLabel.snp.left).offset(-10)
             make.centerY.equalTo(_viewController.dealerRecordContainer)
             make.top.equalTo(_viewController.dealerRecordContainer)
             make.bottom.equalTo(_viewController.dealerRecordContainer)
-
         }
 
-        _viewController.dealerRecordLabel.snp.makeConstraints{(make) -> Void in
-        make.left.equalTo(_viewController.dealerRecordDescriptionLabel.snp.right).offset(10)
+        _viewController.dealerRecordLabel.snp.makeConstraints { (make) -> Void in
+            make.left.equalTo(_viewController.dealerRecordDescriptionLabel.snp.right).offset(10)
             make.centerY.equalTo(_viewController.dealerRecordContainer)
             make.right.equalTo(_viewController.dealerHandCardsContainer)
             make.top.equalTo(_viewController.dealerRecordContainer)
             make.bottom.equalTo(_viewController.dealerRecordContainer)
         }
-
 
         // Stats container
         _viewController.statsContainer.snp.makeConstraints { (make) -> Void in
@@ -245,7 +243,7 @@ class LayoutHelper {
             make.bottom.equalTo(_viewController.statsContainer)
         }
 
-         // Player controls container
+        // Player controls container
         _viewController.playerControlsContainer.snp.makeConstraints { (make) -> Void in
             make.top.equalTo(_viewController.statsContainer.snp.bottom)
             make.bottom.equalTo(_viewController.playerRecordContainer.snp.top)
@@ -264,7 +262,6 @@ class LayoutHelper {
         _viewController.playerControlsContainer.addSubview(_viewController.restartGameLoadingCircle)
 
         let playerControlButtonPadding = (_viewController.playerControlsContainer.frame.height - 192) / 5
-
 
         // left side
         _viewController.playerInsuranceButton.snp.makeConstraints { (make) -> Void in
@@ -388,7 +385,6 @@ class LayoutHelper {
             _viewController.playerRecordLabel.layer.borderWidth = 2
             _viewController.playerRecordDescriptionLabel.layer.borderColor = UIColor.magenta.cgColor
             _viewController.playerRecordDescriptionLabel.layer.borderWidth = 2
-
         }
     }
 }
