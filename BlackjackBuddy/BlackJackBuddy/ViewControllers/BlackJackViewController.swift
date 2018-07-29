@@ -92,6 +92,19 @@ class BlackJackViewController: UIViewController {
         }
     }
 
+    fileprivate func handleDealerTurn() {
+        // it's dealer's turn when the player stands
+        // dealer draws a card until their score is >= 17
+        while (_dealer?.score().value)! < 17 {
+            let dealtCard = _deck?.dealCard(player: _dealer!)
+            addCardToHand(cardContainer: dealerHandCardsContainer, card: dealtCard!, player: _dealer!)
+            updateStats()
+        }
+
+        // check one last time if dealer lost
+        checkDealerGameOver()
+    }
+
     @IBAction func playerStandButtonOnClick(_: Any) {
         // turn dealer's second card face up
         _dealer?._cards[1]._isFaceUp = true
@@ -108,22 +121,35 @@ class BlackJackViewController: UIViewController {
         updateStats()
         checkDealerGameOver()
 
-        // it's dealer's turn when the player stands
-        // dealer draws a card until their score is >= 17
-        while (_dealer?.score().value)! < 17 {
-            let dealtCard = _deck?.dealCard(player: _dealer!)
-            addCardToHand(cardContainer: dealerHandCardsContainer, card: dealtCard!, player: _dealer!)
-            updateStats()
-        }
-
-        // check one last time if dealer lost
-        checkDealerGameOver()
+        handleDealerTurn()
     }
 
     @IBOutlet var playerSplitButton: UIButton!
     @IBOutlet var playerDoubleDownButton: UIButton!
+
+    @IBAction func playerDoubleDownButtonOnClick(_ sender: Any) {
+        // player places an additional bet equal to their original bet
+
+        // player draws one card and finishes their turn
+        let dealtCard = (_deck?.dealCard(player: _player!))!
+        addCardToHand(cardContainer: playerHandCardsContainer!, card: dealtCard, player: _player!)
+        updateStats()
+
+        // now the dealer takes a turn
+        handleDealerTurn()
+    }
+
+
     @IBOutlet var playerInsuranceButton: UIButton!
     @IBOutlet var playerSurrenderButton: UIButton!
+    @IBAction func playerSurrenderButtonOnClick(_ sender: Any) {
+        // player recovers half their original bet
+
+        // restart game
+        initGame()
+    }
+
+
     @IBOutlet var playerHitButton: UIButton!
 
     @IBAction func playerHitButtonOnClick(_: Any) {
@@ -142,11 +168,16 @@ class BlackJackViewController: UIViewController {
         let dealtCard = (_deck?.dealCard(player: _player!))!
         addCardToHand(cardContainer: playerHandCardsContainer!, card: dealtCard, player: _player!)
 
+        // if player drew a third card, disable the double down button
+        playerDoubleDownButton.isEnabled = _player?._cards.count == 2
+
         updateStats()
 
         checkIfGameIsOver()
 
-        print("Suggested play is \(SuggestedPlayHelper.determineSuggestedPlay(_player: _player!, _dealer: _dealer!))")
+        let suggestedPlay = SuggestedPlayHelper.determineSuggestedPlay(_player: _player!, _dealer: _dealer!)
+
+        print("Suggested play is \(suggestedPlay)")
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -186,7 +217,7 @@ class BlackJackViewController: UIViewController {
         playerInsuranceButton.isEnabled = false
         playerSplitButton.isEnabled = false
         playerHitButton.isEnabled = true
-        playerSurrenderButton.isEnabled = false
+        playerSurrenderButton.isEnabled = true
         playerDoubleDownButton.isEnabled = false
         playerStandButton.isEnabled = true
     }
@@ -553,11 +584,15 @@ class BlackJackViewController: UIViewController {
 
         // if player has 2 cards of the same rank, they can split
         // enable the split button
-        if (_player?.canSplit())! {
-            playerSplitButton.isEnabled = true
-        }
+        playerSplitButton.isEnabled = (_player?.canSplit())!
 
-        print("Suggested play is \(SuggestedPlayHelper.determineSuggestedPlay(_player: _player!, _dealer: _dealer!))")
+        // the player can choose to double down only after the first draw,
+        // so enable the double down button
+        playerDoubleDownButton.isEnabled = true
+
+        let suggestedPlay = SuggestedPlayHelper.determineSuggestedPlay(_player: _player!, _dealer: _dealer!)
+
+        print("Suggested play is \(suggestedPlay)")
         _currentGameNumber += 1
     }
 

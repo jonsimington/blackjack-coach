@@ -14,6 +14,8 @@ class SuggestedPlayHelper {
         let playerScore = _player.score()
         let dealerUpCard = _dealer._cards.filter { $0._isFaceUp == true }[0]
 
+        let doubleDownIsAllowed = _player._cards.count == 2
+
         switch playerScore.type {
         case .HARD:
             switch dealerUpCard._rank {
@@ -24,9 +26,9 @@ class SuggestedPlayHelper {
                 case 9:
                     return .HIT
                 case 10:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 11:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 12:
                     return .HIT
                 case 13:
@@ -72,11 +74,11 @@ class SuggestedPlayHelper {
                 case 4, 5, 6, 7, 8:
                     return .HIT
                 case 9:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 10:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 11:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 12:
                     return .HIT
                 case 13:
@@ -97,11 +99,11 @@ class SuggestedPlayHelper {
                 case 4, 5, 6, 7, 8:
                     return .HIT
                 case 9:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 10:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 11:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 12:
                     return .STAND
                 case 13:
@@ -122,11 +124,11 @@ class SuggestedPlayHelper {
                 case 4, 5, 6, 7, 8:
                     return .HIT
                 case 9:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 10:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 11:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 12:
                     return .STAND
                 case 13:
@@ -147,11 +149,11 @@ class SuggestedPlayHelper {
                 case 4, 5, 6, 7, 8:
                     return .HIT
                 case 9:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 10:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 11:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 12:
                     return .STAND
                 case 13:
@@ -174,9 +176,9 @@ class SuggestedPlayHelper {
                 case 9:
                     return .HIT
                 case 10:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 11:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 12:
                     return .HIT
                 case 13:
@@ -199,9 +201,9 @@ class SuggestedPlayHelper {
                 case 9:
                     return .HIT
                 case 10:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 11:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 12:
                     return .HIT
                 case 13:
@@ -224,9 +226,9 @@ class SuggestedPlayHelper {
                 case 9:
                     return .HIT
                 case 10:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 11:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 12:
                     return .HIT
                 case 13:
@@ -251,7 +253,7 @@ class SuggestedPlayHelper {
                 case 10:
                     return .HIT
                 case 11:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 12:
                     return .HIT
                 case 13:
@@ -319,9 +321,9 @@ class SuggestedPlayHelper {
                 case 16:
                     return .HIT
                 case 17:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 18:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .STAND
                 case 19, 20, 21:
                     return .STAND
                 default:
@@ -334,13 +336,13 @@ class SuggestedPlayHelper {
                 case 14:
                     return .HIT
                 case 15:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 16:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 17:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 18:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .STAND
                 case 19, 20, 21:
                     return .STAND
                 default:
@@ -349,17 +351,17 @@ class SuggestedPlayHelper {
             case .FIVE:
                 switch playerScore.value {
                 case 13:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 14:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 15:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 16:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 17:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 18:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .STAND
                 case 19, 20, 21:
                     return .STAND
                 default:
@@ -368,17 +370,17 @@ class SuggestedPlayHelper {
             case .SIX:
                 switch playerScore.value {
                 case 13:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 14:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 15:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 16:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 17:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .HIT
                 case 18:
-                    return .DOUBLE_DOWN
+                    return doubleDownIsAllowed ? .DOUBLE_DOWN : .STAND
                 case 19, 20, 21:
                     return .STAND
                 default:

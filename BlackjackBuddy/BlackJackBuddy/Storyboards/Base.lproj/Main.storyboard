@@ -190,8 +190,11 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </state>
+                                                <connections>
+                                                    <action selector="playerDoubleDownButtonOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W7e-Lf-FZm"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="frU-vr-Eao">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="frU-vr-Eao">
                                                 <rect key="frame" x="207" y="21" width="158" height="48"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <state key="normal" backgroundImage="buttonHollowDanger">
@@ -205,6 +208,9 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </state>
+                                                <connections>
+                                                    <action selector="playerSurrenderButtonOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VWX-Cl-aEP"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NAl-u2-xx7">
                                                 <rect key="frame" x="10" y="21" width="158" height="48"/>
