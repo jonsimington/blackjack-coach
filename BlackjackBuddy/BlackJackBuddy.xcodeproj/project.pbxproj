@@ -53,6 +53,7 @@
 		DDCE72A22109BFC100C75A4B /* LayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCE72A12109BFC100C75A4B /* LayoutHelper.swift */; };
 		DDD83C2F210DC0D80086B9D8 /* HAND_VALUE_TYPE.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD83C2E210DC0D80086B9D8 /* HAND_VALUE_TYPE.swift */; };
 		DDD83C31210DFBFE0086B9D8 /* SuggestedPlayHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD83C30210DFBFE0086B9D8 /* SuggestedPlayHelper.swift */; };
+		DDD83C33210DFEE30086B9D8 /* GlowingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD83C32210DFEE30086B9D8 /* GlowingButton.swift */; };
 		F834ED5B7C546F174F0C41D3 /* Pods_BlackjackBuddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99835842FE92FD03AA463092 /* Pods_BlackjackBuddy.framework */; };
 /* End PBXBuildFile section */
 
@@ -129,6 +130,7 @@
 		DDCE72A12109BFC100C75A4B /* LayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutHelper.swift; sourceTree = "<group>"; };
 		DDD83C2E210DC0D80086B9D8 /* HAND_VALUE_TYPE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HAND_VALUE_TYPE.swift; sourceTree = "<group>"; };
 		DDD83C30210DFBFE0086B9D8 /* SuggestedPlayHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestedPlayHelper.swift; sourceTree = "<group>"; };
+		DDD83C32210DFEE30086B9D8 /* GlowingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowingButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +213,7 @@
 				DD4C71D720DA36C1004E5720 /* UIViewSubViews.swift */,
 				834FACE620DC344A00D2F8C3 /* UIFontSize.swift */,
 				DD1335DA20E60B9700FAE7A9 /* UIDeviceInfo.swift */,
+				DDD83C32210DFEE30086B9D8 /* GlowingButton.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -565,6 +568,7 @@
 				DDCE72A22109BFC100C75A4B /* LayoutHelper.swift in Sources */,
 				DD1335DD20E6157300FAE7A9 /* TapticHelper.swift in Sources */,
 				83EC07F520DC5ED300A252F1 /* BlackJackViewController.swift in Sources */,
+				DDD83C33210DFEE30086B9D8 /* GlowingButton.swift in Sources */,
 				DD4AF53620D76CCE001235BA /* PlayerSettings.swift in Sources */,
 				834FACE120DABA6D00D2F8C3 /* UserSetupViewController.swift in Sources */,
 			);

@@ -75,12 +75,10 @@ class BlackJackViewController: UIViewController {
         if insurance {
             if(_dealer?.score().value == 21) {
                 handlePlayerInsurancePayout()
-            }
-            else {
+            } else {
                 handlePlayerInsuranceLoss()
             }
-        }
-        else {
+        } else {
             if (_dealer?.score().value)! >= 17 {
                 // dealer bust -> player wins
                 if (_dealer?.score().value)! > 21 {
@@ -153,7 +151,6 @@ class BlackJackViewController: UIViewController {
         handleDealerTurn()
     }
 
-
     @IBOutlet var playerInsuranceButton: UIButton!
     @IBAction func playerInsuranceButtonOnClick(_ sender: Any) {
         // TODO: allow user to select their wager up to half the value of the original bet
@@ -164,16 +161,11 @@ class BlackJackViewController: UIViewController {
         if _dealer?.score().value == 21 {
             // player gets 2:1 return on their wager
             print("Dealer got blackjack, player wins wager 2:1")
-        }
-        else {
+        } else {
             // player loses wager
             print("Dealer did not get blackjack, player loses wager")
         }
     }
-
-
-
-
 
     @IBOutlet var playerSurrenderButton: UIButton!
     @IBAction func playerSurrenderButtonOnClick(_ sender: Any) {
@@ -182,7 +174,6 @@ class BlackJackViewController: UIViewController {
         // restart game
         initGame()
     }
-
 
     @IBOutlet var playerHitButton: UIButton!
 
@@ -210,6 +201,8 @@ class BlackJackViewController: UIViewController {
         checkIfGameIsOver()
 
         let suggestedPlay = SuggestedPlayHelper.determineSuggestedPlay(_player: _player!, _dealer: _dealer!)
+
+        toggleSuggestedPlayAnimation(action: suggestedPlay)
 
         print("Suggested play is \(suggestedPlay)")
     }
@@ -247,13 +240,55 @@ class BlackJackViewController: UIViewController {
         }
     }
 
+    func clearButtonAnimations(button: UIButton) {
+        button.layer.removeAllAnimations()
+        button.layer.shadowOpacity = 0
+    }
+
+    func startButtonAnimation(button: UIButton) {
+        let animDuration: CGFloat = 1.5
+        let cornerRadius: CGFloat = 5
+        let maxGlowSize: CGFloat = 20
+        let minGlowSize: CGFloat = 0
+        button.layer.cornerRadius = cornerRadius
+        button.layer.shadowPath = CGPath(roundedRect: button.bounds, cornerWidth: cornerRadius, cornerHeight: cornerRadius, transform: nil)
+        button.layer.shadowColor = UIColor.cyan.cgColor
+        button.layer.shadowOffset = CGSize.zero
+        button.layer.shadowRadius = maxGlowSize
+        button.layer.shadowOpacity = 1
+
+        let layerAnimation = CABasicAnimation(keyPath: "shadowRadius")
+        layerAnimation.fromValue = maxGlowSize
+        layerAnimation.toValue = minGlowSize
+        layerAnimation.autoreverses = true
+        layerAnimation.isAdditive = false
+        layerAnimation.duration = CFTimeInterval(animDuration/2)
+        layerAnimation.isRemovedOnCompletion = false
+        layerAnimation.repeatCount = .infinity
+        button.layer.add(layerAnimation, forKey: "glowingAnimation")
+
+    }
+
     func resetPlayerControlButtonStates() {
+        // set enabled status
         playerInsuranceButton.isEnabled = false
         playerSplitButton.isEnabled = false
         playerHitButton.isEnabled = true
         playerSurrenderButton.isEnabled = true
         playerDoubleDownButton.isEnabled = false
         playerStandButton.isEnabled = true
+
+        // disable glow
+        clearAllButtonAnimations()
+    }
+
+    func clearAllButtonAnimations() {
+        clearButtonAnimations(button: playerInsuranceButton)
+        clearButtonAnimations(button: playerSplitButton)
+        clearButtonAnimations(button: playerHitButton)
+        clearButtonAnimations(button: playerSurrenderButton)
+        clearButtonAnimations(button: playerDoubleDownButton)
+        clearButtonAnimations(button: playerStandButton)
     }
 
     func setGameResultLabelPadding(labelPadding: CGFloat) {
@@ -688,17 +723,35 @@ class BlackJackViewController: UIViewController {
         // so enable the double down button
         playerDoubleDownButton.isEnabled = true
 
-
         // insurance is available to the player when the dealer's upcard is an ace
         // enable insurance button
         playerInsuranceButton.isEnabled = _dealer?.upCard._rank == .ACE
 
-
-
         let suggestedPlay = SuggestedPlayHelper.determineSuggestedPlay(_player: _player!, _dealer: _dealer!)
+
+        toggleSuggestedPlayAnimation(action: suggestedPlay)
 
         print("Suggested play is \(suggestedPlay)")
         _currentGameNumber += 1
+    }
+
+    func toggleSuggestedPlayAnimation(action: USER_ACTION) {
+        clearAllButtonAnimations()
+
+        switch action {
+        case .HIT:
+            startButtonAnimation(button: playerHitButton)
+        case .STAND:
+            startButtonAnimation(button: playerStandButton)
+        case .SPLIT:
+            startButtonAnimation(button: playerSplitButton)
+        case .DOUBLE_DOWN:
+            startButtonAnimation(button: playerDoubleDownButton)
+        case .INSURANCE:
+            startButtonAnimation(button: playerInsuranceButton)
+        case .SURRENDER:
+            startButtonAnimation(button: playerSurrenderButton)
+        }
     }
 
     override func viewDidLoad() {

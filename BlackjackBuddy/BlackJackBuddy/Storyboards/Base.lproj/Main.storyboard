@@ -143,7 +143,7 @@
                                         <rect key="frame" x="0.0" y="122" width="375" height="295"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <button autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tO9-fV-PxE">
+                                            <button autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tO9-fV-PxE" customClass="GlowingButton" customModule="BlackjackBuddy" customModuleProvider="target">
                                                 <rect key="frame" x="207" y="157" width="158" height="48"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <state key="normal" backgroundImage="buttonWarning">
@@ -161,7 +161,7 @@
                                                     <action selector="playerStandButtonOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vWE-7x-QS0"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H4c-RS-q6e">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H4c-RS-q6e" customClass="GlowingButton" customModule="BlackjackBuddy" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="89" width="158" height="48"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <state key="normal" backgroundImage="buttonHollowPrimary">
@@ -176,7 +176,7 @@
                                                     </attributedString>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4W1-nA-yMp">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4W1-nA-yMp" customClass="GlowingButton" customModule="BlackjackBuddy" customModuleProvider="target">
                                                 <rect key="frame" x="207" y="89" width="158" height="48"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <state key="normal" backgroundImage="buttonHollowPrimary">
@@ -194,7 +194,7 @@
                                                     <action selector="playerDoubleDownButtonOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W7e-Lf-FZm"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="frU-vr-Eao">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="frU-vr-Eao" customClass="GlowingButton" customModule="BlackjackBuddy" customModuleProvider="target">
                                                 <rect key="frame" x="207" y="21" width="158" height="48"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <state key="normal" backgroundImage="buttonHollowDanger">
@@ -212,7 +212,7 @@
                                                     <action selector="playerSurrenderButtonOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VWX-Cl-aEP"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NAl-u2-xx7">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NAl-u2-xx7" customClass="GlowingButton" customModule="BlackjackBuddy" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="21" width="158" height="48"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <state key="normal" backgroundImage="buttonHollowPrimary">
@@ -230,7 +230,7 @@
                                                     <action selector="playerInsuranceButtonOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QG3-aT-gSi"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ww-bz-0bz">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ww-bz-0bz" customClass="GlowingButton" customModule="BlackjackBuddy" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="157" width="158" height="48"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <state key="normal" backgroundImage="buttonSuccess">
