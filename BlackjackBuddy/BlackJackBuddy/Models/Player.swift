@@ -25,6 +25,21 @@ class Player {
 
     public var toString: String { return "\(_name): \(_cards), \(_chips)" }
 
+    func canSplit() -> Bool {
+        var lastCardRank = _cards.first?._rank
+
+        // if every card in the player's hand is the same rank, then the player can split
+        // if any arent the same rank, they can't split
+        for card in _cards {
+            if card._rank != lastCardRank {
+                return false
+            }
+            lastCardRank = card._rank
+        }
+
+        return true
+    }
+
     // calculates the player's score
     func score() -> (value: Int, type: HAND_VALUE_TYPE) {
         var total = 0

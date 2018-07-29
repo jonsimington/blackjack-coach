@@ -551,6 +551,12 @@ class BlackJackViewController: UIViewController {
 
         initialDeal()
 
+        // if player has 2 cards of the same rank, they can split
+        // enable the split button
+        if (_player?.canSplit())! {
+            playerSplitButton.isEnabled = true
+        }
+
         print("Suggested play is \(SuggestedPlayHelper.determineSuggestedPlay(_player: _player!, _dealer: _dealer!))")
         _currentGameNumber += 1
     }

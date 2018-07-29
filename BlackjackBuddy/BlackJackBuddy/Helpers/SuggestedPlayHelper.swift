@@ -12,10 +12,7 @@ class SuggestedPlayHelper {
     // SUGGESTED PLAY METHODS
     static func determineSuggestedPlay(_player: Player, _dealer: Dealer) -> USER_ACTION {
         let playerScore = _player.score()
-        var dealerScore = _dealer.score()
-
         let dealerUpCard = _dealer._cards.filter { $0._isFaceUp == true }[0]
-        var playerNonAces = _player._cards.filter { $0._rank != .ACE }
 
         switch playerScore.type {
         case .HARD:
@@ -465,6 +462,5 @@ class SuggestedPlayHelper {
                 }
             }
         }
-        return .HIT
     }
 }
