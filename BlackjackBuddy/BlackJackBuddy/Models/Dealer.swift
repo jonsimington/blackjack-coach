@@ -9,4 +9,7 @@
 import Foundation
 
 class Dealer: Player {
+    public var upCard: Card {
+        return _cards[0]
+    }
 }

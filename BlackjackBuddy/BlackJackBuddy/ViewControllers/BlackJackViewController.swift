@@ -71,22 +71,32 @@ class BlackJackViewController: UIViewController {
     @IBOutlet var playerControlsContainer: UIView!
     @IBOutlet var playerStandButton: UIButton!
 
-    func checkDealerGameOver() {
-        if (_dealer?.score().value)! >= 17 {
-            // dealer bust -> player wins
-            if (_dealer?.score().value)! > 21 {
-                handleDealerBust()
+    func checkDealerGameOver(insurance: Bool) {
+        if insurance {
+            if(_dealer?.score().value == 21) {
+                handlePlayerInsurancePayout()
+            }
+            else {
+                handlePlayerInsuranceLoss()
+            }
+        }
+        else {
+            if (_dealer?.score().value)! >= 17 {
+                // dealer bust -> player wins
+                if (_dealer?.score().value)! > 21 {
+                    handleDealerBust()
 
-                // dealer blackjack
-            } else if _dealer?.score().value == 21 {
-                handleDealerBlackJack()
-            } else {
-                if _player?.score().value ?? 0 > _dealer?.score().value ?? 0 {
-                    handlePlayerWinByscore()
-                } else if _dealer?.score().value ?? 0 > _player?.score().value ?? 0 {
-                    handleDealerWinByscore()
-                } else if _player?.score().value ?? 0 == _dealer?.score().value ?? 0 {
-                    handleTieByscore()
+                    // dealer blackjack
+                } else if _dealer?.score().value == 21 {
+                    handleDealerBlackJack()
+                } else {
+                    if _player?.score().value ?? 0 > _dealer?.score().value ?? 0 {
+                        handlePlayerWinByscore()
+                    } else if _dealer?.score().value ?? 0 > _player?.score().value ?? 0 {
+                        handleDealerWinByscore()
+                    } else if _player?.score().value ?? 0 == _dealer?.score().value ?? 0 {
+                        handleTieByscore()
+                    }
                 }
             }
         }
@@ -102,10 +112,10 @@ class BlackJackViewController: UIViewController {
         }
 
         // check one last time if dealer lost
-        checkDealerGameOver()
+        checkDealerGameOver(insurance: false)
     }
 
-    @IBAction func playerStandButtonOnClick(_: Any) {
+    fileprivate func turnOverDealerCard(insurance: Bool = false) {
         // turn dealer's second card face up
         _dealer?._cards[1]._isFaceUp = true
 
@@ -119,7 +129,11 @@ class BlackJackViewController: UIViewController {
 
         // update stats now that the card is flipped
         updateStats()
-        checkDealerGameOver()
+        checkDealerGameOver(insurance: insurance)
+    }
+
+    @IBAction func playerStandButtonOnClick(_: Any) {
+        turnOverDealerCard()
 
         handleDealerTurn()
     }
@@ -141,6 +155,26 @@ class BlackJackViewController: UIViewController {
 
 
     @IBOutlet var playerInsuranceButton: UIButton!
+    @IBAction func playerInsuranceButtonOnClick(_ sender: Any) {
+        // TODO: allow user to select their wager up to half the value of the original bet
+
+        // once player has selected wager, turn over dealer's card and check for 21
+        turnOverDealerCard(insurance: true)
+
+        if _dealer?.score().value == 21 {
+            // player gets 2:1 return on their wager
+            print("Dealer got blackjack, player wins wager 2:1")
+        }
+        else {
+            // player loses wager
+            print("Dealer did not get blackjack, player loses wager")
+        }
+    }
+
+
+
+
+
     @IBOutlet var playerSurrenderButton: UIButton!
     @IBAction func playerSurrenderButtonOnClick(_ sender: Any) {
         // player recovers half their original bet
@@ -329,6 +363,68 @@ class BlackJackViewController: UIViewController {
     fileprivate func UpdatePlayerRecordLabels() {
         playerRecordLabel.text = _player?._record.toString
         dealerRecordLabel.text = _dealer?._record.toString
+    }
+
+    func handlePlayerInsurancePayout() {
+        TapticHelper.playTapticCancelled()
+        TapticHelper.playTapticCancelled()
+        TapticHelper.playTapticCancelled()
+        TapticHelper.playTapticCancelled()
+        TapticHelper.playTapticCancelled()
+        TapticHelper.playTapticCancelled()
+        // hide restart game button from other view
+        restartGameButton.isHidden = true
+        restartGameLoadingCircle.isHidden = true
+
+        // set game win status text
+        gameResultLabel.text = "Dealer got BlackJack!\nInsurance pays 2:1"
+        gameResultLabel.textColor = .green
+        gameResultLabel.backgroundColor = UIColor.darkGray.withAlphaComponent(1)
+        gameResultLabel.center.x = gameResultContainer.center.x
+        gameResultLabel.sizeToFit()
+
+        // set label's padding
+        let labelPadding = CGFloat(10)
+        setGameResultLabelPadding(labelPadding: labelPadding)
+
+        // show the game result overlay
+        gameResultContainer.backgroundColor = UIColor.green.withAlphaComponent(0.15)
+        gameResultContainer.isUserInteractionEnabled = true
+        gameResultContainer.isHidden = false
+
+        // player won, update records
+        _player?._record._wins += 1
+        _dealer?._record._losses += 1
+        UpdatePlayerRecordLabels()
+    }
+
+    func handlePlayerInsuranceLoss() {
+        TapticHelper.playTapticCancelled()
+        TapticHelper.playTapticCancelled()
+        // hide restart game button from other view
+        restartGameButton.isHidden = true
+        restartGameLoadingCircle.isHidden = true
+
+        // set game over status text
+        gameResultLabel.text = "Dealer did not get BlackJack.\nYou lose your wager."
+        gameResultLabel.textColor = UIColor(named: "tomato")
+        gameResultLabel.backgroundColor = UIColor.darkGray.withAlphaComponent(1)
+        gameResultLabel.center.x = gameResultContainer.center.x
+        gameResultLabel.sizeToFit()
+
+        // set label's padding
+        let labelPadding = CGFloat(10)
+        setGameResultLabelPadding(labelPadding: labelPadding)
+
+        // show the game result overlay
+        gameResultContainer.backgroundColor = UIColor.red.withAlphaComponent(0.15)
+        gameResultContainer.isUserInteractionEnabled = true
+        gameResultContainer.isHidden = false
+
+        // player lost, update records
+        _dealer?._record._wins += 1
+        _player?._record._losses += 1
+        UpdatePlayerRecordLabels()
     }
 
     func handlePlayerBust() {
@@ -582,6 +678,8 @@ class BlackJackViewController: UIViewController {
 
         initialDeal()
 
+        checkIfGameIsOver()
+
         // if player has 2 cards of the same rank, they can split
         // enable the split button
         playerSplitButton.isEnabled = (_player?.canSplit())!
@@ -589,6 +687,13 @@ class BlackJackViewController: UIViewController {
         // the player can choose to double down only after the first draw,
         // so enable the double down button
         playerDoubleDownButton.isEnabled = true
+
+
+        // insurance is available to the player when the dealer's upcard is an ace
+        // enable insurance button
+        playerInsuranceButton.isEnabled = _dealer?.upCard._rank == .ACE
+
+
 
         let suggestedPlay = SuggestedPlayHelper.determineSuggestedPlay(_player: _player!, _dealer: _dealer!)
 

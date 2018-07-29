@@ -226,6 +226,9 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </state>
+                                                <connections>
+                                                    <action selector="playerInsuranceButtonOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QG3-aT-gSi"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ww-bz-0bz">
                                                 <rect key="frame" x="10" y="157" width="158" height="48"/>

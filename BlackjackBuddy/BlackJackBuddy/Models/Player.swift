@@ -52,7 +52,6 @@ class Player {
         var handValueType = HAND_VALUE_TYPE.HARD
 
         // if there are 2 cards in hand, and one of them is an ace, then the hand is soft
-//        print("\(_name) | cards: \(_cards.count), faceUp: \(faceUpCards.count) aces: \(acesInHand.count), hiddenAces: \(hiddenAces.count)")
         if _cards.count == 2 && acesInHand.count > 0 && (hiddenAces.count == 0 || hiddenAces.count == 2) {
             handValueType = HAND_VALUE_TYPE.SOFT
         }
@@ -75,7 +74,7 @@ class Player {
             }
 
             // if we are still below 21, count the ace as 11
-            if total < 21 {
+            if total <= 21 {
                 return (total, handValueType)
             }
             // elevatedAcesInHand.forEach { card in print(card) }
