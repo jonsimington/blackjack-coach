@@ -48,6 +48,8 @@
 		DD906DB720D4C2E800501074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD906DB520D4C2E800501074 /* LaunchScreen.storyboard */; };
 		DD906DC220D4C2E800501074 /* BlackJackBuddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD906DC120D4C2E800501074 /* BlackJackBuddyTests.swift */; };
 		DD906DCD20D4C2E800501074 /* BlackJackBuddyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD906DCC20D4C2E800501074 /* BlackJackBuddyUITests.swift */; };
+		DDB26A16210DAB00001564A9 /* PlayerRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB26A15210DAB00001564A9 /* PlayerRecord.swift */; };
+		DDB26A18210DB09D001564A9 /* SharingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB26A17210DB09D001564A9 /* SharingManager.swift */; };
 		DDCE72A22109BFC100C75A4B /* LayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCE72A12109BFC100C75A4B /* LayoutHelper.swift */; };
 		F834ED5B7C546F174F0C41D3 /* Pods_BlackjackBuddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99835842FE92FD03AA463092 /* Pods_BlackjackBuddy.framework */; };
 /* End PBXBuildFile section */
@@ -120,6 +122,8 @@
 		DD906DC820D4C2E800501074 /* BlackjackBuddyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlackjackBuddyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD906DCC20D4C2E800501074 /* BlackJackBuddyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackJackBuddyUITests.swift; sourceTree = "<group>"; };
 		DD906DCE20D4C2E800501074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDB26A15210DAB00001564A9 /* PlayerRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRecord.swift; sourceTree = "<group>"; };
+		DDB26A17210DB09D001564A9 /* SharingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingManager.swift; sourceTree = "<group>"; };
 		DDCE72A12109BFC100C75A4B /* LayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,6 +161,7 @@
 				DD4AEF7B20D4EAC8001235BA /* Dealer.swift */,
 				DD4AEF7D20D4EB83001235BA /* Deck.swift */,
 				DD4AF53520D76CCE001235BA /* PlayerSettings.swift */,
+				DDB26A15210DAB00001564A9 /* PlayerRecord.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -257,6 +262,8 @@
 		DD906DA820D4C2E600501074 /* BlackJackBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				DDB26A14210DA9A8001564A9 /* Storyboards */,
+				DDA7DB7E210DA84700A01979 /* ViewControllers */,
 				DD4AF53720D9D569001235BA /* Helpers */,
 				DD4AF53220D769CD001235BA /* Configuration */,
 				DD4AF52320D58212001235BA /* Extensions */,
@@ -264,13 +271,10 @@
 				DD4AEF7620D4E894001235BA /* Enumerations */,
 				DD4AEF7320D4E69D001235BA /* Models */,
 				DD906DA920D4C2E600501074 /* AppDelegate.swift */,
-				DD906DAB20D4C2E600501074 /* BlackJackViewController.swift */,
-				DD906DAD20D4C2E600501074 /* Main.storyboard */,
 				DD906DB320D4C2E800501074 /* Assets.xcassets */,
-				DD906DB520D4C2E800501074 /* LaunchScreen.storyboard */,
 				DD906DB820D4C2E800501074 /* Info.plist */,
 				DD906DB020D4C2E600501074 /* BlackJackBuddy.xcdatamodeld */,
-				834FACE020DABA6D00D2F8C3 /* UserSetupViewController.swift */,
+				DDB26A17210DB09D001564A9 /* SharingManager.swift */,
 			);
 			path = BlackJackBuddy;
 			sourceTree = "<group>";
@@ -291,6 +295,24 @@
 				DD906DCE20D4C2E800501074 /* Info.plist */,
 			);
 			path = BlackJackBuddyUITests;
+			sourceTree = "<group>";
+		};
+		DDA7DB7E210DA84700A01979 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DD906DAB20D4C2E600501074 /* BlackJackViewController.swift */,
+				834FACE020DABA6D00D2F8C3 /* UserSetupViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DDB26A14210DA9A8001564A9 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				DD906DAD20D4C2E600501074 /* Main.storyboard */,
+				DD906DB520D4C2E800501074 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		F49333F8260CE2C915074658 /* Pods */ = {
@@ -461,11 +483,15 @@
 			inputPaths = (
 				"${SRCROOT}/BlackJackBuddy/Pods/Target Support Files/Pods-BlackjackBuddy/Pods-BlackjackBuddy-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/HandySwift/HandySwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandySwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -519,6 +545,7 @@
 				DD4AF52720D593A1001235BA /* ELEMENT_STATE.swift in Sources */,
 				DD4AF53920D9D588001235BA /* PaddingHelper.swift in Sources */,
 				DD4AF52920D59455001235BA /* ELEMENT_TYPE.swift in Sources */,
+				DDB26A18210DB09D001564A9 /* SharingManager.swift in Sources */,
 				DD4AEF7E20D4EB83001235BA /* Deck.swift in Sources */,
 				DD906DAA20D4C2E600501074 /* AppDelegate.swift in Sources */,
 				DD4AEF8020D4F3FD001235BA /* CARD_RANK.swift in Sources */,
@@ -527,6 +554,7 @@
 				DD4AF53420D769EC001235BA /* config.swift in Sources */,
 				DD4AF53B20D9D6B7001235BA /* CardHelper.swift in Sources */,
 				DD1335DB20E60B9700FAE7A9 /* UIDeviceInfo.swift in Sources */,
+				DDB26A16210DAB00001564A9 /* PlayerRecord.swift in Sources */,
 				DD4AEF7520D4E6B2001235BA /* Card.swift in Sources */,
 				DD4AF52520D58238001235BA /* PaddingLabel.swift in Sources */,
 				DD4C71D820DA36C1004E5720 /* UIViewSubViews.swift in Sources */,

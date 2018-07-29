@@ -13,12 +13,14 @@ class Player {
     var _chips: Int
     var _name: String
     var _settings: PlayerSettings
+    var _record: PlayerRecord
 
-    init(name: String = "", chips: Int = 0, cards: [Card] = [], settings: PlayerSettings = PlayerSettings()) {
+    init(name: String = "", chips: Int = 0, cards: [Card] = [], settings: PlayerSettings = PlayerSettings(), record: PlayerRecord = PlayerRecord()) {
         _name = name
         _chips = chips
         _cards = cards
         _settings = settings
+        _record = record
     }
 
     public var toString: String { return "\(_name): \(_cards), \(_chips)" }

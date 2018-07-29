@@ -17,7 +17,7 @@
                BlueprintIdentifier = "DD906DA520D4C2E600501074"
                BuildableName = "BlackjackBuddy.app"
                BlueprintName = "BlackjackBuddy"
-               ReferencedContainer = "container:BlackJackBuddy.xcodeproj">
+               ReferencedContainer = "container:../BlackJackBuddy.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "DD906DA520D4C2E600501074"
             BuildableName = "BlackjackBuddy.app"
             BlueprintName = "BlackjackBuddy"
-            ReferencedContainer = "container:BlackJackBuddy.xcodeproj">
+            ReferencedContainer = "container:../BlackJackBuddy.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,7 +58,7 @@
             BlueprintIdentifier = "DD906DA520D4C2E600501074"
             BuildableName = "BlackjackBuddy.app"
             BlueprintName = "BlackjackBuddy"
-            ReferencedContainer = "container:BlackJackBuddy.xcodeproj">
+            ReferencedContainer = "container:../BlackJackBuddy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -77,7 +77,7 @@
             BlueprintIdentifier = "DD906DA520D4C2E600501074"
             BuildableName = "BlackjackBuddy.app"
             BlueprintName = "BlackjackBuddy"
-            ReferencedContainer = "container:BlackJackBuddy.xcodeproj">
+            ReferencedContainer = "container:../BlackJackBuddy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

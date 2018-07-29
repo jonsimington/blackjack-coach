@@ -28,11 +28,13 @@ class BlackJackViewController: UIViewController {
     @IBOutlet var dealerHandContainer: UIView!
     @IBOutlet var dealerHandCardsContainer: UIImageView!
     @IBOutlet var dealerNameLabel: UILabel!
+    @IBOutlet var DealerRecordLabel: UILabel!
 
     // PLAYER VIEWS
     @IBOutlet var playerHandContainer: UIView!
     @IBOutlet var playerHandCardsContainer: UIImageView!
     @IBOutlet var playerNameLabel: UILabel!
+    @IBOutlet var PlayerRecordLabel: UILabel!
 
     // STATS VIEWS
     @IBOutlet var statsContainer: UIView!
@@ -333,6 +335,10 @@ class BlackJackViewController: UIViewController {
         gameResultContainer.backgroundColor = UIColor.green.withAlphaComponent(0.15)
         gameResultContainer.isUserInteractionEnabled = true
         gameResultContainer.isHidden = false
+
+        // player won, update records
+        _dealer?._record._wins += 1
+        _player?._record._losses += 1
     }
 
     func handleDealerWinByScore() {
@@ -357,6 +363,10 @@ class BlackJackViewController: UIViewController {
         gameResultContainer.backgroundColor = UIColor.red.withAlphaComponent(0.15)
         gameResultContainer.isUserInteractionEnabled = true
         gameResultContainer.isHidden = false
+
+        // dealer won, update records
+        _dealer?._record._wins += 1
+        _player?._record._losses += 1
     }
 
     func handlePlayerWinByScore() {
@@ -385,6 +395,10 @@ class BlackJackViewController: UIViewController {
         gameResultContainer.backgroundColor = UIColor.green.withAlphaComponent(0.15)
         gameResultContainer.isUserInteractionEnabled = true
         gameResultContainer.isHidden = false
+
+        // player won, update records
+        _player?._record._wins += 1
+        _dealer?._record._losses += 1
     }
 
     func handleTieByScore() {
@@ -407,6 +421,10 @@ class BlackJackViewController: UIViewController {
         gameResultContainer.backgroundColor = UIColor.yellow.withAlphaComponent(0.15)
         gameResultContainer.isUserInteractionEnabled = true
         gameResultContainer.isHidden = false
+
+        // tied, update records
+        _dealer?._record._ties += 1
+        _player?._record._ties += 1
     }
 
     func handleDealerBust() {
@@ -435,6 +453,10 @@ class BlackJackViewController: UIViewController {
         gameResultContainer.backgroundColor = UIColor.green.withAlphaComponent(0.15)
         gameResultContainer.isUserInteractionEnabled = true
         gameResultContainer.isHidden = false
+
+        // dealer lost, update records
+        _dealer?._record._losses += 1
+        _player?._record._wins += 1
     }
 
     func handleDealerBlackJack() {
@@ -459,6 +481,10 @@ class BlackJackViewController: UIViewController {
         gameResultContainer.backgroundColor = UIColor.red.withAlphaComponent(0.15)
         gameResultContainer.isUserInteractionEnabled = true
         gameResultContainer.isHidden = false
+
+        // dealer won, update records
+        _dealer?._record._wins += 1
+        _player?._record._losses += 1
     }
 
     func initGame(firstGame: Bool = false) {

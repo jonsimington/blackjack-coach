@@ -199,7 +199,7 @@ class LayoutHelper {
 
         _viewController.playerInsuranceButton.snp.makeConstraints { (make) -> Void in
             make.top.equalTo(_viewController.playerControlsContainer)
-                .offset(Configuration.PLAYER_CONTROL_BUTTON_PADDING_Y)
+                .offset(Configuration.PLAYER_CONTROL_BUTTON_PADDING_Y*3)
             make.left.equalTo(_viewController.playerControlsContainer)
                 .offset(Configuration.PLAYER_CONTROL_BUTTON_PADDING_X)
             make.width.lessThanOrEqualTo((_viewController.middleView.frame.width - (3.0 * CGFloat(Configuration.PLAYER_CONTROL_BUTTON_PADDING_X))) / 2.0)
@@ -207,7 +207,7 @@ class LayoutHelper {
 
         _viewController.playerSurrenderButton.snp.makeConstraints { (make) -> Void in
             make.top.equalTo(_viewController.playerControlsContainer)
-                .offset(Configuration.PLAYER_CONTROL_BUTTON_PADDING_Y)
+                .offset(Configuration.PLAYER_CONTROL_BUTTON_PADDING_Y*3)
             make.right.equalTo(_viewController.playerControlsContainer)
                 .offset(Configuration.PLAYER_CONTROL_BUTTON_PADDING_X * -3)
             make.width.equalTo(_viewController.playerInsuranceButton)
