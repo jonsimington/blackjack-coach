@@ -178,7 +178,7 @@ class LayoutHelper {
         _viewController.deckCountLabel.snp.makeConstraints { (make) -> Void in
             make.right.equalTo(_viewController.middleView).inset(Configuration.LABEL_PADDING_X)
             make.left.equalTo(_viewController.middleView).inset(Configuration.LABEL_PADDING_X)
-            make.top.equalTo(_viewController.dealerHandContainer.snp.bottom)
+            make.top.equalTo(_viewController.dealerRecordLabel.snp.bottom).offset(Configuration.LABEL_PADDING_Y * 2)
             make.bottom.equalTo(_viewController.playerControlsContainer.snp.top)
         }
 
@@ -196,6 +196,12 @@ class LayoutHelper {
         _viewController.playerControlsContainer.addSubview(_viewController.playerHitButton)
         _viewController.playerControlsContainer.addSubview(_viewController.playerStandButton)
         _viewController.playerControlsContainer.addSubview(_viewController.restartGameButton)
+        _viewController.playerControlsContainer.addSubview(_viewController.playerRecordLabel)
+        _viewController.playerControlsContainer.addSubview(_viewController.dealerRecordLabel)
+        _viewController.playerControlsContainer.addSubview(_viewController.restartGameLoadingCircle)
+        _viewController.playerControlsContainer.addSubview(_viewController.playerRecordDescriptionLabel)
+        _viewController.playerControlsContainer.addSubview(_viewController.dealerRecordDescriptionLabel)
+
 
         _viewController.playerInsuranceButton.snp.makeConstraints { (make) -> Void in
             make.top.equalTo(_viewController.playerControlsContainer)
@@ -251,7 +257,6 @@ class LayoutHelper {
             make.left.equalTo(_viewController.playerHitButton)
             make.right.equalTo(_viewController.playerStandButton)
         }
-        _viewController.playerControlsContainer.addSubview(_viewController.restartGameLoadingCircle)
 
         _viewController.restartGameLoadingCircle.snp.makeConstraints { (make) -> Void in
             make.left.equalTo(_viewController.restartGameButton)
@@ -259,6 +264,28 @@ class LayoutHelper {
             make.centerY.equalTo(_viewController.restartGameButton)
             make.height.equalTo(_viewController.restartGameLoadingCircle.frame.size.height * 0.95)
             make.width.equalTo(_viewController.restartGameLoadingCircle.frame.size.width * 0.95)
+        }
+
+        _viewController.playerRecordDescriptionLabel.snp.makeConstraints{(make) -> Void in
+            make.left.equalTo(_viewController.playerHandCardsContainer)
+            make.bottom.equalTo(_viewController.playerNameLabel.snp.top).offset(Configuration.LABEL_PADDING_Y * -1)
+        }
+
+        _viewController.playerRecordLabel.snp.makeConstraints{(make) -> Void in
+            make.left.equalTo(_viewController.playerRecordDescriptionLabel.snp.right).offset(Configuration.LABEL_PADDING_X)
+            make.centerY.equalTo(_viewController.playerRecordDescriptionLabel)
+            make.right.equalTo(_viewController.playerHandCardsContainer)
+        }
+
+        _viewController.dealerRecordDescriptionLabel.snp.makeConstraints{(make) -> Void in
+            make.left.equalTo(_viewController.dealerHandCardsContainer)
+            make.top.equalTo(_viewController.dealerNameLabel.snp.bottom).offset(Configuration.LABEL_PADDING_Y)
+        }
+
+        _viewController.dealerRecordLabel.snp.makeConstraints{(make) -> Void in
+            make.left.equalTo(_viewController.dealerRecordDescriptionLabel.snp.right).offset(Configuration.LABEL_PADDING_X)
+            make.centerY.equalTo(_viewController.dealerRecordDescriptionLabel)
+            make.right.equalTo(_viewController.dealerHandCardsContainer)
         }
 
         // show borders on _view edges for debugging

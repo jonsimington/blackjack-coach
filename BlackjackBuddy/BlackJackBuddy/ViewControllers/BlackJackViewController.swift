@@ -28,14 +28,16 @@ class BlackJackViewController: UIViewController {
     @IBOutlet var dealerHandContainer: UIView!
     @IBOutlet var dealerHandCardsContainer: UIImageView!
     @IBOutlet var dealerNameLabel: UILabel!
-    @IBOutlet var DealerRecordLabel: UILabel!
-
+    @IBOutlet var dealerRecordLabel: UILabel!
+    @IBOutlet var dealerRecordDescriptionLabel: UILabel!
+    
     // PLAYER VIEWS
     @IBOutlet var playerHandContainer: UIView!
     @IBOutlet var playerHandCardsContainer: UIImageView!
     @IBOutlet var playerNameLabel: UILabel!
-    @IBOutlet var PlayerRecordLabel: UILabel!
-
+    @IBOutlet var playerRecordLabel: UILabel!
+    @IBOutlet var playerRecordDescriptionLabel: UILabel!
+    
     // STATS VIEWS
     @IBOutlet var statsContainer: UIView!
     @IBOutlet var deckCountLabel: UILabel!
@@ -285,6 +287,11 @@ class BlackJackViewController: UIViewController {
         updateStats()
     }
 
+    fileprivate func UpdatePlayerRecordLabels() {
+        playerRecordLabel.text = _player?._record.toString
+        dealerRecordLabel.text = _dealer?._record.toString
+    }
+
     func handlePlayerBust() {
         TapticHelper.playTapticCancelled()
         TapticHelper.playTapticCancelled()
@@ -307,6 +314,11 @@ class BlackJackViewController: UIViewController {
         gameResultContainer.backgroundColor = UIColor.red.withAlphaComponent(0.15)
         gameResultContainer.isUserInteractionEnabled = true
         gameResultContainer.isHidden = false
+
+        // player lost, update records
+        _dealer?._record._wins += 1
+        _player?._record._losses += 1
+        UpdatePlayerRecordLabels()
     }
 
     func handlePlayerBlackJack() {
@@ -337,8 +349,10 @@ class BlackJackViewController: UIViewController {
         gameResultContainer.isHidden = false
 
         // player won, update records
-        _dealer?._record._wins += 1
-        _player?._record._losses += 1
+        _player?._record._wins += 1
+        _dealer?._record._losses += 1
+        UpdatePlayerRecordLabels()
+
     }
 
     func handleDealerWinByScore() {
@@ -367,6 +381,8 @@ class BlackJackViewController: UIViewController {
         // dealer won, update records
         _dealer?._record._wins += 1
         _player?._record._losses += 1
+        UpdatePlayerRecordLabels()
+
     }
 
     func handlePlayerWinByScore() {
@@ -399,6 +415,8 @@ class BlackJackViewController: UIViewController {
         // player won, update records
         _player?._record._wins += 1
         _dealer?._record._losses += 1
+        UpdatePlayerRecordLabels()
+
     }
 
     func handleTieByScore() {
@@ -425,6 +443,8 @@ class BlackJackViewController: UIViewController {
         // tied, update records
         _dealer?._record._ties += 1
         _player?._record._ties += 1
+        UpdatePlayerRecordLabels()
+
     }
 
     func handleDealerBust() {
@@ -457,6 +477,8 @@ class BlackJackViewController: UIViewController {
         // dealer lost, update records
         _dealer?._record._losses += 1
         _player?._record._wins += 1
+        UpdatePlayerRecordLabels()
+
     }
 
     func handleDealerBlackJack() {
@@ -485,6 +507,9 @@ class BlackJackViewController: UIViewController {
         // dealer won, update records
         _dealer?._record._wins += 1
         _player?._record._losses += 1
+        UpdatePlayerRecordLabels()
+
+
     }
 
     func initGame(firstGame: Bool = false) {
@@ -498,6 +523,9 @@ class BlackJackViewController: UIViewController {
             playerNameLabel.text = _player?._name.uppercased()
             dealerNameLabel.text = _dealer?._name.uppercased()
         }
+
+        UpdatePlayerRecordLabels()
+
 
         _player?._cards = []
         _dealer?._cards = []

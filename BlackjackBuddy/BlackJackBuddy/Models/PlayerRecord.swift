@@ -13,8 +13,18 @@ class PlayerRecord {
     var _losses: Int
     var _ties: Int
 
+    var _ratio: Float  {
+        if _losses > 0 {
+            return Float(_wins) / Float(_losses)
+        }
+        if _wins > 0 && _losses == 0 {
+            return Float(_wins)
+        }
+        return Float(0.000)
+    }
+
     public var toString: String {
-        return "\(_wins) - \(_losses) - \(_ties)"
+        return "\(_wins) - \(_losses) - \(_ties) (\(String(format: "%.3f", _ratio)))"
     }
 
     init(wins: Int = 0, losses: Int = 0, ties: Int = 0) {
