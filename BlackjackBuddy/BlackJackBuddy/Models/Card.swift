@@ -14,6 +14,17 @@ class Card {
     var _suit: CARD_SUIT
     var _isFaceUp: Bool
 
+    var _cardValue: Int {
+        if [.TWO, .THREE, .FOUR, .FIVE, .SIX, .SEVEN, .EIGHT, .NINE].contains(_rank) {
+            return _rank.getValue()
+        }
+        else if _rank == CARD_RANK.ACE {
+            return 11
+        }
+        return 0
+
+    }
+
     init(rank: CARD_RANK = CARD_RANK.ACE, value: Int = 0, suit: CARD_SUIT = CARD_SUIT.CLUBS, isFaceUp: Bool = true) {
         _rank = rank
         _value = value

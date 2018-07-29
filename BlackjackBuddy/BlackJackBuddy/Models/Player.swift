@@ -26,16 +26,26 @@ class Player {
     public var toString: String { return "\(_name): \(_cards), \(_chips)" }
 
     // calculates the player's score
-    func score() -> Int {
+    func score() -> (value: Int, type: HAND_VALUE_TYPE) {
         var total = 0
 
         let acesInHand = _cards.filter { $0._rank == CARD_RANK.ACE }
         let nonAcesInHand = _cards.filter { $0._rank != CARD_RANK.ACE }
+        let hiddenAces = acesInHand.filter { $0._isFaceUp == false }
+        let faceUpCards = _cards.filter { $0._isFaceUp == true}
+
+        var handValueType = HAND_VALUE_TYPE.HARD
+
+        // if there are 2 cards in hand, and one of them is an ace, then the hand is soft
+//        print("\(_name) | cards: \(_cards.count), faceUp: \(faceUpCards.count) aces: \(acesInHand.count), hiddenAces: \(hiddenAces.count)")
+        if _cards.count == 2 && acesInHand.count > 0 && (hiddenAces.count == 0 || hiddenAces.count == 2) {
+            handValueType = HAND_VALUE_TYPE.SOFT
+        }
 
         // if there are aces in hand, we should check if counting the aces as 11 would bust the player
         if acesInHand.count > 0 {
             let elevatedAcesInHand = Array(acesInHand.map { (card: Card) -> Card in
-                let item = Card(rank: card._rank, value: card._value * 11, suit: card._suit)
+                let item = Card(rank: card._rank, value: card._value * 11, suit: card._suit, isFaceUp: card._isFaceUp)
                 return item
             })
 
@@ -51,19 +61,17 @@ class Player {
 
             // if we are still below 21, count the ace as 11
             if total < 21 {
-                return total
+                return (total, handValueType)
             }
             // elevatedAcesInHand.forEach { card in print(card) }
         }
 
         total = 0
-        for c in _cards {
-            if c._isFaceUp {
-                total += c._value
-            }
+        for c in faceUpCards {
+            total += c._value
         }
 
-        return total
+        return (total, handValueType)
     }
 
     // prints the player's hand to the console for debugging

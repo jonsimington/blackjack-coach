@@ -77,7 +77,7 @@ class Deck {
 
         let currentPlayerScore = player.score()
 
-        print("Dealt (\(card.description)) to (\(player._name)) --> \(currentPlayerScore)")
+        print("Dealt (\(card.description)) to (\(player._name)) --> \(currentPlayerScore.type) \(currentPlayerScore.value)")
 
         // if deck is empty, we need to build a new deck
         if _cards.count == 0 {

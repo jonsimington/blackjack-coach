@@ -166,26 +166,91 @@ class LayoutHelper {
         // init player controls _view
         _viewController.middleView.addSubview(_viewController.playerControlsContainer)
         _viewController.middleView.addSubview(_viewController.statsContainer)
+        _viewController.middleView.addSubview(_viewController.playerRecordContainer)
+        _viewController.middleView.addSubview(_viewController.dealerRecordContainer)
 
-        _viewController.statsContainer.snp.makeConstraints { (make) -> Void in
+        // Player record container
+        _viewController.playerRecordContainer.snp.makeConstraints{(make) -> Void in
+            make.bottom.equalTo(_viewController.middleView)
+            make.left.equalTo(_viewController.middleView)
+            make.right.equalTo(_viewController.middleView)
+            make.top.equalTo(_viewController.playerControlsContainer.snp.bottom)
+            make.height.equalTo(53)
+        }
+        _viewController.playerRecordContainer.addSubview(_viewController.playerRecordLabel)
+        _viewController.playerRecordContainer.addSubview(_viewController.playerRecordDescriptionLabel)
+
+        _viewController.playerRecordDescriptionLabel.snp.makeConstraints{(make) -> Void in
+            make.left.equalTo(_viewController.playerHandCardsContainer)
+            make.right.equalTo(_viewController.playerRecordLabel.snp.left).offset(-10)
+            make.centerY.equalTo(_viewController.playerRecordContainer)
+            make.top.equalTo(_viewController.playerRecordContainer)
+            make.bottom.equalTo(_viewController.playerRecordContainer)
+        }
+
+        _viewController.playerRecordLabel.snp.makeConstraints{(make) -> Void in
+            make.left.equalTo(_viewController.playerRecordDescriptionLabel.snp.right).offset(10)
+            make.centerY.equalTo(_viewController.playerRecordContainer)
+            make.right.equalTo(_viewController.playerHandCardsContainer)
+            make.top.equalTo(_viewController.playerRecordContainer)
+            make.bottom.equalTo(_viewController.playerRecordContainer)
+        }
+
+        // Dealer record container
+        _viewController.dealerRecordContainer.snp.makeConstraints{(make) -> Void in
             make.top.equalTo(_viewController.middleView)
-            make.centerX.equalTo(_viewController.middleView)
-            print("stats \(_viewController.statsContainer.center.x) middle \(_viewController.middleView.center.x)")
+            make.left.equalTo(_viewController.middleView)
+            make.right.equalTo(_viewController.middleView)
+            make.bottom.equalTo(_viewController.statsContainer.snp.top)
+            make.height.equalTo(53)
+        }
+
+        _viewController.dealerRecordContainer.addSubview(_viewController.dealerRecordLabel)
+        _viewController.dealerRecordContainer.addSubview(_viewController.dealerRecordDescriptionLabel)
+
+        _viewController.dealerRecordDescriptionLabel.snp.makeConstraints{(make) -> Void in
+            make.left.equalTo(_viewController.dealerHandCardsContainer)
+            make.right.equalTo(_viewController.dealerRecordLabel.snp.left).offset(-10)
+            make.centerY.equalTo(_viewController.dealerRecordContainer)
+            make.top.equalTo(_viewController.dealerRecordContainer)
+            make.bottom.equalTo(_viewController.dealerRecordContainer)
+
+        }
+
+        _viewController.dealerRecordLabel.snp.makeConstraints{(make) -> Void in
+        make.left.equalTo(_viewController.dealerRecordDescriptionLabel.snp.right).offset(10)
+            make.centerY.equalTo(_viewController.dealerRecordContainer)
+            make.right.equalTo(_viewController.dealerHandCardsContainer)
+            make.top.equalTo(_viewController.dealerRecordContainer)
+            make.bottom.equalTo(_viewController.dealerRecordContainer)
+        }
+
+
+        // Stats container
+        _viewController.statsContainer.snp.makeConstraints { (make) -> Void in
+            make.top.equalTo(_viewController.dealerRecordContainer.snp.bottom)
+            make.bottom.equalTo(_viewController.playerControlsContainer.snp.top)
+            make.left.equalTo(_viewController.middleView)
+            make.right.equalTo(_viewController.middleView)
+            make.height.equalTo(_viewController.dealerRecordContainer)
         }
 
         _viewController.statsContainer.addSubview(_viewController.deckCountLabel)
 
         _viewController.deckCountLabel.snp.makeConstraints { (make) -> Void in
-            make.right.equalTo(_viewController.middleView).inset(Configuration.LABEL_PADDING_X)
-            make.left.equalTo(_viewController.middleView).inset(Configuration.LABEL_PADDING_X)
-            make.top.equalTo(_viewController.dealerRecordLabel.snp.bottom).offset(Configuration.LABEL_PADDING_Y * 2)
-            make.bottom.equalTo(_viewController.playerControlsContainer.snp.top)
+            make.right.equalTo(_viewController.dealerHandCardsContainer)
+            make.left.equalTo(_viewController.dealerHandCardsContainer)
+            make.centerY.equalTo(_viewController.statsContainer)
+            make.top.equalTo(_viewController.statsContainer)
+            make.bottom.equalTo(_viewController.statsContainer)
         }
 
+         // Player controls container
         _viewController.playerControlsContainer.snp.makeConstraints { (make) -> Void in
-            make.top.equalTo(_viewController.middleView).offset(_viewController.statsContainer.frame.size.height)
-            make.bottom.equalTo(_viewController.middleView.snp.bottom)
-            make.width.equalTo(_viewController.middleView)
+            make.top.equalTo(_viewController.statsContainer.snp.bottom)
+            make.bottom.equalTo(_viewController.playerRecordContainer.snp.top)
+            make.left.equalTo(_viewController.middleView)
+            make.right.equalTo(_viewController.middleView)
         }
 
         _viewController.playerControlsContainer.isUserInteractionEnabled = true
@@ -196,66 +261,59 @@ class LayoutHelper {
         _viewController.playerControlsContainer.addSubview(_viewController.playerHitButton)
         _viewController.playerControlsContainer.addSubview(_viewController.playerStandButton)
         _viewController.playerControlsContainer.addSubview(_viewController.restartGameButton)
-        _viewController.playerControlsContainer.addSubview(_viewController.playerRecordLabel)
-        _viewController.playerControlsContainer.addSubview(_viewController.dealerRecordLabel)
         _viewController.playerControlsContainer.addSubview(_viewController.restartGameLoadingCircle)
-        _viewController.playerControlsContainer.addSubview(_viewController.playerRecordDescriptionLabel)
-        _viewController.playerControlsContainer.addSubview(_viewController.dealerRecordDescriptionLabel)
+
+        let playerControlButtonPadding = (_viewController.playerControlsContainer.frame.height - 192) / 5
 
 
+        // left side
         _viewController.playerInsuranceButton.snp.makeConstraints { (make) -> Void in
             make.top.equalTo(_viewController.playerControlsContainer)
-                .offset(Configuration.PLAYER_CONTROL_BUTTON_PADDING_Y*3)
+                .offset(playerControlButtonPadding)
             make.left.equalTo(_viewController.playerControlsContainer)
-                .offset(Configuration.PLAYER_CONTROL_BUTTON_PADDING_X)
-            make.width.lessThanOrEqualTo((_viewController.middleView.frame.width - (3.0 * CGFloat(Configuration.PLAYER_CONTROL_BUTTON_PADDING_X))) / 2.0)
+                .offset(playerControlButtonPadding)
+            make.width.equalTo((_viewController.middleView.frame.width - (3.0 * CGFloat(playerControlButtonPadding))) / 2.0)
         }
-
-        _viewController.playerSurrenderButton.snp.makeConstraints { (make) -> Void in
-            make.top.equalTo(_viewController.playerControlsContainer)
-                .offset(Configuration.PLAYER_CONTROL_BUTTON_PADDING_Y*3)
-            make.right.equalTo(_viewController.playerControlsContainer)
-                .offset(Configuration.PLAYER_CONTROL_BUTTON_PADDING_X * -3)
-            make.width.equalTo(_viewController.playerInsuranceButton)
-        }
-
         _viewController.playerSplitButton.snp.makeConstraints { (make) -> Void in
             make.top.equalTo(_viewController.playerInsuranceButton.snp.bottom)
-                .offset(Configuration.PLAYER_CONTROL_BUTTON_PADDING_Y)
+                .offset(playerControlButtonPadding)
             make.width.equalTo(_viewController.playerInsuranceButton)
-            make.left.equalTo(_viewController.playerControlsContainer)
-                .offset(Configuration.PLAYER_CONTROL_BUTTON_PADDING_X)
+            make.left.equalTo(_viewController.playerInsuranceButton)
         }
-
-        _viewController.playerDoubleDownButton.snp.makeConstraints { (make) -> Void in
-            make.top.equalTo(_viewController.playerSurrenderButton.snp.bottom)
-                .offset(Configuration.PLAYER_CONTROL_BUTTON_PADDING_Y)
-            make.width.equalTo(_viewController.playerInsuranceButton)
-            make.right.equalTo(_viewController.playerControlsContainer)
-                .offset(Configuration.PLAYER_CONTROL_BUTTON_PADDING_X * -3)
-        }
-
         _viewController.playerHitButton.snp.makeConstraints { (make) -> Void in
             make.top.equalTo(_viewController.playerSplitButton.snp.bottom)
-                .offset(Configuration.PLAYER_CONTROL_BUTTON_PADDING_Y)
+                .offset(playerControlButtonPadding)
             make.width.equalTo(_viewController.playerInsuranceButton)
-            make.left.equalTo(_viewController.playerControlsContainer)
-                .offset(Configuration.PLAYER_CONTROL_BUTTON_PADDING_X)
+            make.left.equalTo(_viewController.playerInsuranceButton)
         }
 
+        // right side
+        _viewController.playerSurrenderButton.snp.makeConstraints { (make) -> Void in
+            make.top.equalTo(_viewController.playerControlsContainer)
+                .offset(playerControlButtonPadding)
+            make.right.equalTo(_viewController.playerControlsContainer)
+                .offset(playerControlButtonPadding)
+            make.width.equalTo(_viewController.playerInsuranceButton)
+        }
+        _viewController.playerDoubleDownButton.snp.makeConstraints { (make) -> Void in
+            make.top.equalTo(_viewController.playerSurrenderButton.snp.bottom)
+                .offset(playerControlButtonPadding)
+            make.width.equalTo(_viewController.playerInsuranceButton)
+            make.right.equalTo(_viewController.playerSurrenderButton)
+        }
         _viewController.playerStandButton.snp.makeConstraints { (make) -> Void in
             make.top.equalTo(_viewController.playerDoubleDownButton.snp.bottom)
-                .offset(Configuration.PLAYER_CONTROL_BUTTON_PADDING_Y)
+                .offset(playerControlButtonPadding)
             make.width.equalTo(_viewController.playerInsuranceButton)
-            make.right.equalTo(_viewController.playerControlsContainer)
-                .offset(Configuration.PLAYER_CONTROL_BUTTON_PADDING_X * -3)
+            make.right.equalTo(_viewController.playerSurrenderButton)
         }
 
+        // bottom of stack
         _viewController.restartGameButton.snp.makeConstraints { (make) -> Void in
             make.top.equalTo(_viewController.playerHitButton.snp.bottom)
-                .offset(Configuration.PLAYER_CONTROL_BUTTON_PADDING_Y)
-            make.left.equalTo(_viewController.playerHitButton)
-            make.right.equalTo(_viewController.playerStandButton)
+                .offset(playerControlButtonPadding)
+            make.left.equalTo(_viewController.playerInsuranceButton)
+            make.right.equalTo(_viewController.playerSurrenderButton)
         }
 
         _viewController.restartGameLoadingCircle.snp.makeConstraints { (make) -> Void in
@@ -266,32 +324,10 @@ class LayoutHelper {
             make.width.equalTo(_viewController.restartGameLoadingCircle.frame.size.width * 0.95)
         }
 
-        _viewController.playerRecordDescriptionLabel.snp.makeConstraints{(make) -> Void in
-            make.left.equalTo(_viewController.playerHandCardsContainer)
-            make.bottom.equalTo(_viewController.playerNameLabel.snp.top).offset(Configuration.LABEL_PADDING_Y * -1)
-        }
-
-        _viewController.playerRecordLabel.snp.makeConstraints{(make) -> Void in
-            make.left.equalTo(_viewController.playerRecordDescriptionLabel.snp.right).offset(Configuration.LABEL_PADDING_X)
-            make.centerY.equalTo(_viewController.playerRecordDescriptionLabel)
-            make.right.equalTo(_viewController.playerHandCardsContainer)
-        }
-
-        _viewController.dealerRecordDescriptionLabel.snp.makeConstraints{(make) -> Void in
-            make.left.equalTo(_viewController.dealerHandCardsContainer)
-            make.top.equalTo(_viewController.dealerNameLabel.snp.bottom).offset(Configuration.LABEL_PADDING_Y)
-        }
-
-        _viewController.dealerRecordLabel.snp.makeConstraints{(make) -> Void in
-            make.left.equalTo(_viewController.dealerRecordDescriptionLabel.snp.right).offset(Configuration.LABEL_PADDING_X)
-            make.centerY.equalTo(_viewController.dealerRecordDescriptionLabel)
-            make.right.equalTo(_viewController.dealerHandCardsContainer)
-        }
-
         // show borders on _view edges for debugging
         if Configuration.SHOW_VIEW_OUTLINE_BORDERS {
             // dealer hand
-            _viewController.dealerHandContainer.layer.borderColor = UIColor.purple.cgColor
+            _viewController.dealerHandContainer.layer.borderColor = UIColor.magenta.cgColor
             _viewController.dealerHandContainer.layer.borderWidth = 2
             _viewController.dealerNameLabel.layer.borderColor = UIColor.green.cgColor
             _viewController.dealerNameLabel.layer.borderWidth = 2
@@ -311,25 +347,25 @@ class LayoutHelper {
             _viewController.playerControlsContainer.layer.borderWidth = 4
 
             // player buttons
-            _viewController.playerInsuranceButton.layer.borderColor = UIColor.purple.cgColor
+            _viewController.playerInsuranceButton.layer.borderColor = UIColor.magenta.cgColor
             _viewController.playerInsuranceButton.layer.borderWidth = 3
-            _viewController.playerSurrenderButton.layer.borderColor = UIColor.purple.cgColor
+            _viewController.playerSurrenderButton.layer.borderColor = UIColor.magenta.cgColor
             _viewController.playerSurrenderButton.layer.borderWidth = 3
-            _viewController.playerSplitButton.layer.borderColor = UIColor.purple.cgColor
+            _viewController.playerSplitButton.layer.borderColor = UIColor.magenta.cgColor
             _viewController.playerSplitButton.layer.borderWidth = 3
-            _viewController.playerDoubleDownButton.layer.borderColor = UIColor.purple.cgColor
+            _viewController.playerDoubleDownButton.layer.borderColor = UIColor.magenta.cgColor
             _viewController.playerDoubleDownButton.layer.borderWidth = 3
-            _viewController.playerHitButton.layer.borderColor = UIColor.purple.cgColor
+            _viewController.playerHitButton.layer.borderColor = UIColor.magenta.cgColor
             _viewController.playerHitButton.layer.borderWidth = 3
-            _viewController.playerStandButton.layer.borderColor = UIColor.purple.cgColor
+            _viewController.playerStandButton.layer.borderColor = UIColor.magenta.cgColor
             _viewController.playerStandButton.layer.borderWidth = 3
-            _viewController.restartGameButton.layer.borderColor = UIColor.purple.cgColor
+            _viewController.restartGameButton.layer.borderColor = UIColor.magenta.cgColor
             _viewController.restartGameButton.layer.borderWidth = 3
             _viewController.restartGameLoadingCircle.layer.borderColor = UIColor.red.withAlphaComponent(0.5).cgColor
             _viewController.restartGameLoadingCircle.layer.borderWidth = 2
 
             // player hand
-            _viewController.playerHandContainer.layer.borderColor = UIColor.purple.cgColor
+            _viewController.playerHandContainer.layer.borderColor = UIColor.magenta.cgColor
             _viewController.playerHandContainer.layer.borderWidth = 2
             _viewController.playerNameLabel.layer.borderColor = UIColor.green.cgColor
             _viewController.playerNameLabel.layer.borderWidth = 2
@@ -337,6 +373,22 @@ class LayoutHelper {
             _viewController.playerScoreLabel.layer.borderWidth = 2
             _viewController.playerHandCardsContainer.layer.borderColor = UIColor.red.cgColor
             _viewController.playerHandCardsContainer.layer.borderWidth = 2
+
+            // dealer record
+            _viewController.dealerRecordContainer.layer.borderColor = UIColor.green.cgColor
+            _viewController.dealerRecordContainer.layer.borderWidth = 4
+            _viewController.dealerRecordLabel.layer.borderColor = UIColor.magenta.cgColor
+            _viewController.dealerRecordLabel.layer.borderWidth = 2
+            _viewController.dealerRecordDescriptionLabel.layer.borderColor = UIColor.magenta.cgColor
+            _viewController.dealerRecordDescriptionLabel.layer.borderWidth = 2
+            // player record
+            _viewController.playerRecordContainer.layer.borderColor = UIColor.green.cgColor
+            _viewController.playerRecordContainer.layer.borderWidth = 4
+            _viewController.playerRecordLabel.layer.borderColor = UIColor.magenta.cgColor
+            _viewController.playerRecordLabel.layer.borderWidth = 2
+            _viewController.playerRecordDescriptionLabel.layer.borderColor = UIColor.magenta.cgColor
+            _viewController.playerRecordDescriptionLabel.layer.borderWidth = 2
+
         }
     }
 }

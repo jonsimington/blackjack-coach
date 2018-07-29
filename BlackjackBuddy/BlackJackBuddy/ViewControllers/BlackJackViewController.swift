@@ -24,19 +24,26 @@ class BlackJackViewController: UIViewController {
     @IBOutlet var superView: UIView!
     @IBOutlet var middleView: UIView!
 
+    // PLAYER RECORD VIEWS
+    @IBOutlet var dealerRecordLabel: UILabel!
+    @IBOutlet var dealerRecordDescriptionLabel: UILabel!
+    @IBOutlet var playerRecordLabel: UILabel!
+    @IBOutlet var playerRecordDescriptionLabel: UILabel!
+    @IBOutlet var playerRecordContainer: UIView!
+    @IBOutlet var dealerRecordContainer: UIView!
+    
+    
     // DEALER VIEWS
     @IBOutlet var dealerHandContainer: UIView!
     @IBOutlet var dealerHandCardsContainer: UIImageView!
     @IBOutlet var dealerNameLabel: UILabel!
-    @IBOutlet var dealerRecordLabel: UILabel!
-    @IBOutlet var dealerRecordDescriptionLabel: UILabel!
+
     
     // PLAYER VIEWS
     @IBOutlet var playerHandContainer: UIView!
     @IBOutlet var playerHandCardsContainer: UIImageView!
     @IBOutlet var playerNameLabel: UILabel!
-    @IBOutlet var playerRecordLabel: UILabel!
-    @IBOutlet var playerRecordDescriptionLabel: UILabel!
+
     
     // STATS VIEWS
     @IBOutlet var statsContainer: UIView!
@@ -68,21 +75,21 @@ class BlackJackViewController: UIViewController {
     @IBOutlet var playerStandButton: UIButton!
 
     func checkDealerGameOver() {
-        if (_dealer?.score())! >= 17 {
+        if (_dealer?.score().value)! >= 17 {
             // dealer bust -> player wins
-            if (_dealer?.score())! > 21 {
+            if (_dealer?.score().value)! > 21 {
                 handleDealerBust()
 
                 // dealer blackjack
-            } else if _dealer?.score() == 21 {
+            } else if _dealer?.score().value == 21 {
                 handleDealerBlackJack()
             } else {
-                if _player?.score() ?? 0 > _dealer?.score() ?? 0 {
-                    handlePlayerWinByScore()
-                } else if _dealer?.score() ?? 0 > _player?.score() ?? 0 {
-                    handleDealerWinByScore()
-                } else if _player?.score() ?? 0 == _dealer?.score() ?? 0 {
-                    handleTieByScore()
+                if _player?.score().value ?? 0 > _dealer?.score().value ?? 0 {
+                    handlePlayerWinByscore()
+                } else if _dealer?.score().value ?? 0 > _player?.score().value ?? 0 {
+                    handleDealerWinByscore()
+                } else if _player?.score().value ?? 0 == _dealer?.score().value ?? 0 {
+                    handleTieByscore()
                 }
             }
         }
@@ -106,7 +113,7 @@ class BlackJackViewController: UIViewController {
 
         // it's dealer's turn when the player stands
         // dealer draws a card until their score is >= 17
-        while (_dealer?.score())! < 17 {
+        while (_dealer?.score().value)! < 17 {
             let dealtCard = _deck?.dealCard(player: _dealer!)
             addCardToHand(cardContainer: dealerHandCardsContainer, card: dealtCard!, player: _dealer!)
             updateStats()
@@ -149,8 +156,8 @@ class BlackJackViewController: UIViewController {
 
     // Updates label text for player scores, remaining cards in deck
     func updateStats() {
-        playerScoreLabel.text = "\(_player?.score() ?? 0)"
-        dealerScoreLabel.text = "\(_dealer?.score() ?? 0)"
+        playerScoreLabel.text = "\(_player?.score().type ?? HAND_VALUE_TYPE.HARD) \(_player?.score().value ?? 0)"
+        dealerScoreLabel.text = "\(_dealer?.score().type ?? HAND_VALUE_TYPE.HARD) \(_dealer?.score().value ?? 0)"
         deckCountLabel.text = "\(_deck?._cards.count ?? 52) CARDS REMAINING IN DECK"
     }
 
@@ -254,9 +261,9 @@ class BlackJackViewController: UIViewController {
     // determines if user busted or got blackjack and updates the UI accordingly
     func checkIfGameIsOver() {
         // check if user busted
-        if (_player?.score())! > 21 {
+        if (_player?.score().value)! > 21 {
             handlePlayerBust()
-        } else if _player?.score() == 21 {
+        } else if _player?.score().value == 21 {
             handlePlayerBlackJack()
         } else {
             // enable hit and stand buttons
@@ -266,6 +273,7 @@ class BlackJackViewController: UIViewController {
     }
 
     func initialDeal() {
+        print("------------------------------------------------------------")
         // deal card to player and check for a terminal state
         var dealtCard = (_deck?.dealCard(player: _player!))!
         addCardToHand(cardContainer: playerHandCardsContainer!, card: dealtCard, player: _player!)
@@ -285,6 +293,8 @@ class BlackJackViewController: UIViewController {
         dealtCard = (_deck?.dealCard(player: _dealer!, isFaceUp: false))!
         addCardToHand(cardContainer: dealerHandCardsContainer!, card: dealtCard, player: _dealer!)
         updateStats()
+        print("------------------------------------------------------------")
+
     }
 
     fileprivate func UpdatePlayerRecordLabels() {
@@ -300,7 +310,7 @@ class BlackJackViewController: UIViewController {
         restartGameLoadingCircle.isHidden = true
 
         // set game over status text
-        gameResultLabel.text = "Dang,\nyou busted.\n(\(_player?.score() ?? 0))"
+        gameResultLabel.text = "Dang,\nyou busted.\n(\(_player?.score().value ?? 0))"
         gameResultLabel.textColor = UIColor(named: "tomato")
         gameResultLabel.backgroundColor = UIColor.darkGray.withAlphaComponent(1)
         gameResultLabel.center.x = gameResultContainer.center.x
@@ -355,7 +365,7 @@ class BlackJackViewController: UIViewController {
 
     }
 
-    func handleDealerWinByScore() {
+    func handleDealerWinByscore() {
         TapticHelper.playTapticCancelled()
         TapticHelper.playTapticCancelled()
         // hide restart game button from other view
@@ -363,7 +373,7 @@ class BlackJackViewController: UIViewController {
         restartGameLoadingCircle.isHidden = true
 
         // set game over status text
-        gameResultLabel.text = "Dealer wins by\nhigher score\n\(_dealer?.score() ?? 0) vs \(_player?.score() ?? 0)"
+        gameResultLabel.text = "Dealer wins by\nhigher score\n\(_dealer?.score().value ?? 0) vs \(_player?.score().value ?? 0)"
         gameResultLabel.textColor = UIColor(named: "tomato")
         gameResultLabel.backgroundColor = UIColor.darkGray.withAlphaComponent(1)
         gameResultLabel.center.x = gameResultContainer.center.x
@@ -385,7 +395,7 @@ class BlackJackViewController: UIViewController {
 
     }
 
-    func handlePlayerWinByScore() {
+    func handlePlayerWinByscore() {
         TapticHelper.playTapticCancelled()
         TapticHelper.playTapticCancelled()
         TapticHelper.playTapticCancelled()
@@ -397,7 +407,7 @@ class BlackJackViewController: UIViewController {
         restartGameLoadingCircle.isHidden = true
 
         // set game win status text
-        gameResultLabel.text = "You win by\nhigher score\n\(_player?.score() ?? 0) vs \(_dealer?.score() ?? 0)"
+        gameResultLabel.text = "You win by\nhigher score\n\(_player?.score().value ?? 0) vs \(_dealer?.score().value ?? 0)"
         gameResultLabel.textColor = .green
         gameResultLabel.backgroundColor = UIColor.darkGray.withAlphaComponent(1)
         gameResultLabel.center.x = gameResultContainer.center.x
@@ -419,7 +429,7 @@ class BlackJackViewController: UIViewController {
 
     }
 
-    func handleTieByScore() {
+    func handleTieByscore() {
         // hide restart game button from other view
         restartGameButton.isHidden = true
         restartGameLoadingCircle.isHidden = true
@@ -459,7 +469,7 @@ class BlackJackViewController: UIViewController {
         restartGameLoadingCircle.isHidden = true
 
         // set game win status text
-        gameResultLabel.text = "Dealer Busted!\n(\(_dealer?.score() ?? 0))\nYou Win!"
+        gameResultLabel.text = "Dealer Busted!\n(\(_dealer?.score().value ?? 0))\nYou Win!"
         gameResultLabel.textColor = .green
         gameResultLabel.backgroundColor = UIColor.darkGray.withAlphaComponent(1)
         gameResultLabel.center.x = gameResultContainer.center.x

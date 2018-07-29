@@ -51,6 +51,7 @@
 		DDB26A16210DAB00001564A9 /* PlayerRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB26A15210DAB00001564A9 /* PlayerRecord.swift */; };
 		DDB26A18210DB09D001564A9 /* SharingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB26A17210DB09D001564A9 /* SharingManager.swift */; };
 		DDCE72A22109BFC100C75A4B /* LayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCE72A12109BFC100C75A4B /* LayoutHelper.swift */; };
+		DDD83C2F210DC0D80086B9D8 /* HAND_VALUE_TYPE.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD83C2E210DC0D80086B9D8 /* HAND_VALUE_TYPE.swift */; };
 		F834ED5B7C546F174F0C41D3 /* Pods_BlackjackBuddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99835842FE92FD03AA463092 /* Pods_BlackjackBuddy.framework */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +126,7 @@
 		DDB26A15210DAB00001564A9 /* PlayerRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRecord.swift; sourceTree = "<group>"; };
 		DDB26A17210DB09D001564A9 /* SharingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingManager.swift; sourceTree = "<group>"; };
 		DDCE72A12109BFC100C75A4B /* LayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutHelper.swift; sourceTree = "<group>"; };
+		DDD83C2E210DC0D80086B9D8 /* HAND_VALUE_TYPE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HAND_VALUE_TYPE.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 				DD4AEF8120D51D03001235BA /* USER_ACTION.swift */,
 				DD4AF52620D593A1001235BA /* ELEMENT_STATE.swift */,
 				DD4AF52820D59455001235BA /* ELEMENT_TYPE.swift */,
+				DDD83C2E210DC0D80086B9D8 /* HAND_VALUE_TYPE.swift */,
 			);
 			path = Enumerations;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 				834FACE720DC344A00D2F8C3 /* UIFontSize.swift in Sources */,
 				DD4AEF7820D4E8A3001235BA /* CARD_SUIT.swift in Sources */,
 				DD4AEF7C20D4EAC8001235BA /* Dealer.swift in Sources */,
+				DDD83C2F210DC0D80086B9D8 /* HAND_VALUE_TYPE.swift in Sources */,
 				DD906DB220D4C2E600501074 /* BlackJackBuddy.xcdatamodeld in Sources */,
 				DD4AF52720D593A1001235BA /* ELEMENT_STATE.swift in Sources */,
 				DD4AF53920D9D588001235BA /* PaddingHelper.swift in Sources */,
