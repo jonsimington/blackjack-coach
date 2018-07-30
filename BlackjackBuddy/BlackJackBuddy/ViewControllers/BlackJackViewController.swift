@@ -101,6 +101,8 @@ class BlackJackViewController: UIViewController {
     }
 
     fileprivate func handleDealerTurn() {
+        turnOverDealerCard(insurance: false)
+
         // it's dealer's turn when the player stands
         // dealer draws a card until their score is >= 17
         while (_dealer?.score().value)! < 17 {
