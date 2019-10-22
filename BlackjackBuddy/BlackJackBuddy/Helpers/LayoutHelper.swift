@@ -89,7 +89,6 @@ class LayoutHelper {
 
         // init player name label
         _viewController.playerNameLabel.text = _viewController._player?._name.uppercased()
-        _viewController.playerNameLabel.sizeToFit()
         _viewController.playerHandContainer.addSubview(_viewController.playerNameLabel)
         _viewController.playerNameLabel.snp.makeConstraints { (make) -> Void in
             make.top.equalTo(_viewController.playerHandContainer.snp.top)
@@ -100,11 +99,12 @@ class LayoutHelper {
                 .inset(Configuration.LABEL_PADDING_X)
             make.width.equalTo(_viewController.playerNameLabel.frame.width * 2.5)
 
-            make.height.equalTo(_viewController.dealerNameLabel)
+            make.height.equalTo(30)
         }
 
         // init player score label
         _viewController.playerHandContainer.addSubview(_viewController.playerScoreLabel)
+        _viewController.playerScoreLabel.sizeToFit()
         _viewController.playerScoreLabel.snp.makeConstraints { (make) -> Void in
             make.centerY.equalTo(_viewController.playerNameLabel.snp.centerY)
             make.left.equalTo(_viewController.playerNameLabel.snp.right)
@@ -130,9 +130,21 @@ class LayoutHelper {
             make.height.equalTo(_view.snp.height).multipliedBy(0.12)
         }
 
+
+
+        // init dealer score label
+        _viewController.dealerHandContainer.addSubview(_viewController.dealerScoreLabel)
+        _viewController.dealerScoreLabel.sizeToFit()
+        _viewController.dealerScoreLabel.snp.makeConstraints { (make) -> Void in
+            make.centerY.equalTo(_viewController.dealerNameLabel.snp.centerY)
+            make.left.equalTo(_viewController.dealerNameLabel.snp.right)
+            make.height.equalTo(_viewController.dealerNameLabel)
+            make.right.equalTo(_viewController.dealerHandContainer).inset(Configuration.LABEL_PADDING_X)
+        }
+
         // init dealer name label
         _viewController.dealerNameLabel.text = _viewController._dealer?._name.uppercased()
-        _viewController.dealerNameLabel.sizeToFit()
+        //_viewController.dealerNameLabel.sizeToFit()
 
         _viewController.dealerHandContainer.addSubview(_viewController.dealerNameLabel)
         _viewController.dealerNameLabel.snp.makeConstraints { (make) -> Void in
@@ -140,18 +152,9 @@ class LayoutHelper {
                 .offset(Configuration.PLAYER_NAME_PADDING_Y)
             make.bottom.equalTo(_viewController.dealerHandContainer.snp.bottom)
                 .offset(Configuration.PLAYER_NAME_PADDING_Y * -1)
-            make.width.equalTo(_viewController.dealerNameLabel.frame.width * 1.3)
-            make.left.equalTo(_viewController.dealerHandContainer).offset(Configuration.LABEL_PADDING_X)
-        }
+        make.left.equalTo(_viewController.dealerHandContainer).offset(Configuration.LABEL_PADDING_X)
+            make.height.equalTo(_viewController.playerNameLabel)
 
-        // init dealer score label
-        _viewController.dealerHandContainer.addSubview(_viewController.dealerScoreLabel)
-
-        _viewController.dealerScoreLabel.snp.makeConstraints { (make) -> Void in
-            make.centerY.equalTo(_viewController.dealerNameLabel.snp.centerY)
-            make.left.equalTo(_viewController.dealerNameLabel.snp.right)
-            make.height.equalTo(_viewController.dealerNameLabel)
-            make.right.equalTo(_viewController.dealerHandContainer).inset(Configuration.LABEL_PADDING_X)
         }
 
         // bind middle _view between card hands containers
